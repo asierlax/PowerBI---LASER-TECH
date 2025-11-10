@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "SemanticModel",
+    "displayName": "Salesforce"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "8494d5a6-cc9c-4c15-aa83-8278cd22992f"
+  }
+}

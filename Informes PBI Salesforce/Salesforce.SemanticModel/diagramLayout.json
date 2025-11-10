@@ -1,0 +1,74 @@
+{
+  "version": "1.1.0",
+  "diagrams": [
+    {
+      "ordinal": 0,
+      "scrollPosition": {
+        "x": 0,
+        "y": 0
+      },
+      "nodes": [
+        {
+          "location": {
+            "x": 72,
+            "y": 400.5
+          },
+          "nodeIndex": "Contacto",
+          "nodeLineageTag": "b97e98bd-ee61-457f-8d47-d83e727d7c1f",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 1
+        },
+        {
+          "location": {
+            "x": 102,
+            "y": 29
+          },
+          "nodeIndex": "Cuenta",
+          "nodeLineageTag": "db5f4cd7-3f94-4400-b765-10a82f3295e2",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 4
+        },
+        {
+          "location": {
+            "x": 520,
+            "y": 1.5
+          },
+          "nodeIndex": "Oportunidad",
+          "nodeLineageTag": "666cd7a4-89c5-4728-bf61-d07a726bad09",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 2
+        },
+        {
+          "location": {
+            "x": 902,
+            "y": 0
+          },
+          "nodeIndex": "Usuario",
+          "nodeLineageTag": "e21e6932-90aa-474d-9db8-af3d17728d37",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 3
+        }
+      ],
+      "name": "Todas las tablas",
+      "zoomValue": 100,
+      "pinKeyFieldsToTop": false,
+      "showExtraHeaderInfo": false,
+      "hideKeyFieldsWhenCollapsed": false,
+      "tablesLocked": false
+    }
+  ],
+  "selectedDiagram": "Todas las tablas",
+  "defaultDiagram": "Todas las tablas"
+}

@@ -1,0 +1,222 @@
+relationship 564ca500-b56f-4bb5-99a0-773471ac92bf
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Cuenta.CreatedDate
+	toColumn: LocalDateTable_265a3e70-ca25-4a57-95b4-d86f2824bced.Date
+
+relationship c337f27e-46b1-4dc3-bba6-beb1acd4f262
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Cuenta.LastModifiedDate
+	toColumn: LocalDateTable_7f5a2d4f-e6ef-486d-90df-9ab403e65256.Date
+
+relationship 3eb319c6-c3b7-49a7-a436-e06df0662067
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Cuenta.SystemModstamp
+	toColumn: LocalDateTable_0371ad24-f863-40dd-89c9-0c769f21ed32.Date
+
+relationship 19e18555-fbf5-41e9-8860-18b856e20165
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Cuenta.LastActivityDate
+	toColumn: LocalDateTable_f7d2c1b4-c549-4de7-a84b-0238c9b430d3.Date
+
+relationship 8d5b6e50-3c18-4e27-8172-2bee3e234aeb
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Cuenta.LastViewedDate
+	toColumn: LocalDateTable_ce57b769-d579-4fdb-bc4c-4c2e1ae65e25.Date
+
+relationship 34ee06b3-2b24-40d7-8855-e8b1d2f5265e
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Cuenta.LastReferencedDate
+	toColumn: LocalDateTable_88d8b19c-2761-4ddf-8dac-d94a9df09b7c.Date
+
+relationship c43e6c90-ad13-4b99-91a9-fb74486ace08
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Oportunidad.CloseDate
+	toColumn: LocalDateTable_b12c2642-2939-48b3-8b0b-fe403399c897.Date
+
+relationship 972ea27b-7d72-47aa-90aa-a034c5e86c60
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Oportunidad.CreatedDate
+	toColumn: LocalDateTable_07fde72b-71a1-4962-a4a7-a216eb1300f8.Date
+
+relationship 2ae46447-c96b-4c7f-829a-c667a980923f
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Oportunidad.LastModifiedDate
+	toColumn: LocalDateTable_76e03e68-d1c2-4f19-ba35-6796fd7406be.Date
+
+relationship 960fa8a5-752f-4ec0-b158-9420123ef49d
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Oportunidad.SystemModstamp
+	toColumn: LocalDateTable_aab0af9b-74a6-4823-bd7a-f82539bfccd3.Date
+
+relationship 6a8443f0-1e08-4504-993e-4c13dc2d56ee
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Oportunidad.LastActivityDate
+	toColumn: LocalDateTable_e23dfe52-291b-4d68-bc36-e53f1ea443fe.Date
+
+relationship ec7d7d90-8ab1-43bd-afc2-b8670816f53b
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Oportunidad.LastViewedDate
+	toColumn: LocalDateTable_a0fb6504-129d-47f9-b907-13071c0947ea.Date
+
+relationship 9f9f590e-d214-49c6-a525-8ffb457701b5
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Oportunidad.LastReferencedDate
+	toColumn: LocalDateTable_163eac21-90c8-4fe8-ab09-0f653712d651.Date
+
+relationship fb7f3c49-2025-49ae-9669-84e587c24b82
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Oportunidad.Fecha_toma_decisi_n__c
+	toColumn: LocalDateTable_a41cba2e-8f4e-47e6-859b-2397c1797772.Date
+
+relationship 9b36b1bd-edd8-4952-b06c-4f2801518703
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Usuario.LastLoginDate
+	toColumn: LocalDateTable_412d582c-2dfe-4cc7-ab6b-78a518410f49.Date
+
+relationship ff7c2e59-f82a-4f92-be31-3423aef5562b
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Usuario.LastPasswordChangeDate
+	toColumn: LocalDateTable_72d64cf6-6098-4f95-b537-8716be07d441.Date
+
+relationship feb33f12-6699-4549-a791-c011f903ee35
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Usuario.CreatedDate
+	toColumn: LocalDateTable_6c668033-8b8f-4f60-8e0f-a8a8c8601537.Date
+
+relationship 385ca43a-6c59-4b13-b3d0-c5d71d7f7bc6
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Usuario.LastModifiedDate
+	toColumn: LocalDateTable_6afdb4e9-bbab-489a-adc7-6aa34b754a52.Date
+
+relationship 4ab428c0-c304-4748-bb66-826ce7d6aea8
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Usuario.SystemModstamp
+	toColumn: LocalDateTable_6fe44675-ad05-4834-9acc-1e3b6c2a1388.Date
+
+relationship a9f68592-8751-49b4-9c64-1241f24df4aa
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Usuario.PasswordExpirationDate
+	toColumn: LocalDateTable_f7aac577-bd5e-48e2-bd8c-41c4ea7edb7d.Date
+
+relationship df2c35d3-c3af-4776-a21f-8b610b05fbcc
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Usuario.SuAccessExpirationDate
+	toColumn: LocalDateTable_27dbac6d-2735-4860-be25-3b94c244fa5a.Date
+
+relationship ec7221d2-bbdd-40d3-89fc-f809be128b47
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Usuario.OfflineTrialExpirationDate
+	toColumn: LocalDateTable_871f6118-94e7-4a55-9455-a09f3334d04a.Date
+
+relationship 7eccf29f-51ee-44a1-a338-92fecab1052b
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Usuario.OfflinePdaTrialExpirationDate
+	toColumn: LocalDateTable_29cd0807-1162-46be-a9f0-b1559df17df6.Date
+
+relationship 61dd9c32-fdc2-4a75-ad42-4d5d39ffbb1e
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Usuario.LastViewedDate
+	toColumn: LocalDateTable_dc345693-d860-4077-8a76-3799682adcd2.Date
+
+relationship f54e57bb-7177-4008-8045-4dc44ed780e8
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Usuario.LastReferencedDate
+	toColumn: LocalDateTable_da094f65-d8c7-4b67-b1d3-14d3e4b9d392.Date
+
+relationship bb3aaa26-984a-4487-9402-ddef534fa160
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Contacto.Birthdate
+	toColumn: LocalDateTable_8ff41c91-83d5-4c84-af94-985e86537b3f.Date
+
+relationship e0e3c222-39f9-4cf6-a8b2-9a3e6d68cc9c
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Contacto.CreatedDate
+	toColumn: LocalDateTable_a9a17174-b57e-405f-94e6-5b601e657873.Date
+
+relationship 739bafcf-058c-4edc-9ad2-af175bc505f4
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Contacto.LastModifiedDate
+	toColumn: LocalDateTable_cddc99b6-7f10-4e5f-9160-4063a50f00e6.Date
+
+relationship 99470c90-a636-4255-b09a-fad5c81996a7
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Contacto.SystemModstamp
+	toColumn: LocalDateTable_59359988-c5c0-427e-b595-34b562701693.Date
+
+relationship 494575be-be90-476d-b62a-d5ceb5e8d4ff
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Contacto.LastActivityDate
+	toColumn: LocalDateTable_d2f51744-09f0-4415-9275-54c1a1d10264.Date
+
+relationship 25458a4b-01c3-4fba-8c01-c94b3733c32c
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Contacto.LastCURequestDate
+	toColumn: LocalDateTable_1084a95b-ab4b-4eab-9ffc-eff0f246e926.Date
+
+relationship 63dca168-662a-4e57-8922-2f362213f57b
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Contacto.LastCUUpdateDate
+	toColumn: LocalDateTable_60550800-a5cb-40bd-ac11-cfb21be70906.Date
+
+relationship 30690507-7a91-4bd6-842c-5657c04b082a
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Contacto.LastViewedDate
+	toColumn: LocalDateTable_56be01c8-858e-4f2d-906c-5b9c6335c5aa.Date
+
+relationship fda8d736-e0bd-4c7b-9096-7911fb429e4b
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Contacto.LastReferencedDate
+	toColumn: LocalDateTable_6edae561-ed80-45fb-8571-114d601ba16a.Date
+
+relationship 847948eb-6eb3-4fee-804f-8614cee569f2
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Contacto.EmailBouncedDate
+	toColumn: LocalDateTable_428a95bd-2bd7-451d-b448-cf08e9770aeb.Date
+
+relationship dbc0ce4d-9957-4f75-a7ac-a7b46993e13b
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Contacto.pi__Pardot_Last_Scored_At__c
+	toColumn: LocalDateTable_d4f27b9a-8636-42d8-9516-da5e685b8a96.Date
+
+relationship 92a30410-2aff-4268-b11f-8991323a38f9
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Contacto.pi__conversion_date__c
+	toColumn: LocalDateTable_7d5e6c98-d49d-4cd2-ba31-dbf8d16cd0eb.Date
+
+relationship 361986b9-880d-4a35-a967-c34d855160b7
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Contacto.pi__created_date__c
+	toColumn: LocalDateTable_192bc35a-cd4e-4a38-ae6a-829f4dd6a472.Date
+
+relationship 6bcee586-90af-4482-8d23-5eb65f837c38
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Contacto.pi__first_activity__c
+	toColumn: LocalDateTable_a5a24959-4d4f-4cca-af55-2364dafbe126.Date
+
+relationship 8f691d95-e398-410f-ae9a-a845cf4e2f14
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Contacto.pi__last_activity__c
+	toColumn: LocalDateTable_ea31d098-95ea-4767-8b79-27314b8e52e2.Date
+
+relationship cf675c0c-f94a-4706-a030-626b8e6f0e26
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Contacto.Fecha_acepta_politica_priv_Dekalaser__c
+	toColumn: LocalDateTable_cda8256d-ceb4-4f68-95e2-6c207a67a14f.Date
+
+relationship 17c50e1b-4fa9-4e55-bd91-4bb113abcfd0
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Contacto.Fecha_acepta_politica_priv_Lasertech__c
+	toColumn: LocalDateTable_1bed304e-74ca-40ad-a4d2-166b7a00ffb0.Date
+
+relationship 69cb21bc-61ff-f8da-c857-532b68ef8eca
+	fromColumn: Oportunidad.AccountId
+	toColumn: Cuenta.Id
+
+relationship d1c82379-2673-9467-d271-f1316bb9c751
+	fromColumn: Oportunidad.OwnerId
+	toColumn: Usuario.Id
+
+relationship 67b7c571-befd-fc88-48ad-4e1e40e8da75
+	fromColumn: Contacto.AccountId
+	toColumn: Cuenta.Id
+

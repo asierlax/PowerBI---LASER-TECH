@@ -1,0 +1,64 @@
+model Model
+	culture: es-ES
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	sourceQueryCulture: es-ES
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+annotation __PBI_TimeIntelligenceEnabled = 1
+
+annotation PBI_QueryOrder = ["Cuenta","Oportunidad","Usuario","Contacto"]
+
+annotation PBI_ProTooling = ["DevMode"]
+
+ref table Cuenta
+ref table DateTableTemplate_68d52381-d845-4713-85fc-7e72fdbc2008
+ref table LocalDateTable_265a3e70-ca25-4a57-95b4-d86f2824bced
+ref table LocalDateTable_7f5a2d4f-e6ef-486d-90df-9ab403e65256
+ref table LocalDateTable_0371ad24-f863-40dd-89c9-0c769f21ed32
+ref table LocalDateTable_f7d2c1b4-c549-4de7-a84b-0238c9b430d3
+ref table LocalDateTable_ce57b769-d579-4fdb-bc4c-4c2e1ae65e25
+ref table LocalDateTable_88d8b19c-2761-4ddf-8dac-d94a9df09b7c
+ref table Oportunidad
+ref table LocalDateTable_b12c2642-2939-48b3-8b0b-fe403399c897
+ref table LocalDateTable_07fde72b-71a1-4962-a4a7-a216eb1300f8
+ref table LocalDateTable_76e03e68-d1c2-4f19-ba35-6796fd7406be
+ref table LocalDateTable_aab0af9b-74a6-4823-bd7a-f82539bfccd3
+ref table LocalDateTable_e23dfe52-291b-4d68-bc36-e53f1ea443fe
+ref table LocalDateTable_a0fb6504-129d-47f9-b907-13071c0947ea
+ref table LocalDateTable_163eac21-90c8-4fe8-ab09-0f653712d651
+ref table LocalDateTable_a41cba2e-8f4e-47e6-859b-2397c1797772
+ref table Usuario
+ref table LocalDateTable_412d582c-2dfe-4cc7-ab6b-78a518410f49
+ref table LocalDateTable_72d64cf6-6098-4f95-b537-8716be07d441
+ref table LocalDateTable_6c668033-8b8f-4f60-8e0f-a8a8c8601537
+ref table LocalDateTable_6afdb4e9-bbab-489a-adc7-6aa34b754a52
+ref table LocalDateTable_6fe44675-ad05-4834-9acc-1e3b6c2a1388
+ref table LocalDateTable_f7aac577-bd5e-48e2-bd8c-41c4ea7edb7d
+ref table LocalDateTable_27dbac6d-2735-4860-be25-3b94c244fa5a
+ref table LocalDateTable_871f6118-94e7-4a55-9455-a09f3334d04a
+ref table LocalDateTable_29cd0807-1162-46be-a9f0-b1559df17df6
+ref table LocalDateTable_dc345693-d860-4077-8a76-3799682adcd2
+ref table LocalDateTable_da094f65-d8c7-4b67-b1d3-14d3e4b9d392
+ref table Contacto
+ref table LocalDateTable_8ff41c91-83d5-4c84-af94-985e86537b3f
+ref table LocalDateTable_a9a17174-b57e-405f-94e6-5b601e657873
+ref table LocalDateTable_cddc99b6-7f10-4e5f-9160-4063a50f00e6
+ref table LocalDateTable_59359988-c5c0-427e-b595-34b562701693
+ref table LocalDateTable_d2f51744-09f0-4415-9275-54c1a1d10264
+ref table LocalDateTable_1084a95b-ab4b-4eab-9ffc-eff0f246e926
+ref table LocalDateTable_60550800-a5cb-40bd-ac11-cfb21be70906
+ref table LocalDateTable_56be01c8-858e-4f2d-906c-5b9c6335c5aa
+ref table LocalDateTable_6edae561-ed80-45fb-8571-114d601ba16a
+ref table LocalDateTable_428a95bd-2bd7-451d-b448-cf08e9770aeb
+ref table LocalDateTable_d4f27b9a-8636-42d8-9516-da5e685b8a96
+ref table LocalDateTable_7d5e6c98-d49d-4cd2-ba31-dbf8d16cd0eb
+ref table LocalDateTable_192bc35a-cd4e-4a38-ae6a-829f4dd6a472
+ref table LocalDateTable_a5a24959-4d4f-4cca-af55-2364dafbe126
+ref table LocalDateTable_ea31d098-95ea-4767-8b79-27314b8e52e2
+ref table LocalDateTable_cda8256d-ceb4-4f68-95e2-6c207a67a14f
+ref table LocalDateTable_1bed304e-74ca-40ad-a4d2-166b7a00ffb0
+
+ref cultureInfo es-ES
+

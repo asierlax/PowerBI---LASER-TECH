@@ -1,0 +1,478 @@
+table Oportunidad
+	lineageTag: 666cd7a4-89c5-4728-bf61-d07a726bad09
+
+	column Id
+		dataType: string
+		lineageTag: 37ade3ae-2abb-4e49-afe9-a3a197e3349c
+		summarizeBy: none
+		sourceColumn: Id
+
+		annotation SummarizationSetBy = Automatic
+
+	column IsDeleted
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 2d3aba6d-0ee5-4f48-a952-b41ae38b6b71
+		summarizeBy: none
+		sourceColumn: IsDeleted
+
+		annotation SummarizationSetBy = Automatic
+
+	column AccountId
+		dataType: string
+		lineageTag: 29b6950d-736c-4e1e-87b1-8684e3af5127
+		summarizeBy: none
+		sourceColumn: AccountId
+
+		annotation SummarizationSetBy = Automatic
+
+	column IsPrivate
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: da35e235-65e2-4287-9581-75b7ef7540ee
+		summarizeBy: none
+		sourceColumn: IsPrivate
+
+		annotation SummarizationSetBy = Automatic
+
+	column Name
+		dataType: string
+		lineageTag: 9f5e5582-8614-45e7-97c5-2767586c8298
+		summarizeBy: none
+		sourceColumn: Name
+
+		annotation SummarizationSetBy = Automatic
+
+	column Description
+		dataType: string
+		lineageTag: 6b068af2-881f-43d3-a6e0-662d9999bfd4
+		summarizeBy: none
+		sourceColumn: Description
+
+		annotation SummarizationSetBy = Automatic
+
+	column StageName
+		dataType: string
+		lineageTag: 18e554cd-9712-477c-adf6-4f34ba2b00cb
+		summarizeBy: none
+		sourceColumn: StageName
+
+		annotation SummarizationSetBy = Automatic
+
+	column Amount
+		dataType: double
+		lineageTag: 6de6b754-9a11-4b77-822c-eca185d9f27e
+		summarizeBy: sum
+		sourceColumn: Amount
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Probability
+		dataType: double
+		lineageTag: 27828d75-cc9e-40c2-ae69-cf3c3ded0978
+		summarizeBy: sum
+		sourceColumn: Probability
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column ExpectedRevenue
+		dataType: double
+		lineageTag: 24d0c31d-24ec-4a6c-9fb5-29def3fe2f0b
+		summarizeBy: sum
+		sourceColumn: ExpectedRevenue
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column TotalOpportunityQuantity
+		dataType: double
+		lineageTag: 8ac01da6-4688-4402-8496-144c1191cae6
+		summarizeBy: sum
+		sourceColumn: TotalOpportunityQuantity
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column CloseDate
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: d503248b-7112-4c47-ba96-d0c64e59bfbe
+		summarizeBy: none
+		sourceColumn: CloseDate
+
+		variation Variación
+			isDefault
+			relationship: c43e6c90-ad13-4b99-91a9-fb74486ace08
+			defaultHierarchy: LocalDateTable_b12c2642-2939-48b3-8b0b-fe403399c897.'Jerarquía de fechas'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column Type
+		dataType: string
+		lineageTag: 878ffb58-0500-4f93-b27e-ced0bb77b36d
+		summarizeBy: none
+		sourceColumn: Type
+
+		annotation SummarizationSetBy = Automatic
+
+	column NextStep
+		dataType: string
+		lineageTag: d96f11ef-678b-4367-b27c-b636a0a2e00c
+		summarizeBy: none
+		sourceColumn: NextStep
+
+		annotation SummarizationSetBy = Automatic
+
+	column LeadSource
+		dataType: string
+		lineageTag: 0859fe2d-8a69-43f6-9146-270dd4e84842
+		summarizeBy: none
+		sourceColumn: LeadSource
+
+		annotation SummarizationSetBy = Automatic
+
+	column IsClosed
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: f8403821-d221-431f-8ebb-f8693bef4ce6
+		summarizeBy: none
+		sourceColumn: IsClosed
+
+		annotation SummarizationSetBy = Automatic
+
+	column IsWon
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 9c5edbf2-042f-41d5-9268-d8aeeb56cf9b
+		summarizeBy: none
+		sourceColumn: IsWon
+
+		annotation SummarizationSetBy = Automatic
+
+	column ForecastCategory
+		dataType: string
+		lineageTag: 932c09de-9726-40ee-bd5c-064a841d33bb
+		summarizeBy: none
+		sourceColumn: ForecastCategory
+
+		annotation SummarizationSetBy = Automatic
+
+	column ForecastCategoryName
+		dataType: string
+		lineageTag: 120dd760-be10-43dd-adf3-29b7b8862cff
+		summarizeBy: none
+		sourceColumn: ForecastCategoryName
+
+		annotation SummarizationSetBy = Automatic
+
+	column CampaignId
+		dataType: string
+		lineageTag: eb1a39e8-0ace-4eee-a70e-b31e3df87e4e
+		summarizeBy: none
+		sourceColumn: CampaignId
+
+		annotation SummarizationSetBy = Automatic
+
+	column HasOpportunityLineItem
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: cb8d7436-6084-460b-9f5d-926a7559309f
+		summarizeBy: none
+		sourceColumn: HasOpportunityLineItem
+
+		annotation SummarizationSetBy = Automatic
+
+	column Pricebook2Id
+		dataType: string
+		lineageTag: 2372b350-964b-4cbc-9455-a26d9424dbfe
+		summarizeBy: none
+		sourceColumn: Pricebook2Id
+
+		annotation SummarizationSetBy = Automatic
+
+	column OwnerId
+		dataType: string
+		lineageTag: 23dc04af-4c10-4bf5-a936-0cdfa74b4f0c
+		summarizeBy: none
+		sourceColumn: OwnerId
+
+		annotation SummarizationSetBy = Automatic
+
+	column CreatedDate
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: b31b6b95-4a77-4505-ac39-de946c486d53
+		summarizeBy: none
+		sourceColumn: CreatedDate
+
+		variation Variación
+			isDefault
+			relationship: 972ea27b-7d72-47aa-90aa-a034c5e86c60
+			defaultHierarchy: LocalDateTable_07fde72b-71a1-4962-a4a7-a216eb1300f8.'Jerarquía de fechas'
+
+		annotation SummarizationSetBy = Automatic
+
+	column CreatedById
+		dataType: string
+		lineageTag: ed611cc4-ba72-4f79-9735-df418568dd2d
+		summarizeBy: none
+		sourceColumn: CreatedById
+
+		annotation SummarizationSetBy = Automatic
+
+	column LastModifiedDate
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 8eebedb9-1403-4577-97b1-4b7b22fca748
+		summarizeBy: none
+		sourceColumn: LastModifiedDate
+
+		variation Variación
+			isDefault
+			relationship: 2ae46447-c96b-4c7f-829a-c667a980923f
+			defaultHierarchy: LocalDateTable_76e03e68-d1c2-4f19-ba35-6796fd7406be.'Jerarquía de fechas'
+
+		annotation SummarizationSetBy = Automatic
+
+	column LastModifiedById
+		dataType: string
+		lineageTag: 5cb7dcf5-75d5-4123-b172-80f97aa495d4
+		summarizeBy: none
+		sourceColumn: LastModifiedById
+
+		annotation SummarizationSetBy = Automatic
+
+	column SystemModstamp
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 5d86fd4d-d6df-46c2-a110-8f827ca5a93a
+		summarizeBy: none
+		sourceColumn: SystemModstamp
+
+		variation Variación
+			isDefault
+			relationship: 960fa8a5-752f-4ec0-b158-9420123ef49d
+			defaultHierarchy: LocalDateTable_aab0af9b-74a6-4823-bd7a-f82539bfccd3.'Jerarquía de fechas'
+
+		annotation SummarizationSetBy = Automatic
+
+	column LastActivityDate
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 3963c488-dd50-4038-b745-61c5adaa014a
+		summarizeBy: none
+		sourceColumn: LastActivityDate
+
+		variation Variación
+			isDefault
+			relationship: 6a8443f0-1e08-4504-993e-4c13dc2d56ee
+			defaultHierarchy: LocalDateTable_e23dfe52-291b-4d68-bc36-e53f1ea443fe.'Jerarquía de fechas'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column FiscalQuarter
+		dataType: int64
+		formatString: 0
+		lineageTag: 05a1cf13-0fdf-4f9c-8c6d-32f1732ef75c
+		summarizeBy: sum
+		sourceColumn: FiscalQuarter
+
+		annotation SummarizationSetBy = Automatic
+
+	column FiscalYear
+		dataType: int64
+		formatString: 0
+		lineageTag: 77069eeb-28d3-4482-b243-c3d851fdd720
+		summarizeBy: sum
+		sourceColumn: FiscalYear
+
+		annotation SummarizationSetBy = Automatic
+
+	column Fiscal
+		dataType: string
+		lineageTag: 3ca9989a-b2f9-45bd-88c3-33ead4f5b82e
+		summarizeBy: none
+		sourceColumn: Fiscal
+
+		annotation SummarizationSetBy = Automatic
+
+	column ContactId
+		dataType: string
+		lineageTag: a7cf5bfb-737b-4407-910b-925bfa4e14a4
+		summarizeBy: none
+		sourceColumn: ContactId
+
+		annotation SummarizationSetBy = Automatic
+
+	column LastViewedDate
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: aee6d5dd-bc84-485c-839a-8df0bb9909b0
+		summarizeBy: none
+		sourceColumn: LastViewedDate
+
+		variation Variación
+			isDefault
+			relationship: ec7d7d90-8ab1-43bd-afc2-b8670816f53b
+			defaultHierarchy: LocalDateTable_a0fb6504-129d-47f9-b907-13071c0947ea.'Jerarquía de fechas'
+
+		annotation SummarizationSetBy = Automatic
+
+	column LastReferencedDate
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 8487323b-ed9d-4cc0-b193-4fee3493041a
+		summarizeBy: none
+		sourceColumn: LastReferencedDate
+
+		variation Variación
+			isDefault
+			relationship: 9f9f590e-d214-49c6-a525-8ffb457701b5
+			defaultHierarchy: LocalDateTable_163eac21-90c8-4fe8-ab09-0f653712d651.'Jerarquía de fechas'
+
+		annotation SummarizationSetBy = Automatic
+
+	column SyncedQuoteId
+		dataType: string
+		lineageTag: b3d0cc67-11e3-4242-9eb2-f6b4fec15192
+		summarizeBy: none
+		sourceColumn: SyncedQuoteId
+
+		annotation SummarizationSetBy = Automatic
+
+	column ContractId
+		dataType: string
+		lineageTag: d2af45db-6235-421b-a19e-575a6cf11143
+		summarizeBy: none
+		sourceColumn: ContractId
+
+		annotation SummarizationSetBy = Automatic
+
+	column HasOpenActivity
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 41980496-8215-4e31-b0f1-7068b184cbfe
+		summarizeBy: none
+		sourceColumn: HasOpenActivity
+
+		annotation SummarizationSetBy = Automatic
+
+	column HasOverdueTask
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 535e3375-207b-4270-af56-3bd9fe201c05
+		summarizeBy: none
+		sourceColumn: HasOverdueTask
+
+		annotation SummarizationSetBy = Automatic
+
+	column Budget_Confirmed__c
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 98efcbfe-ac5a-46ab-88ab-2077c14e5dd2
+		summarizeBy: none
+		sourceColumn: Budget_Confirmed__c
+
+		annotation SummarizationSetBy = Automatic
+
+	column Discovery_Completed__c
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 04e3626e-e42d-4f3a-9f02-cd7c9dcef457
+		summarizeBy: none
+		sourceColumn: Discovery_Completed__c
+
+		annotation SummarizationSetBy = Automatic
+
+	column ROI_Analysis_Completed__c
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 0945fc8e-8a51-4423-b67e-c9013521f125
+		summarizeBy: none
+		sourceColumn: ROI_Analysis_Completed__c
+
+		annotation SummarizationSetBy = Automatic
+
+	column Contacto_Ppal_de_la_Oportunidad__c
+		dataType: string
+		lineageTag: 40763db4-93ac-4f83-8187-a0b1fca2e435
+		summarizeBy: none
+		sourceColumn: Contacto_Ppal_de_la_Oportunidad__c
+
+		annotation SummarizationSetBy = Automatic
+
+	column Motivo_perdida__c
+		dataType: string
+		lineageTag: e14e0a20-bdc2-4c13-8682-8a9b576f56fe
+		summarizeBy: none
+		sourceColumn: Motivo_perdida__c
+
+		annotation SummarizationSetBy = Automatic
+
+	column Competidor__c
+		dataType: string
+		lineageTag: 6640e777-a3c6-4e80-b2f8-b49b56eb1883
+		summarizeBy: none
+		sourceColumn: Competidor__c
+
+		annotation SummarizationSetBy = Automatic
+
+	column Cuenta_Origen__c
+		dataType: string
+		lineageTag: 624d8d19-8707-4e45-9efa-391d6f5ca37b
+		summarizeBy: none
+		sourceColumn: Cuenta_Origen__c
+
+		annotation SummarizationSetBy = Automatic
+
+	column Id_Externo__c
+		dataType: string
+		lineageTag: e7fe669c-a4c6-4a0c-87f8-784b84fc6ce8
+		summarizeBy: none
+		sourceColumn: Id_Externo__c
+
+		annotation SummarizationSetBy = Automatic
+
+	column Fecha_toma_decisi_n__c
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: f3728e1e-1a22-4454-ba1a-7bc4666f6dbf
+		summarizeBy: none
+		sourceColumn: Fecha_toma_decisi_n__c
+
+		variation Variación
+			isDefault
+			relationship: fb7f3c49-2025-49ae-9669-84e587c24b82
+			defaultHierarchy: LocalDateTable_a41cba2e-8f4e-47e6-859b-2397c1797772.'Jerarquía de fechas'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column Resumen_perdida__c
+		dataType: string
+		lineageTag: 4f94529c-1710-400f-bb2d-3e08993e90b9
+		summarizeBy: none
+		sourceColumn: Resumen_perdida__c
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Oportunidad = m
+		mode: import
+		source =
+				let
+				    Origen = Salesforce.Data("https://login.salesforce.com/", [ApiVersion=48]),
+				    Opportunity = Origen{[Name="Opportunity"]}[Data]
+				in
+				    Opportunity
+
