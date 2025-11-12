@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.3.0/schema.json",
-  "name": "b1dd3259d06287d2cc68",
+  "name": "54749d8d1b45564ad41a",
   "position": {
-    "x": 7.7811550151975686,
+    "x": 338.48024316109422,
     "y": 88.510638297872347,
-    "z": 0,
+    "z": 7000,
     "height": 82.674772036474167,
-    "width": 166.32218844984803,
-    "tabOrder": 7000
+    "width": 158.54103343465047,
+    "tabOrder": 6000
   },
   "visual": {
     "visualType": "card",
@@ -93,6 +93,13 @@
       "title": [
         {
           "properties": {
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Oportunidades cerradas'"
+                }
+              }
+            },
             "show": {
               "expr": {
                 "Literal": {
@@ -100,10 +107,10 @@
                 }
               }
             },
-            "text": {
+            "titleWrap": {
               "expr": {
                 "Literal": {
-                  "Value": "'Total Oportunidades'"
+                  "Value": "true"
                 }
               }
             },
@@ -111,13 +118,6 @@
               "expr": {
                 "Literal": {
                   "Value": "'center'"
-                }
-              }
-            },
-            "titleWrap": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
                 }
               }
             },
@@ -139,17 +139,17 @@
       "subTitle": [
         {
           "properties": {
-            "show": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
-            },
             "text": {
               "expr": {
                 "Literal": {
                   "Value": "''"
+                }
+              }
+            },
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
                 }
               }
             }
@@ -182,7 +182,95 @@
   "filterConfig": {
     "filters": [
       {
-        "name": "a503fc17a79b124c9a7f",
+        "name": "df712e7098dcb0b35a87",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Oportunidad"
+              }
+            },
+            "Property": "IsClosed"
+          }
+        },
+        "type": "Categorical",
+        "filter": {
+          "Version": 2,
+          "From": [
+            {
+              "Name": "o",
+              "Entity": "Oportunidad",
+              "Type": 0
+            }
+          ],
+          "Where": [
+            {
+              "Condition": {
+                "Not": {
+                  "Expression": {
+                    "In": {
+                      "Expressions": [
+                        {
+                          "Column": {
+                            "Expression": {
+                              "SourceRef": {
+                                "Source": "o"
+                              }
+                            },
+                            "Property": "IsClosed"
+                          }
+                        }
+                      ],
+                      "Values": [
+                        [
+                          {
+                            "Literal": {
+                              "Value": "false"
+                            }
+                          }
+                        ]
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        },
+        "howCreated": "User",
+        "objects": {
+          "general": [
+            {
+              "properties": {
+                "isInvertedSelectionMode": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "true"
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "e1eda93a3c6d1dedaa57",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Oportunidad"
+              }
+            },
+            "Property": "StageName"
+          }
+        },
+        "type": "Categorical",
+        "howCreated": "User"
+      },
+      {
+        "name": "14271c85640db791167e",
         "field": {
           "Aggregation": {
             "Expression": {

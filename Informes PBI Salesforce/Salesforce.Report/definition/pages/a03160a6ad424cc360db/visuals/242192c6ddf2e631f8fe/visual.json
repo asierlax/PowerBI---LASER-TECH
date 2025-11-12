@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.3.0/schema.json",
-  "name": "b1dd3259d06287d2cc68",
+  "name": "242192c6ddf2e631f8fe",
   "position": {
-    "x": 7.7811550151975686,
+    "x": 181.88449848024317,
     "y": 88.510638297872347,
-    "z": 0,
+    "z": 6000,
     "height": 82.674772036474167,
-    "width": 166.32218844984803,
-    "tabOrder": 7000
+    "width": 148.8145896656535,
+    "tabOrder": 5000
   },
   "visual": {
     "visualType": "card",
@@ -93,6 +93,13 @@
       "title": [
         {
           "properties": {
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Oportunidades abiertas'"
+                }
+              }
+            },
             "show": {
               "expr": {
                 "Literal": {
@@ -100,10 +107,10 @@
                 }
               }
             },
-            "text": {
+            "titleWrap": {
               "expr": {
                 "Literal": {
-                  "Value": "'Total Oportunidades'"
+                  "Value": "true"
                 }
               }
             },
@@ -111,13 +118,6 @@
               "expr": {
                 "Literal": {
                   "Value": "'center'"
-                }
-              }
-            },
-            "titleWrap": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
                 }
               }
             },
@@ -139,17 +139,17 @@
       "subTitle": [
         {
           "properties": {
-            "show": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
-            },
             "text": {
               "expr": {
                 "Literal": {
                   "Value": "''"
+                }
+              }
+            },
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
                 }
               }
             }
@@ -182,7 +182,61 @@
   "filterConfig": {
     "filters": [
       {
-        "name": "a503fc17a79b124c9a7f",
+        "name": "df712e7098dcb0b35a87",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Oportunidad"
+              }
+            },
+            "Property": "IsClosed"
+          }
+        },
+        "type": "Categorical",
+        "filter": {
+          "Version": 2,
+          "From": [
+            {
+              "Name": "o",
+              "Entity": "Oportunidad",
+              "Type": 0
+            }
+          ],
+          "Where": [
+            {
+              "Condition": {
+                "In": {
+                  "Expressions": [
+                    {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Source": "o"
+                          }
+                        },
+                        "Property": "IsClosed"
+                      }
+                    }
+                  ],
+                  "Values": [
+                    [
+                      {
+                        "Literal": {
+                          "Value": "false"
+                        }
+                      }
+                    ]
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        "howCreated": "User"
+      },
+      {
+        "name": "2a9c38fb3cd483d20bbd",
         "field": {
           "Aggregation": {
             "Expression": {

@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/report/3.0.0/schema.json",
   "themeCollection": {
     "baseTheme": {
-      "name": "CY25SU10",
+      "name": "CY18SU07",
       "reportVersionAtImport": {
-        "visual": "2.1.0",
-        "report": "3.0.0",
-        "page": "2.3.0"
+        "visual": "1.8.23",
+        "report": "2.0.23",
+        "page": "1.3.23"
       },
       "type": "SharedResources"
     }
@@ -26,15 +26,30 @@
       }
     ]
   },
+  "publicCustomVisuals": [
+    "HorizontalFunnel1449177164235",
+    "funnelwithsource1823AB39DB234AB522063E728AD51"
+  ],
   "resourcePackages": [
     {
       "name": "SharedResources",
       "type": "SharedResources",
       "items": [
         {
-          "name": "CY25SU10",
-          "path": "BaseThemes/CY25SU10.json",
+          "name": "CY18SU07",
+          "path": "BaseThemes/CY18SU07.json",
           "type": "BaseTheme"
+        }
+      ]
+    },
+    {
+      "name": "RegisteredResources",
+      "type": "RegisteredResources",
+      "items": [
+        {
+          "name": "Salesforce_logo_PBI7499526899168677.png",
+          "path": "Salesforce_logo_PBI7499526899168677.png",
+          "type": "Image"
         }
       ]
     }

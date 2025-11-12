@@ -5,8 +5,13 @@
   "displayOption": "FitToPage",
   "height": 720,
   "width": 1280,
+  "pageBinding": {
+    "name": "b1369921521c3f0a03b1",
+    "type": "Default",
+    "parameters": []
+  },
   "objects": {
-    "background": [
+    "outspace": [
       {
         "properties": {
           "color": {
@@ -15,7 +20,7 @@
                 "expr": {
                   "ThemeDataColor": {
                     "ColorId": 0,
-                    "Percent": 0
+                    "Percent": -0.1
                   }
                 }
               }
@@ -24,15 +29,23 @@
         }
       }
     ],
-    "outspace": [
+    "background": [
       {
         "properties": {
+          "transparency": {
+            "expr": {
+              "Literal": {
+                "Value": "0D"
+              }
+            }
+          },
           "color": {
             "solid": {
               "color": {
                 "expr": {
-                  "Literal": {
-                    "Value": "'#F6F6F6'"
+                  "ThemeDataColor": {
+                    "ColorId": 0,
+                    "Percent": -0.1
                   }
                 }
               }
@@ -41,5 +54,37 @@
         }
       }
     ]
-  }
+  },
+  "visualInteractions": [
+    {
+      "source": "cfce52688d50c84845b4",
+      "target": "95a61f4db6ee39de734c",
+      "type": "NoFilter"
+    },
+    {
+      "source": "95a61f4db6ee39de734c",
+      "target": "b1dd3259d06287d2cc68",
+      "type": "NoFilter"
+    },
+    {
+      "source": "95a61f4db6ee39de734c",
+      "target": "242192c6ddf2e631f8fe",
+      "type": "NoFilter"
+    },
+    {
+      "source": "95a61f4db6ee39de734c",
+      "target": "54749d8d1b45564ad41a",
+      "type": "NoFilter"
+    },
+    {
+      "source": "95a61f4db6ee39de734c",
+      "target": "8e52e8969f8fb848fb2b",
+      "type": "NoFilter"
+    },
+    {
+      "source": "95a61f4db6ee39de734c",
+      "target": "71fe35c19bb0f4e65d46",
+      "type": "NoFilter"
+    }
+  ]
 }

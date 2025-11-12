@@ -1,18 +1,37 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.3.0/schema.json",
-  "name": "b1dd3259d06287d2cc68",
+  "name": "70a5da300d0a5575f651",
   "position": {
     "x": 7.7811550151975686,
-    "y": 88.510638297872347,
-    "z": 0,
-    "height": 82.674772036474167,
-    "width": 166.32218844984803,
-    "tabOrder": 7000
+    "y": 421.15501519756839,
+    "z": 4000,
+    "height": 287.90273556231006,
+    "width": 433.79939209726444,
+    "tabOrder": 3000
   },
   "visual": {
-    "visualType": "card",
+    "visualType": "treemap",
     "query": {
       "queryState": {
+        "Details": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Oportunidad"
+                    }
+                  },
+                  "Property": "Type"
+                }
+              },
+              "queryRef": "Oportunidad.Type",
+              "nativeQueryRef": "Tipo",
+              "displayName": "Tipo"
+            }
+          ]
+        },
         "Values": {
           "projections": [
             {
@@ -28,60 +47,57 @@
                       "Property": "Id"
                     }
                   },
-                  "Function": 2
+                  "Function": 5
                 }
               },
-              "queryRef": "Min(Oportunidad.Id)",
-              "nativeQueryRef": "Recuento de Id1"
+              "queryRef": "CountNonNull(Oportunidad.Id)",
+              "nativeQueryRef": "Recuento de Id"
             }
           ]
         }
-      },
-      "sortDefinition": {
-        "sort": [
-          {
-            "field": {
-              "Aggregation": {
-                "Expression": {
-                  "Column": {
-                    "Expression": {
-                      "SourceRef": {
-                        "Entity": "Oportunidad"
-                      }
-                    },
-                    "Property": "Id"
-                  }
-                },
-                "Function": 2
-              }
-            },
-            "direction": "Descending"
-          }
-        ],
-        "isDefaultSort": true
       }
     },
     "objects": {
-      "categoryLabels": [
+      "labels": [
         {
           "properties": {
             "show": {
               "expr": {
                 "Literal": {
-                  "Value": "false"
+                  "Value": "true"
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "10D"
                 }
               }
             }
           }
         }
       ],
-      "labels": [
+      "categoryLabels": [
         {
           "properties": {
-            "labelPrecision": {
+            "fontSize": {
               "expr": {
                 "Literal": {
-                  "Value": "0L"
+                  "Value": "11D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "layout": [
+        {
+          "properties": {
+            "tilingMethod": {
+              "expr": {
+                "Literal": {
+                  "Value": "'stableSquarified'"
                 }
               }
             }
@@ -93,31 +109,17 @@
       "title": [
         {
           "properties": {
-            "show": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
-            },
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Total Oportunidades'"
+                  "Value": "'Oportunidades por Tipo'"
                 }
               }
             },
-            "alignment": {
+            "fontSize": {
               "expr": {
                 "Literal": {
-                  "Value": "'center'"
-                }
-              }
-            },
-            "titleWrap": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
+                  "Value": "13D"
                 }
               }
             },
@@ -132,24 +134,11 @@
                   }
                 }
               }
-            }
-          }
-        }
-      ],
-      "subTitle": [
-        {
-          "properties": {
-            "show": {
+            },
+            "bold": {
               "expr": {
                 "Literal": {
                   "Value": "true"
-                }
-              }
-            },
-            "text": {
-              "expr": {
-                "Literal": {
-                  "Value": "''"
                 }
               }
             }
@@ -182,7 +171,21 @@
   "filterConfig": {
     "filters": [
       {
-        "name": "a503fc17a79b124c9a7f",
+        "name": "3e63653c59f28adcc50f",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Oportunidad"
+              }
+            },
+            "Property": "Type"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "8605d8699d4e83df027d",
         "field": {
           "Aggregation": {
             "Expression": {
@@ -195,7 +198,7 @@
                 "Property": "Id"
               }
             },
-            "Function": 2
+            "Function": 5
           }
         },
         "type": "Advanced"
