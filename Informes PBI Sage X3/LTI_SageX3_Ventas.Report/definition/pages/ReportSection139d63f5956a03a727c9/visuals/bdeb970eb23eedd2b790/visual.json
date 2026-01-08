@@ -19,7 +19,7 @@
               {
                 "textRuns": [
                   {
-                    "value": "Informe Gestión Ventas",
+                    "value": "Informe Ventas",
                     "textStyle": {
                       "fontWeight": "bold",
                       "fontFamily": "Segoe UI",
@@ -33,7 +33,7 @@
               {
                 "textRuns": [
                   {
-                    "value": "Verne Technology Group",
+                    "value": "Sage X3",
                     "textStyle": {
                       "fontFamily": "Segoe UI",
                       "fontSize": "28pt",
