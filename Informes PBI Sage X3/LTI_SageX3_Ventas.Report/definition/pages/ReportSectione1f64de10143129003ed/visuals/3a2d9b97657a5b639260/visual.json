@@ -1,0 +1,121 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
+  "name": "3a2d9b97657a5b639260",
+  "position": {
+    "x": 875.7946210268949,
+    "y": 159.31540342298288,
+    "z": 8000,
+    "height": 110.02444987775061,
+    "width": 370.56234718826408,
+    "tabOrder": 10000
+  },
+  "visual": {
+    "visualType": "treemap",
+    "query": {
+      "queryState": {
+        "Group": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "ABC by Year"
+                    }
+                  },
+                  "Property": "ABC Class"
+                }
+              },
+              "queryRef": "ABC by Year.ABC Class",
+              "active": true,
+              "displayName": "Clase ABC"
+            }
+          ]
+        },
+        "Tooltips": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "ABC by Year"
+                    }
+                  },
+                  "Property": "ABC Sales Amount"
+                }
+              },
+              "queryRef": "Metricas.ABC Sales Amount",
+              "displayName": "Ventas"
+            }
+          ]
+        },
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "ABC by Year"
+                    }
+                  },
+                  "Property": "Customers ABC"
+                }
+              },
+              "queryRef": "Metricas.# Customers",
+              "displayName": "Nº de clientes"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "isDefaultSort": true
+      }
+    },
+    "objects": {
+      "labels": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "background": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

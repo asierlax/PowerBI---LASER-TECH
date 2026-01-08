@@ -84,6 +84,13 @@
                   "Value": "0L"
                 }
               }
+            },
+            "labelDisplayUnits": {
+              "expr": {
+                "Literal": {
+                  "Value": "1D"
+                }
+              }
             }
           }
         }
@@ -182,7 +189,7 @@
   "filterConfig": {
     "filters": [
       {
-        "name": "a503fc17a79b124c9a7f",
+        "name": "0b4670dfcffe39f5234a",
         "field": {
           "Aggregation": {
             "Expression": {

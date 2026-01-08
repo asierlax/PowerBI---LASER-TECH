@@ -4,10 +4,10 @@
   "position": {
     "x": 930.82066869300911,
     "y": 421.15501519756839,
-    "z": 11001,
+    "z": 12000,
     "height": 287.90273556231006,
     "width": 342.370820668693,
-    "tabOrder": 11001
+    "tabOrder": 12000
   },
   "visual": {
     "visualType": "clusteredColumnChart",
@@ -213,39 +213,6 @@
           ]
         },
         "howCreated": "User"
-      },
-      {
-        "name": "aa7b56f96d8f6a2af4b1",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Usuario"
-              }
-            },
-            "Property": "Name"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "b7423a5cd5d537de7df7",
-        "field": {
-          "Aggregation": {
-            "Expression": {
-              "Column": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "Oportunidad"
-                  }
-                },
-                "Property": "Id"
-              }
-            },
-            "Function": 5
-          }
-        },
-        "type": "Advanced"
       }
     ]
   }

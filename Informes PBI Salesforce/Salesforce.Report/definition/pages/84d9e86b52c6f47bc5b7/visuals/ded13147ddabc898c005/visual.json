@@ -1,0 +1,153 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.3.0/schema.json",
+  "name": "ded13147ddabc898c005",
+  "position": {
+    "x": 174.3653250773994,
+    "y": 184.27244582043346,
+    "z": 12005,
+    "height": 193.1888544891641,
+    "width": 248.66873065015483,
+    "tabOrder": 12005
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Usuario_Cuenta"
+                    }
+                  },
+                  "Property": "Name"
+                }
+              },
+              "queryRef": "Usuario_Cuenta.Name",
+              "nativeQueryRef": "Comercial",
+              "displayName": "Comercial"
+            },
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Cuenta"
+                        }
+                      },
+                      "Property": "Id"
+                    }
+                  },
+                  "Function": 2
+                }
+              },
+              "queryRef": "Cuenta.Id",
+              "nativeQueryRef": "Recuento",
+              "displayName": "Recuento"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Usuario_Cuenta"
+                  }
+                },
+                "Property": "Name"
+              }
+            },
+            "direction": "Descending"
+          }
+        ]
+      }
+    },
+    "objects": {
+      "columnFormatting": [
+        {
+          "properties": {
+            "labelDisplayUnits": {
+              "expr": {
+                "Literal": {
+                  "Value": "1D"
+                }
+              }
+            },
+            "labelPrecision": {
+              "expr": {
+                "Literal": {
+                  "Value": "0L"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Cuenta.Id"
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "stylePreset": [
+        {
+          "properties": {
+            "name": {
+              "expr": {
+                "Literal": {
+                  "Value": "'AlternatingRowsNew'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "bb412ef91a5a5f51f379",
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Cuenta"
+                  }
+                },
+                "Property": "Id"
+              }
+            },
+            "Function": 2
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "8c320544249cd917e9f8",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Usuario_Cuenta"
+              }
+            },
+            "Property": "Name"
+          }
+        },
+        "type": "Categorical"
+      }
+    ]
+  }
+}

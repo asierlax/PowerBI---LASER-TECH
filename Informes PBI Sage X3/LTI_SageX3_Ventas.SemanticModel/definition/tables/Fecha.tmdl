@@ -1,0 +1,125 @@
+table Fecha
+	lineageTag: fff26a44-9740-4abc-af8c-31819644bc51
+	dataCategory: Time
+
+	measure MaxSelectedDate = CALCULATE(MAX('Fecha'[Fecha]), ALLSELECTED('Fecha'))
+		formatString: General Date
+		lineageTag: 78b13da0-6fa5-42f1-b717-e1b9714b2d53
+
+	measure MinSelectedDate = CALCULATE(MIN('Fecha'[Fecha]), ALLSELECTED('Fecha'))
+		formatString: General Date
+		lineageTag: 1b8d3551-577a-4794-9ebb-50c51482ccfe
+
+	column Fecha
+		isKey
+		formatString: dd/mm/yyyy
+		lineageTag: fb4324f0-9e53-4f3e-8073-a50193fcc7fc
+		summarizeBy: none
+		sourceColumn: [Date]
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isDateTimeCustom":true}
+
+	column Ano = YEAR(Fecha[Fecha])
+		formatString: 0
+		lineageTag: a8bebbae-1dff-4678-9bf2-ef54528fbc33
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column Dia = day([Fecha])
+		formatString: 0
+		lineageTag: 6e8c8182-dd1a-4303-a849-8914c90b5e82
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column Mes = MONTH([Fecha])
+		formatString: 0
+		lineageTag: 9a445354-7a42-4aa4-90e0-631a9b3e4b98
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Nombre Mes' = UPPER( mid(FORMAT([Fecha],"MMM"),1,1)) & mid(FORMAT([Fecha],"MMM"),2,100)
+		lineageTag: e550ad4e-e79b-4c56-abbc-d40368202b2d
+		summarizeBy: none
+		sortByColumn: Mes
+
+		annotation SummarizationSetBy = Automatic
+
+	column Trimestre = "T" & QUARTER([Fecha])
+		lineageTag: f6a03463-f025-4f0f-bd46-34471a035f6f
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column MesAno = (Fecha[Nombre Mes] & "-" & Fecha[Ano])
+		dataType: string
+		lineageTag: 3af2a9fa-de9b-43bb-8a62-a5e68078caa1
+		summarizeBy: none
+
+		changedProperty = DataType
+
+		annotation SummarizationSetBy = Automatic
+
+	column AnoMes = CONCATENATE(Fecha[Ano],if(len(Fecha[Mes])=1,CONCATENATE("0",Fecha[Mes]),Fecha[Mes]))
+		lineageTag: c490e5e4-384e-45ad-81fb-0ccc6eca17a8
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column AnoMesStock = CONCATENATE(year(NOW()), if(len(month(NOW()))=1,CONCATENATE("0", month(NOW())),month(NOW())))
+		lineageTag: 0497b53f-b241-407d-82bb-4ec770b04b29
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	hierarchy 'Ano Jerarquía'
+		lineageTag: b0874bca-434f-4dff-a9e1-65ec509e88d0
+
+		level Ano
+			lineageTag: 467f8e18-a470-4c12-a637-27bb4e0f15f0
+			column: Ano
+
+		level Trimestre
+			lineageTag: afa7af5c-6a84-4a48-9a4d-d1db830d8559
+			column: Trimestre
+
+		level Mes
+			lineageTag: 9e1a76ce-127c-4731-be96-f688e0aae28b
+			column: Mes
+
+		level Dia
+			lineageTag: 2941640b-d856-4748-8032-85e2dbb6614b
+			column: Dia
+
+	hierarchy 'MesAno Hierarchy'
+		lineageTag: 68a4aed3-c019-4890-8566-a3233bf576f2
+
+		level MesAno
+			lineageTag: 035aae1f-8bec-456e-9825-14b6500e60f4
+			column: MesAno
+
+		level Mes
+			lineageTag: 8ebafac1-e68d-406a-aa02-4a1ea0b1d983
+			column: Mes
+
+	hierarchy 'MesAno Hierarchy 2'
+		lineageTag: 3710d133-d07c-406b-b2da-68bd24962247
+
+		level MesAno
+			lineageTag: c520af5d-a032-4039-bee8-1bec50047c0d
+			column: MesAno
+
+		level Mes
+			lineageTag: 46b7e08b-ee51-44f0-abe3-c647c2f5899f
+			column: Mes
+
+	partition Fecha-75bde20e-0cf7-4839-baec-03011fb1b0f3 = calculated
+		mode: import
+		source = CALENDAR(DATE(2020,1,1),DATE(2023,12,31))
+
+	annotation PBI_Id = c5e160ff35dd4db1a0bf063cb89b77d3
+

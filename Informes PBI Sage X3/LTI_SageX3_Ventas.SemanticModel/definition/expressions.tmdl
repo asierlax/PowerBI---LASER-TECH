@@ -1,0 +1,166 @@
+expression 'General Posting Setup' = ```
+		let
+		    CurrentServer = Instancia,
+		    CurrentDatabase = BaseDeDatos,
+		    CurrentSchema = Esquema,
+		    Origen = Sql.Database(CurrentServer, CurrentDatabase, [Query="
+		                                                                SELECT  -1 AS sk_Cuenta,
+		                                                                        '-1' as idCuenta,
+		                                                                        'Indefinida' as Cuenta,
+		                                                                        '-1' as [No Cuenta],
+		                                                                        -1 as Grupo,
+		                                                                        'INDEFINIDA' AS NombreBusqueda,
+		                                                                        0 as Indentacion,
+		                                                                        'Indefinido' as GrupoCuenta 
+		                                                                        
+		                                                                    union all 
+		                                                                
+		                                                                SELECT  A.ACC_0 as sk_Cuenta, 
+		                                                                        A.ACC_0 + '#2' AS idCuenta, 
+		                                                                        A.DES_0 AS Cuenta, 
+		                                                                        A.ACC_0 as [No Cuenta], 
+		                                                                        LEFT(A.ACC_0,1) AS Grupo, 
+		                                                                        UPPER(A.DES_0) as NombreBusqueda,
+		                                                                        0 as Indentacion,
+		                                                                        CASE LEFT(LTRIM(RTRIM(A.ACC_0)), 1) WHEN '1' THEN '1.- Financiación Básica' 
+		                                                                                                            WHEN '2' THEN '2.- Inmovilizado' 
+		                                                                                                            WHEN '3' THEN '3.- Existencias' 
+		                                                                                                            WHEN '4' THEN '4.- Acreedores y Deudores' 
+		                                                                                                            WHEN '5' THEN '5.- Cuentas Financieras' 
+		                                                                                                            WHEN '6' THEN '6.- Compras y Gastos' 
+		                                                                                                            WHEN '7' THEN '7.- Ventas e Ingresos' 
+		                                                                                                            WHEN '8' THEN '8.- Gastos del Patrimonio Neto' 
+		                                                                                                            WHEN '9' THEN '9.- Ingresos del Patrimonio Neto' 
+		                                                                        END AS GrupoCuenta 
+		                                                                FROM " & CurrentSchema & ".GACCOUNT AS A WHERE COA_0 = 'SPA' "
+		                                                          ])
+		in
+		    Origen
+		```
+	lineageTag: e8a585ae-eebc-4da9-9fb4-80baca848c6e
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+
+expression Resourcce =
+		let
+		    CurrentServer = Instancia,
+		    CurrentDatabase = BaseDeDatos,
+		    CurrentSchema = Esquema,
+		    Origen = Sql.Database(CurrentServer, CurrentDatabase, [Query="
+		                                                                SELECT  *
+		                                                                FROM " & CurrentSchema & ".CACCE WHERE DIE_0 = 'REC'"
+		                                                          ])
+		in
+		    Origen
+	lineageTag: 663e9a20-f85b-4954-b9b4-0f6025397e68
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+
+expression 'Product Group' =
+		let
+		    CurrentServer = Instancia,
+		    CurrentDatabase = BaseDeDatos,
+		    CurrentSchema = Esquema,
+		    Origen = Sql.Database(CurrentServer, CurrentDatabase, [Query="
+		                                                                SELECT IDENT1_0, IDENT2_0, TEXTE_0 FROM "& CurrentSchema &".ATEXTRA WHERE CODFIC_0 = 'ATABDIV' AND ZONE_0 = 'LNGDES' AND IDENT1_0 IN ('20', '21', '22')"
+		                                                          ])
+		in
+		    Origen
+	lineageTag: 5c5819ad-b9b1-4c05-a0e9-1a1d768de858
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+
+expression Proyectos =
+		let
+		    CurrentServer = Instancia,
+		    CurrentDatabase = BaseDeDatos,
+		    CurrentSchema = Esquema,
+		    Origen = Sql.Database(CurrentServer, CurrentDatabase, [Query="
+		                                                                SELECT  *
+		                                                                FROM " & CurrentSchema & ".ZPROYECI"
+		                                                          ])
+		in
+		    Origen
+	lineageTag: 49e0b423-2b60-490a-92ab-6c15f2e57c80
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Exception
+
+/// Obligatorio:
+/// Servidor en el que se aloja la Base de datos
+expression Instancia = "192.168.1.14\X3V12" meta [IsParameterQuery=true, Type="Text", IsParameterQueryRequired=true]
+	lineageTag: bc882005-270d-4f6e-a735-9201221656bc
+	queryGroup: Auxiliares
+
+	annotation PBI_ResultType = Text
+
+/// Obligatorio:
+/// Base de datos donde se encuentra la información de Sage x3
+expression BaseDeDatos = "x3v12" meta [IsParameterQuery=true, Type="Text", IsParameterQueryRequired=true]
+	lineageTag: a1a82060-5be5-45e3-8782-106ec59ff066
+	queryGroup: Auxiliares
+
+	annotation PBI_ResultType = Text
+
+/// Obligatorio:
+/// Esquema de la Base de Datos
+expression Esquema = "VYGON" meta [IsParameterQuery=true, Type="Text", IsParameterQueryRequired=true]
+	lineageTag: 761542c4-251b-4873-8fb8-f02c6707feb2
+	queryGroup: Auxiliares
+
+	annotation PBI_ResultType = Text
+
+	annotation PBI_NavigationStepName = Navigation
+
+/// Opcional:
+/// Nº máximo de registros que se cargarán en el modelo. 
+/// 
+/// AVISO: Si el modelo supera los 120.000.000 de registros, no se podrá publicar en el servidor ya que el límite de tamaño es de 1GB.
+expression Registros = "120000000" meta [IsParameterQuery=true, List={"120000000"}, DefaultValue="120000000", Type="Text", IsParameterQueryRequired=false]
+	lineageTag: a4663608-c6ff-4f8d-9b8b-107452dcf83f
+	queryGroup: Auxiliares
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Text
+
+/// Opcional:
+/// Año a partir del cual se van a cargar los registros. Por ejemplo, si introducimos "2010", se cargará toda la información desde el 2010 hasta el presente. 
+/// 
+/// Si no seleccionas un periodo, el modelo cargará automaticamente el número de años adecuado a la capacidad de almacenaje del modelo.
+expression Periodo = "Periodo automático" meta [IsParameterQuery=true, List={"Periodo automático"}, DefaultValue="Periodo automático", Type="Text", IsParameterQueryRequired=false]
+	lineageTag: e61ac979-a551-45cf-8498-39bc1ba5af54
+	queryGroup: Auxiliares
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Text
+
+expression Provincias =
+		let
+		    Source = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText("TVJBTiQxDPxKxJlPwAgGVs0uYkYcQBw8HW8rI3e8cndaon/DkQOHFU/oj+HBzgy3qtgplyt5fj67CCuWsvyHs5dzZQRTRTtocUQnqYV8JD3K8uFtw1gkwWBkSmTHlxBhz7NjaZE4e6VIx9a+Wt5aFDySmOzCSkfBTlWdDSMSLZ/ZKJbRC6lEiOEBgVzhUyLvvFgwtwavWXpU82J0naR6WQtkNWq4KCLYQ20r6V+ZWzZ2U5CmIxxc+XaXZkO/YHk3fw2Eh8T704Cg60Bd5rqgjDipneJzGsgzCHu2DdY9m+VdkntrSsff4A6iHhpc3gg68GMiFjd1h/mEi7Q++bc+rPjMP4J5sIH3QBqU99xzPpiL3rbRPHqoMW4xo6S/WLdcc4/HHYLq9EauKNwkFDHHG+x4cvkN6v/wD7LhGsn2YKurT7JF0agNMmE0lcefLpUQRCYP4jHNLbxa6Ql6lgoPqv48twPBEC5VBep/+zYcIoZTeC9f", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type nullable text) meta [Serialized.Text = true]) in type table [Provincias = _t]),
+		    #"Changed Type" = Table.TransformColumnTypes(Source,{{"Provincias", type text}}),
+		    #"Sorted Rows" = Table.Sort(#"Changed Type",{{"Provincias", Order.Ascending}})
+		in
+		    #"Sorted Rows"
+	lineageTag: a52de956-6ddf-41a9-905d-f62afe9142c8
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+
+expression Empresa = "VYGONFR" meta [IsParameterQuery=true, Type="Any", IsParameterQueryRequired=true]
+	lineageTag: d06f8ca6-7d86-41b2-9b91-51cb228963de
+	queryGroup: Auxiliares
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Text
+

@@ -1,0 +1,65 @@
+table Usuario_Cuenta
+	lineageTag: d6d083c3-3947-4e24-93d1-ed56f5dbb70f
+
+	column Id
+		dataType: string
+		lineageTag: 872d3326-f36a-4820-90b6-f838863ab995
+		summarizeBy: none
+		sourceColumn: Id
+
+		annotation SummarizationSetBy = Automatic
+
+	column Username
+		dataType: string
+		lineageTag: 10a090a7-75b2-4e9d-9f70-739f6e9e60e4
+		summarizeBy: none
+		sourceColumn: Username
+
+		annotation SummarizationSetBy = Automatic
+
+	column LastName
+		dataType: string
+		lineageTag: c859c075-0aab-45c1-b8fc-ddbe603ad30b
+		summarizeBy: none
+		sourceColumn: LastName
+
+		annotation SummarizationSetBy = Automatic
+
+	column FirstName
+		dataType: string
+		lineageTag: 9baec7e2-f480-4890-95ae-573bfe1a448d
+		summarizeBy: none
+		sourceColumn: FirstName
+
+		annotation SummarizationSetBy = Automatic
+
+	column Name
+		dataType: string
+		lineageTag: 1ffe55bd-29bd-464d-8d28-5d0bbd3d2acb
+		summarizeBy: none
+		sourceColumn: Name
+
+		annotation SummarizationSetBy = Automatic
+
+	column CompanyName
+		dataType: string
+		lineageTag: e589015a-88ca-43b3-a8cd-db739d94a1c1
+		summarizeBy: none
+		sourceColumn: CompanyName
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Usuario_Cuenta = m
+		mode: import
+		source =
+				let
+				    Origen = Salesforce.Data("https://login.salesforce.com/", [ApiVersion=48]),
+				    User = Origen{[Name="User"]}[Data],
+				    #"Columnas quitadas" = Table.RemoveColumns(User,{"Division", "Department", "Title", "Street", "City", "State", "PostalCode", "Country", "StateCode", "CountryCode", "Latitude", "Longitude", "GeocodeAccuracy", "Address", "Email", "EmailPreferencesAutoBcc", "EmailPreferencesAutoBccStayInTouch", "EmailPreferencesStayInTouchReminder", "SenderEmail", "SenderName", "Signature", "StayInTouchSubject", "StayInTouchSignature", "StayInTouchNote", "Phone", "Fax", "MobilePhone", "Alias", "CommunityNickname", "BadgeText", "IsActive", "TimeZoneSidKey", "UserRoleId", "LocaleSidKey", "ReceivesInfoEmails", "ReceivesAdminInfoEmails", "EmailEncodingKey", "ProfileId", "UserType", "StartDay", "EndDay", "LanguageLocaleKey", "EmployeeNumber", "DelegatedApproverId", "ManagerId", "LastLoginDate", "LastPasswordChangeDate", "CreatedDate", "CreatedById", "LastModifiedDate", "LastModifiedById", "SystemModstamp", "PasswordExpirationDate", "NumberOfFailedLogins", "SuAccessExpirationDate", "OfflineTrialExpirationDate", "OfflinePdaTrialExpirationDate", "UserPermissionsMarketingUser", "UserPermissionsOfflineUser", "UserPermissionsAvantgoUser", "UserPermissionsCallCenterAutoLogin", "UserPermissionsSFContentUser", "UserPermissionsInteractionUser", "UserPermissionsSupportUser", "ForecastEnabled", "UserPreferencesActivityRemindersPopup", "UserPreferencesEventRemindersCheckboxDefault", "UserPreferencesTaskRemindersCheckboxDefault", "UserPreferencesReminderSoundOff", "UserPreferencesDisableAllFeedsEmail", "UserPreferencesDisableFollowersEmail", "UserPreferencesDisableProfilePostEmail", "UserPreferencesDisableChangeCommentEmail", "UserPreferencesDisableLaterCommentEmail", "UserPreferencesDisProfPostCommentEmail", "UserPreferencesApexPagesDeveloperMode", "UserPreferencesReceiveNoNotificationsAsApprover", "UserPreferencesReceiveNotificationsAsDelegatedApprover", "UserPreferencesHideCSNGetChatterMobileTask", "UserPreferencesDisableMentionsPostEmail", "UserPreferencesDisMentionsCommentEmail", "UserPreferencesHideCSNDesktopTask", "UserPreferencesHideChatterOnboardingSplash", "UserPreferencesHideSecondChatterOnboardingSplash", "UserPreferencesDisCommentAfterLikeEmail", "UserPreferencesDisableLikeEmail", "UserPreferencesSortFeedByComment", "UserPreferencesDisableMessageEmail", "UserPreferencesDisableBookmarkEmail", "UserPreferencesDisableSharePostEmail", "UserPreferencesEnableAutoSubForFeeds", "UserPreferencesDisableFileShareNotificationsForApi", "UserPreferencesShowTitleToExternalUsers", "UserPreferencesShowManagerToExternalUsers", "UserPreferencesShowEmailToExternalUsers", "UserPreferencesShowWorkPhoneToExternalUsers", "UserPreferencesShowMobilePhoneToExternalUsers", "UserPreferencesShowFaxToExternalUsers", "UserPreferencesShowStreetAddressToExternalUsers", "UserPreferencesShowCityToExternalUsers", "UserPreferencesShowStateToExternalUsers", "UserPreferencesShowPostalCodeToExternalUsers", "UserPreferencesShowCountryToExternalUsers", "UserPreferencesShowProfilePicToGuestUsers", "UserPreferencesShowTitleToGuestUsers", "UserPreferencesShowCityToGuestUsers", "UserPreferencesShowStateToGuestUsers", "UserPreferencesShowPostalCodeToGuestUsers", "UserPreferencesShowCountryToGuestUsers", "UserPreferencesPipelineViewHideHelpPopover", "UserPreferencesHideS1BrowserUI", "UserPreferencesDisableEndorsementEmail", "UserPreferencesPathAssistantCollapsed", "UserPreferencesCacheDiagnostics", "UserPreferencesShowEmailToGuestUsers", "UserPreferencesShowManagerToGuestUsers", "UserPreferencesShowWorkPhoneToGuestUsers", "UserPreferencesShowMobilePhoneToGuestUsers", "UserPreferencesShowFaxToGuestUsers", "UserPreferencesShowStreetAddressToGuestUsers", "UserPreferencesLightningExperiencePreferred", "UserPreferencesPreviewLightning", "UserPreferencesHideEndUserOnboardingAssistantModal", "UserPreferencesHideLightningMigrationModal", "UserPreferencesHideSfxWelcomeMat", "UserPreferencesHideBiggerPhotoCallout", "UserPreferencesGlobalNavBarWTShown", "UserPreferencesGlobalNavGridMenuWTShown", "UserPreferencesCreateLEXAppsWTShown", "UserPreferencesFavoritesWTShown", "UserPreferencesRecordHomeSectionCollapseWTShown", "UserPreferencesRecordHomeReservedWTShown", "UserPreferencesFavoritesShowTopFavorites", "UserPreferencesExcludeMailAppAttachments", "UserPreferencesSuppressTaskSFXReminders", "UserPreferencesSuppressEventSFXReminders", "UserPreferencesPreviewCustomTheme", "UserPreferencesHasCelebrationBadge", "UserPreferencesUserDebugModePref", "UserPreferencesSRHOverrideActivities", "UserPreferencesNewLightningReportRunPageEnabled", "UserPreferencesNativeEmailClient", "ContactId", "AccountId", "CallCenterId", "Extension", "FederationIdentifier", "AboutMe", "FullPhotoUrl", "SmallPhotoUrl", "IsExtIndicatorVisible", "OutOfOfficeMessage", "MediumPhotoUrl", "DigestFrequency", "DefaultGroupNotificationFrequency", "LastViewedDate", "LastReferencedDate", "BannerPhotoUrl", "SmallBannerPhotoUrl", "MediumBannerPhotoUrl", "IsProfilePhotoActive", "IndividualId", "ID_SAGE__c", "Zona__c", "Zona_de_trabajo__c", "pi__Can_View_Not_Assigned_Prospects__c", "pi__Pardot_Api_Key__c", "pi__Pardot_Api_Version__c", "pi__Pardot_User_Id__c", "pi__Pardot_User_Key__c", "pi__Pardot_User_Role__c", "maps__AllowMapsExports__c", "maps__BetaTester__c", "maps__DefaultLatitude__c", "maps__DefaultLongitude__c", "maps__DefaultProximityRadius__c", "maps__DefaultType__c", "maps__DefaultZoomLevel__c", "maps__DeviceId__c", "maps__DeviceVendor__c", "maps__EditMapsOrgWideQueries__c", "maps__FinishedAdvRouteSetup__c", "maps__MapsSetting__c", "maps__MaxExportSize__c", "maps__MaxQuerySize__c", "maps__PreferredTypeOfMeasurement__c", "maps__ReceiveBatchExceptionEmails__c", "maps__TPApprover__c", "maps__TestUserLookup__c", "maps__Version__c", "maps__TPPublisher__c", "inov8__PMT_Manager_Name__c", "inov8__Is_PMT_User_consider_for_Availability__c"})
+				in
+				    #"Columnas quitadas"
+
+	annotation PBI_NavigationStepName = Navegación
+
+	annotation PBI_ResultType = Table
+

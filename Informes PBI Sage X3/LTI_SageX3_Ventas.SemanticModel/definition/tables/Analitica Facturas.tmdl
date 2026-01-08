@@ -1,0 +1,247 @@
+table 'Analitica Facturas'
+	lineageTag: 1fcfe6cd-8d8c-4f5c-8f57-17336535ac97
+
+	column Documento
+		dataType: string
+		lineageTag: d3b17416-ea69-40ba-82f4-1b23e709004b
+		summarizeBy: none
+		sourceColumn: Documento
+
+		annotation SummarizationSetBy = Automatic
+
+	column Linea
+		dataType: int64
+		formatString: 0
+		lineageTag: 759498c7-aac1-4fc6-b3fe-3c9af319cc59
+		summarizeBy: sum
+		sourceColumn: Linea
+
+		annotation SummarizationSetBy = Automatic
+
+	column PlanCuentas
+		dataType: string
+		lineageTag: 015e0f05-5eab-4a08-9cdc-f9f39d199ebf
+		summarizeBy: none
+		sourceColumn: PlanCuentas
+
+		annotation SummarizationSetBy = Automatic
+
+	column CuentaContable
+		dataType: string
+		lineageTag: db100608-d189-458e-a355-77074a4424b6
+		summarizeBy: none
+		sourceColumn: CuentaContable
+
+		annotation SummarizationSetBy = Automatic
+
+	column CodEje1
+		dataType: string
+		lineageTag: 9495195c-2b8b-458f-976e-18fa6d0e34f5
+		summarizeBy: none
+		sourceColumn: CodEje1
+
+		annotation SummarizationSetBy = Automatic
+
+	column EjeAnalitico1
+		dataType: string
+		lineageTag: 1aa51dad-cf62-48af-9870-00d26433e400
+		summarizeBy: none
+		sourceColumn: EjeAnalitico1
+
+		annotation SummarizationSetBy = Automatic
+
+	column CodEje2
+		dataType: string
+		lineageTag: 77147817-16d5-431f-b38d-24061adee242
+		summarizeBy: none
+		sourceColumn: CodEje2
+
+		annotation SummarizationSetBy = Automatic
+
+	column EjeAnalitico2
+		dataType: string
+		lineageTag: 5d7fcd03-f984-4dc6-b750-9b2451efeec2
+		summarizeBy: none
+		sourceColumn: EjeAnalitico2
+
+		annotation SummarizationSetBy = Automatic
+
+	column CodEje3
+		dataType: string
+		lineageTag: 20f83902-1166-4db3-b343-804273e50cf5
+		summarizeBy: none
+		sourceColumn: CodEje3
+
+		annotation SummarizationSetBy = Automatic
+
+	column EjeAnalitico3
+		dataType: string
+		lineageTag: 5455c427-677f-44ae-8457-22d2bc139a61
+		summarizeBy: none
+		sourceColumn: EjeAnalitico3
+
+		annotation SummarizationSetBy = Automatic
+
+	column CodEje4
+		dataType: string
+		lineageTag: 54defac1-9fc2-4e0d-8a42-3fdd90bd249b
+		summarizeBy: none
+		sourceColumn: CodEje4
+
+		annotation SummarizationSetBy = Automatic
+
+	column EjeAnalitico4
+		dataType: string
+		lineageTag: 27c02c78-5f88-4e35-aa4a-29eca4be4433
+		summarizeBy: none
+		sourceColumn: EjeAnalitico4
+
+		annotation SummarizationSetBy = Automatic
+
+	column CodEje5
+		dataType: string
+		lineageTag: 7182c6c2-a4a1-4f48-8836-95bca19761c9
+		summarizeBy: none
+		sourceColumn: CodEje5
+
+		annotation SummarizationSetBy = Automatic
+
+	column EjeAnalitico5
+		dataType: string
+		lineageTag: bcd3b966-3c69-4ab7-a609-960befdb57be
+		summarizeBy: none
+		sourceColumn: EjeAnalitico5
+
+		annotation SummarizationSetBy = Automatic
+
+	column CodEje6
+		dataType: string
+		lineageTag: c6aae287-2dfa-46e1-b00a-ecf8a47282db
+		summarizeBy: none
+		sourceColumn: CodEje6
+
+		annotation SummarizationSetBy = Automatic
+
+	column EjeAnalitico6
+		dataType: string
+		lineageTag: ead31382-ca1d-44fa-b376-4596e85174b9
+		summarizeBy: none
+		sourceColumn: EjeAnalitico6
+
+		annotation SummarizationSetBy = Automatic
+
+	column CodEje7
+		dataType: string
+		lineageTag: 79ca3c95-d0f4-4c9e-9933-64d8535c0af3
+		summarizeBy: none
+		sourceColumn: CodEje7
+
+		annotation SummarizationSetBy = Automatic
+
+	column EjeAnalitico7
+		dataType: string
+		lineageTag: 4eabf8e1-4a59-4ff1-b4f2-079b37f92d3d
+		summarizeBy: none
+		sourceColumn: EjeAnalitico7
+
+		annotation SummarizationSetBy = Automatic
+
+	column CodEje8
+		dataType: string
+		lineageTag: 9764a309-6e14-4355-9257-32fcf56058f6
+		summarizeBy: none
+		sourceColumn: CodEje8
+
+		annotation SummarizationSetBy = Automatic
+
+	column EjeAnalitico8
+		dataType: string
+		lineageTag: 3f54115a-5258-4a21-8099-6cb6f14b7ddc
+		summarizeBy: none
+		sourceColumn: EjeAnalitico8
+
+		annotation SummarizationSetBy = Automatic
+
+	column CodEje9
+		dataType: string
+		lineageTag: 4b164f76-c832-4243-909f-350b19873464
+		summarizeBy: none
+		sourceColumn: CodEje9
+
+		annotation SummarizationSetBy = Automatic
+
+	column EjeAnalitico9
+		dataType: string
+		lineageTag: c0219767-d762-4456-b7de-e0552a928b36
+		summarizeBy: none
+		sourceColumn: EjeAnalitico9
+
+		annotation SummarizationSetBy = Automatic
+
+	column CodEje10
+		dataType: string
+		lineageTag: ec18048b-8ef4-4f3f-9bb7-d35a716e2a2e
+		summarizeBy: none
+		sourceColumn: CodEje10
+
+		annotation SummarizationSetBy = Automatic
+
+	column EjeAnalitico10
+		dataType: string
+		lineageTag: 420260ad-63bb-4369-89f2-83c64bcc9408
+		summarizeBy: none
+		sourceColumn: EjeAnalitico10
+
+		annotation SummarizationSetBy = Automatic
+
+	column Id_Documento_Linea = CONCATENATE('Analitica Facturas'[Documento],'Analitica Facturas'[Linea])
+		lineageTag: 3d845a0d-de24-4b10-8ce6-23e40e1eb963
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Analitica Facturas-bce99906-49fd-4c08-ac02-43e07f8a2510' = m
+		mode: import
+		source = ```
+				let
+				    CurrentServer = Instancia,
+				    CurrentDatabase = BaseDeDatos,
+				    CurrentSchema = Esquema,
+				    Origen = Sql.Database(CurrentServer, CurrentDatabase, [Query="
+				SELECT 
+				VCRNUM_0 as Documento, 
+				VCRLIN_0 as Linea,
+				COA_0 as PlanCuentas, 
+				ACC_0 as CuentaContable,
+				DIE_0 as CodEje1,
+				CCE_0 as EjeAnalitico1,
+				DIE_1 as CodEje2, 
+				CCE_1 as EjeAnalitico2, 
+				DIE_2 as CodEje3, 
+				CCE_2 as EjeAnalitico3, 
+				DIE_3 as CodEje4, 
+				CCE_3 as EjeAnalitico4, 
+				DIE_4 as CodEje5, 
+				CCE_4 as EjeAnalitico5,
+				DIE_5 as CodEje6,  
+				CCE_5 as EjeAnalitico6, 
+				DIE_6 as CodEje7, 
+				CCE_6 as EjeAnalitico7, 
+				DIE_7 as CodEje8, 
+				CCE_7 as EjeAnalitico8, 
+				DIE_8 as CodEje9, 
+				CCE_8 as EjeAnalitico9, 
+				DIE_9 as CodEje10, 
+				CCE_9 as EjeAnalitico10
+				
+				                                                                    FROM " & CurrentSchema &".CPTANALIN
+				                                                                    WHERE ABRFIC_0 = 'SID'"
+				                                                          ])
+				   
+				in Origen
+				```
+
+	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navigation
+

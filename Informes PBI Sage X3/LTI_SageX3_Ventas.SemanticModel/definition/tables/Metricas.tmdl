@@ -1,0 +1,362 @@
+table Metricas
+	lineageTag: 8f3050e2-9455-4ce9-a383-af94125f0237
+
+	measure Rentabilidad = ```
+			
+			var nVentas = COUNT('Sales Invoice Line'[Documento])
+			var totalVentas = SUMX('Sales Invoice Line', 'Sales Invoice Line'[Precio Neto])
+			var margenBeneficio = SUMX('Sales Invoice Line', 'Sales Invoice Line'[Margen Beneficio])
+			
+			return 
+			    IF(
+			        nVentas = 0, 
+			        0,
+			        DIVIDE(margenBeneficio, totalVentas) * 100
+			    )
+			```
+		displayFolder: Rentabilidad
+		lineageTag: 3b773a24-6218-488b-aff9-1fa94feb2bdc
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Items Media' = DIVIDE(SUM('Sales Invoice Line'[Cantidad]), DISTINCTCOUNT('Sales Invoice Line'[Documento]), 0)
+		displayFolder: Items
+		lineageTag: 44d6cb82-4984-40ad-9232-b75a50f8b698
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure ClientesNuevos =
+			
+			var anteriores = CALCULATE(DISTINCTCOUNT('Sales Invoice Line'[IdCliente]), DATESBETWEEN(Fecha[Fecha], DATE(1990,1,1), [MinSelectedDate]))
+			var actuales = CALCULATE(DISTINCTCOUNT('Sales Invoice Line'[IdCliente]), DATESBETWEEN(Fecha[Fecha], DATE(1990,1,1), [MaxSelectedDate]))
+			var dif = actuales - anteriores
+			return IF(dif < 0, 0, dif)
+		formatString: 0
+		displayFolder: Clientes
+		lineageTag: 917d877f-72a8-456c-8a03-81ff08681382
+
+	measure 'Margen Beneficio' = SUMX('Sales Invoice Line', 'Sales Invoice Line'[Margen Beneficio] * 'Sales Invoice Line'[Cantidad]*'Sales Invoice Line'[Sentido Cargo/Abono])
+		formatString: #,0.00\ "€";-#,0.00\ "€";#,0.00\ "€"
+		displayFolder: Margen
+		lineageTag: 054aa74d-3da4-4027-b545-d537c6d1551a
+
+	measure 'Margen %' = CALCULATE([Margen Beneficio] / [Total Ventas])
+		formatString: 0.00\ %;-0.00\ %;0.00\ %
+		displayFolder: Margen
+		lineageTag: 81f247b5-6622-43b9-a50f-12fe22eff380
+
+	measure 'Coste Ventas AA' = CALCULATE([Coste Ventas], SAMEPERIODLASTYEAR(Fecha[Fecha]))
+		formatString: #,0.00\ "€";-#,0.00\ "€";#,0.00\ "€"
+		displayFolder: Ventas
+		lineageTag: d3306290-bcba-47c0-937d-ce75236df8be
+
+	measure 'Margen Beneficio AA' = CALCULATE([Margen Beneficio], SAMEPERIODLASTYEAR(Fecha[Fecha]))
+		formatString: #,0.00\ "€";-#,0.00\ "€";#,0.00\ "€"
+		displayFolder: Margen
+		lineageTag: ce0a9543-b3ed-485e-ba26-6fe07b0b8202
+
+	measure 'Margen % AA' = CALCULATE([Margen %], SAMEPERIODLASTYEAR(Fecha[Fecha]))
+		formatString: 0.00\ %;-0.00\ %;0.00\ %
+		displayFolder: Margen
+		lineageTag: 15d1af13-8067-4d4f-a863-ed5ac693bffa
+
+	measure 'Variacion Ventas AA' = [Total Ventas] - [Total Ventas AA]
+		formatString: #,0.00\ "€";-#,0.00\ "€";#,0.00\ "€"
+		displayFolder: Ventas
+		lineageTag: a4dfa6c7-0407-4695-81c7-e863963ba3f8
+
+	measure 'Variacion Ventas AA %' = DIVIDE(([Variacion Ventas AA]), [Total Ventas AA], 1)
+		formatString: 0.00\ %;-0.00\ %;0.00\ %
+		displayFolder: Ventas
+		lineageTag: 824762c2-9cd3-482c-b2e0-f13b7c304fd6
+
+	measure FirstOfDate = FIRSTDATE(Fecha[Fecha])
+		formatString: General Date
+		displayFolder: Ayuda
+		lineageTag: 293c6343-0ddc-4b02-8d34-50bfc3c2f7af
+
+	measure EndOfDate = LASTDATE(Fecha[Fecha])
+		formatString: General Date
+		displayFolder: Ayuda
+		lineageTag: b219289d-ec83-4970-9c81-67e0d5aa7a00
+
+	measure TXT_Periodo =
+			
+			var ultimaActu = FIRSTDATE(UltimaActualizacion[Fecha])
+			return "Analizando periodo " & [FirstOfDate] & " a " & [EndOfDate] & " | Última actualización: " & ultimaActu
+		displayFolder: Ayuda
+		lineageTag: efb17981-ad15-4583-b60c-015e69bba046
+
+	measure Clientes = DISTINCTCOUNT('Sales Invoice Line'[IdCliente])
+		formatString: 0
+		displayFolder: Clientes
+		lineageTag: 289ac24a-e925-4680-9312-71cac53dba10
+
+	measure Clientes_PA =
+			
+			var  difPeriodoActual = [MaxSelectedDate] - [MinSelectedDate]
+			var MaxSelctedDatePA = [MinSelectedDate] - 1
+			var minSelectedPA = MaxSelctedDatePA - difPeriodoActual
+			return CALCULATE([Clientes], DATESBETWEEN(Fecha[Fecha], minSelectedPA, MaxSelctedDatePA))
+		formatString: 0
+		displayFolder: Clientes
+		lineageTag: 109185d8-17bf-45bc-a550-e06a996ca8db
+
+	measure ClientesNuevos_PA =
+			
+			var  difPeriodoActual = [MaxSelectedDate] - [MinSelectedDate]
+			var MaxSelctedDatePA = [MinSelectedDate] - 1
+			var minSelectedPA = MaxSelctedDatePA - difPeriodoActual
+			
+			var anteriores = CALCULATE(DISTINCTCOUNT('Sales Invoice Line'[IdCliente]), DATESBETWEEN(Fecha[Fecha], DATE(1990,1,1), minSelectedPA))
+			var actuales = CALCULATE(DISTINCTCOUNT('Sales Invoice Line'[IdCliente]), DATESBETWEEN(Fecha[Fecha], DATE(1990,1,1), MaxSelctedDatePA))
+			var dif = actuales - anteriores
+			return IF(dif < 0, 0, dif)
+		formatString: 0
+		displayFolder: Clientes
+		lineageTag: fecd7456-a053-4443-a277-1901186a8712
+
+	measure DifClientesNuevos = ```
+			
+			VAR difNum = [ClientesNuevos] - [ClientesNuevos_PA]
+			var difPorc = DIVIDE(difNum * 100, [ClientesNuevos_PA], 0)
+			return 
+			    IF([ClientesNuevos_PA] = 0, "+100 %",
+			        IF(difPorc > 0, "+" & CONCATENATE(FIXED(difPorc, 2), " %"),
+			            IF(difPorc <= 0, CONCATENATE(FIXED(difPorc, 2), " %"))))
+			```
+		displayFolder: Clientes
+		lineageTag: 0f044366-962a-4bc8-a3e8-b42116d40a76
+
+	measure 'Rentabilidad PA' =
+			
+			var difPeriodoActual = [MaxSelectedDate] - [MinSelectedDate]
+			var MaxSelctedDatePA = [MinSelectedDate] - 1
+			var minSelectedPA = MaxSelctedDatePA - difPeriodoActual
+			return CALCULATE([Rentabilidad], DATESBETWEEN(Fecha[Fecha], minSelectedPA, MaxSelctedDatePA))
+		displayFolder: Rentabilidad
+		lineageTag: d1849377-d57b-4b04-9125-1062b9815f57
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure DifTotalClientes = ```
+			
+			var difNum = [Clientes] - [Clientes_PA]
+			var difPorc = DIVIDE(difNum * 100, [Clientes_PA], 0)
+			return 
+			    IF([Clientes_PA] = 0, "+100 %",
+			        IF(difPorc > 0, "+" & CONCATENATE(FIXED(difPorc, 2), " %"),
+			            IF(difPorc <= 0, CONCATENATE(FIXED(difPorc, 2), " %"))))
+			```
+		displayFolder: Clientes
+		lineageTag: 2ba4e33a-bc6b-4282-a353-09e084ea0e51
+
+	measure FechaPrimeraCompra = FIRSTNONBLANK('Sales Invoice Line'[Fecha Factura], 'Sales Invoice Line'[Fecha Factura])
+		formatString: General Date
+		displayFolder: Ayuda
+		lineageTag: 9357bc3d-8685-4e2a-b1ab-20c5d7e200cc
+
+	measure FechaUltimaCompra = LASTNONBLANK('Sales Invoice Header'[Fecha Factura],'Sales Invoice Header'[Fecha Factura])
+		formatString: dd/mm/yyyy
+		displayFolder: Ayuda
+		lineageTag: 0fee209a-42a8-4fc1-ab83-bb1564ca30ca
+
+		annotation PBI_FormatHint = {"isDateTimeCustom":true}
+
+	measure Frecuencia_Media = DIVIDE(DISTINCTCOUNT('Sales Invoice Line'[Documento]), [Clientes], 0)
+		formatString: 0
+		displayFolder: Clientes
+		lineageTag: eab7f544-64e4-4330-b22d-163f9038653b
+
+		annotation PBI_FormatHint = {"isDecimal":true}
+
+	measure 'Importe Medio' = DIVIDE(SUM('Sales Invoice Line'[Total Linea Sin Impuesto]), DISTINCTCOUNT('Sales Invoice Line'[Documento]), 0)
+		formatString: #,0.00\ "€";-#,0.00\ "€";#,0.00\ "€"
+		displayFolder: Importe
+		lineageTag: c601e16b-6841-4110-a9b7-dd2c8ad02a70
+
+	measure 'Items Media AA' = CALCULATE([Items Media], SAMEPERIODLASTYEAR(Fecha[Fecha]))
+		displayFolder: Items
+		lineageTag: 2901974c-f05c-4e70-8c2e-88d73a2774e6
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Total Ventas' = SUMX('Sales Invoice Line',[Total Linea Sin Impuesto]*'Sales Invoice Line'[Sentido Cargo/Abono] )
+		formatString: #,0.00\ "€";-#,0.00\ "€";#,0.00\ "€"
+		displayFolder: Ventas
+		lineageTag: 099ceaa1-7306-4b09-bc53-76b2c5197720
+
+	measure 'Total Ventas AA' = ```
+			CALCULATE([Total Ventas], SAMEPERIODLASTYEAR(Fecha[Fecha])) 
+			```
+		formatString: #,0.00\ "€";-#,0.00\ "€";#,0.00\ "€"
+		displayFolder: Ventas
+		lineageTag: 5867dee6-a935-4f4c-ac4d-853a71a50ed5
+
+	measure Antiguedad =
+			
+			--var fp = CALCULATE(FIRSTNONBLANK('Facturas a clientes'[Fecha de Orden], 'Facturas a clientes'[Fecha de Orden]), ALL('Facturas a clientes'))
+			DATEDIFF(CALCULATE([FechaPrimeraCompra], ALL(Fecha[Fecha])), TODAY(), day) / 365.25
+		formatString: 0.0
+		displayFolder: Ayuda
+		lineageTag: 799e2418-65bb-49b3-9472-dd160de4b268
+
+	measure '# Clientes In' =
+			
+			var ClientesIn = //CALCULATETABLE(cliente,  Cliente[IdCliente] in VALUES(FacturasClientes_AUX[IdCliente]))
+			                TREATAS(VALUES('Sales Invoice Line'[IdCliente]), Customer[IdCliente])
+			Return COUNTROWS(ClientesIn)
+		formatString: 0
+		displayFolder: Clientes
+		lineageTag: 69d003b4-aa40-4750-86f1-c050f1e6726f
+
+	measure '# Clientes seleccionados' = ```
+			
+			    COUNTROWS(filter(all(Customer[IdCliente]), [Total Ventas]<>BLANK()))
+			```
+		formatString: 0
+		displayFolder: Clientes
+		lineageTag: 892f895a-a0d9-4d2c-8e13-8628f6e36894
+
+	measure '% Clientes s/Total' =
+			
+			var ClientesIn = CALCULATETABLE(all(customer), TREATAS( VALUES('Sales Invoice Line'[IdCliente]),Customer[IdCliente]))
+			Return DIVIDE([# Clientes seleccionados]
+			    , [# Clientes In]
+			    )
+			    //CALCULATE(COUNTROWS(VALUES(Cliente[IdCliente])), all('Cliente')))
+		displayFolder: Clientes
+		lineageTag: 1b76092e-29de-42a3-9c11-ea9bc3148efd
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Coste Ventas' = SUMX('Sales Invoice Line', 'Sales Invoice Line'[Precio Coste] * 'Sales Invoice Line'[Cantidad])
+		formatString: #,0.00\ "€";-#,0.00\ "€";#,0.00\ "€"
+		displayFolder: Ventas
+		lineageTag: df78f0fd-2c52-407f-8ff7-de32d411142e
+
+	measure 'Variacion Coste AA' = [Coste Ventas] - [Coste Ventas AA]
+		displayFolder: Ventas
+		lineageTag: f8865738-f4ac-4839-86a5-9f384d0e28f2
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Variacion Coste AA %' = DIVIDE(([Variacion Coste AA]), [Coste Ventas AA], 1)
+		formatString: 0.00\ %;-0.00\ %;0.00\ %
+		displayFolder: Ventas
+		lineageTag: f5087c9d-6544-4472-af5b-4da457d9b908
+
+	measure 'Variacion Margen AA' = [Margen Beneficio] - [Margen Beneficio AA]
+		formatString: #,0.00\ "€";-#,0.00\ "€";#,0.00\ "€"
+		displayFolder: Margen
+		lineageTag: 745ca4a2-5acb-4a69-ad86-8ef5052f1fdb
+
+	measure 'Variacion Margen AA %' = DIVIDE([Margen Beneficio] - [Margen Beneficio AA], [Margen Beneficio AA])
+		formatString: 0.00\ %;-0.00\ %;0.00\ %
+		displayFolder: Margen
+		lineageTag: 836a25cc-7298-42a4-b098-d392c6532979
+
+	measure 'Variacion Margen % AA' = [Margen %]-[Margen % AA]
+		formatString: 0.00\ %;-0.00\ %;0.00\ %
+		displayFolder: Margen
+		lineageTag: 4bb071a6-a001-4d25-b7af-902af0291cb9
+
+	measure 'Total Cantidad' = SUM('Sales Invoice Line'[Cantidad])
+		formatString: 0
+		displayFolder: Items
+		lineageTag: 27fcb0a5-596e-4853-94e7-f8394e422e46
+
+		annotation PBI_FormatHint = {"isDecimal":true}
+
+	measure 'Cantidad AA' = calculate( [Total Cantidad], SAMEPERIODLASTYEAR(Fecha[Fecha]))
+		formatString: 0
+		displayFolder: Items
+		lineageTag: b8df87c9-a590-4a8e-aa4a-59adb4ee8398
+
+		annotation PBI_FormatHint = {"isDecimal":true}
+
+	measure 'Variacion Cantidad AA %' = divide([Total Cantidad]-[Cantidad AA],[Cantidad AA])
+		formatString: 0.00\ %;-0.00\ %;0.00\ %
+		displayFolder: Items
+		lineageTag: ef2e7060-b6de-47da-a39a-5600fe3384b2
+
+	measure 'Variacion Facturas AA %' = divide([Total Facturas]-[Total Facturas AA], [Total Facturas AA])
+		formatString: 0.00\ %;-0.00\ %;0.00\ %
+		displayFolder: Items
+		lineageTag: 814fb326-4f62-4675-a181-36e1826c2ebb
+
+	measure 'Total Facturas' = DISTINCTCOUNT('Sales Invoice Line'[Documento])
+		formatString: 0
+		displayFolder: Items
+		lineageTag: a86a998c-8da2-4bdb-b618-e0a7d8af8ff0
+
+	measure 'Total Facturas AA' = CALCULATE([Total Facturas], SAMEPERIODLASTYEAR(Fecha[Fecha]))
+		formatString: 0
+		displayFolder: Items
+		lineageTag: 919f6d90-132b-4d8e-b636-4ab0a20f464f
+
+	measure Warning = ```
+			
+			IF(
+			        MIN(Registros_Year[ACUMULADO])<MAX(Registros_Year[MAX_REGISTROS]),
+			          "*AVISO: No se ha podido realizar la carga entera debido a que la información desde el año " 
+			        & MIN(Registros_Year[PERIODO_SELECCIONADO]) & " hasta el "  & MAX(Registros_Year[PERIODO])
+			        & " supera los " 
+			        & MAX(Registros_Year[MAX_REGISTROS]) 
+			        & " registros. Por tanto, no se mostrará ninguna información.",
+			        
+			        IF(
+			            MAX(Registros_Year[ACUMULADO])> MAX(Registros_Year[MAX_REGISTROS]),
+			            "*AVISO: No se ha podido realizar la carga entera debido a que la información desde el año " 
+			            & MIN(Registros_Year[PERIODO_SELECCIONADO]) & " hasta el "  & MAX(Registros_Year[PERIODO])
+			            & " supera los " 
+			            & MAX(Registros_Year[MAX_REGISTROS]) 
+			            & " registros. Por tanto, se mostrará la información desde el año " 
+			            & MAX(Registros_Year[PERIODO_RECOMENDADO])+0 & "."
+			        ,   ""))
+			```
+		displayFolder: Ayuda
+		lineageTag: 7cc076ab-f4e0-41ba-b2ef-1d44b23dc276
+
+	measure 'Warning 2' =
+			
+			IF(
+			        MAX(Registros_Year[ACUMULADO])>MAX(Registros_Year[MAX_REGISTROS]),
+			          "*AVISO: Con la carga de datos actual, es posible que el informe no pueda publicarse en el servidor por superar 1GB el tamaño del archivo. Para disminuir el tamaño, recomendamos dejar vacío el parámetro ""Periodo"", y permitir que el modelo calcule automáticamente el número de años adecuado para el informe. Pasando el ratón sobre este mensaje, podrá ver el número de años recomendado."
+			           ,   "")
+		displayFolder: Ayuda
+		lineageTag: 5cc126f8-5e3c-4683-b41a-4136ea870d5f
+
+	measure 'Mensaje informativo' = ```
+			
+			        "Actualmente se han cargado "&MAX(Registros_Year[ACUMULADO])& 
+			        " registros en el informe, con información desde el año " 
+			        & MIN(Registros_Year[PERIODO]) & " hasta el "  & MAX(Registros_Year[PERIODO])
+			        & ". Recomendamos mostrar la información desde el año " & MAX(Registros_Year[PERIODO_RECOMENDADO])
+			        & ", lo que supondría un total de " &CALCULATE(VALUES(Registros_Year[ACUMULADO]), (Registros_Year[PERIODO]=Registros_Year[PERIODO_RECOMENDADO]))
+			        & " registros."
+			
+			```
+		displayFolder: Ayuda
+		lineageTag: 5e10b96c-f99b-4854-bae0-661e2b311257
+
+	measure 'Coste Lineas Factura' = SUMX('Sales Invoice Line', 'Sales Invoice Line'[Precio Coste] * 'Sales Invoice Line'[Cantidad])
+		displayFolder: Importe
+		lineageTag: d60bca4a-5161-4465-9b6f-4028a3e91712
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	partition Metricas-6395655b-e65a-43af-b3d7-1807b8438801 = m
+		mode: import
+		source =
+				let
+				    Origen = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText("i44FAA==", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type nullable text) meta [Serialized.Text = true]) in type table [Columna1 = _t]),
+				    #"Tipo cambiado" = Table.TransformColumnTypes(Origen,{{"Columna1", type text}}),
+				    #"Columnas quitadas" = Table.RemoveColumns(#"Tipo cambiado",{"Columna1"})
+				in
+				    #"Columnas quitadas"
+
+	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navigation
+

@@ -1,0 +1,34 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
+  "name": "b9d4285d727e6f643647",
+  "position": {
+    "x": 12.448540706605222,
+    "y": 5.0424987199180578,
+    "z": 2000,
+    "height": 30.222222222222221,
+    "width": 30.222222222222221,
+    "tabOrder": 33000
+  },
+  "visual": {
+    "visualType": "image",
+    "objects": {
+      "general": [
+        {
+          "properties": {
+            "imageUrl": {
+              "expr": {
+                "ResourcePackageItem": {
+                  "PackageName": "RegisteredResources",
+                  "PackageType": 1,
+                  "ItemName": "shopping-cart-2-line03840442886383544.png"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  },
+  "parentGroupName": "dd8af28dc88a5b684156"
+}

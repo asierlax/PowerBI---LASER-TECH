@@ -1,0 +1,64 @@
+table Stock
+	lineageTag: 81bc4502-cf87-439c-9a28-a7b8535b38c0
+
+	column ITMREF_0
+		dataType: string
+		lineageTag: c4d948f7-2e68-4a6f-9038-efeefaf2acd0
+		summarizeBy: none
+		sourceColumn: ITMREF_0
+
+		annotation SummarizationSetBy = Automatic
+
+	column Quantity
+		dataType: double
+		lineageTag: 84ad49b3-1c7b-487e-8f99-cc4feaf2cac7
+		summarizeBy: sum
+		sourceColumn: Quantity
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Value
+		dataType: double
+		lineageTag: 34375920-e1b0-412e-bce2-02e2518558c4
+		summarizeBy: sum
+		sourceColumn: Value
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Standard Cost'
+		dataType: double
+		lineageTag: 9d7501eb-dbc5-4705-881c-10d18fa2b45a
+		summarizeBy: sum
+		sourceColumn: Standard Cost
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	partition Stock-a68e783f-7af5-47e9-8c84-8f91e563392d = m
+		mode: import
+		source = ```
+				let
+				    CurrentServer = Instancia,
+				    CurrentDatabase = BaseDeDatos,
+				    CurrentSchema = Esquema,
+				    CurrentRows = Registros,
+				    CurrentPeriod = Periodo,
+				    Origen = Sql.Database(CurrentServer, CurrentDatabase, [Query="select ITMREF_0, sum(PHYSTO_0) as 'Quantity' 
+				, sum(PHYSTO_0*AVC_0) as 'Value' , max(AVC_0) as 'Standard Cost'
+				from " & CurrentSchema &".ITMMVT
+				group by ITMREF_0
+				        "
+				                                                          ])
+				in
+				    Origen
+				```
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

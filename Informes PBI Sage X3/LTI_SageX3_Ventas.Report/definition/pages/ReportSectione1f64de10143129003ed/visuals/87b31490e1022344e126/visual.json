@@ -1,0 +1,17 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
+  "name": "87b31490e1022344e126",
+  "position": {
+    "x": 50.317241379310346,
+    "y": 101.51724137931035,
+    "z": 20000,
+    "height": 223.33793103448275,
+    "width": 495.22758620689655,
+    "tabOrder": 24000
+  },
+  "visualGroup": {
+    "displayName": "Matriz RyF",
+    "groupMode": "ScaleMode"
+  },
+  "isHidden": true
+}

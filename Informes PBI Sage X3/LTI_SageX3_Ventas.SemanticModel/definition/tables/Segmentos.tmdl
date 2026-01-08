@@ -1,0 +1,60 @@
+table Segmentos
+	lineageTag: 6a2f68e8-1757-4a92-b9c9-2dc3671c2434
+
+	column Segmento
+		dataType: string
+		lineageTag: 6a70e999-fb8b-462e-b996-315e24a75a19
+		summarizeBy: none
+		sourceColumn: Segmento
+
+		annotation SummarizationSetBy = Automatic
+
+	column Recencia
+		dataType: int64
+		formatString: 0
+		lineageTag: 24b0cc25-a989-4b6a-8e54-7a3cf206879d
+		summarizeBy: none
+		sourceColumn: Recencia
+
+		annotation SummarizationSetBy = Automatic
+
+	column Frecuencia
+		dataType: int64
+		formatString: 0
+		lineageTag: 126202bf-4979-4b8f-957a-3b6d7aaf00ef
+		summarizeBy: none
+		sourceColumn: Frecuencia
+
+		annotation SummarizationSetBy = Automatic
+
+	column RF
+		dataType: string
+		lineageTag: 4d227823-68ae-4c4a-a0cd-c1142c72d4ff
+		summarizeBy: none
+		sourceColumn: RF
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Segmentos-09355974-5d90-405a-a1d7-e57124c33b75 = m
+		mode: import
+		source =
+				let
+				    Origen = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText("bdDBCsIwDAbgd+l5F7PkIQQVEW9jhzKCBMoidu7g0ytbDWzpoYd8/D8N6bpwHOMwyaw5NOGwvL7xCk6hmgXL3oTzQ0u99YSeaEvgi+CLYMWzzpLkE19L77/dXqGq6z8njolzIfREW0KfQktd3ryeBG0VIzK66sTjIDGVIFS1dUrVLFn2rs8y427+bdd/AQ==", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type nullable text) meta [Serialized.Text = true]) in type table [Segmento = _t, Recencia = _t, Frecuencia = _t]),
+				    #"Tipo cambiado" = Table.TransformColumnTypes(Origen,{{"Segmento", type text}, {"Recencia", Int64.Type}, {"Frecuencia", Int64.Type}}),
+				    #"Personalizada agregada" = Table.AddColumn(#"Tipo cambiado", "RF", each [Recencia] & " - " & [Frecuencia]),
+				    #"Columnas quitadas" = Table.RemoveColumns(#"Personalizada agregada",{"RF"}),
+				    #"Personalizada agregada1" = Table.AddColumn(#"Columnas quitadas", "Personalizado", each Text.Combine([Recencia], [Frecuencia])),
+				    #"Columnas quitadas1" = Table.RemoveColumns(#"Personalizada agregada1",{"Personalizado"}),
+				    #"Personalizada agregada2" = Table.AddColumn(#"Columnas quitadas1", "RF", each [Recencia] & [Frecuencia]),
+				    #"Columnas quitadas2" = Table.RemoveColumns(#"Personalizada agregada2",{"RF"}),
+				    #"Personalizada agregada3" = Table.AddColumn(#"Columnas quitadas2", "Personalizado", each [Recencia] + " - " + [Frecuencia]),
+				    #"Columnas quitadas3" = Table.RemoveColumns(#"Personalizada agregada3",{"Personalizado"}),
+				    #"Personalizada agregada4" = Table.AddColumn(#"Columnas quitadas3", "Personalizado", each Number.ToText([Recencia]) & "-" & Number.ToText([Frecuencia])),
+				    #"Columnas con nombre cambiado" = Table.RenameColumns(#"Personalizada agregada4",{{"Personalizado", "RF"}})
+				in
+				    #"Columnas con nombre cambiado"
+
+	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navigation
+

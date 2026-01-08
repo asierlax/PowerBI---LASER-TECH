@@ -1,0 +1,45 @@
+table Price
+	lineageTag: 234d2824-c1e0-421d-84ee-017b0d8e4fef
+
+	column ITMREF_0
+		dataType: string
+		lineageTag: ebe76d00-1ed1-4cf1-9d1c-71f6cae8f793
+		summarizeBy: none
+		sourceColumn: ITMREF_0
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Purchase price'
+		dataType: double
+		lineageTag: 6626fcde-bef6-4aa7-99f5-848a9e3814c4
+		summarizeBy: sum
+		sourceColumn: Purchase price
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	partition Price-ef8847b0-eb7f-43d1-8846-9c2c311a5bee = m
+		mode: import
+		source =
+				let
+				    CurrentServer = Instancia,
+				    CurrentDatabase = BaseDeDatos,
+				    CurrentSchema = Esquema,
+				    CurrentRows = Registros,
+				    CurrentPeriod = Periodo,
+				    Origen = Sql.Database(CurrentServer, CurrentDatabase, [Query="select PPL.PLICRI2_0 as [ITMREF_0], PPL.PRI_0 as 'Purchase price'
+				from " & CurrentSchema &".PPRICLIST PPL
+				where PPL.PLI_0 = 'T20'
+				and PPL.PLICRI1_0 = (select top 1 ITS.BPSNUM_0 from PROTO.ITMBPS ITS where ITS.ITMREF_0 = PPL.PLICRI2_0 and ITS.PIO_0 = 0)
+				and PPL.PLISTRDAT_0 <= GETDATE()
+				and PPL.PLIENDDAT_0 >= GETDATE()
+				        "
+				                                                          ])
+				in
+				    Origen
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

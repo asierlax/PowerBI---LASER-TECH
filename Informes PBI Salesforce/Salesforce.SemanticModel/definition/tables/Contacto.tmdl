@@ -935,6 +935,23 @@ table Contacto
 
 		annotation SummarizationSetBy = Automatic
 
+	column Movil_formulario_MC__c
+		dataType: string
+		lineageTag: 0d4dd792-2514-455d-858b-4d0a0a5587b9
+		summarizeBy: none
+		sourceColumn: Movil_formulario_MC__c
+
+		annotation SummarizationSetBy = Automatic
+
+	column Whatsapp_consentimiento_comunicaciones__c
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 76650041-cf03-49de-97c3-bdc09141a6ba
+		summarizeBy: none
+		sourceColumn: Whatsapp_consentimiento_comunicaciones__c
+
+		annotation SummarizationSetBy = Automatic
+
 	partition Contacto = m
 		mode: import
 		source =

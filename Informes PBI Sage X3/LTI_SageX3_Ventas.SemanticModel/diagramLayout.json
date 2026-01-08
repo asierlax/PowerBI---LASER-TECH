@@ -1,0 +1,275 @@
+{
+  "version": "1.1.0",
+  "diagrams": [
+    {
+      "ordinal": 0,
+      "scrollPosition": {
+        "x": 151,
+        "y": 219
+      },
+      "nodes": [
+        {
+          "location": {
+            "x": 0,
+            "y": 883.2
+          },
+          "nodeIndex": "Metricas",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 2046.9,
+            "y": 1304.5
+          },
+          "nodeIndex": "ABC by Year",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 1836.2,
+            "y": 511.6
+          },
+          "nodeIndex": "ABCD by Year",
+          "size": {
+            "height": 272,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 830.1,
+            "y": 1130.9
+          },
+          "nodeIndex": "Address",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 2393.2,
+            "y": 733.6
+          },
+          "nodeIndex": "Analitica Facturas",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 1245.1,
+            "y": 1300.1
+          },
+          "nodeIndex": "Company",
+          "size": {
+            "height": 296,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 1660.1,
+            "y": 836.1
+          },
+          "nodeIndex": "Customer",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 415,
+            "y": 1152.9
+          },
+          "nodeIndex": "Fecha",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 2442.3,
+            "y": 1129.4
+          },
+          "nodeIndex": "Item",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 2958.6,
+            "y": 1206
+          },
+          "nodeIndex": "Price",
+          "size": {
+            "height": 128,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 3373.6,
+            "y": 921.2
+          },
+          "nodeIndex": "Registros_Year",
+          "size": {
+            "height": 224,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 2079,
+            "y": 357
+          },
+          "nodeIndex": "RFM",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 1021.1563380281691,
+            "y": 312.21690140845078
+          },
+          "nodeIndex": "Saleperson",
+          "size": {
+            "height": 248,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 1798.5,
+            "y": 1251.5
+          },
+          "nodeIndex": "Sales Invoice Header",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 2022.8,
+            "y": 823.5
+          },
+          "nodeIndex": "Sales Invoice Line",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 2235.9,
+            "y": 0
+          },
+          "nodeIndex": "Segmentos",
+          "size": {
+            "height": 176,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 2857.4,
+            "y": 1580.7
+          },
+          "nodeIndex": "Stock",
+          "size": {
+            "height": 176,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 3788.7,
+            "y": 981.2
+          },
+          "nodeIndex": "UltimaActualizacion",
+          "size": {
+            "height": 104,
+            "width": 234
+          },
+          "zIndex": 0
+        }
+      ],
+      "name": "Todas las tablas",
+      "zoomValue": 71,
+      "pinKeyFieldsToTop": false,
+      "showExtraHeaderInfo": false,
+      "hideKeyFieldsWhenCollapsed": false
+    },
+    {
+      "ordinal": 1,
+      "scrollPosition": {
+        "x": 0,
+        "y": 0
+      },
+      "nodes": [
+        {
+          "location": {
+            "x": 862,
+            "y": 170
+          },
+          "nodeIndex": "Saleperson",
+          "size": {
+            "height": 248,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 140,
+            "y": 184
+          },
+          "nodeIndex": "Sales Invoice Line",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        }
+      ],
+      "name": "Layout 1",
+      "zoomValue": 100,
+      "pinKeyFieldsToTop": false,
+      "showExtraHeaderInfo": false,
+      "hideKeyFieldsWhenCollapsed": false
+    }
+  ],
+  "selectedDiagram": "Layout 1",
+  "defaultDiagram": "Todas las tablas"
+}

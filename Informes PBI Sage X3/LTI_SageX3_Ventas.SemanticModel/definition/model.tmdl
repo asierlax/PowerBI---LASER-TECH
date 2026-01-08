@@ -1,0 +1,39 @@
+model Model
+	culture: es-ES
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	sourceQueryCulture: es-ES
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+queryGroup Auxiliares
+
+	annotation PBI_QueryGroupOrder = 0
+
+annotation __PBI_TimeIntelligenceEnabled = 0
+
+annotation PBI_QueryOrder = ["Sales Invoice Line","Sales Invoice Header","Customer","Address","Company","Saleperson","Item","Metricas","UltimaActualizacion","Segmentos","Proyectos","General Posting Setup","Resourcce","Product Group","Analitica Facturas","Provincias","Instancia","BaseDeDatos","Esquema","Registros","Periodo","Registros_Year","Stock","Price","Empresa"]
+
+annotation PBI_ProTooling = ["DevMode"]
+
+ref table 'Sales Invoice Line'
+ref table 'Sales Invoice Header'
+ref table Company
+ref table Customer
+ref table Saleperson
+ref table Item
+ref table Address
+ref table Fecha
+ref table Metricas
+ref table 'ABC by Year'
+ref table UltimaActualizacion
+ref table Segmentos
+ref table 'ABCD by Year'
+ref table RFM
+ref table 'Analitica Facturas'
+ref table Registros_Year
+ref table Stock
+ref table Price
+
+ref cultureInfo es-ES
+

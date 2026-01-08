@@ -1,0 +1,79 @@
+relationship 5b6cab62-c83b-4590-9b70-972cb3f16255
+	fromColumn: 'Sales Invoice Line'.Documento
+	toColumn: 'Sales Invoice Header'.Documento
+
+relationship 67c99e48-f58a-40c5-9893-e7d72771649d
+	fromColumn: 'Sales Invoice Line'.Empresa
+	toColumn: Company.Empresa
+
+relationship 47a9ba8d-e77c-4976-9823-018072520445
+	isActive: false
+	fromColumn: 'Sales Invoice Header'.Empresa
+	toColumn: Company.Empresa
+
+relationship 4035afb1-227e-463b-b732-97cddd9b96cd
+	crossFilteringBehavior: bothDirections
+	fromColumn: 'Sales Invoice Line'.IdCliente
+	toColumn: Customer.IdCliente
+
+relationship 50d03596-fb85-4554-a222-32c4991bd5b7
+	crossFilteringBehavior: bothDirections
+	fromColumn: Address.Entidad
+	toColumn: Customer.IdCliente
+
+relationship 3daf2cfc-19f2-4dcd-b840-eb8e5d9e40fa
+	isActive: false
+	fromColumn: Address.IdDireccion
+	toColumn: Company.IdDireccion
+
+relationship 32ff5668-ba21-47db-b46a-befed6b69b14
+	fromColumn: 'Sales Invoice Line'.IdItem
+	toColumn: Item.IdItem
+
+relationship d8667d06-1140-4fab-9a20-e68e81530537
+	crossFilteringBehavior: bothDirections
+	fromColumn: 'Sales Invoice Line'.Id_Fecha
+	toColumn: 'ABCD by Year'.Id_Fecha
+
+relationship ae26f843-3556-4b11-9c56-5627b99447c2
+	crossFilteringBehavior: bothDirections
+	fromColumn: 'Sales Invoice Line'.Id_Fecha
+	toColumn: 'ABC by Year'.Id_Fecha
+
+relationship 28bfaa34-2dbf-4b9f-b299-ade78101fc66
+	crossFilteringBehavior: bothDirections
+	fromColumn: 'Sales Invoice Line'.Id_Fecha
+	toColumn: RFM.Id_Fecha
+
+relationship 685b8689-5ef5-4fd8-9c9e-25dd45ba81c8
+	crossFilteringBehavior: bothDirections
+	fromColumn: RFM.RFScore
+	toColumn: Segmentos.RF
+
+relationship 6d6d27b0-e4d9-45a1-9215-ced8395d79f8
+	fromColumn: 'Analitica Facturas'.Id_Documento_Linea
+	toColumn: 'Sales Invoice Line'.Id_Documento_Linea
+
+relationship 49a87043-17cf-4e25-8a7a-8aeea571e2ea
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: Stock.ITMREF_0
+	toColumn: Item.IdItem
+
+relationship 34a465fe-ef93-4682-b120-dea21699a046
+	fromColumn: Price.ITMREF_0
+	toColumn: Item.IdItem
+
+relationship f617aecb-ae9b-4334-ade3-a63b99c2a199
+	fromColumn: 'Sales Invoice Header'.'Fecha Factura'
+	toColumn: Fecha.Fecha
+
+relationship e9410fcb-1069-46db-b3ea-4728751e4f3a
+	fromColumn: 'Sales Invoice Line'.'Comercial 1'
+	toColumn: Saleperson.Comercial
+
+relationship 7e477274-94d2-4090-9fad-72da2a25454d
+	isActive: false
+	fromColumn: 'Sales Invoice Line'.'Comercial 2'
+	toColumn: Saleperson.Comercial
+

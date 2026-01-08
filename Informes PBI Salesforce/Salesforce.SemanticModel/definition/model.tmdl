@@ -8,7 +8,7 @@ model Model
 
 annotation __PBI_TimeIntelligenceEnabled = 1
 
-annotation PBI_QueryOrder = ["Cuenta","Oportunidad","Usuario","Contacto"]
+annotation PBI_QueryOrder = ["Cuenta","Oportunidad","Usuario","Contacto","Usuario_Cuenta"]
 
 annotation PBI_ProTooling = ["DevMode"]
 
@@ -59,6 +59,7 @@ ref table LocalDateTable_a5a24959-4d4f-4cca-af55-2364dafbe126
 ref table LocalDateTable_ea31d098-95ea-4767-8b79-27314b8e52e2
 ref table LocalDateTable_cda8256d-ceb4-4f68-95e2-6c207a67a14f
 ref table LocalDateTable_1bed304e-74ca-40ad-a4d2-166b7a00ffb0
+ref table Usuario_Cuenta
 
 ref cultureInfo es-ES
 

@@ -1,0 +1,164 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
+  "name": "2da8783addc0284a9c02",
+  "position": {
+    "x": 875.7946210268949,
+    "y": 294.86552567237163,
+    "z": 14000,
+    "height": 110.02444987775061,
+    "width": 370.56234718826408,
+    "tabOrder": 11000
+  },
+  "visual": {
+    "visualType": "treemap",
+    "query": {
+      "queryState": {
+        "Group": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "ABCD by Year"
+                    }
+                  },
+                  "Property": "ABCD Class"
+                }
+              },
+              "queryRef": "ABCD by Year.ABCD Class",
+              "active": true,
+              "displayName": "Clase ABCD"
+            }
+          ]
+        },
+        "Tooltips": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "ABCD by Year"
+                    }
+                  },
+                  "Property": "ABCD Margen Amount"
+                }
+              },
+              "queryRef": "ABCD by Year.ABCD Margen Amount",
+              "displayName": "Margen"
+            }
+          ]
+        },
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "ABCD by Year"
+                    }
+                  },
+                  "Property": "# CustomersABCD"
+                }
+              },
+              "queryRef": "ABCD by Year.# CustomersABCD",
+              "displayName": "Nº de clientes"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "isDefaultSort": true
+      }
+    },
+    "objects": {
+      "labels": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "dataPoint": [
+        {
+          "properties": {
+            "fill": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#F76176'"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "ABCD by Year"
+                          }
+                        },
+                        "Property": "ABCD Class"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "'D'"
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "background": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

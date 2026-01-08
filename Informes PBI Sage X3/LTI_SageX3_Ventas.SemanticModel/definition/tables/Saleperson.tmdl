@@ -1,0 +1,84 @@
+table Saleperson
+	lineageTag: 9e54ec5a-7c17-4b59-a1d0-d0d9e0788d20
+
+	column Comercial
+		dataType: string
+		lineageTag: 349abac9-5341-4b5e-af80-f36db022d433
+		summarizeBy: none
+		sourceColumn: Comercial
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Nombre Comercial'
+		dataType: string
+		lineageTag: 4d403d46-9874-4cfb-86ee-b2e127a9b695
+		summarizeBy: none
+		sourceColumn: Nombre Comercial
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Codigo Usuario'
+		dataType: string
+		lineageTag: 20fa7483-9de6-44ac-ba1e-7c0ba4978f1c
+		summarizeBy: none
+		sourceColumn: Codigo Usuario
+
+		annotation SummarizationSetBy = Automatic
+
+	column Empresa
+		dataType: string
+		lineageTag: ce19f2f2-1fb6-43a9-a357-12a17ed6333a
+		summarizeBy: none
+		sourceColumn: Empresa
+
+		annotation SummarizationSetBy = Automatic
+
+	column Moneda
+		dataType: string
+		lineageTag: 0e12911b-f111-4287-b971-96d8432c0b37
+		summarizeBy: none
+		sourceColumn: Moneda
+
+		annotation SummarizationSetBy = Automatic
+
+	column Direccion
+		dataType: string
+		lineageTag: 4854d16e-5129-4da6-a8fa-934a7fb5616a
+		summarizeBy: none
+		sourceColumn: Direccion
+
+		annotation SummarizationSetBy = Automatic
+
+	column IdDireccion
+		dataType: string
+		lineageTag: a8c889db-6e5d-4ecd-918d-886a8dae76b3
+		summarizeBy: none
+		sourceColumn: IdDireccion
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Saleperson-66b70925-f506-4382-b29e-82b103a88725 = m
+		mode: import
+		source =
+				let
+				    CurrentServer = Instancia,
+				    CurrentDatabase = BaseDeDatos,
+				    CurrentSchema = Esquema,
+				    Origen = Sql.Database(CurrentServer, CurrentDatabase, [Query="
+				                                                                SELECT   [REPNUM_0]
+				                                                                        ,[REPNAM_0]
+				                                                                        ,[AUSNUM_0]
+				                                                                        ,[CFY_0]
+				                                                                        ,[CUR_0]
+				                                                                        ,[BPAADD_0]
+				                                                                FROM " & CurrentSchema & ".SALESREP"
+				                                                          ]),
+				    #"Columnas con nombre cambiado" = Table.RenameColumns(Origen,{{"REPNUM_0", "Comercial"}, {"REPNAM_0", "Nombre Comercial"}, {"AUSNUM_0", "Codigo Usuario"}, {"CFY_0", "Empresa"}, {"CUR_0", "Moneda"}, {"BPAADD_0", "Direccion"}}),
+				    #"Personalizada agregada" = Table.AddColumn(#"Columnas con nombre cambiado", "IdDireccion", each [Comercial]&"-"&[Direccion])
+				in
+				    #"Personalizada agregada"
+
+	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navigation
+

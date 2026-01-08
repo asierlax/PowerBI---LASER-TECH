@@ -1,0 +1,496 @@
+table 'Sales Invoice Line'
+	lineageTag: 821da74c-f6eb-4554-8a9d-531618a48278
+
+	column Documento
+		dataType: string
+		lineageTag: f6663a2f-eb6b-4048-927c-a6e70cc1d61a
+		summarizeBy: none
+		sourceColumn: Documento
+
+		annotation SummarizationSetBy = Automatic
+
+	column Linea
+		dataType: int64
+		formatString: 0
+		lineageTag: e28de939-46fe-47c7-96cf-da3df7e93067
+		summarizeBy: sum
+		sourceColumn: Linea
+
+		annotation SummarizationSetBy = Automatic
+
+	column Empresa
+		dataType: string
+		lineageTag: ea9a5171-a251-40fb-9c61-8993d8c0361f
+		summarizeBy: none
+		sourceColumn: Empresa
+
+		annotation SummarizationSetBy = Automatic
+
+	column IdCliente
+		dataType: string
+		lineageTag: 8a88e728-903f-42ac-976a-5eaf63d518aa
+		summarizeBy: none
+		sourceColumn: IdCliente
+
+		annotation SummarizationSetBy = Automatic
+
+	column IdItem
+		dataType: string
+		lineageTag: 8b4a1a2e-d8b7-4f7e-afcd-9d41c0520744
+		summarizeBy: none
+		sourceColumn: IdItem
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Descripcion 1'
+		dataType: string
+		lineageTag: e211d868-3178-4570-9eeb-e75c774260d1
+		summarizeBy: none
+		sourceColumn: Descripcion 1
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Comercial 1'
+		dataType: string
+		lineageTag: 895d7410-4bf6-428c-bc8f-16581cc55b9b
+		summarizeBy: none
+		sourceColumn: Comercial 1
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Comercial 2'
+		dataType: string
+		lineageTag: d478c7d2-68a5-4d58-bad9-6acd1cae5b55
+		summarizeBy: none
+		sourceColumn: Comercial 2
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Precio Bruto'
+		dataType: double
+		lineageTag: baa4e4d5-6cde-49d5-a564-69b0d5b4e422
+		summarizeBy: sum
+		sourceColumn: Precio Bruto
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Motivo Precio'
+		dataType: int64
+		formatString: 0
+		lineageTag: 4afc30f2-7eb5-4cd5-9266-58f6e7eedd1b
+		summarizeBy: sum
+		sourceColumn: Motivo Precio
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Precio Neto'
+		dataType: double
+		formatString: #,0.00\ "€";-#,0.00\ "€";#,0.00\ "€"
+		lineageTag: 12b2594b-304e-4720-90d3-accdc7c5fa17
+		summarizeBy: sum
+		sourceColumn: Precio Neto
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Precio Neto AI'
+		dataType: double
+		lineageTag: f51c8356-b623-4a5b-b041-b259dd7cbac7
+		summarizeBy: sum
+		sourceColumn: Precio Neto AI
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Precio Neto II'
+		dataType: double
+		lineageTag: 0cd62b1b-f3c6-4221-87a6-cf0abab7285d
+		summarizeBy: sum
+		sourceColumn: Precio Neto II
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Margen Beneficio'
+		dataType: double
+		formatString: 0.00
+		lineageTag: d3ed5a56-22a5-4fbb-ae21-8256981ddacd
+		summarizeBy: sum
+		sourceColumn: Margen Beneficio
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Precio Coste'
+		dataType: double
+		lineageTag: 82366715-7ba3-48f4-8de2-c38a44660fbf
+		summarizeBy: sum
+		sourceColumn: Precio Coste
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Valor Descuento 1'
+		dataType: double
+		lineageTag: 6d6371ef-b358-4cea-85f6-b9df4d512576
+		summarizeBy: sum
+		sourceColumn: Valor Descuento 1
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Motivo Descuento'
+		dataType: int64
+		formatString: 0
+		lineageTag: fa0634ea-4a7e-4494-a86c-b6ada8d0ec9c
+		summarizeBy: sum
+		sourceColumn: Motivo Descuento
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Total Linea Sin Impuesto'
+		dataType: double
+		formatString: #,0.00\ "€";-#,0.00\ "€";#,0.00\ "€"
+		lineageTag: 4dff10c8-4c87-4b70-b017-62dfbee02ab2
+		summarizeBy: sum
+		sourceColumn: Total Linea Sin Impuesto
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Importe Imponible'
+		dataType: double
+		lineageTag: 1abb25ba-be6d-43b0-a95b-73b4ddd3640f
+		summarizeBy: sum
+		sourceColumn: Importe Imponible
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Tasa Impuesto'
+		dataType: double
+		lineageTag: 73baf550-4a4a-4a5d-bb07-48d73a14d63a
+		summarizeBy: sum
+		sourceColumn: Tasa Impuesto
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Importe Impuesto'
+		dataType: double
+		lineageTag: c631fd4f-eae6-4495-a9bf-eb02c7d02dad
+		summarizeBy: sum
+		sourceColumn: Importe Impuesto
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Total Linea con Impuesto'
+		dataType: double
+		lineageTag: 1288aaa6-c280-456f-b503-c236951268a7
+		summarizeBy: sum
+		sourceColumn: Total Linea con Impuesto
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Cantidad
+		dataType: double
+		formatString: 0
+		lineageTag: 39d5c342-f241-4a12-aac8-fe5749fb38a5
+		summarizeBy: sum
+		sourceColumn: Cantidad
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isDecimal":true}
+
+	column 'Unidad Venta'
+		dataType: string
+		lineageTag: e585432d-4d6b-4543-bd0f-48fc447644d1
+		summarizeBy: none
+		sourceColumn: Unidad Venta
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Descripcion 2'
+		dataType: string
+		lineageTag: 4555c201-95ff-4e98-9221-a821cf9179bd
+		summarizeBy: none
+		sourceColumn: Descripcion 2
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Valor Descuento 2'
+		dataType: double
+		lineageTag: aef5e791-ab2d-4a87-a8f8-142193bc852b
+		summarizeBy: sum
+		sourceColumn: Valor Descuento 2
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Motivo Descuento 2'
+		dataType: int64
+		formatString: 0
+		lineageTag: 1b3873a5-d8d0-4f5c-876d-8c510faf1063
+		summarizeBy: sum
+		sourceColumn: Motivo Descuento 2
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Precio Pedido'
+		dataType: double
+		lineageTag: 3e763f88-49a4-462e-b8d4-9e634d4fe0e4
+		summarizeBy: sum
+		sourceColumn: Precio Pedido
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Fecha Factura'
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: bd850e3b-d3fa-4aed-be56-8d7c50358858
+		summarizeBy: none
+		sourceColumn: Fecha Factura
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column 'Tipo IVA'
+		dataType: string
+		lineageTag: ab63652b-6bd3-4749-b9b0-c98dcd847d56
+		summarizeBy: none
+		sourceColumn: Tipo IVA
+
+		annotation SummarizationSetBy = Automatic
+
+	column Year_Factura = YEAR('Sales Invoice Line'[Fecha Factura])
+		formatString: 0
+		lineageTag: 2901d560-a3d1-4ce4-a192-b1f2f9a26564
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
+	column Id_Fecha = CONCATENATE('Sales Invoice Line'[Year_Factura],'Sales Invoice Line'[IdCliente])
+		lineageTag: c2667109-3fd7-4d08-bea3-f45fc1afe0b0
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column Id_Documento_Linea = ```
+			CONCATENATE('Sales Invoice Line'[Documento],'Sales Invoice Line'[Linea]) 
+			```
+		lineageTag: 6379f0df-4366-41dc-8fe3-fd5cbd1ca5e7
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Sentido Cargo/Abono'
+		dataType: int64
+		formatString: 0
+		lineageTag: 5f38673f-1182-4641-9f28-d4b8aa21aa41
+		summarizeBy: sum
+		sourceColumn: Sentido Cargo/Abono
+
+		annotation SummarizationSetBy = Automatic
+
+	column COMPROBACION_PRECIO_NETO = ('Sales Invoice Line'[Precio Neto] * 'Sales Invoice Line'[Cantidad]) * 'Sales Invoice Line'[Sentido Cargo/Abono]
+		formatString: #,0.00\ "€";-#,0.00\ "€";#,0.00\ "€"
+		lineageTag: 402a34cc-da9a-4fcd-b226-6ae1b57bab32
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
+	column COMPROBACION_TOTALSINIMPUESTOS = 'Sales Invoice Line'[Total Linea Sin Impuesto]*'Sales Invoice Line'[Sentido Cargo/Abono]
+		formatString: #,0.00\ "€";-#,0.00\ "€";#,0.00\ "€"
+		lineageTag: 52a07190-bf45-45b5-8975-af9f126b78ce
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
+	column Modulo
+		dataType: int64
+		formatString: 0
+		lineageTag: 4bee700d-df68-4c62-8188-96ac78af8f57
+		summarizeBy: sum
+		sourceColumn: Modulo
+
+		annotation SummarizationSetBy = Automatic
+
+	column RepresentanteKey = 'Sales Invoice Line'[IdCliente]&'Sales Invoice Line'[IdItem]&'Sales Invoice Line'[Direccion de envio]
+		lineageTag: bdc736ad-002c-4dba-a431-a4a55162f2c8
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column Rep1 = RELATED('Representante Excel'[Código Representante])
+		lineageTag: 6d3acce5-e737-4ba6-85f8-65be6065d7ee
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column Representante = IF(ISBLANK('Sales Invoice Line'[Rep1]),'Sales Invoice Line'[Comercial 1],'Sales Invoice Line'[Rep1])
+		lineageTag: 111185f5-b2d7-4e07-86b8-1dd8c4f4c83a
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column Quantity
+		dataType: double
+		lineageTag: 66069c3b-e879-45c0-b3c6-34408ef7f287
+		summarizeBy: sum
+		sourceColumn: Quantity
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column STOFCY_0
+		dataType: string
+		lineageTag: 925b10d8-2368-4dc5-97ed-9d7b4ca5cf87
+		summarizeBy: none
+		sourceColumn: STOFCY_0
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Codigo Proveedor'
+		dataType: string
+		lineageTag: b20c1ca6-3122-4b9a-a760-e5b4a5b6da65
+		summarizeBy: none
+		sourceColumn: Codigo Proveedor
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Nombre Proveedor'
+		dataType: string
+		lineageTag: 16be1423-d383-43c6-9470-44ffe3703cdc
+		summarizeBy: none
+		sourceColumn: Nombre Proveedor
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Articulo VYGON'
+		dataType: string
+		lineageTag: 90123f56-4bb3-4089-8c47-115088d163d3
+		summarizeBy: none
+		sourceColumn: Articulo VYGON
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Inf Codigo Proveedor' = """" &  'Sales Invoice Line'[Codigo Proveedor] & """"
+		isHidden
+		lineageTag: 9aec7836-7927-4165-b2bc-5355e9e29f5b
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Inf Nombre Proveedor' = """" &  'Sales Invoice Line'[Nombre Proveedor] & """"
+		isHidden
+		lineageTag: 87be0b34-16f1-4d44-ba1c-204a1ac817ce
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Direccion de envio'
+		dataType: string
+		lineageTag: 7a0c7193-d6be-450c-a095-50b097a662ed
+		summarizeBy: none
+		sourceColumn: Direccion de envio
+
+		annotation SummarizationSetBy = Automatic
+
+	hierarchy 'Id_Fecha Hierarchy'
+		lineageTag: d9c797ec-734e-48d4-8853-93327aa17ac5
+
+		level Id_Fecha
+			lineageTag: 81772be9-e528-42b4-972e-039241661089
+			column: Id_Fecha
+
+		level IdCliente
+			lineageTag: 431b9450-de7c-45f3-a3f2-2d05b2ad7298
+			column: IdCliente
+
+	partition 'Sales Invoice Line-0c6674fe-a5fc-471c-b110-0db2baba156a' = m
+		mode: import
+		source = ```
+				let
+				    CurrentServer = Instancia,
+				    CurrentDatabase = BaseDeDatos,
+				    CurrentSchema = Esquema,
+				    CurrentRows = Registros,
+				    CurrentPeriod = Periodo,
+				    CurrentCompany = Empresa,
+				    Origen = Sql.Database(CurrentServer, CurrentDatabase, [Query="
+				
+				
+				DECLARE @ANO1 VARCHAR(20)
+				DECLARE @ANO2 int
+				set @ANO1='"& CurrentPeriod &"'
+				set @ANO2=(SELECT MIN(PERIODO) FROM (	SELECT YEAR(ACCDAT_0) AS PERIODO,COUNT(*) AS REGISTROS,
+														SUM(COUNT(*)) OVER (ORDER BY YEAR(ACCDAT_0) DESC) AS ACUMULADO
+														FROM " & CurrentSchema &".SINVOICED as SED left join " & CurrentSchema &".SINVOICE AS SE on SED.NUM_0 = SE.NUM_0
+														where SE.ORIMOD_0=5 
+														GROUP BY YEAR(ACCDAT_0)
+														) A	WHERE ACUMULADO <=" & CurrentRows &")
+														
+				
+				IF @ANO1='Periodo automático'
+				
+				(
+				SELECT 
+				SED.[NUM_0],SED.[SIDLIN_0] ,SED.[CPY_0] ,SED.[BPCINV_0] ,SED.[ITMREF_0] ,SED.[ITMDES1_0] ,SED.[ITMDES_0] ,SED.[REP1_0] ,SED.[REP2_0] ,SED.[GROPRI_0] ,SED.[PRIREN_0] ,SED.[NETPRI_0] ,SED.[NETPRINOT_0]
+				,SED.[NETPRIATI_0] ,SED.[PFM_0] ,SED.[CPRPRI_0] ,SED.[DISCRGVAL1_0],SED.[DISCRGVAL2_0] ,SED.[DISCRGREN1_0],SED.[DISCRGREN2_0] ,SED.[AMTNOTLIN_0] ,SED.[BASTAXLIN_0] ,SED.[RATTAXLIN_0] ,SED.[AMTTAXLIN_0]
+				,SED.[AMTATILIN_0] ,SED.[QTY_0] ,SED.[SAU_0] ,SED.[PRIORD_0] ,SED.[VAT_0] ,SE.SNS_0 ,SE.ORIMOD_0, ACCDAT_0 ,SED.QTYSTU_0, SED.STOFCY_0, SYD.BPAADD_0
+				,(select top 1 ITS.BPSNUM_0 from " & CurrentSchema &".ITMBPS ITS where ITS.ITMREF_0 = SED.ITMREF_0 and ITS.PIO_0 = 0) as 'Codigo Proveedor',
+				(select top 1 BPS.BPSNAM_0 from " & CurrentSchema &".ITMBPS ITS inner join " & CurrentSchema &".BPSUPPLIER BPS on BPS.BPSNUM_0 = ITS.BPSNUM_0 where ITS.ITMREF_0 = SED.ITMREF_0 and ITS.PIO_0 = 0) as 'Nombre Proveedor'
+				, (select top 1 ITS.ITMREFBPS_0 from " & CurrentSchema &".ITMBPS ITS where ITS.ITMREF_0 = SED.ITMREF_0 and ITS.BPSNUM_0='" & CurrentCompany &"') as [Articulo VYGON]
+				
+				FROM " & CurrentSchema &".SINVOICED as SED left join " & CurrentSchema &".SINVOICE AS SE on SED.NUM_0 = SE.NUM_0
+				left join " & CurrentSchema &".SDELIVERYD SYD on SYD.SDHNUM_0=SED.SDHNUM_0 and SYD.SDDLIN_0=SED.SDDLIN_0
+				where SE.ORIMOD_0=5 and INVTYP_0 in (1,2) AND YEAR(ACCDAT_0)>=@ANO2
+				
+				
+				)
+				
+				ELSE
+				
+				(
+				SELECT 
+				SED.[NUM_0],SED.[SIDLIN_0] ,SED.[CPY_0] ,SED.[BPCINV_0] ,SED.[ITMREF_0] ,SED.[ITMDES1_0] ,SED.[ITMDES_0] ,SED.[REP1_0] ,SED.[REP2_0] ,SED.[GROPRI_0] ,SED.[PRIREN_0] ,SED.[NETPRI_0] ,SED.[NETPRINOT_0]
+				,SED.[NETPRIATI_0] ,SED.[PFM_0] ,SED.[CPRPRI_0] ,SED.[DISCRGVAL1_0],SED.[DISCRGVAL2_0] ,SED.[DISCRGREN1_0],SED.[DISCRGREN2_0] ,SED.[AMTNOTLIN_0] ,SED.[BASTAXLIN_0] ,SED.[RATTAXLIN_0] ,SED.[AMTTAXLIN_0]
+				,SED.[AMTATILIN_0] ,SED.[QTY_0] ,SED.[SAU_0] ,SED.[PRIORD_0] ,SED.[VAT_0] ,SE.SNS_0 ,SE.ORIMOD_0, ACCDAT_0 ,SED.QTYSTU_0, SED.STOFCY_0, SYD.BPAADD_0
+				,(select top 1 ITS.BPSNUM_0 from " & CurrentSchema &".ITMBPS ITS where ITS.ITMREF_0 = SED.ITMREF_0 and ITS.PIO_0 = 0) as 'Codigo Proveedor',
+				(select top 1 BPS.BPSNAM_0 from " & CurrentSchema &".ITMBPS ITS inner join " & CurrentSchema &".BPSUPPLIER BPS on BPS.BPSNUM_0 = ITS.BPSNUM_0 where ITS.ITMREF_0 = SED.ITMREF_0 and ITS.PIO_0 = 0) as 'Nombre Proveedor'
+				, (select top 1 ITS.ITMREFBPS_0 from " & CurrentSchema &".ITMBPS ITS where ITS.ITMREF_0 = SED.ITMREF_0 and ITS.BPSNUM_0='" & CurrentCompany &"') as [Articulo VYGON]
+				
+				FROM " & CurrentSchema &".SINVOICED as SED left join " & CurrentSchema &".SINVOICE AS SE on SED.NUM_0 = SE.NUM_0
+				left join " & CurrentSchema &".SDELIVERYD SYD on SYD.SDHNUM_0=SED.SDHNUM_0 and SYD.SDDLIN_0=SED.SDDLIN_0
+				where SE.ORIMOD_0=5 and INVTYP_0 in (1,2) AND YEAR(ACCDAT_0)>=@ANO1
+				
+				)     
+				        
+				        
+				        "
+				                                                          ]),
+				    #"Columnas con nombre cambiado" = Table.RenameColumns(Origen,{{"NUM_0", "Documento"}, {"SIDLIN_0", "Linea"}, {"CPY_0", "Empresa"}, {"BPCINV_0", "IdCliente"}, {"ITMREF_0", "IdItem"}, {"ITMDES1_0", "Descripcion 1"}, {"ITMDES_0", "Descripcion 2"}, {"REP1_0", "Comercial 1"}, {"REP2_0", "Comercial 2"}, {"GROPRI_0", "Precio Bruto"}, {"PRIREN_0", "Motivo Precio"}, {"NETPRI_0", "Precio Neto"}, {"NETPRINOT_0", "Precio Neto AI"}, {"NETPRIATI_0", "Precio Neto II"}, {"PFM_0", "Margen Beneficio"}, {"CPRPRI_0", "Precio Coste"}, {"DISCRGVAL1_0", "Valor Descuento 1"}, {"DISCRGVAL2_0", "Valor Descuento 2"}, {"DISCRGREN1_0", "Motivo Descuento"}, {"DISCRGREN2_0", "Motivo Descuento 2"}, {"AMTNOTLIN_0", "Total Linea Sin Impuesto"}, {"BASTAXLIN_0", "Importe Imponible"}, {"RATTAXLIN_0", "Tasa Impuesto"}, {"AMTTAXLIN_0", "Importe Impuesto"}, {"AMTATILIN_0", "Total Linea con Impuesto"}, {"QTY_0", "Cantidad"}, {"SAU_0", "Unidad Venta"}, {"PRIORD_0", "Precio Pedido"}, {"ACCDAT_0", "Fecha Factura"}, {"VAT_0", "Tipo IVA"},{"SNS_0", "Sentido Cargo/Abono"}, {"ORIMOD_0", "Modulo"},{"QTYSTU_0", "Quantity"},{"BPAADD_0", "Direccion de envio"}}),
+				    #"Tipo cambiado" = Table.TransformColumnTypes(#"Columnas con nombre cambiado",{{"Fecha Factura", type date}})
+				in
+				    #"Tipo cambiado"
+				```
+
+	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navigation
+

@@ -337,25 +337,6 @@
           ]
         },
         "howCreated": "User"
-      },
-      {
-        "name": "3424d2d92b698e717762",
-        "field": {
-          "Aggregation": {
-            "Expression": {
-              "Column": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "Oportunidad"
-                  }
-                },
-                "Property": "Id"
-              }
-            },
-            "Function": 2
-          }
-        },
-        "type": "Advanced"
       }
     ]
   }

@@ -326,39 +326,6 @@
           ]
         },
         "howCreated": "User"
-      },
-      {
-        "name": "e09f5f0aa72a8856cb70",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Cuenta"
-              }
-            },
-            "Property": "Nombre_comercial__c"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "d36366b4f31a93dd619e",
-        "field": {
-          "Aggregation": {
-            "Expression": {
-              "Column": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "Oportunidad"
-                  }
-                },
-                "Property": "Amount"
-              }
-            },
-            "Function": 0
-          }
-        },
-        "type": "Advanced"
       }
     ]
   }

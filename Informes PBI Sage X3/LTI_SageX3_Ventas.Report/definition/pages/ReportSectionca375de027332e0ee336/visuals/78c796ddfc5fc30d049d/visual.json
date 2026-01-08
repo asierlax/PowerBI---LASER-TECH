@@ -1,0 +1,31 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
+  "name": "78c796ddfc5fc30d049d",
+  "position": {
+    "x": 24.603773584905753,
+    "y": 95.0943396226415,
+    "z": 1000,
+    "height": 578.71698113207549,
+    "width": 1230.7924528301885,
+    "tabOrder": 0
+  },
+  "visual": {
+    "visualType": "qnaVisual",
+    "objects": {
+      "hiddenProperties": [
+        {
+          "properties": {
+            "savedUtterance": {
+              "expr": {
+                "Literal": {
+                  "Value": "'top 10 address provincias totalventas as filled map  '"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

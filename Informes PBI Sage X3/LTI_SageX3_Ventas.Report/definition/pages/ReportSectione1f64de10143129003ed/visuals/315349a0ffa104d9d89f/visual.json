@@ -1,0 +1,16 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
+  "name": "315349a0ffa104d9d89f",
+  "position": {
+    "x": 537.60002150229354,
+    "y": 95.823869337729349,
+    "z": 22000,
+    "height": 318.82568807339447,
+    "width": 303.85321100917429,
+    "tabOrder": 40000
+  },
+  "visualGroup": {
+    "displayName": "Vinculación RF",
+    "groupMode": "ScaleMode"
+  }
+}

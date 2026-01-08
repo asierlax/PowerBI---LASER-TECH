@@ -321,39 +321,6 @@
           ]
         },
         "howCreated": "User"
-      },
-      {
-        "name": "28654e88d3cbe7f964cd",
-        "field": {
-          "Aggregation": {
-            "Expression": {
-              "Column": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "Oportunidad"
-                  }
-                },
-                "Property": "Id"
-              }
-            },
-            "Function": 5
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "f9dfd1afbe4ef564e7a1",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Oportunidad"
-              }
-            },
-            "Property": "StageName"
-          }
-        },
-        "type": "Categorical"
       }
     ]
   }

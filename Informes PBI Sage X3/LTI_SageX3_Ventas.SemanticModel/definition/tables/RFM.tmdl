@@ -1,0 +1,399 @@
+table RFM
+	lineageTag: 426f761d-548d-42fd-8ebf-0f936b4dab3a
+
+	measure '# CustomersRFM' = ```
+			
+			VAR RemapFilterAbc =
+			    TREATAS (
+			        'RFM',
+			        Customer[IdCliente],
+			        Fecha[Ano],
+			        RFM[Recency Score],
+			        RFM[Frecuency Score],
+			        RFM[Monetary Score],
+			        RFM[Id_Fecha],
+			        RFM[RFScore],
+			        RFM[Recency Value],
+			        RFM[Duracion Periodo],
+			        RFM[Ultima fecha compra],
+			        RFM[Frecuency Value],
+			        RFM[Max Frec],
+			        RFM[Monetary Value],
+			        RFM[max mon],
+			        RFM[Min fecha],
+			        RFM[Max fecha]
+			   
+			          )
+			VAR Result =
+			    CALCULATE (
+			        DISTINCTCOUNT ( 'Sales Invoice Line'[IdCliente] ),
+			        KEEPFILTERS ( RemapFilterAbc )
+			    )
+			RETURN
+			    IF(ISBLANK(Result), 0, Result)
+			
+			```
+		formatString: 0
+		lineageTag: f101ea2d-b5a5-462c-9667-0196f95d0480
+
+	measure '# PromedioRec' =
+			
+			VAR minAno = YEAR([MinSelectedDate])
+			var maxAno = YEAR([MaxSelectedDate])
+			VAR Result =
+			    CALCULATE (
+			        AVERAGE(RFM[Recency Score]),
+			        AND(RFM[Ano] >= minAno, RFM[Ano] <= maxAno)
+			    )
+			RETURN
+			    IF(ISBLANK(Result), 0, Result)
+		lineageTag: 92d743d3-dd35-4919-8bd0-4d36dcd077c8
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure '# PromedioFrec' =
+			
+			VAR minAno = YEAR([MinSelectedDate])
+			var maxAno = YEAR([MaxSelectedDate])
+			VAR Result =
+			    CALCULATE (
+			        AVERAGE(RFM[Frecuency Score]),
+			        AND(RFM[Ano] >= minAno, RFM[Ano] <= maxAno)
+			    )
+			RETURN
+			    IF(ISBLANK(Result), 0, Result)
+		lineageTag: 8a2ad083-cb46-466a-b2c4-7f450d6c5d44
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure '# PromedioMon' =
+			
+			VAR minAno = YEAR([MinSelectedDate])
+			var maxAno = YEAR([MaxSelectedDate])
+			VAR Result =
+			    CALCULATE (
+			        AVERAGE(RFM[Monetary Score]),
+			        AND(RFM[Ano] >= minAno, RFM[Ano] <= maxAno)
+			    )
+			RETURN
+			    IF(ISBLANK(Result), 0, Result)
+		lineageTag: ffdcad98-586c-478f-9533-38994cbcb803
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Numero Documentos' = DISTINCTCOUNT('Sales Invoice Line'[Documento])
+		formatString: 0
+		lineageTag: 7e868cb9-54bc-4732-b410-3c1218324bb6
+
+	measure 'Primera Fecha Factura' = MIN('Sales Invoice Line'[Fecha Factura])
+		formatString: General Date
+		lineageTag: 23f94515-e7bb-45c3-a02c-3479e4c96687
+
+	measure 'Ultima Fecha Factura' = MAX('Sales Invoice Line'[Fecha Factura])
+		formatString: General Date
+		lineageTag: 41c3ded9-7f6d-4ec7-b997-728e138409ee
+
+	column ClienteID
+		lineageTag: 84d050f4-1735-4c5d-8381-fcbb0718136a
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [ClienteID]
+
+		annotation SummarizationSetBy = Automatic
+
+	column Ano
+		formatString: 0
+		lineageTag: 89d4da50-8d2f-40aa-bcd4-5f0c7b664043
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Ano]
+
+		annotation SummarizationSetBy = User
+
+	column 'Recency Score'
+		dataType: int64
+		formatString: 0
+		lineageTag: a0092d34-ee80-409f-bdd8-a987cfcf54e0
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Recency Score]
+
+		annotation SummarizationSetBy = User
+
+	column 'Frecuency Score'
+		dataType: int64
+		formatString: 0
+		lineageTag: 917985c8-999e-4f54-99ad-f67d3c7ec3ec
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Frecuency Score]
+
+		annotation SummarizationSetBy = User
+
+	column 'Monetary Score'
+		dataType: int64
+		formatString: 0
+		lineageTag: b4870fc0-f7ac-4b53-a028-223c084544c4
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Monetary Score]
+
+		annotation SummarizationSetBy = User
+
+	column Id_Fecha
+		lineageTag: e0380c15-4d9e-42f5-aa0a-f10c41599065
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Id_Fecha]
+
+		annotation SummarizationSetBy = Automatic
+
+	column RFScore
+		lineageTag: 6e6923e7-ef48-41ca-9e41-ca3c110870d0
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [RFScore]
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Recency Value'
+		formatString: 0
+		lineageTag: 34a4fd90-3d43-421e-9a2f-ad75f250bf25
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: [Recency Value]
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Duracion Periodo'
+		formatString: 0
+		lineageTag: d00784c5-8b36-43ef-9aec-abf44610d60d
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: [Duracion Periodo]
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Ultima fecha compra'
+		formatString: General Date
+		lineageTag: d93c77bc-88c0-467e-9762-38e9af0345ab
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Ultima fecha compra]
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Frecuency Value'
+		formatString: 0
+		lineageTag: 5d514f29-3f54-43bd-bf3b-127f8056a842
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: [Frecuency Value]
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Max Frec'
+		formatString: 0
+		lineageTag: bded59a9-fbde-4df4-a316-2bc1a8e44d8e
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: [Max Frec]
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Monetary Value'
+		formatString: #,0.00\ "€";-#,0.00\ "€";#,0.00\ "€"
+		lineageTag: 95572918-8291-474a-a85b-60c733b8d02b
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: [Monetary Value]
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Max mon'
+		lineageTag: b6373b31-1f3a-4962-8a56-15fea3d20fb0
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: [Max mon]
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Min fecha'
+		formatString: General Date
+		lineageTag: 9d73d44f-f77e-4314-8e3f-279ed495e37d
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Min fecha]
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Max fecha'
+		formatString: General Date
+		lineageTag: b98e5ee2-6c76-4f83-8d34-89c107cf6e05
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Max fecha]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition RFM-458907bf-0fec-4dac-8521-555fda872d61 = calculated
+		mode: import
+		source = ```
+				
+				VAR CustomersByYear =
+				    SUMMARIZE (
+				        'Sales Invoice Line',
+				        Customer[IdCliente],
+				        'Fecha'[Ano]
+				    )     
+				--Calcular la ultima fecha de factura de cada cliente en cada año
+				VAR MaxFechaByAnoCustomer =
+				    ADDCOLUMNS( 
+				        CustomersByYear,        
+				        "@Fecha Factura", 
+				            var ano = Fecha[Ano]
+				            var cliente = Customer[IdCliente]
+				            var filtersTab = 
+				                 FILTER (
+				                    CustomersByYear,
+				                    AND ( 'Fecha'[Ano] = Ano, cliente = Customer[IdCliente] )
+				                )
+				            return CALCULATE([Ultima Fecha Factura], filtersTab),      
+				        "@Max Fecha Factura Ano",
+				            var ano = Fecha[Ano]
+				            var filtersTab = 
+				                 FILTER (
+				                    CustomersByYear,
+				                    'Fecha'[Ano] = Ano
+				                )
+				            return CALCULATE([Ultima Fecha Factura], filtersTab),
+				        "@Min Fecha Factura Ano",
+				            var ano = Fecha[Ano]
+				            var filtersTab = 
+				                 FILTER (
+				                    CustomersByYear,
+				                    'Fecha'[Ano] = Ano
+				                )
+				            return CALCULATE([Primera Fecha Factura], filtersTab),
+				        "@CustomerSales",
+				                [Total Ventas]                
+				            ,
+				        "@FrecValue",
+				                [Numero Documentos]
+				    )
+				--Obtener los valores máximos y mínimos de Ventas y Frecuencia
+				VAR MaxSalesMinSalesMaxFrecMinFrec =
+				    ADDCOLUMNS (
+				        MaxFechaByAnoCustomer,
+				        "@MinSales",
+				            VAR CurrentSales = [@CustomerSales]
+				            VAR Ano = 'Fecha'[Ano]
+				            VAR CumulatedSalesWithinYear =
+				                FILTER (
+				                    MaxFechaByAnoCustomer,
+				                    AND ( 'Fecha'[Ano] = Ano, [@CustomerSales] <= CurrentSales )
+				                )
+				            RETURN
+				                MINX ( CumulatedSalesWithinYear, [@CustomerSales] ),
+				        "@MaxSales",
+				            VAR CurrentSales = [@CustomerSales]
+				            VAR Ano = 'Fecha'[Ano]
+				            VAR CumulatedSalesWithinYear =
+				                FILTER (
+				                    MaxFechaByAnoCustomer,
+				                    AND ( 'Fecha'[Ano] = Ano, [@CustomerSales] >= CurrentSales )
+				                )
+				            RETURN
+				                MAXX ( CumulatedSalesWithinYear, [@CustomerSales] ),
+				        "@MinFrec",
+				            VAR FrecValue = [@FrecValue]
+				            VAR Ano = 'Fecha'[Ano]
+				            VAR CumulatedSalesWithinYear =
+				                FILTER (
+				                    MaxFechaByAnoCustomer,
+				                    AND ( 'Fecha'[Ano] = Ano, [@FrecValue] <= FrecValue )
+				                )
+				            RETURN
+				                MINX ( CumulatedSalesWithinYear, [@FrecValue] ),
+				        "@MaxFrec",
+				            VAR FrecValue = [@FrecValue]
+				            VAR Ano = 'Fecha'[Ano]
+				            VAR CumulatedSalesWithinYear =
+				                FILTER (
+				                    MaxFechaByAnoCustomer,
+				                    AND ('Fecha'[Ano] = Ano, [@FrecValue] >= FrecValue )
+				                )
+				            RETURN
+				                MAXX ( CumulatedSalesWithinYear, [@FrecValue] )
+				    )
+				--Obtener la diferencia entre los valores minimos y maximos, la duracion del periodo en días y el tiempo, en días, desde la ultima compra del cliente
+				VAR DifMon =
+				    ADDCOLUMNS (
+				        MaxSalesMinSalesMaxFrecMinFrec,
+				        "@DifMon", [@MaxSales] - [@MinSales],
+				        "@DifFrec", [@MaxFrec] - [@MinFrec],
+				        "@DuracionPeriodo", DATEDIFF ( [@Min Fecha Factura Ano], [@Max Fecha Factura Ano], DAY ),
+				        "@RecValue", DATEDIFF ( [@Fecha Factura], [@Max Fecha Factura Ano], DAY )
+				    )
+				--Calcular las puntuaciones
+				VAR Scores =
+				    ADDCOLUMNS (
+				        DifMon,
+				        "@MonetaryScore",
+				            SWITCH (
+				                TRUE,
+				                 ( [@CustomerSales] - [@MinSales] ) < [@DifMon] * 0.20, "1",
+				                 ( [@CustomerSales] - [@MinSales] ) < [@DifMon] * 0.40, "2",
+				                 ( [@CustomerSales] - [@MinSales] ) < [@DifMon] * 0.60, "3",
+				                 ( [@CustomerSales] - [@MinSales] ) < [@DifMon] * 0.80, "4",
+				                "5"
+				            ),
+				        "@FrecuencyScore",
+				            SWITCH (
+				                TRUE,
+				                 ( [@FrecValue] - [@MinFrec] ) < [@DifFrec] * 0.20, "1",
+				                 ( [@FrecValue] - [@MinFrec] ) < [@DifFrec] * 0.40, "2",
+				                 ( [@FrecValue] - [@MinFrec] ) < [@DifFrec] * 0.60, "3",
+				                 ( [@FrecValue] - [@MinFrec] ) < [@DifFrec] * 0.80, "4",
+				                "5"
+				            ),
+				        "@RecencyScore",
+				            SWITCH (
+				                TRUE,
+				                [@RecValue] < [@DuracionPeriodo] * 0.20, "5",
+				                [@RecValue] < [@DuracionPeriodo] * 0.40, "4",
+				                [@RecValue] < [@DuracionPeriodo] * 0.60, "3",
+				                [@RecValue] < [@DuracionPeriodo] * 0.80, "2",
+				                "1"
+				            )
+				    )
+				--Tabla final
+				VAR Result =
+				    SELECTCOLUMNS (
+				        Scores,
+				        "ClienteID", 'Customer'[IdCliente],
+				        "Ano", 'Fecha'[Ano],
+				        "Recency Score", [@RecencyScore], 
+				        "Frecuency Score", [@FrecuencyScore],
+				        "Monetary Score", [@MonetaryScore],
+				        "Id_Fecha", 'Fecha'[Ano] & Customer[IdCliente],
+				        "RFScore", [@RecencyScore] & "-" & [@FrecuencyScore],
+				        "Recency Value", [@RecValue],
+				        "Duracion Periodo", [@DuracionPeriodo],
+				        "Ultima fecha compra", [@Fecha Factura],
+				        "Frecuency Value", [@FrecValue],
+				        "Max Frec", [@MaxFrec],
+				        "Monetary Value", [@CustomerSales],
+				        "Max mon", [@MaxSales],
+				        "Min fecha", [@Min Fecha Factura Ano],
+				        "Max fecha", [@Max Fecha Factura Ano]
+				    )
+				RETURN
+				    FILTER(Result,[ClienteID]<>"")  
+				    
+				```
+
+	annotation PBI_Id = 64c4c85ddf1e47c0ac2a249532d52f49
+

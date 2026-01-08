@@ -65,7 +65,7 @@
               },
               "queryRef": "Oportunidad.CloseDate.Variación.Jerarquía de fechas.Trimestre",
               "nativeQueryRef": "CloseDate Trimestre",
-              "active": true
+              "active": false
             },
             {
               "field": {
@@ -91,7 +91,7 @@
               },
               "queryRef": "Oportunidad.CloseDate.Variación.Jerarquía de fechas.Mes",
               "nativeQueryRef": "CloseDate Mes",
-              "active": true
+              "active": false
             }
           ]
         }
@@ -159,7 +159,6 @@
                   }
                 }
               ],
-              "isToggled": true,
               "children": [
                 {
                   "identityValues": [
@@ -199,108 +198,6 @@
                 "Literal": {
                   "Value": "0D"
                 }
-              }
-            },
-            "filter": {
-              "filter": {
-                "Version": 2,
-                "From": [
-                  {
-                    "Name": "l",
-                    "Entity": "LocalDateTable_b12c2642-2939-48b3-8b0b-fe403399c897",
-                    "Type": 0
-                  }
-                ],
-                "Where": [
-                  {
-                    "Condition": {
-                      "In": {
-                        "Expressions": [
-                          {
-                            "Column": {
-                              "Expression": {
-                                "SourceRef": {
-                                  "Source": "l"
-                                }
-                              },
-                              "Property": "Año"
-                            }
-                          }
-                        ],
-                        "Values": [
-                          [
-                            {
-                              "Literal": {
-                                "Value": "2025L"
-                              }
-                            }
-                          ]
-                        ]
-                      }
-                    },
-                    "Annotations": {
-                      "filterExpressionMetadata": {
-                        "expressions": [
-                          {
-                            "HierarchyLevel": {
-                              "Expression": {
-                                "Hierarchy": {
-                                  "Expression": {
-                                    "PropertyVariationSource": {
-                                      "Expression": {
-                                        "SourceRef": {
-                                          "Entity": "Oportunidad"
-                                        }
-                                      },
-                                      "Name": "Variación",
-                                      "Property": "CloseDate"
-                                    }
-                                  },
-                                  "Hierarchy": "Jerarquía de fechas"
-                                }
-                              },
-                              "Level": "Año"
-                            }
-                          }
-                        ],
-                        "decomposedIdentities": {
-                          "values": [
-                            [
-                              {
-                                "0": [
-                                  {
-                                    "Literal": {
-                                      "Value": "2025L"
-                                    }
-                                  }
-                                ]
-                              }
-                            ]
-                          ],
-                          "columns": [
-                            {
-                              "value": {
-                                "Column": {
-                                  "Expression": {
-                                    "SourceRef": {
-                                      "Entity": "LocalDateTable_b12c2642-2939-48b3-8b0b-fe403399c897"
-                                    }
-                                  },
-                                  "Property": "Año"
-                                }
-                              }
-                            }
-                          ]
-                        },
-                        "valueMap": [
-                          {
-                            "0": "2025"
-                          }
-                        ]
-                      }
-                    }
-                  }
-                ]
               }
             }
           }
@@ -373,84 +270,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "d4a720e79957a4ebd05b",
-        "field": {
-          "HierarchyLevel": {
-            "Expression": {
-              "Hierarchy": {
-                "Expression": {
-                  "PropertyVariationSource": {
-                    "Expression": {
-                      "SourceRef": {
-                        "Entity": "Oportunidad"
-                      }
-                    },
-                    "Name": "Variación",
-                    "Property": "CloseDate"
-                  }
-                },
-                "Hierarchy": "Jerarquía de fechas"
-              }
-            },
-            "Level": "Año"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "ad77c5fcedde81b1d0fe",
-        "field": {
-          "HierarchyLevel": {
-            "Expression": {
-              "Hierarchy": {
-                "Expression": {
-                  "PropertyVariationSource": {
-                    "Expression": {
-                      "SourceRef": {
-                        "Entity": "Oportunidad"
-                      }
-                    },
-                    "Name": "Variación",
-                    "Property": "CloseDate"
-                  }
-                },
-                "Hierarchy": "Jerarquía de fechas"
-              }
-            },
-            "Level": "Trimestre"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "616c10907804f6b83410",
-        "field": {
-          "HierarchyLevel": {
-            "Expression": {
-              "Hierarchy": {
-                "Expression": {
-                  "PropertyVariationSource": {
-                    "Expression": {
-                      "SourceRef": {
-                        "Entity": "Oportunidad"
-                      }
-                    },
-                    "Name": "Variación",
-                    "Property": "CloseDate"
-                  }
-                },
-                "Hierarchy": "Jerarquía de fechas"
-              }
-            },
-            "Level": "Mes"
-          }
-        },
-        "type": "Categorical"
-      }
-    ]
   }
 }

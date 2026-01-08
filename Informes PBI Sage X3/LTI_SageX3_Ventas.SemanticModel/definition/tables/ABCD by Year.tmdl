@@ -1,0 +1,178 @@
+table 'ABCD by Year'
+	lineageTag: 1873fb10-3d68-4c33-a241-68980a52c91e
+
+	measure '# CustomersABCD' = ```
+			
+			VAR RemapFilterAbc =
+			    TREATAS (
+			        'ABCD by Year',           -- Remap the columns of ABC by Year
+			        'Customer'[IdCliente],   -- so that only the specific
+			        'Fecha'[Ano],            -- combinations of product and year
+			        'ABCD by Year'[ABCD Class], -- are included in the filter context
+			        'ABCD by Year'[Margen],
+			        'ABCD by Year'[Check Margen],
+			        'ABCD by Year'[Id_Fecha]
+			  
+			          )
+			VAR Result =
+			    CALCULATE (
+			        DISTINCTCOUNT ( 'Sales Invoice Line'[IdCliente] ),
+			        KEEPFILTERS ( RemapFilterAbc )
+			    )
+			RETURN
+			    Result + 0
+			```
+		formatString: 0
+		lineageTag: 23c8b60b-fc56-4870-9665-3398006f94a4
+
+	measure 'ABCD Margen Amount' = ```
+			
+			VAR RemapFilterAbc = 
+			    TREATAS ( 
+			        'ABCD by Year',           -- Remap the columns of ABCD by Year 
+			        'Customer'[IdCliente],   -- so that only the specific 
+			        'Fecha'[Ano],   -- combinations of product and year 
+			        'ABCD by Year'[ABCD Class], -- are included in the filter context 
+			        'ABCD by Year'[Margen],
+			        'ABCD by Year'[Check Margen],
+			        'ABCD by Year'[Id_Fecha]
+			
+			    ) 
+			VAR Result = 
+			    CALCULATE ( 
+			        [Margen Beneficio], 
+			        KEEPFILTERS ( RemapFilterAbc ) 
+			    ) 
+			RETURN 
+			    Result 
+			
+			```
+		formatString: #,0.00\ "€";-#,0.00\ "€";#,0.00\ "€"
+		lineageTag: 89a7639f-d1f7-4369-be36-9afd66236719
+
+	column 'Cliente ID'
+		lineageTag: fa1cde3d-e9d9-42c7-9ab6-a10027a1a2b9
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Cliente ID]
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Calendar Year'
+		formatString: 0
+		lineageTag: cd035ed1-8bfb-45aa-8a63-3dd98ca7bbeb
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Calendar Year]
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'ABCD Class'
+		lineageTag: b77098af-0c0d-47c2-9282-1a737f6a6b89
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [ABCD Class]
+
+		annotation SummarizationSetBy = Automatic
+
+	column Margen
+		lineageTag: 664a8994-989a-469c-ae95-86eaca4ebec8
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Margen]
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Check Margen' =
+			
+			IF(
+			    'ABCD by Year'[Margen]< 0,
+			    "Margen Bruto Negativo",
+			    "Margen Bruto Positivo"
+			   )
+		lineageTag: c17f1fc8-4dcd-4476-8274-b4c7d8dc3d02
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column Id_Fecha = CONCATENATE('ABCD by Year'[Calendar Year],'ABCD by Year'[Cliente ID])
+		lineageTag: 548ceb31-e0ea-4e2e-9d4f-3a97afb5baa6
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'ABCD by Year-393b86e3-daa2-475c-9ae7-753047478215' = calculated
+		mode: import
+		source = ```
+				
+				VAR CustomersByYear =
+				    SUMMARIZE (
+				        'Sales Invoice Line',
+				        Customer[IdCliente],
+				        'Fecha'[Ano]
+				    )
+				VAR SaleByYearCustomer =
+				    ADDCOLUMNS (
+				        CustomersByYear,
+				        "@CustomerMargen", [Margen Beneficio],
+				        "@YearlySales", CALCULATE (
+				            [Margen Beneficio],
+				            ALL ( 'Customer' )
+				        )
+				    )
+				VAR CumulatedSalesByYearProduct =
+				    ADDCOLUMNS (
+				        SaleByYearCustomer,
+				        "@CumulatedMargen",
+				        VAR CurrentMargen = [@CustomerMargen]
+				        VAR CurrentYear = 'Fecha'[Ano]
+				        VAR CumulatedSalesWithinYear =
+				            FILTER (
+				                SaleByYearCustomer,
+				                AND (
+				                    'Fecha'[Ano] = CurrentYear,
+				                    [@CustomerMargen] >= CurrentMargen
+				                )
+				            )
+				        RETURN
+				            SUMX (
+				                CumulatedSalesWithinYear,
+				                [@CustomerMargen]
+				            )
+				    )
+				VAR CumulatedPctByYearProduct =
+				    ADDCOLUMNS (
+				        CumulatedSalesByYearProduct,
+				        "@CumulatedPct", DIVIDE (
+				            [@CumulatedMargen],
+				            [@YearlySales]
+				        )
+				    )
+				VAR ClassByYearProduct =
+				    ADDCOLUMNS (
+				        CumulatedPctByYearProduct,
+				        "@AbcdClass", SWITCH (
+				            TRUE,
+				            [@CumulatedPct] <= 0.80, "A",
+				            [@CumulatedPct] <= 0.95, "B",
+				            [@CustomerMargen] <0, "D",
+				            "C"
+				        )
+				    )
+				
+				VAR Result =
+				    SELECTCOLUMNS (
+				        ClassByYearProduct,
+				        "Cliente ID", 'Customer'[IdCliente],
+				        "Calendar Year", 'Fecha'[Ano],
+				        "ABCD Class", [@AbcdClass],
+				        "Margen", [@CustomerMargen]
+				       )
+				RETURN
+				    FILTER(Result,[Cliente ID]<>"")  
+				```
+
+	annotation PBI_Id = ce36427d9efe4a20852e32a117a9a31e
+

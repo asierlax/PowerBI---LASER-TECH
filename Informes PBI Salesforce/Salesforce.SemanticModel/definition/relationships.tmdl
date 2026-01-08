@@ -220,3 +220,7 @@ relationship 67b7c571-befd-fc88-48ad-4e1e40e8da75
 	fromColumn: Contacto.AccountId
 	toColumn: Cuenta.Id
 
+relationship 67bbddd4-13af-ea2a-24fe-8d2723af4836
+	fromColumn: Cuenta.OwnerId
+	toColumn: Usuario_Cuenta.Id
+

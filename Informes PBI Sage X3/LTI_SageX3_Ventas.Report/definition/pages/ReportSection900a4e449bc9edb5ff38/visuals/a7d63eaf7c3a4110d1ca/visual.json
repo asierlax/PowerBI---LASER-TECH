@@ -1,0 +1,16 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
+  "name": "a7d63eaf7c3a4110d1ca",
+  "position": {
+    "x": 771.55640504668725,
+    "y": 133.69246667594945,
+    "z": 26000,
+    "height": 31.744906997342781,
+    "width": 100.90345438441098,
+    "tabOrder": 6000
+  },
+  "visualGroup": {
+    "displayName": "VENTAS",
+    "groupMode": "ScaleMode"
+  }
+}

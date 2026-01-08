@@ -1,0 +1,163 @@
+table 'ABC by Year'
+	lineageTag: 9bd79a4d-660d-4a66-9929-42953165583b
+
+	measure 'ABC AA' = CALCULATE([Customers ABC],SAMEPERIODLASTYEAR(Fecha[Fecha]))
+		formatString: 0
+		lineageTag: f361f8c2-c5c8-4c6e-a15e-2d1527f195b8
+
+	measure 'ABCD AA' = CALCULATE('ABCD by Year'[# CustomersABCD], SAMEPERIODLASTYEAR(Fecha[Fecha]))
+		formatString: 0
+		lineageTag: b4745205-737c-4576-b281-8b2b6170884f
+
+	measure 'ABC variacion AA' = DIVIDE(([Customers ABC] - 'ABC by Year'[ABC AA]),'ABC by Year'[ABC AA])
+		formatString: 0.00\ %;-0.00\ %;0.00\ %
+		lineageTag: 1eef8f6c-db36-44d9-a38c-2718b8bd59aa
+
+	measure 'ABCD variacion AA' = DIVIDE(('ABCD by Year'[# CustomersABCD] - [ABCD AA]),[ABCD AA])
+		formatString: 0.00\ %;-0.00\ %;0.00\ %
+		lineageTag: 5ae96b5e-8e3b-43f0-8a78-d881b5c58c38
+
+	measure 'ABC Sales Amount' =
+			
+			VAR RemapFilterAbc =
+			    TREATAS (
+			        'ABC by Year',           -- Remap the columns of ABC by Year
+			        'Customer'[IdCliente],   -- so that only the specific
+			        'Fecha'[Ano],   -- combinations of product and year
+			        'ABC by Year'[ABC Class],
+			        'ABC by Year'[Id_Fecha] -- are included in the filter context
+			    )
+			VAR Result =
+			    CALCULATE (
+			        [Total Ventas],
+			        KEEPFILTERS ( RemapFilterAbc )
+			    )
+			RETURN
+			    Result
+		formatString: #,0.00\ "€";-#,0.00\ "€";#,0.00\ "€"
+		lineageTag: f109a836-9968-4f04-96c2-1721e6bf31dd
+
+	measure 'Customers ABC' = ```
+			
+			VAR RemapFilterAbc =
+			    TREATAS (
+			        'ABC by Year',           -- Remap the columns of ABC by Year
+			        'Customer'[IdCliente],   -- so that only the specific
+			        'Fecha'[Ano],            -- combinations of product and year
+			        'ABC by Year'[ABC Class],
+			        'ABC by Year'[Id_Fecha] -- are included in the filter context
+			    )
+			         
+			VAR Result =
+			    CALCULATE (
+			        DISTINCTCOUNT ( 'Sales Invoice Line'[IdCliente] ),
+			        KEEPFILTERS ( RemapFilterAbc )
+			    )
+			RETURN
+			    Result + 0
+			```
+		formatString: 0
+		lineageTag: 4314407e-6616-4a44-a522-1c42a5419519
+
+	column 'Cliente ID'
+		lineageTag: 83cf8f32-611d-4d67-bad4-2224bbc44aea
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Cliente ID]
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Calendar Year'
+		formatString: 0
+		lineageTag: afc01982-141c-4cb4-9b04-89399229f280
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Calendar Year]
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'ABC Class'
+		lineageTag: 50bdf5fa-ab7d-4bb3-9ba5-33b3d1f18115
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [ABC Class]
+
+		annotation SummarizationSetBy = Automatic
+
+	column Id_Fecha = CONCATENATE('ABC by Year'[Calendar Year],'ABC by Year'[Cliente ID])
+		lineageTag: aa9451d6-4a8d-4a57-8149-b07798d87e6c
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'ABC by Year-bb222606-61a7-451f-a314-c67d7d7836af' = calculated
+		mode: import
+		source = ```
+				
+				VAR CustomersByYear =
+				    SUMMARIZE (
+				        'Sales Invoice Line',
+				        Customer[IdCliente],
+				        'Fecha'[Ano]
+				    )
+				VAR SaleByYearCustomer =
+				    ADDCOLUMNS (
+				        CustomersByYear,
+				        "@CustomerSales", [Total Ventas],
+				        "@YearlySales", CALCULATE (
+				            [Total Ventas],
+				            ALL ( 'Customer' )
+				        )
+				    )
+				VAR CumulatedSalesByYearProduct =
+				    ADDCOLUMNS (
+				        SaleByYearCustomer,
+				        "@CumulatedSales",
+				        VAR CurrentSales = [@CustomerSales]
+				        VAR CurrentYear = 'Fecha'[Ano]
+				        VAR CumulatedSalesWithinYear =
+				            FILTER (
+				                SaleByYearCustomer,
+				                AND (
+				                    'Fecha'[Ano] = CurrentYear,
+				                    [@CustomerSales] >= CurrentSales
+				                )
+				            )
+				        RETURN
+				            SUMX (
+				                CumulatedSalesWithinYear,
+				                [@CustomerSales]
+				            )
+				    )
+				VAR CumulatedPctByYearProduct =
+				    ADDCOLUMNS (
+				        CumulatedSalesByYearProduct,
+				        "@CumulatedPct", DIVIDE (
+				            [@CumulatedSales],
+				            [@YearlySales]
+				        )
+				    )
+				VAR ClassByYearProduct =
+				    ADDCOLUMNS (
+				        CumulatedPctByYearProduct,
+				        "@AbcClass", SWITCH (
+				            TRUE,
+				            [@CumulatedPct] <= 0.80, "A",
+				            [@CumulatedPct] <= 0.95, "B",
+				            "C"
+				        )
+				    )
+				VAR Result =
+				    SELECTCOLUMNS (
+				        ClassByYearProduct,
+				        "Cliente ID", 'Customer'[IdCliente],
+				        "Calendar Year", 'Fecha'[Ano],
+				        "ABC Class", [@AbcClass]
+				        
+				    )
+				RETURN
+				    FILTER(Result,[Cliente ID]<>"")  
+				```
+
+	annotation PBI_Id = 8e4aa8c368df4dba9423689eeba6919f
+
