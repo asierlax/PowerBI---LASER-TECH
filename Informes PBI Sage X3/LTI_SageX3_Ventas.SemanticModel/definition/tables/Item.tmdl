@@ -1,35 +1,11 @@
 table Item
 	lineageTag: 8099d0dd-b23d-43ec-b6cc-fa03fb491aaa
 
-	column IdItem
-		dataType: string
-		lineageTag: 132bcd5e-18e2-4703-a97c-a5b366be991b
-		summarizeBy: none
-		sourceColumn: IdItem
-
-		annotation SummarizationSetBy = Automatic
-
-	column Sociedad
-		dataType: string
-		lineageTag: f3325be6-ab4c-4146-953f-0104ec962be3
-		summarizeBy: none
-		sourceColumn: Sociedad
-
-		annotation SummarizationSetBy = Automatic
-
 	column IdCategoria
 		dataType: string
 		lineageTag: e2610429-f116-4521-be63-e1773eb3cd50
 		summarizeBy: none
 		sourceColumn: IdCategoria
-
-		annotation SummarizationSetBy = Automatic
-
-	column CATEGORIA
-		dataType: string
-		lineageTag: ff9e279b-6ccb-47e2-a5e4-80d3be11fc83
-		summarizeBy: none
-		sourceColumn: CATEGORIA
 
 		annotation SummarizationSetBy = Automatic
 
@@ -119,35 +95,19 @@ table Item
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-	column 'Codigo Business Unit Analisis'
-		dataType: string
-		lineageTag: e14f52d5-4d20-4964-8891-db1a94181598
-		summarizeBy: none
-		sourceColumn: Codigo Business Unit Analisis
-
-		annotation SummarizationSetBy = Automatic
-
-	column 'Codigo Familia Analisis'
-		dataType: string
-		lineageTag: 2987f899-69a3-4b4f-9cd4-84ee27eb259e
-		summarizeBy: none
-		sourceColumn: Codigo Familia Analisis
-
-		annotation SummarizationSetBy = Automatic
-
-	column 'Business Unit'
+	column Familia
 		dataType: string
 		lineageTag: 7921d200-35c9-4013-91e6-aea436f79beb
 		summarizeBy: none
-		sourceColumn: Business Unit
+		sourceColumn: Familia
 
 		annotation SummarizationSetBy = Automatic
 
-	column Familia
+	column Subfamilia
 		dataType: string
 		lineageTag: a049e3f4-e63f-43f2-8ae2-d1ea9ea2da2d
 		summarizeBy: none
-		sourceColumn: Familia
+		sourceColumn: Subfamilia
 
 		annotation SummarizationSetBy = Automatic
 
@@ -156,16 +116,6 @@ table Item
 		lineageTag: 97bf05f7-1e17-432e-a299-d5fe04eb927e
 		summarizeBy: sum
 		sourceColumn: Cantidad Minima
-
-		annotation SummarizationSetBy = Automatic
-
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
-
-	column 'Cantidad Máxima'
-		dataType: double
-		lineageTag: f7c61c3e-4a82-499f-a98d-863339f6d018
-		summarizeBy: sum
-		sourceColumn: Cantidad Máxima
 
 		annotation SummarizationSetBy = Automatic
 
@@ -186,16 +136,6 @@ table Item
 		lineageTag: 50618ef2-21de-4b06-b54e-43760614f776
 		summarizeBy: sum
 		sourceColumn: Precio Minimo
-
-		annotation SummarizationSetBy = Automatic
-
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
-
-	column 'Precio Teorico'
-		dataType: double
-		lineageTag: 19ac4dfa-058a-4993-885b-daba1af821d5
-		summarizeBy: sum
-		sourceColumn: Precio Teorico
 
 		annotation SummarizationSetBy = Automatic
 
@@ -249,46 +189,6 @@ table Item
 
 		annotation SummarizationSetBy = Automatic
 
-	column Supplier
-		dataType: string
-		lineageTag: f279ed9e-2835-40c4-8dff-d507306f0287
-		summarizeBy: none
-		sourceColumn: Supplier
-
-		annotation SummarizationSetBy = Automatic
-
-	column 'Vygon Item Number'
-		dataType: string
-		lineageTag: aafb25a3-1135-4743-9455-a05295b06225
-		summarizeBy: none
-		sourceColumn: Vygon Item Number
-
-		annotation SummarizationSetBy = Automatic
-
-	column 'Subsidiary ID'
-		dataType: string
-		lineageTag: 83c5b6c4-2d3c-462b-b991-0ebd817c180a
-		summarizeBy: none
-		sourceColumn: Subsidiary ID
-
-		annotation SummarizationSetBy = Automatic
-
-	column EOR
-		dataType: string
-		lineageTag: 3f236d93-e01e-4666-9797-75c9f4dc38cd
-		summarizeBy: none
-		sourceColumn: EOR
-
-		annotation SummarizationSetBy = Automatic
-
-	column 'Purchased from VYGON'
-		dataType: string
-		lineageTag: 10b204f7-75d7-4ab8-8951-aa14c0202f45
-		summarizeBy: none
-		sourceColumn: Purchased from VYGON
-
-		annotation SummarizationSetBy = Automatic
-
 	column 'Inf IdItem' = "'" &  'Item'[IdItem] & "'"
 		isHidden
 		lineageTag: 0c06e773-e4f6-4bd4-88b6-47fd69ea396b
@@ -324,6 +224,38 @@ table Item
 
 		annotation SummarizationSetBy = Automatic
 
+	column CodArticulo
+		dataType: string
+		lineageTag: 0be7bf27-39c3-41dd-a315-ad6fa0de1da4
+		summarizeBy: none
+		sourceColumn: CodArticulo
+
+		annotation SummarizationSetBy = Automatic
+
+	column Categoria
+		dataType: string
+		lineageTag: 74b199e6-5493-4210-843a-f869c1147936
+		summarizeBy: none
+		sourceColumn: Categoria
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Codigo Famlia'
+		dataType: string
+		lineageTag: 154888ac-5095-4948-a854-53f23e3fe515
+		summarizeBy: none
+		sourceColumn: Codigo Famlia
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Codigo Subfamilia'
+		dataType: string
+		lineageTag: b9ff2923-38ea-4f64-abae-a7dbf85c601b
+		summarizeBy: none
+		sourceColumn: Codigo Subfamilia
+
+		annotation SummarizationSetBy = Automatic
+
 	partition Item-23e52532-cf86-420a-9324-3147ff6164b4 = m
 		mode: import
 		source =
@@ -333,53 +265,41 @@ table Item
 				    CurrentSchema = Esquema,
 				    CurrentCompany = Empresa,
 				    Origen = Sql.Database(CurrentServer, CurrentDatabase, [Query="
-				                                                                SELECT   ITM.[ITMREF_0] AS IdItem
-				                                                                        ,ITM.[CPY_0] AS Sociedad
-				                                                                        ,ITM.[TCLCOD_0] AS IdCategoria
-				                                                                        ,TXCAT.TEXTE_0 AS CATEGORIA
-				                                                                        ,ITM.[ACCCOD_0] AS 'Codigo Contable'
-				                                                                        ,ITM.[ITMDES1_0] AS 'Descripcion 1'
-				                                                                        ,ITM.[ITMDES2_0] AS 'Descripcion 2'
-				                                                                        ,ITM.[ITMDES3_0] AS 'Descripcion 3'
-				                                                                        ,ITM.[STU_0] AS Unidad
-				                                                                        ,ITM.[VACITM_0] AS 'Nivel Impuesto'
-				                                                                        ,ITM.[BUY_0] AS Comprador
-				                                                                        ,ITM.[PURBASPRI_0] AS 'Precio Base'
-				                                                                        ,ITM.[CPRCOE_0] AS 'Coef Gastos Entrega'
-				                                                                        ,ITM.[CPRAMT_0] AS 'Coste Fijo Unitario'
-				                                                                        ,ITM.[CCE_0] AS 'Eje Analitico 1'
-				                                                                        ,ITM.[CCE_1] AS 'Eje Analitico 2'
-				                                                                        ,ITM.[CCE_2] AS 'Eje Analitico 3'
-				                                                                        ,ITM.[CCE_3] AS 'Eje Analitico 4'
-				                                                                        ,ITM.TSICOD_0 AS 'Codigo Famlia Analisis'
-				                                                                        ,ITM.TSICOD_1 AS 'Codigo Subfamilia Analisis'
-				                                                                        ,TXT.TEXTE_0 AS Familia
-				                                                                        ,TXT2.TEXTE_0 AS Subfamilia
-				                                                                        ,ITMS.[MINQTY_0] AS 'Cantidad Minima'
-				                                                                        ,ITMS.[MAXQTY_0] AS 'Cantidad Máxima'
-				                                                                        ,ITMS.[MINPFM_0] AS 'Margen Minimo'
-				                                                                        ,ITMS.[MINPRI_0] AS 'Precio Minimo'
-				                                                                        ,ITMS.[THEPRI_0] AS 'Precio Teorico'
-				                                                                        ,ITMS.[BASPRI_0] AS 'Precio Base Ventas'
-																						,(select top 1 ITS.BPSNUM_0 from " & CurrentSchema & ".ITMBPS ITS where ITS.ITMREF_0 = ITM.ITMREF_0 and ITS.PIO_0 = 0) as Supplier
-																						,(select top 1 ITS.ITMREFBPS_0 from " & CurrentSchema & ".ITMBPS ITS where ITS.ITMREF_0 = ITM.ITMREF_0 and ITS.BPSNUM_0='" & CurrentCompany &"') as [Vygon Item Number]
-																						,case when BPS.ITMREF_0 is null then 'N' else 'Y' end as 'Purchased from VYGON'
-				                                                                    FROM " & CurrentSchema & ".ITMMASTER AS ITM
-				                                                                    LEFT JOIN " & CurrentSchema & ".[ITMSALES] AS ITMS
-				                                                                    ON ITM.ITMREF_0 = ITMS.ITMREF_0
-				                                                                    LEFT JOIN " & CurrentSchema & ".ATEXTRA as TXT
-				                                                                    on ITM.TSICOD_0 = TXT.IDENT2_0  AND CODFIC_0 = 'ATABDIV' AND ZONE_0 = 'LNGDES' AND IDENT1_0 = '20' AND LANGUE_0 = 'SPA'
-				                                                                    LEFT JOIN " & CurrentSchema & ".ATEXTRA as TXT2
-				                                                                    on ITM.TSICOD_1 = TXT2.IDENT2_0 AND TXT2.CODFIC_0 = 'ATABDIV' AND TXT2.ZONE_0 = 'LNGDES' AND TXT2.IDENT1_0 = '21' AND TXT2.LANGUE_0 = 'SPA'
-				                                                                    LEFT JOIN " & CurrentSchema & ".ATEXTRA AS TXCAT
-				                                                                    ON ITM.TCLCOD_0 = TXCAT.IDENT1_0 AND TXCAT.CODFIC_0 = 'ITMCATEG' AND TXCAT.ZONE_0 = 'TCLAXX' AND TXCAT.LANGUE_0 = 'SPA'
-																					LEFT JOIN  PROTO.ITMBPS BPS on ITM.ITMREF_0=BPS.ITMREF_0  and BPS.BPSNUM_0='" & CurrentCompany &"'"
-				                                                          ]),
-				    #"Added Custom" = Table.AddColumn(Origen, "Subsidiary ID", each "ES"),
-				    #"Added Custom1" = Table.AddColumn(#"Added Custom", "EOR", each "EOR"),
-				    #"Renamed Columns" = Table.RenameColumns(#"Added Custom1",{{"Familia", "Business Unit"}, {"Codigo Famlia Analisis", "Codigo Business Unit Analisis"}, {"Codigo Subfamilia Analisis", "Codigo Familia Analisis"}, {"Subfamilia", "Familia"}})
+				                                                                SELECT ITM.ITMREF_0 AS 'CodArticulo',
+				                                                                ITM.TCLCOD_0 AS 'IdCategoria',
+				                                                                TXCAT.TEXTE_0 AS 'Categoria',
+				                                                                ITM.ACCCOD_0 AS 'Codigo Contable',
+				                                                                ITM.ITMDES1_0 AS 'Descripcion 1',
+				                                                                ITM.ITMDES2_0 AS 'Descripcion 2',
+				                                                                ITM.ITMDES3_0 AS 'Descripcion 3',
+				                                                                ITM.STU_0 AS 'Unidad',
+				                                                                ITM.VACITM_0 AS 'Nivel Impuesto',
+				                                                                ITM.BUY_0 AS 'Comprador',
+				                                                                ITM.PURBASPRI_0 AS 'Precio Base',
+				                                                                ITM.CPRCOE_0 AS 'Coef Gastos Entrega',
+				                                                                ITM.CPRAMT_0 AS 'Coste Fijo Unitario',
+				                                                                ITM.CCE_0 AS 'Eje Analitico 1',
+				                                                                ITM.CCE_1 AS 'Eje Analitico 2',
+				                                                                ITM.CCE_2 AS 'Eje Analitico 3',
+				                                                                ITM.CCE_3 AS 'Eje Analitico 4',
+				                                                                ITM.TSICOD_0 AS 'Codigo Famlia',
+				                                                                ITM.TSICOD_1 AS 'Codigo Subfamilia',
+				                                                                ATXFAM.TEXTE_0 AS 'Familia',
+				                                                                ATXFAM2.TEXTE_0 AS 'Subfamilia',
+				                                                                ITMS.MINQTY_0 AS 'Cantidad Minima',
+				                                                                ITMS.MINPFM_0 AS 'Margen Minimo',
+				                                                                ITMS.MINPRI_0 AS 'Precio Minimo',
+				                                                                ITMS.BASPRI_0 AS 'Precio Base Ventas'
+				
+				                                                                FROM " & CurrentSchema & ".ITMMASTER ITM
+				                                                                LEFT JOIN " & CurrentSchema & ".ITMSALES ITMS ON ITM.ITMREF_0 = ITMS.ITMREF_0
+				                                                                LEFT JOIN " & CurrentSchema & ".ATEXTRA ATXFAM ON ITM.TSICOD_0 = ATXFAM.IDENT2_0  AND ATXFAM.CODFIC_0 = 'ATABDIV' AND ATXFAM.ZONE_0 = 'LNGDES' AND ATXFAM.IDENT1_0 = '20' AND ATXFAM.LANGUE_0 = 'SPA'
+				                                                                LEFT JOIN " & CurrentSchema & ".ATEXTRA ATXFAM2 ON ITM.TSICOD_1 = ATXFAM2.IDENT2_0 AND ATXFAM2.CODFIC_0 = 'ATABDIV' AND ATXFAM2.ZONE_0 = 'LNGDES' AND ATXFAM2.IDENT1_0 = '21' AND ATXFAM2.LANGUE_0 = 'SPA'
+				                                                                LEFT JOIN " & CurrentSchema & ".ATEXTRA TXCAT ON ITM.TCLCOD_0 = TXCAT.IDENT1_0 AND TXCAT.CODFIC_0 = 'ITMCATEG' AND TXCAT.ZONE_0 = 'TCLAXX' AND TXCAT.LANGUE_0 = 'SPA'
+				
+				                                                          "])
 				in
-				    #"Renamed Columns"
+				    Origen
 
 	annotation PBI_ResultType = Table
 

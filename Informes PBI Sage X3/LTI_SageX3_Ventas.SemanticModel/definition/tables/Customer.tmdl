@@ -37,7 +37,7 @@ table Customer
 		dataType: int64
 		formatString: 0
 		lineageTag: eed2a143-579a-42a6-ab87-308f8bdbee3f
-		summarizeBy: sum
+		summarizeBy: none
 		sourceColumn: Tipo
 
 		annotation SummarizationSetBy = Automatic

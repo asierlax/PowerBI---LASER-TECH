@@ -23,7 +23,7 @@
                       "Entity": "Item"
                     }
                   },
-                  "Property": "Familia"
+                  "Property": "Subfamilia"
                 }
               },
               "queryRef": "Item.Subfamilia",

@@ -86,7 +86,7 @@
                       "Entity": "Item"
                     }
                   },
-                  "Property": "Business Unit"
+                  "Property": "Familia"
                 }
               },
               "queryRef": "Item.Familia",
@@ -100,7 +100,7 @@
                       "Entity": "Item"
                     }
                   },
-                  "Property": "Familia"
+                  "Property": "Subfamilia"
                 }
               },
               "queryRef": "Item.Subfamilia",
@@ -284,7 +284,7 @@
                       "Entity": "Item"
                     }
                   },
-                  "Property": "Business Unit"
+                  "Property": "Familia"
                 }
               }
             ],
@@ -303,7 +303,7 @@
                       "Entity": "Item"
                     }
                   },
-                  "Property": "Familia"
+                  "Property": "Subfamilia"
                 }
               }
             ],

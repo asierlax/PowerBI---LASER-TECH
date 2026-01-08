@@ -172,7 +172,7 @@
                           "Entity": "Item"
                         }
                       },
-                      "Property": "Business Unit"
+                      "Property": "Familia"
                     }
                   },
                   "howCreated": 0
@@ -187,7 +187,7 @@
                           "Entity": "Item"
                         }
                       },
-                      "Property": "Familia"
+                      "Property": "Subfamilia"
                     }
                   },
                   "howCreated": 0
@@ -458,7 +458,7 @@
                           "Entity": "Item"
                         }
                       },
-                      "Property": "Business Unit"
+                      "Property": "Familia"
                     }
                   },
                   "howCreated": 0
@@ -473,7 +473,7 @@
                           "Entity": "Item"
                         }
                       },
-                      "Property": "Familia"
+                      "Property": "Subfamilia"
                     }
                   },
                   "howCreated": 0
@@ -735,7 +735,7 @@
                           "Entity": "Item"
                         }
                       },
-                      "Property": "Business Unit"
+                      "Property": "Familia"
                     }
                   },
                   "howCreated": 0
@@ -750,7 +750,7 @@
                           "Entity": "Item"
                         }
                       },
-                      "Property": "Familia"
+                      "Property": "Subfamilia"
                     }
                   },
                   "howCreated": 0
@@ -971,7 +971,7 @@
                           "Entity": "Item"
                         }
                       },
-                      "Property": "Business Unit"
+                      "Property": "Familia"
                     }
                   },
                   "howCreated": 0
@@ -990,7 +990,7 @@
                           "Entity": "Item"
                         }
                       },
-                      "Property": "Business Unit"
+                      "Property": "Familia"
                     }
                   }
                 ]
@@ -1013,7 +1013,7 @@
                           "Entity": "Item"
                         }
                       },
-                      "Property": "Familia"
+                      "Property": "Subfamilia"
                     }
                   },
                   "howCreated": 0
@@ -1032,7 +1032,7 @@
                           "Entity": "Item"
                         }
                       },
-                      "Property": "Familia"
+                      "Property": "Subfamilia"
                     }
                   }
                 ]

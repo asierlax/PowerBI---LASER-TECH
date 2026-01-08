@@ -72,7 +72,7 @@
                       "Entity": "Item"
                     }
                   },
-                  "Property": "Business Unit"
+                  "Property": "Familia"
                 }
               },
               "queryRef": "Item.Business Unit",
@@ -86,7 +86,7 @@
                       "Entity": "Item"
                     }
                   },
-                  "Property": "Familia"
+                  "Property": "Subfamilia"
                 }
               },
               "queryRef": "Item.Familia",
@@ -255,7 +255,7 @@
                       "Entity": "Item"
                     }
                   },
-                  "Property": "Business Unit"
+                  "Property": "Familia"
                 }
               }
             ],
@@ -274,7 +274,7 @@
                       "Entity": "Item"
                     }
                   },
-                  "Property": "Familia"
+                  "Property": "Subfamilia"
                 }
               }
             ],
@@ -1096,7 +1096,7 @@
                 "Entity": "Item"
               }
             },
-            "Property": "Familia"
+            "Property": "Subfamilia"
           }
         },
         "type": "Categorical",

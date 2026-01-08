@@ -95,23 +95,27 @@ expression Proyectos =
 
 /// Obligatorio:
 /// Servidor en el que se aloja la Base de datos
-expression Instancia = "192.168.1.14\X3V12" meta [IsParameterQuery=true, Type="Text", IsParameterQueryRequired=true]
+expression Instancia = "10.0.0.16\SAGEX3" meta [IsParameterQuery=true, Type="Text", IsParameterQueryRequired=true]
 	lineageTag: bc882005-270d-4f6e-a735-9201221656bc
 	queryGroup: Auxiliares
 
 	annotation PBI_ResultType = Text
 
+	annotation PBI_NavigationStepName = Navegación
+
 /// Obligatorio:
 /// Base de datos donde se encuentra la información de Sage x3
-expression BaseDeDatos = "x3v12" meta [IsParameterQuery=true, Type="Text", IsParameterQueryRequired=true]
+expression BaseDeDatos = "sagex3v12" meta [IsParameterQuery=true, Type="Text", IsParameterQueryRequired=true]
 	lineageTag: a1a82060-5be5-45e3-8782-106ec59ff066
 	queryGroup: Auxiliares
 
 	annotation PBI_ResultType = Text
 
+	annotation PBI_NavigationStepName = Navegación
+
 /// Obligatorio:
 /// Esquema de la Base de Datos
-expression Esquema = "VYGON" meta [IsParameterQuery=true, Type="Text", IsParameterQueryRequired=true]
+expression Esquema = "LASERTECH" meta [IsParameterQuery=true, Type="Text", IsParameterQueryRequired=true]
 	lineageTag: 761542c4-251b-4873-8fb8-f02c6707feb2
 	queryGroup: Auxiliares
 
@@ -156,11 +160,11 @@ expression Provincias =
 
 	annotation PBI_ResultType = Table
 
-expression Empresa = "VYGONFR" meta [IsParameterQuery=true, Type="Any", IsParameterQueryRequired=true]
+expression Empresa = null meta [IsParameterQuery=true, Type="Any", IsParameterQueryRequired=true]
 	lineageTag: d06f8ca6-7d86-41b2-9b91-51cb228963de
 	queryGroup: Auxiliares
 
 	annotation PBI_NavigationStepName = Navigation
 
-	annotation PBI_ResultType = Text
+	annotation PBI_ResultType = Null
 

@@ -77,7 +77,7 @@
                                       "Source": "i"
                                     }
                                   },
-                                  "Property": "Business Unit"
+                                  "Property": "Familia"
                                 },
                                 "Name": "Item.Familia"
                               }
@@ -92,7 +92,7 @@
                                         "Source": "i"
                                       }
                                     },
-                                    "Property": "Business Unit"
+                                    "Property": "Familia"
                                   }
                                 }
                               }

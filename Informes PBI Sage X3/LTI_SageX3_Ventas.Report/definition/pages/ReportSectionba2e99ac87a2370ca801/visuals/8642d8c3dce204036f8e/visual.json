@@ -23,7 +23,7 @@
                       "Entity": "Item"
                     }
                   },
-                  "Property": "Business Unit"
+                  "Property": "Familia"
                 }
               },
               "queryRef": "Item.Familia",

@@ -21,7 +21,7 @@ table Company
 		dataType: int64
 		formatString: 0
 		lineageTag: 2f48e1a4-007b-4694-a17c-31b2244b2491
-		summarizeBy: none
+		summarizeBy: sum
 		sourceColumn: Sociedad Juridica
 
 		annotation SummarizationSetBy = Automatic
