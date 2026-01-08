@@ -44,8 +44,7 @@
                   "Property": "Business Unit"
                 }
               },
-              "queryRef": "Item.Familia",
-              "active": true
+              "queryRef": "Item.Familia"
             },
             {
               "field": {
@@ -59,7 +58,6 @@
                 }
               },
               "queryRef": "Item.Descripcion 1",
-              "active": true,
               "displayName": "Producto"
             },
             {
@@ -73,8 +71,7 @@
                   "Property": "Familia"
                 }
               },
-              "queryRef": "Item.Subfamilia",
-              "active": false
+              "queryRef": "Item.Subfamilia"
             }
           ]
         }
@@ -170,18 +167,7 @@
           }
         ],
         "root": {
-          "children": [
-            {
-              "identityValues": [
-                {
-                  "Literal": {
-                    "Value": "'ANAESTHESIA Y EMERGENCY'"
-                  }
-                }
-              ],
-              "isToggled": true
-            }
-          ]
+          "isToggled": true
         }
       }
     ],
