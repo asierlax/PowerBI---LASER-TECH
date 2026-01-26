@@ -12,17 +12,17 @@ queryGroup Auxiliares
 
 annotation __PBI_TimeIntelligenceEnabled = 0
 
-annotation PBI_QueryOrder = ["Sales Invoice Line","Sales Invoice Header","Customer","Address","Company","Saleperson","Item","Metricas","UltimaActualizacion","Segmentos","Proyectos","General Posting Setup","Resourcce","Product Group","Analitica Facturas","Provincias","Instancia","BaseDeDatos","Esquema","Registros","Periodo","Registros_Year","Stock","Price","Empresa"]
+annotation PBI_QueryOrder = ["DocumentosLinea","DocumentosCabecera","Clientes","Direcciones","Sociedades","Representantes","Articulos","Metricas","UltimaActualizacion","Segmentos","General Posting Setup","FamiliasArticulos","Analitica Facturas","Provincias","Instancia","BaseDeDatos","Esquema","Registros","Periodo","Registros_Year","Stock","TarifasCompra","Empresa","Albaranes","Intervenciones"]
 
 annotation PBI_ProTooling = ["DevMode"]
 
-ref table 'Sales Invoice Line'
-ref table 'Sales Invoice Header'
-ref table Company
-ref table Customer
-ref table Saleperson
-ref table Item
-ref table Address
+ref table DocumentosLinea
+ref table DocumentosCabecera
+ref table Sociedades
+ref table Clientes
+ref table Representantes
+ref table Articulos
+ref table Direcciones
 ref table Fecha
 ref table Metricas
 ref table 'ABC by Year'
@@ -33,7 +33,9 @@ ref table RFM
 ref table 'Analitica Facturas'
 ref table Registros_Year
 ref table Stock
-ref table Price
+ref table TarifasCompra
+ref table Albaranes
+ref table Intervenciones
 
 ref cultureInfo es-ES
 

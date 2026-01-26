@@ -1,0 +1,263 @@
+table Direcciones
+	lineageTag: a23f9ee2-22f9-4a22-b324-421fca5adb94
+
+	column IdDireccion
+		dataType: string
+		lineageTag: 08de9ee7-7f48-4e82-8e52-351278fe3ae5
+		summarizeBy: none
+		sourceColumn: IdDireccion
+
+		annotation SummarizationSetBy = Automatic
+
+	column PaisCodigoPostal = 'Direcciones'[Pais] & "-" & 'Direcciones'[Codigo Postal]
+		lineageTag: c0460151-0b7c-40be-83aa-1ea0c37c612c
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Provincia mapa' =
+			-- 'Address'[Provincia Nombre]&", "&'Address'[País]
+			'Direcciones'[País] &", "&'Direcciones'[Provincia Nombre]
+		lineageTag: 627c3753-b518-4461-9350-8c99a5124869
+		dataCategory: StateOrProvince
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Tipo dir'
+		dataType: int64
+		formatString: 0
+		lineageTag: 26d4292e-2fd6-45a8-84ac-649f64061d43
+		summarizeBy: sum
+		sourceColumn: Tipo dir
+
+		annotation SummarizationSetBy = Automatic
+
+	column IdTercero
+		dataType: string
+		lineageTag: 1401d422-18aa-4364-bda6-6e5e43169c21
+		summarizeBy: none
+		sourceColumn: IdTercero
+
+		annotation SummarizationSetBy = Automatic
+
+	column Descripcion
+		dataType: string
+		lineageTag: 8164f952-40bc-418c-a7cd-4a3649bcad1c
+		summarizeBy: none
+		sourceColumn: Descripcion
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Direccion linea 1'
+		dataType: string
+		lineageTag: 35ec91dd-62d4-469d-a7e4-b97b771be723
+		summarizeBy: none
+		sourceColumn: Direccion linea 1
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Direccion linea 2'
+		dataType: string
+		lineageTag: f6cedcdd-f2ef-4976-bf12-21d7bc423e77
+		summarizeBy: none
+		sourceColumn: Direccion linea 2
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Direccion linea 3'
+		dataType: string
+		lineageTag: d975b58a-f7ea-4d9c-b41e-6c3f2d7f8e99
+		summarizeBy: none
+		sourceColumn: Direccion linea 3
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Codigo postal'
+		dataType: string
+		lineageTag: 90cd35c6-ed97-407c-b3e4-3a8dc4f987e7
+		summarizeBy: none
+		sourceColumn: Codigo postal
+
+		annotation SummarizationSetBy = Automatic
+
+	column Ciudad
+		dataType: string
+		lineageTag: 646dda5d-49ba-44e5-b411-a79eae3136a3
+		summarizeBy: none
+		sourceColumn: Ciudad
+
+		annotation SummarizationSetBy = Automatic
+
+	column Provincia
+		dataType: string
+		lineageTag: ec1f8263-6e2e-46e8-bbbc-8fc3c89c294e
+		summarizeBy: none
+		sourceColumn: Provincia
+
+		annotation SummarizationSetBy = Automatic
+
+	column Pais
+		dataType: string
+		lineageTag: 69893069-092a-4a60-b879-dcad813d7303
+		summarizeBy: none
+		sourceColumn: Pais
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Nombre Pais'
+		dataType: string
+		lineageTag: ed0af313-77c4-4936-8f82-1319b409caf0
+		summarizeBy: none
+		sourceColumn: Nombre Pais
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Telefono 1'
+		dataType: string
+		lineageTag: 9071f1ed-b146-4f25-aebf-2b15c7af6761
+		summarizeBy: none
+		sourceColumn: Telefono 1
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Telefono 2'
+		dataType: string
+		lineageTag: d6bca1ed-59f7-4ef5-8959-8bdf178c67db
+		summarizeBy: none
+		sourceColumn: Telefono 2
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Telefono 3'
+		dataType: string
+		lineageTag: 74dcf552-a99a-4909-b9fa-741290f10e4e
+		summarizeBy: none
+		sourceColumn: Telefono 3
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Telefono 4'
+		dataType: string
+		lineageTag: 4e096b7f-e06f-4d13-ad56-4a6e8644cc36
+		summarizeBy: none
+		sourceColumn: Telefono 4
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Telefono 5'
+		dataType: string
+		lineageTag: 87a21ff5-8ad6-426c-8438-ac94db0e182b
+		summarizeBy: none
+		sourceColumn: Telefono 5
+
+		annotation SummarizationSetBy = Automatic
+
+	column Fax
+		dataType: string
+		lineageTag: 0cf8be79-96fc-4ff9-afad-068cc1ab6301
+		summarizeBy: none
+		sourceColumn: Fax
+
+		annotation SummarizationSetBy = Automatic
+
+	column Movil
+		dataType: string
+		lineageTag: 9779f4dd-b98b-442f-8080-8a202bda1804
+		summarizeBy: none
+		sourceColumn: Movil
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Email 1'
+		dataType: string
+		lineageTag: ba9a19c9-e567-4c0f-8ca0-ae711cd3959b
+		summarizeBy: none
+		sourceColumn: Email 1
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Email 2'
+		dataType: string
+		lineageTag: 30e0d889-6fba-4340-a585-23dc2c16fe0f
+		summarizeBy: none
+		sourceColumn: Email 2
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Email 3'
+		dataType: string
+		lineageTag: eb39f46c-d4ac-4ede-9a04-76a7a1553e69
+		summarizeBy: none
+		sourceColumn: Email 3
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Email 4'
+		dataType: string
+		lineageTag: 3f389803-42e8-4327-a612-07c17204db12
+		summarizeBy: none
+		sourceColumn: Email 4
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Email 5'
+		dataType: string
+		lineageTag: 7beb5664-47a7-40d5-874b-2ac4f2f7a364
+		summarizeBy: none
+		sourceColumn: Email 5
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Sitio web'
+		dataType: string
+		lineageTag: 1409de7f-7592-4e06-b926-e14c845fbe43
+		summarizeBy: none
+		sourceColumn: Sitio web
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Direcciones-e18b7bd4-8a28-4423-a487-803742af1195 = m
+		mode: import
+		source = ```
+				let
+				    CurrentServer = Instancia,
+				    CurrentDatabase = BaseDeDatos,
+				    CurrentSchema = Esquema,
+				    Origen = Sql.Database(CurrentServer, CurrentDatabase, [Query="
+				                                                                SELECT  
+				                                                                BPATYP_0 'Tipo dir',
+				                                                                BPANUM_0 'IdTercero',
+				                                                                BPAADD_0 'IdDireccion',
+				                                                                BPADES_0 'Descripcion',
+				                                                                BPAADDLIG_0 'Direccion linea 1',
+				                                                                BPAADDLIG_1 'Direccion linea 2',
+				                                                                BPAADDLIG_2 'Direccion linea 3',
+				                                                                POSCOD_0 'Codigo postal',
+				                                                                CTY_0 'Ciudad',
+				                                                                SAT_0 'Provincia',
+				                                                                CRY_0 'Pais',
+				                                                                CRYNAM_0 'Nombre Pais',
+				                                                                TEL_0 'Telefono 1',
+				                                                                TEL_1 'Telefono 2',
+				                                                                TEL_2 'Telefono 3',
+				                                                                TEL_3 'Telefono 4',
+				                                                                TEL_4 'Telefono 5',
+				                                                                FAX_0 'Fax',
+				                                                                MOB_0 'Movil',
+				                                                                WEB_0 'Email 1',
+				                                                                WEB_1 'Email 2',
+				                                                                WEB_2 'Email 3',
+				                                                                WEB_3 'Email 4',
+				                                                                WEB_4 'Email 5',
+				                                                                FCYWEB_0 'Sitio web'                                                               
+				                                                                FROM " & CurrentSchema & ".BPADDRESS BPA    
+				                                                          "])
+				in
+				    #"Origen"
+				```
+
+	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navigation
+

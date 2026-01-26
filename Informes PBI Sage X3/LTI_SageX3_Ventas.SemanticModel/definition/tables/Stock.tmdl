@@ -1,39 +1,39 @@
 table Stock
 	lineageTag: 81bc4502-cf87-439c-9a28-a7b8535b38c0
 
-	column ITMREF_0
+	column IdArticulo
 		dataType: string
-		lineageTag: c4d948f7-2e68-4a6f-9038-efeefaf2acd0
+		lineageTag: 884d66e8-e0c1-42ee-95af-5bf84dfb1f0d
 		summarizeBy: none
-		sourceColumn: ITMREF_0
+		sourceColumn: IdArticulo
 
 		annotation SummarizationSetBy = Automatic
 
-	column Quantity
+	column Cantidad
 		dataType: double
-		lineageTag: 84ad49b3-1c7b-487e-8f99-cc4feaf2cac7
+		lineageTag: 3689887a-6e66-4898-866f-597bd01010ca
 		summarizeBy: sum
-		sourceColumn: Quantity
-
-		annotation SummarizationSetBy = Automatic
-
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
-
-	column Value
-		dataType: double
-		lineageTag: 34375920-e1b0-412e-bce2-02e2518558c4
-		summarizeBy: sum
-		sourceColumn: Value
+		sourceColumn: Cantidad
 
 		annotation SummarizationSetBy = Automatic
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-	column 'Standard Cost'
+	column 'Valor stock'
 		dataType: double
-		lineageTag: 9d7501eb-dbc5-4705-881c-10d18fa2b45a
+		lineageTag: 4ecb19bf-fa37-4b71-a559-21cc269bdd25
 		summarizeBy: sum
-		sourceColumn: Standard Cost
+		sourceColumn: Valor stock
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Coste standar'
+		dataType: double
+		lineageTag: a5a9925d-3184-4cb5-8d66-2518bd2f7711
+		summarizeBy: sum
+		sourceColumn: Coste standar
 
 		annotation SummarizationSetBy = Automatic
 
@@ -48,12 +48,14 @@ table Stock
 				    CurrentSchema = Esquema,
 				    CurrentRows = Registros,
 				    CurrentPeriod = Periodo,
-				    Origen = Sql.Database(CurrentServer, CurrentDatabase, [Query="select ITMREF_0, sum(PHYSTO_0) as 'Quantity' 
-				, sum(PHYSTO_0*AVC_0) as 'Value' , max(AVC_0) as 'Standard Cost'
-				from " & CurrentSchema &".ITMMVT
-				group by ITMREF_0
-				        "
-				                                                          ])
+				    Origen = Sql.Database(CurrentServer, CurrentDatabase, [Query="
+				                                                                SELECT ITMREF_0 'IdArticulo', 
+				                                                                SUM(PHYSTO_0) AS 'Cantidad', 
+				                                                                SUM(PHYSTO_0*AVC_0) AS 'Valor stock', 
+				                                                                MAX(AVC_0) AS 'Coste standar'
+				                                                                FROM " & CurrentSchema &".ITMMVT
+				                                                                GROUP BY ITMREF_0
+				                                                        "])
 				in
 				    Origen
 				```

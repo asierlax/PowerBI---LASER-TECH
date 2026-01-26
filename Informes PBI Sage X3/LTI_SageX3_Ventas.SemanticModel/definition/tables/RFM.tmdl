@@ -6,7 +6,7 @@ table RFM
 			VAR RemapFilterAbc =
 			    TREATAS (
 			        'RFM',
-			        Customer[IdCliente],
+			        Clientes[IdCliente],
 			        Fecha[Ano],
 			        RFM[Recency Score],
 			        RFM[Frecuency Score],
@@ -26,7 +26,7 @@ table RFM
 			          )
 			VAR Result =
 			    CALCULATE (
-			        DISTINCTCOUNT ( 'Sales Invoice Line'[IdCliente] ),
+			        DISTINCTCOUNT ( 'DocumentosLinea'[IdCliente] ),
 			        KEEPFILTERS ( RemapFilterAbc )
 			    )
 			RETURN
@@ -81,15 +81,15 @@ table RFM
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-	measure 'Numero Documentos' = DISTINCTCOUNT('Sales Invoice Line'[Documento])
+	measure 'Numero Documentos' = DISTINCTCOUNT('DocumentosLinea'[Documento])
 		formatString: 0
 		lineageTag: 7e868cb9-54bc-4732-b410-3c1218324bb6
 
-	measure 'Primera Fecha Factura' = MIN('Sales Invoice Line'[Fecha Factura])
+	measure 'Primera Fecha Factura' = MIN('DocumentosLinea'[Fecha])
 		formatString: General Date
 		lineageTag: 23f94515-e7bb-45c3-a02c-3479e4c96687
 
-	measure 'Ultima Fecha Factura' = MAX('Sales Invoice Line'[Fecha Factura])
+	measure 'Ultima Fecha Factura' = MAX('DocumentosLinea'[Fecha])
 		formatString: General Date
 		lineageTag: 41c3ded9-7f6d-4ec7-b997-728e138409ee
 
@@ -244,8 +244,8 @@ table RFM
 				
 				VAR CustomersByYear =
 				    SUMMARIZE (
-				        'Sales Invoice Line',
-				        Customer[IdCliente],
+				        'DocumentosLinea',
+				        Clientes[IdCliente],
 				        'Fecha'[Ano]
 				    )     
 				--Calcular la ultima fecha de factura de cada cliente en cada año
@@ -254,11 +254,11 @@ table RFM
 				        CustomersByYear,        
 				        "@Fecha Factura", 
 				            var ano = Fecha[Ano]
-				            var cliente = Customer[IdCliente]
+				            var cliente = Clientes[IdCliente]
 				            var filtersTab = 
 				                 FILTER (
 				                    CustomersByYear,
-				                    AND ( 'Fecha'[Ano] = Ano, cliente = Customer[IdCliente] )
+				                    AND ( 'Fecha'[Ano] = Ano, cliente = Clientes[IdCliente] )
 				                )
 				            return CALCULATE([Ultima Fecha Factura], filtersTab),      
 				        "@Max Fecha Factura Ano",
@@ -373,12 +373,12 @@ table RFM
 				VAR Result =
 				    SELECTCOLUMNS (
 				        Scores,
-				        "ClienteID", 'Customer'[IdCliente],
+				        "ClienteID", 'Clientes'[IdCliente],
 				        "Ano", 'Fecha'[Ano],
 				        "Recency Score", [@RecencyScore], 
 				        "Frecuency Score", [@FrecuencyScore],
 				        "Monetary Score", [@MonetaryScore],
-				        "Id_Fecha", 'Fecha'[Ano] & Customer[IdCliente],
+				        "Id_Fecha", 'Fecha'[Ano] & Clientes[IdCliente],
 				        "RFScore", [@RecencyScore] & "-" & [@FrecuencyScore],
 				        "Recency Value", [@RecValue],
 				        "Duracion Periodo", [@DuracionPeriodo],

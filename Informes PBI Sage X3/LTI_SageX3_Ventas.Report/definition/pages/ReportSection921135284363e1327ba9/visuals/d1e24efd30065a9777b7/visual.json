@@ -65,7 +65,7 @@
                             "From": [
                               {
                                 "Name": "i",
-                                "Entity": "Item",
+                                "Entity": "Articulos",
                                 "Type": 0
                               }
                             ],

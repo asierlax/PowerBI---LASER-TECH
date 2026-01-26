@@ -20,7 +20,7 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Sales Invoice Header"
+                      "Entity": "DocumentosCabecera"
                     }
                   },
                   "Property": "Fecha Factura"
@@ -39,7 +39,7 @@
               "Column": {
                 "Expression": {
                   "SourceRef": {
-                    "Entity": "Sales Invoice Header"
+                    "Entity": "DocumentosCabecera"
                   }
                 },
                 "Property": "Fecha Factura"

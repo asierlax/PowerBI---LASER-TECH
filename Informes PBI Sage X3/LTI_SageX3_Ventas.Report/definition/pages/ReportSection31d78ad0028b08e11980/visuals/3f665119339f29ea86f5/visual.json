@@ -65,7 +65,7 @@
                             "From": [
                               {
                                 "Name": "s",
-                                "Entity": "Sales Invoice Line",
+                                "Entity": "DocumentosLinea",
                                 "Type": 0
                               }
                             ],

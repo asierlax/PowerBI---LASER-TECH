@@ -20,7 +20,7 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Item"
+                      "Entity": "Articulos"
                     }
                   },
                   "Property": "Descripcion 1"
@@ -230,7 +230,7 @@
           "Column": {
             "Expression": {
               "SourceRef": {
-                "Entity": "Item"
+                "Entity": "Articulos"
               }
             },
             "Property": "Descripcion 1"
@@ -242,7 +242,7 @@
           "From": [
             {
               "Name": "i",
-              "Entity": "Item",
+              "Entity": "Articulos",
               "Type": 0
             }
           ],
@@ -310,7 +310,7 @@
           "Column": {
             "Expression": {
               "SourceRef": {
-                "Entity": "Company"
+                "Entity": "Sociedades"
               }
             },
             "Property": "Empresa"
@@ -326,7 +326,7 @@
           "Column": {
             "Expression": {
               "SourceRef": {
-                "Entity": "Saleperson"
+                "Entity": "Representantes"
               }
             },
             "Property": "Nombre Comercial"
@@ -338,7 +338,7 @@
           "From": [
             {
               "Name": "s",
-              "Entity": "Saleperson",
+              "Entity": "Representantes",
               "Type": 0
             }
           ],

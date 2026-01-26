@@ -20,7 +20,7 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Item"
+                      "Entity": "Articulos"
                     }
                   },
                   "Property": "Subsidiary ID"
@@ -33,7 +33,7 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Sales Invoice Line"
+                      "Entity": "DocumentosLinea"
                     }
                   },
                   "Property": "IdItem"
@@ -47,7 +47,7 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Sales Invoice Line"
+                      "Entity": "DocumentosLinea"
                     }
                   },
                   "Property": "Descripcion 1"
@@ -61,7 +61,7 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Sales Invoice Line"
+                      "Entity": "DocumentosLinea"
                     }
                   },
                   "Property": "Quantity"
@@ -76,7 +76,7 @@
                     "Column": {
                       "Expression": {
                         "SourceRef": {
-                          "Entity": "Sales Invoice Line"
+                          "Entity": "DocumentosLinea"
                         }
                       },
                       "Property": "Precio Neto AI"
@@ -107,7 +107,7 @@
                     "Column": {
                       "Expression": {
                         "SourceRef": {
-                          "Entity": "Sales Invoice Line"
+                          "Entity": "DocumentosLinea"
                         }
                       },
                       "Property": "Precio Coste"
@@ -123,7 +123,7 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Customer"
+                      "Entity": "Clientes"
                     }
                   },
                   "Property": "Moneda"
@@ -150,7 +150,7 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Item"
+                      "Entity": "Articulos"
                     }
                   },
                   "Property": "Purchased from VYGON"
@@ -163,7 +163,7 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Sales Invoice Line"
+                      "Entity": "DocumentosLinea"
                     }
                   },
                   "Property": "Codigo Proveedor"
@@ -176,7 +176,7 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Sales Invoice Line"
+                      "Entity": "DocumentosLinea"
                     }
                   },
                   "Property": "Nombre Proveedor"
@@ -189,7 +189,7 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Sales Invoice Line"
+                      "Entity": "DocumentosLinea"
                     }
                   },
                   "Property": "Articulo VYGON"
@@ -202,7 +202,7 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Item"
+                      "Entity": "Articulos"
                     }
                   },
                   "Property": "EOR"

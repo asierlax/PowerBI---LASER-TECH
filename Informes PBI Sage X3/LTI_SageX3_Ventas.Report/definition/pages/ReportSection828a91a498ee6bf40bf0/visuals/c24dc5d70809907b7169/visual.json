@@ -20,7 +20,7 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Sales Invoice Header"
+                      "Entity": "DocumentosCabecera"
                     }
                   },
                   "Property": "Planta Venta"
@@ -56,7 +56,7 @@
                 "From": [
                   {
                     "Name": "s",
-                    "Entity": "Sales Invoice Header",
+                    "Entity": "DocumentosCabecera",
                     "Type": 0
                   }
                 ],

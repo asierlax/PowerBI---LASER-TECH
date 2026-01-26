@@ -65,7 +65,7 @@
                             "From": [
                               {
                                 "Name": "c",
-                                "Entity": "Customer",
+                                "Entity": "Clientes",
                                 "Type": 0
                               }
                             ],

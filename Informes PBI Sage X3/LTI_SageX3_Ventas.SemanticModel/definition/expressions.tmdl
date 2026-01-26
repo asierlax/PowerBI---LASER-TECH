@@ -13,7 +13,7 @@ expression 'General Posting Setup' = ```
 		                                                                        0 as Indentacion,
 		                                                                        'Indefinido' as GrupoCuenta 
 		                                                                        
-		                                                                    union all 
+		                                                                    UNION ALL 
 		                                                                
 		                                                                SELECT  A.ACC_0 as sk_Cuenta, 
 		                                                                        A.ACC_0 + '#2' AS idCuenta, 
@@ -43,24 +43,7 @@ expression 'General Posting Setup' = ```
 
 	annotation PBI_ResultType = Table
 
-expression Resourcce =
-		let
-		    CurrentServer = Instancia,
-		    CurrentDatabase = BaseDeDatos,
-		    CurrentSchema = Esquema,
-		    Origen = Sql.Database(CurrentServer, CurrentDatabase, [Query="
-		                                                                SELECT  *
-		                                                                FROM " & CurrentSchema & ".CACCE WHERE DIE_0 = 'REC'"
-		                                                          ])
-		in
-		    Origen
-	lineageTag: 663e9a20-f85b-4954-b9b4-0f6025397e68
-
-	annotation PBI_NavigationStepName = Navigation
-
-	annotation PBI_ResultType = Table
-
-expression 'Product Group' =
+expression FamiliasArticulos =
 		let
 		    CurrentServer = Instancia,
 		    CurrentDatabase = BaseDeDatos,
@@ -75,23 +58,6 @@ expression 'Product Group' =
 	annotation PBI_NavigationStepName = Navigation
 
 	annotation PBI_ResultType = Table
-
-expression Proyectos =
-		let
-		    CurrentServer = Instancia,
-		    CurrentDatabase = BaseDeDatos,
-		    CurrentSchema = Esquema,
-		    Origen = Sql.Database(CurrentServer, CurrentDatabase, [Query="
-		                                                                SELECT  *
-		                                                                FROM " & CurrentSchema & ".ZPROYECI"
-		                                                          ])
-		in
-		    Origen
-	lineageTag: 49e0b423-2b60-490a-92ab-6c15f2e57c80
-
-	annotation PBI_NavigationStepName = Navigation
-
-	annotation PBI_ResultType = Exception
 
 /// Obligatorio:
 /// Servidor en el que se aloja la Base de datos
@@ -124,7 +90,7 @@ expression Esquema = "LASERTECH" meta [IsParameterQuery=true, Type="Text", IsPar
 	annotation PBI_NavigationStepName = Navigation
 
 /// Opcional:
-/// Nº máximo de registros que se cargarán en el modelo. 
+/// Nº máximo de registros que se cargarán en el modelo.
 /// 
 /// AVISO: Si el modelo supera los 120.000.000 de registros, no se podrá publicar en el servidor ya que el límite de tamaño es de 1GB.
 expression Registros = "120000000" meta [IsParameterQuery=true, List={"120000000"}, DefaultValue="120000000", Type="Text", IsParameterQueryRequired=false]
@@ -136,7 +102,7 @@ expression Registros = "120000000" meta [IsParameterQuery=true, List={"120000000
 	annotation PBI_ResultType = Text
 
 /// Opcional:
-/// Año a partir del cual se van a cargar los registros. Por ejemplo, si introducimos "2010", se cargará toda la información desde el 2010 hasta el presente. 
+/// Año a partir del cual se van a cargar los registros. Por ejemplo, si introducimos "2010", se cargará toda la información desde el 2010 hasta el presente.
 /// 
 /// Si no seleccionas un periodo, el modelo cargará automaticamente el número de años adecuado a la capacidad de almacenaje del modelo.
 expression Periodo = "Periodo automático" meta [IsParameterQuery=true, List={"Periodo automático"}, DefaultValue="Periodo automático", Type="Text", IsParameterQueryRequired=false]

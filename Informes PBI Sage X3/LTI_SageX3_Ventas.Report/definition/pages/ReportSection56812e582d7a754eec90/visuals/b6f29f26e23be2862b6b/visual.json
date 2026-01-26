@@ -38,7 +38,7 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Customer"
+                      "Entity": "Clientes"
                     }
                   },
                   "Property": "Cliente"
@@ -52,7 +52,7 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Saleperson"
+                      "Entity": "Representantes"
                     }
                   },
                   "Property": "Nombre Comercial"
@@ -99,7 +99,7 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Customer"
+                      "Entity": "Clientes"
                     }
                   },
                   "Property": "Cliente"
@@ -118,7 +118,7 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Saleperson"
+                      "Entity": "Representantes"
                     }
                   },
                   "Property": "Nombre Comercial"
@@ -304,7 +304,7 @@
                       "Column": {
                         "Expression": {
                           "SourceRef": {
-                            "Entity": "Customer"
+                            "Entity": "Clientes"
                           }
                         },
                         "Property": "Cliente"
@@ -326,7 +326,7 @@
                       "Column": {
                         "Expression": {
                           "SourceRef": {
-                            "Entity": "Saleperson"
+                            "Entity": "Representantes"
                           }
                         },
                         "Property": "Nombre Comercial"

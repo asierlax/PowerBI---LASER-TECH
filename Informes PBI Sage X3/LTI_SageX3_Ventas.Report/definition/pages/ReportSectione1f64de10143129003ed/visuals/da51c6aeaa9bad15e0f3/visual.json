@@ -80,7 +80,7 @@
                     "Column": {
                       "Expression": {
                         "SourceRef": {
-                          "Entity": "Customer"
+                          "Entity": "Clientes"
                         }
                       },
                       "Property": "Cliente"

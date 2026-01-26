@@ -13,7 +13,7 @@
           "Column": {
             "Expression": {
               "SourceRef": {
-                "Entity": "Customer"
+                "Entity": "Clientes"
               }
             },
             "Property": "Cliente"
@@ -25,7 +25,7 @@
           "From": [
             {
               "Name": "c",
-              "Entity": "Customer",
+              "Entity": "Clientes",
               "Type": 0
             }
           ],
@@ -67,7 +67,7 @@
           "Column": {
             "Expression": {
               "SourceRef": {
-                "Entity": "Customer"
+                "Entity": "Clientes"
               }
             },
             "Property": "Cliente"
@@ -89,7 +89,7 @@
           "Column": {
             "Expression": {
               "SourceRef": {
-                "Entity": "Customer"
+                "Entity": "Clientes"
               }
             },
             "Property": "Cliente"

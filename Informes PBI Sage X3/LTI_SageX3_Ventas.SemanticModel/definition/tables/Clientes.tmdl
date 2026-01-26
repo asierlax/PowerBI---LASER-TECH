@@ -1,0 +1,135 @@
+table Clientes
+	lineageTag: 87a08bef-d5ce-488c-843d-139538bde7f0
+
+	column IdDireccion
+		dataType: string
+		lineageTag: 8f085392-8d0e-45f0-b595-c968aa6b81f7
+		summarizeBy: none
+		sourceColumn: IdDireccion
+
+		annotation SummarizationSetBy = Automatic
+
+	column Ciudad-Pais = [Ciudad] & ", " & [Pais]
+		lineageTag: ebceaea8-f40f-4be6-87b2-28bad816da1d
+		dataCategory: Country
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Inf Divisa' = """" &  'Clientes'[Divisa] & """"
+		isHidden
+		lineageTag: 10f6eff3-ce96-47d8-8770-7dafcfdb237d
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column IdCliente
+		dataType: string
+		lineageTag: 7628d0cd-f9cc-457b-a7fd-c9c3bb85e533
+		summarizeBy: none
+		sourceColumn: IdCliente
+
+		annotation SummarizationSetBy = Automatic
+
+	column Cliente
+		dataType: string
+		lineageTag: b3a85d53-9e39-4e0d-a28e-29cce97b0f21
+		summarizeBy: none
+		sourceColumn: Cliente
+
+		annotation SummarizationSetBy = Automatic
+
+	column Categoria
+		dataType: string
+		lineageTag: c7adef49-4b9a-4494-9cce-fc93f0b946e3
+		summarizeBy: none
+		sourceColumn: Categoria
+
+		annotation SummarizationSetBy = Automatic
+
+	column Tipo
+		dataType: int64
+		formatString: 0
+		lineageTag: 5cb1b5af-55aa-4d71-ba20-5a4a713dfec6
+		summarizeBy: sum
+		sourceColumn: Tipo
+
+		annotation SummarizationSetBy = Automatic
+
+	column Direccion
+		dataType: string
+		lineageTag: 1ec3a54b-644f-4a0b-8d32-d73fe0a6680e
+		summarizeBy: none
+		sourceColumn: Direccion
+
+		annotation SummarizationSetBy = Automatic
+
+	column Divisa
+		dataType: string
+		lineageTag: 84b16f4c-ab3d-4d4c-967b-579f40a90630
+		summarizeBy: none
+		sourceColumn: Divisa
+
+		annotation SummarizationSetBy = Automatic
+
+	column Pais
+		dataType: string
+		lineageTag: d8510b68-17c1-4afc-977c-5448cb8a23f0
+		summarizeBy: none
+		sourceColumn: Pais
+
+		annotation SummarizationSetBy = Automatic
+
+	column Ciudad
+		dataType: string
+		lineageTag: d02db1a0-fc6c-40b0-9b10-f6745d9b8683
+		summarizeBy: none
+		sourceColumn: Ciudad
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Cliente Grupo'
+		dataType: string
+		lineageTag: f2ef67eb-5248-47c6-8e62-5c16e68b05d3
+		summarizeBy: none
+		sourceColumn: Cliente Grupo
+
+		annotation SummarizationSetBy = Automatic
+
+	hierarchy 'IdDireccion Jerarquía'
+		lineageTag: 7f194bf5-bb74-418c-98f2-f303e4718619
+
+		level IdDireccion
+			lineageTag: 7cfded6a-281a-4221-a964-bb0731a4ab75
+			column: IdDireccion
+
+	partition Clientes-53a8d1e2-fa5d-4c94-b706-9994f227b7f6 = m
+		mode: import
+		source = ```
+				let
+				    CurrentServer = Instancia,
+				    CurrentDatabase = BaseDeDatos,
+				    CurrentSchema = Esquema,
+				    Origen = Sql.Database(CurrentServer, CurrentDatabase, [Query="
+				                                                                SELECT  
+				                                                                BPC.BPCNUM_0 'IdCliente',
+				                                                                BPC.BPCNAM_0 'Cliente',
+				                                                                BPC.BCGCOD_0 'Categoria',
+				                                                                BPC.BPCGRU_0 'Cliente Grupo',
+				                                                                BPC.BPCTYP_0 'Tipo',
+				                                                                BPC.BPAINV_0 'Direccion',
+				                                                                BPC.CUR_0 'Divisa',
+				                                                                BPA.CRY_0 'Pais',
+				                                                                BPA.CTY_0 'Ciudad',
+				                                                                BPC.BPCNUM_0 + '-' + BPC.BPAINV_0 AS 'IdDireccion'
+				                                                                FROM " & CurrentSchema & ".BPCUSTOMER BPC
+				                                                                LEFT JOIN " & CurrentSchema & ".BPADDRESS BPA ON BPC.BPCNUM_0 = BPA.BPANUM_0 AND BPC.BPAINV_0 = BPA.BPAADD_0 AND BPC.BPCTYP_0 = BPA.BPATYP_0" 
+				                                                          ])
+				in
+				    #"Origen"
+				```
+
+	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navigation
+

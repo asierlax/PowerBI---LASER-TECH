@@ -20,7 +20,7 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Address"
+                      "Entity": "Direcciones"
                     }
                   },
                   "Property": "País"
@@ -34,7 +34,7 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Address"
+                      "Entity": "Direcciones"
                     }
                   },
                   "Property": "Provincia Nombre"

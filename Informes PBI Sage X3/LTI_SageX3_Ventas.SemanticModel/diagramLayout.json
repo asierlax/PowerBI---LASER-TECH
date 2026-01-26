@@ -4,141 +4,87 @@
     {
       "ordinal": 0,
       "scrollPosition": {
-        "x": 151,
-        "y": 219
+        "x": 564.56688615562393,
+        "y": 168.16277414491975
       },
       "nodes": [
         {
           "location": {
-            "x": 0,
-            "y": 883.2
+            "x": 564.56688615562393,
+            "y": 168.16277414491975
           },
           "nodeIndex": "Metricas",
+          "nodeLineageTag": "8f3050e2-9455-4ce9-a383-af94125f0237",
           "size": {
             "height": 300,
             "width": 234
           },
-          "zIndex": 0
+          "zIndex": 7
         },
         {
           "location": {
-            "x": 2046.9,
-            "y": 1304.5
+            "x": 2186.7656883153636,
+            "y": 1437.2838813120538
           },
           "nodeIndex": "ABC by Year",
+          "nodeLineageTag": "9bd79a4d-660d-4a66-9929-42953165583b",
           "size": {
             "height": 300,
             "width": 234
           },
-          "zIndex": 0
+          "zIndex": 8
         },
         {
           "location": {
-            "x": 1836.2,
-            "y": 511.6
+            "x": 1667.9099175861618,
+            "y": 515.2870780164717
           },
           "nodeIndex": "ABCD by Year",
+          "nodeLineageTag": "1873fb10-3d68-4c33-a241-68980a52c91e",
           "size": {
             "height": 272,
             "width": 234
           },
-          "zIndex": 0
+          "zIndex": 9
         },
         {
           "location": {
-            "x": 830.1,
-            "y": 1130.9
-          },
-          "nodeIndex": "Address",
-          "size": {
-            "height": 300,
-            "width": 234
-          },
-          "zIndex": 0
-        },
-        {
-          "location": {
-            "x": 2393.2,
-            "y": 733.6
+            "x": 2455.1658112789582,
+            "y": 630.91379845201186
           },
           "nodeIndex": "Analitica Facturas",
+          "nodeLineageTag": "1fcfe6cd-8d8c-4f5c-8f57-17336535ac97",
           "size": {
             "height": 300,
             "width": 234
           },
-          "zIndex": 0
+          "zIndex": 18
         },
         {
           "location": {
-            "x": 1245.1,
-            "y": 1300.1
-          },
-          "nodeIndex": "Company",
-          "size": {
-            "height": 296,
-            "width": 234
-          },
-          "zIndex": 0
-        },
-        {
-          "location": {
-            "x": 1660.1,
-            "y": 836.1
-          },
-          "nodeIndex": "Customer",
-          "size": {
-            "height": 300,
-            "width": 234
-          },
-          "zIndex": 0
-        },
-        {
-          "location": {
-            "x": 415,
-            "y": 1152.9
+            "x": 1284.2918096562453,
+            "y": 611.14176424682069
           },
           "nodeIndex": "Fecha",
+          "nodeLineageTag": "fff26a44-9740-4abc-af8c-31819644bc51",
           "size": {
             "height": 300,
             "width": 234
           },
-          "zIndex": 0
+          "zIndex": 14
         },
         {
           "location": {
-            "x": 2442.3,
-            "y": 1129.4
-          },
-          "nodeIndex": "Item",
-          "size": {
-            "height": 300,
-            "width": 234
-          },
-          "zIndex": 0
-        },
-        {
-          "location": {
-            "x": 2958.6,
-            "y": 1206
-          },
-          "nodeIndex": "Price",
-          "size": {
-            "height": 128,
-            "width": 234
-          },
-          "zIndex": 0
-        },
-        {
-          "location": {
-            "x": 3373.6,
-            "y": 921.2
+            "x": 2792.8918257286182,
+            "y": 1048.6725260595717
           },
           "nodeIndex": "Registros_Year",
+          "nodeLineageTag": "f492c6de-2e02-468f-8ec4-457031129351",
           "size": {
             "height": 224,
             "width": 234
           },
-          "zIndex": 0
+          "zIndex": 10
         },
         {
           "location": {
@@ -150,43 +96,7 @@
             "height": 300,
             "width": 234
           },
-          "zIndex": 0
-        },
-        {
-          "location": {
-            "x": 1021.1563380281691,
-            "y": 312.21690140845078
-          },
-          "nodeIndex": "Saleperson",
-          "size": {
-            "height": 248,
-            "width": 234
-          },
-          "zIndex": 0
-        },
-        {
-          "location": {
-            "x": 1798.5,
-            "y": 1251.5
-          },
-          "nodeIndex": "Sales Invoice Header",
-          "size": {
-            "height": 300,
-            "width": 234
-          },
-          "zIndex": 0
-        },
-        {
-          "location": {
-            "x": 2022.8,
-            "y": 823.5
-          },
-          "nodeIndex": "Sales Invoice Line",
-          "size": {
-            "height": 300,
-            "width": 234
-          },
-          "zIndex": 0
+          "zIndex": 19
         },
         {
           "location": {
@@ -198,38 +108,164 @@
             "height": 176,
             "width": 234
           },
-          "zIndex": 0
+          "zIndex": 11
         },
         {
           "location": {
-            "x": 2857.4,
-            "y": 1580.7
+            "x": 2521.014167342797,
+            "y": 1504.5705747144225
           },
           "nodeIndex": "Stock",
+          "nodeLineageTag": "81bc4502-cf87-439c-9a28-a7b8535b38c0",
           "size": {
-            "height": 176,
+            "height": 199.01587276075611,
             "width": 234
           },
-          "zIndex": 0
+          "zIndex": 17
         },
         {
           "location": {
-            "x": 3788.7,
-            "y": 981.2
+            "x": 2793.7061160350104,
+            "y": 890.90696070780359
           },
           "nodeIndex": "UltimaActualizacion",
+          "nodeLineageTag": "fdc5c519-6885-4e84-b453-70be9be8df63",
           "size": {
             "height": 104,
             "width": 234
           },
-          "zIndex": 0
+          "zIndex": 12
+        },
+        {
+          "location": {
+            "x": 1468.3654745329186,
+            "y": 0
+          },
+          "nodeIndex": "Albaranes",
+          "nodeLineageTag": "e922900c-ade0-4b0f-8262-e53ead82cfb2",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 13
+        },
+        {
+          "location": {
+            "x": 1105.6647367513476,
+            "y": 0
+          },
+          "nodeIndex": "Intervenciones",
+          "nodeLineageTag": "a811d9c7-1fbc-4ced-a0de-dc14be13f171",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 15
+        },
+        {
+          "location": {
+            "x": 2785.0957284189162,
+            "y": 1301.6043945446786
+          },
+          "nodeIndex": "TarifasCompra",
+          "size": {
+            "height": 128,
+            "width": 234
+          },
+          "zIndex": 1
+        },
+        {
+          "location": {
+            "x": 1034.2973243655783,
+            "y": 1097.3056909440118
+          },
+          "nodeIndex": "Clientes",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 2
+        },
+        {
+          "location": {
+            "x": 437.05971131632111,
+            "y": 1093.7205132326249
+          },
+          "nodeIndex": "Direcciones",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 16
+        },
+        {
+          "location": {
+            "x": 2042.2749692591012,
+            "y": 800.484127239244
+          },
+          "nodeIndex": "DocumentosLinea",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 20
+        },
+        {
+          "location": {
+            "x": 1685.1910879470474,
+            "y": 1062.06166266147
+          },
+          "nodeIndex": "DocumentosCabecera",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 3
+        },
+        {
+          "location": {
+            "x": 1354.8680085512976,
+            "y": 1429.3429778103989
+          },
+          "nodeIndex": "Sociedades",
+          "size": {
+            "height": 296,
+            "width": 234
+          },
+          "zIndex": 4
+        },
+        {
+          "location": {
+            "x": 1830.1616417780037,
+            "y": 128.72535950384395
+          },
+          "nodeIndex": "Representantes",
+          "nodeLineageTag": "9e54ec5a-7c17-4b59-a1d0-d0d9e0788d20",
+          "size": {
+            "height": 248,
+            "width": 234
+          },
+          "zIndex": 5
+        },
+        {
+          "location": {
+            "x": 2449.38180700331,
+            "y": 989.5343116846368
+          },
+          "nodeIndex": "Articulos",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 6
         }
       ],
       "name": "Todas las tablas",
-      "zoomValue": 71,
+      "zoomValue": 56.482759246766875,
       "pinKeyFieldsToTop": false,
       "showExtraHeaderInfo": false,
-      "hideKeyFieldsWhenCollapsed": false
+      "hideKeyFieldsWhenCollapsed": false,
+      "tablesLocked": false
     },
     {
       "ordinal": 1,
@@ -240,22 +276,77 @@
       "nodes": [
         {
           "location": {
-            "x": 862,
-            "y": 170
+            "x": 140,
+            "y": 184
           },
-          "nodeIndex": "Saleperson",
+          "nodeIndex": "DocumentosLinea",
           "size": {
-            "height": 248,
+            "height": 300,
             "width": 234
           },
           "zIndex": 0
         },
         {
           "location": {
-            "x": 140,
-            "y": 184
+            "x": 655,
+            "y": 196
           },
-          "nodeIndex": "Sales Invoice Line",
+          "nodeIndex": "Representantes",
+          "nodeLineageTag": "9e54ec5a-7c17-4b59-a1d0-d0d9e0788d20",
+          "size": {
+            "height": 248,
+            "width": 234
+          },
+          "zIndex": 0
+        }
+      ],
+      "name": "Comercial",
+      "zoomValue": 100,
+      "pinKeyFieldsToTop": false,
+      "showExtraHeaderInfo": false,
+      "hideKeyFieldsWhenCollapsed": false,
+      "tablesLocked": false
+    },
+    {
+      "ordinal": 2,
+      "scrollPosition": {
+        "x": 0,
+        "y": 0
+      },
+      "nodes": [
+        {
+          "location": {
+            "x": 355,
+            "y": 155
+          },
+          "nodeIndex": "Albaranes",
+          "nodeLineageTag": "e922900c-ade0-4b0f-8262-e53ead82cfb2",
+          "size": {
+            "height": 485,
+            "width": 257
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 0,
+            "y": 186
+          },
+          "nodeIndex": "Fecha",
+          "nodeLineageTag": "fff26a44-9740-4abc-af8c-31819644bc51",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 733,
+            "y": 108
+          },
+          "nodeIndex": "Clientes",
+          "nodeLineageTag": "87a08bef-d5ce-488c-843d-139538bde7f0",
           "size": {
             "height": 300,
             "width": 234
@@ -263,13 +354,67 @@
           "zIndex": 0
         }
       ],
-      "name": "Layout 1",
+      "name": "Albaranes",
       "zoomValue": 100,
       "pinKeyFieldsToTop": false,
       "showExtraHeaderInfo": false,
-      "hideKeyFieldsWhenCollapsed": false
+      "hideKeyFieldsWhenCollapsed": false,
+      "tablesLocked": false
+    },
+    {
+      "ordinal": 3,
+      "scrollPosition": {
+        "x": 0,
+        "y": 0
+      },
+      "nodes": [
+        {
+          "location": {
+            "x": 0,
+            "y": 0
+          },
+          "nodeIndex": "Fecha",
+          "nodeLineageTag": "fff26a44-9740-4abc-af8c-31819644bc51",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 420,
+            "y": 256
+          },
+          "nodeIndex": "Intervenciones",
+          "nodeLineageTag": "a811d9c7-1fbc-4ced-a0de-dc14be13f171",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 842,
+            "y": 172
+          },
+          "nodeIndex": "Clientes",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        }
+      ],
+      "name": "Intervenciones",
+      "zoomValue": 100,
+      "pinKeyFieldsToTop": false,
+      "showExtraHeaderInfo": false,
+      "hideKeyFieldsWhenCollapsed": false,
+      "tablesLocked": false
     }
   ],
-  "selectedDiagram": "Layout 1",
+  "selectedDiagram": "Todas las tablas",
   "defaultDiagram": "Todas las tablas"
 }

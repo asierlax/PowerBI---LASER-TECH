@@ -24,21 +24,21 @@ table Fecha
 	column Ano = YEAR(Fecha[Fecha])
 		formatString: 0
 		lineageTag: a8bebbae-1dff-4678-9bf2-ef54528fbc33
-		summarizeBy: none
+		summarizeBy: sum
 
 		annotation SummarizationSetBy = Automatic
 
 	column Dia = day([Fecha])
 		formatString: 0
 		lineageTag: 6e8c8182-dd1a-4303-a849-8914c90b5e82
-		summarizeBy: none
+		summarizeBy: sum
 
 		annotation SummarizationSetBy = Automatic
 
 	column Mes = MONTH([Fecha])
 		formatString: 0
 		lineageTag: 9a445354-7a42-4aa4-90e0-631a9b3e4b98
-		summarizeBy: none
+		summarizeBy: sum
 
 		annotation SummarizationSetBy = Automatic
 
@@ -72,6 +72,18 @@ table Fecha
 
 	column AnoMesStock = CONCATENATE(year(NOW()), if(len(month(NOW()))=1,CONCATENATE("0", month(NOW())),month(NOW())))
 		lineageTag: 0497b53f-b241-407d-82bb-4ec770b04b29
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column Semestre = IF(MONTH(Fecha[Fecha]) <= 6, "S1", "S2")
+		lineageTag: d9156aa6-1d4c-4c35-9b58-979801d608bb
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Ano Semestre' = Fecha[Ano] & " - " & Fecha[Semestre]
+		lineageTag: e7cb58b2-d508-496e-b693-3fe6ab5965aa
 		summarizeBy: none
 
 		annotation SummarizationSetBy = Automatic
@@ -119,7 +131,7 @@ table Fecha
 
 	partition Fecha-75bde20e-0cf7-4839-baec-03011fb1b0f3 = calculated
 		mode: import
-		source = CALENDAR(DATE(2020,1,1),DATE(2023,12,31))
+		source = CALENDAR(DATE(2007,1,1),DATE(2026,12,31))
 
 	annotation PBI_Id = c5e160ff35dd4db1a0bf063cb89b77d3
 

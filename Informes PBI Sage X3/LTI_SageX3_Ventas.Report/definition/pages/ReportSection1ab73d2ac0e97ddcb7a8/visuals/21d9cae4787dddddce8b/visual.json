@@ -38,7 +38,7 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Item"
+                      "Entity": "Articulos"
                     }
                   },
                   "Property": "Familia"
@@ -51,7 +51,7 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Item"
+                      "Entity": "Articulos"
                     }
                   },
                   "Property": "Descripcion 1"
@@ -65,7 +65,7 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Item"
+                      "Entity": "Articulos"
                     }
                   },
                   "Property": "Subfamilia"
@@ -111,7 +111,7 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Item"
+                      "Entity": "Articulos"
                     }
                   },
                   "Property": "Familia"
@@ -134,7 +134,7 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Item"
+                      "Entity": "Articulos"
                     }
                   },
                   "Property": "Descripcion 1"
@@ -157,7 +157,7 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Item"
+                      "Entity": "Articulos"
                     }
                   },
                   "Property": "Subfamilia"
@@ -331,7 +331,7 @@
                       "Column": {
                         "Expression": {
                           "SourceRef": {
-                            "Entity": "Item"
+                            "Entity": "Articulos"
                           }
                         },
                         "Property": "Familia"
@@ -368,7 +368,7 @@
                       "Column": {
                         "Expression": {
                           "SourceRef": {
-                            "Entity": "Item"
+                            "Entity": "Articulos"
                           }
                         },
                         "Property": "Familia"
@@ -390,7 +390,7 @@
                       "Column": {
                         "Expression": {
                           "SourceRef": {
-                            "Entity": "Item"
+                            "Entity": "Articulos"
                           }
                         },
                         "Property": "Descripcion 1"

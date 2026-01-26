@@ -20,7 +20,7 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Saleperson"
+                      "Entity": "Representantes"
                     }
                   },
                   "Property": "Comercial"
@@ -40,7 +40,7 @@
                     "Column": {
                       "Expression": {
                         "SourceRef": {
-                          "Entity": "Saleperson"
+                          "Entity": "Representantes"
                         }
                       },
                       "Property": "Nombre Comercial"
@@ -213,7 +213,7 @@
           "Column": {
             "Expression": {
               "SourceRef": {
-                "Entity": "Saleperson"
+                "Entity": "Representantes"
               }
             },
             "Property": "Comercial"
@@ -225,7 +225,7 @@
           "From": [
             {
               "Name": "s",
-              "Entity": "Saleperson",
+              "Entity": "Representantes",
               "Type": 0
             }
           ],

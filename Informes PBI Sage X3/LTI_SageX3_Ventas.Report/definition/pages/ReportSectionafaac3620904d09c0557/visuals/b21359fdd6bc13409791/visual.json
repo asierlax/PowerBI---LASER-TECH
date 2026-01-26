@@ -20,7 +20,7 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Saleperson"
+                      "Entity": "Representantes"
                     }
                   },
                   "Property": "Nombre Comercial"
@@ -40,7 +40,7 @@
                     "Column": {
                       "Expression": {
                         "SourceRef": {
-                          "Entity": "Company"
+                          "Entity": "Sociedades"
                         }
                       },
                       "Property": "Empresa"
@@ -82,7 +82,7 @@
                   "Column": {
                     "Expression": {
                       "SourceRef": {
-                        "Entity": "Sales Invoice Line"
+                        "Entity": "DocumentosLinea"
                       }
                     },
                     "Property": "Total Linea Sin Impuesto"
@@ -164,7 +164,7 @@
           "Column": {
             "Expression": {
               "SourceRef": {
-                "Entity": "Saleperson"
+                "Entity": "Representantes"
               }
             },
             "Property": "Nombre Comercial"
@@ -176,7 +176,7 @@
           "From": [
             {
               "Name": "s",
-              "Entity": "Saleperson",
+              "Entity": "Representantes",
               "Type": 0
             }
           ],
@@ -236,7 +236,7 @@
           "Column": {
             "Expression": {
               "SourceRef": {
-                "Entity": "Company"
+                "Entity": "Sociedades"
               }
             },
             "Property": "Empresa"
@@ -248,7 +248,7 @@
           "From": [
             {
               "Name": "c",
-              "Entity": "Company",
+              "Entity": "Sociedades",
               "Type": 0
             }
           ],

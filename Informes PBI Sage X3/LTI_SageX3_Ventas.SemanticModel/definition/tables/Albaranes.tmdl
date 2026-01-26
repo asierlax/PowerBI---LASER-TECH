@@ -1,0 +1,325 @@
+table Albaranes
+	lineageTag: e922900c-ade0-4b0f-8262-e53ead82cfb2
+
+	column Sociedad
+		dataType: string
+		lineageTag: 27c3ea56-4747-4f6a-b847-fa45f3d83f49
+		summarizeBy: none
+		sourceColumn: Sociedad
+
+		annotation SummarizationSetBy = Automatic
+
+	column Planta
+		dataType: string
+		lineageTag: 63bda88a-f712-43d4-8187-120008bad3d3
+		summarizeBy: none
+		sourceColumn: Planta
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Tipo entrega'
+		dataType: string
+		lineageTag: 09674a5a-c971-4d82-984b-b484cd84b74e
+		summarizeBy: none
+		sourceColumn: Tipo entrega
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Num. Entrega'
+		dataType: string
+		lineageTag: a14882a6-13aa-4bb0-835b-149b5bfba299
+		summarizeBy: none
+		sourceColumn: Num. Entrega
+
+		annotation SummarizationSetBy = Automatic
+
+	column Fecha
+		dataType: dateTime
+		formatString: dd/mm/yyyy
+		lineageTag: ab1cecac-409e-4c22-96e1-448e219ae8dc
+		summarizeBy: none
+		sourceColumn: Fecha
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+		annotation PBI_FormatHint = {"isDateTimeCustom":true}
+
+	column Cliente
+		dataType: string
+		lineageTag: 404dd5ed-e6ec-4486-a88a-a111a739c3d6
+		summarizeBy: none
+		sourceColumn: Cliente
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Razon Social'
+		dataType: string
+		lineageTag: 7b25b247-1fae-49d3-b501-019a27aedb74
+		summarizeBy: none
+		sourceColumn: Razon Social
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Causa transporte'
+		dataType: string
+		lineageTag: 51690529-5632-4395-bd57-5fa6db26fc4e
+		summarizeBy: none
+		sourceColumn: Causa transporte
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Cod. Cliente grupo'
+		dataType: string
+		lineageTag: 0f6f1640-81f7-48e3-bdb5-8295ab7d9199
+		summarizeBy: none
+		sourceColumn: Cod. Cliente grupo
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Cliente grupo'
+		dataType: string
+		lineageTag: e182c7ce-72f2-45f1-b886-0ccdc7552920
+		summarizeBy: none
+		sourceColumn: Cliente grupo
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Cliente facturado'
+		dataType: string
+		lineageTag: 16297dbd-6871-437d-89d6-220e4a5f4d9c
+		summarizeBy: none
+		sourceColumn: Cliente facturado
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Num. Pedido'
+		dataType: string
+		lineageTag: b3239cd6-4bdc-4fe5-a126-1b6803b16540
+		summarizeBy: none
+		sourceColumn: Num. Pedido
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Dir. entrega'
+		dataType: string
+		lineageTag: 403804b1-2bd8-4c05-bf18-6236cc743862
+		summarizeBy: none
+		sourceColumn: Dir. entrega
+
+		annotation SummarizationSetBy = Automatic
+
+	column Linea
+		dataType: int64
+		formatString: 0
+		lineageTag: 2034aa9c-d0ce-4a6e-8e68-0f21f5d8f07b
+		summarizeBy: sum
+		sourceColumn: Linea
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Cod. articulo'
+		dataType: string
+		lineageTag: 20101650-acf1-4eb4-95ee-c1f5bbd16950
+		summarizeBy: none
+		sourceColumn: Cod. articulo
+
+		annotation SummarizationSetBy = Automatic
+
+	column Descripcion
+		dataType: string
+		lineageTag: 76a06009-8776-493d-ace7-69c696aba71e
+		summarizeBy: none
+		sourceColumn: Descripcion
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Cantidad UV'
+		dataType: double
+		lineageTag: bf1c949e-aee3-4dc7-92d6-2d2a857862e5
+		summarizeBy: sum
+		sourceColumn: Cantidad UV
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Unidad venta'
+		dataType: string
+		lineageTag: 8b8d93c2-17e9-4996-89fb-122c45d0809b
+		summarizeBy: none
+		sourceColumn: Unidad venta
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Coeficiente UV-US'
+		dataType: double
+		lineageTag: 80a66af5-b243-42df-be0b-5cd173a3468d
+		summarizeBy: sum
+		sourceColumn: Coeficiente UV-US
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Cantidad US'
+		dataType: double
+		lineageTag: a8051314-bb58-4807-ac1b-08d043fbfe3f
+		summarizeBy: sum
+		sourceColumn: Cantidad US
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Unidad stock'
+		dataType: string
+		lineageTag: 62c42fd0-1504-43d5-9f63-7a96600a684e
+		summarizeBy: none
+		sourceColumn: Unidad stock
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Precio bruto'
+		dataType: double
+		lineageTag: 8fc560fd-1c6a-432e-908f-07875e7f97ff
+		summarizeBy: sum
+		sourceColumn: Precio bruto
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Descuento 1'
+		dataType: double
+		lineageTag: d8b1ce7c-8e56-4bdf-bb89-d4b04f979182
+		summarizeBy: sum
+		sourceColumn: Descuento 1
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Descuento 2'
+		dataType: double
+		lineageTag: 00bd17cb-145c-4406-95a8-6840dba8a81b
+		summarizeBy: sum
+		sourceColumn: Descuento 2
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Descuento 3'
+		dataType: double
+		lineageTag: cc3d8832-bba4-420f-a8cc-d86ffe19c170
+		summarizeBy: sum
+		sourceColumn: Descuento 3
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Precio neto'
+		dataType: double
+		lineageTag: 58bb9921-4604-4208-bbbb-58437c6d95b7
+		summarizeBy: sum
+		sourceColumn: Precio neto
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Coste
+		dataType: double
+		lineageTag: e0604725-65b0-4046-a5da-113c8e35c702
+		summarizeBy: sum
+		sourceColumn: Coste
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Margen
+		dataType: double
+		lineageTag: 026afcc0-fe2a-47e7-8b2b-3d034b455a6b
+		summarizeBy: sum
+		sourceColumn: Margen
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Representante 1'
+		dataType: string
+		lineageTag: dddd0ae8-3b58-4608-aca6-fefd78777c9c
+		summarizeBy: none
+		sourceColumn: Representante 1
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Representante 2'
+		dataType: string
+		lineageTag: b4571bfc-2575-4af8-93c6-80e77fb5bd7f
+		summarizeBy: none
+		sourceColumn: Representante 2
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Albaranes = m
+		mode: import
+		source = ```
+				let
+				    CurrentServer = Instancia,
+				    CurrentDatabase = BaseDeDatos,
+				    CurrentSchema = Esquema,
+				    CurrentRows = Registros,
+				    CurrentPeriod = Periodo,
+				    CurrentCompany = Empresa,
+				    Origen = Sql.Database(CurrentServer, CurrentDatabase, [Query="
+				                                                                SELECT SDH.CPY_0 'Sociedad', 
+				                                                                SDH.STOFCY_0 'Planta', 
+				                                                                (cast(SDH.SDHCAT_0 as varchar) + ' - ' + M490.LANMES_0) AS 'Tipo entrega', 
+				                                                                SDH.SDHNUM_0 'Num. Entrega', 
+				                                                                SDH.SHIDAT_0 'Fecha', 
+				                                                                SDH.BPCORD_0 'Cliente', 
+				                                                                BPDNAM_0 'Razon Social', 
+				                                                                (YTIPPED_0 + ' - ' + ATX1.TEXTE_0) AS 'Causa transporte', 
+				                                                                SDH.BPCGRU_0 'Cod. Cliente grupo', 
+				                                                                BPC.BPCNAM_0 'Cliente grupo', 
+				                                                                SDH.BPCINV_0 'Cliente facturado', 
+				                                                                SDH.SOHNUM_0 'Num. Pedido', 
+				                                                                SDH.BPAADD_0 'Dir. entrega',
+				                                                                SDD.SDDLIN_0 'Linea', 
+				                                                                ITMREF_0 'Cod. articulo', 
+				                                                                ITMDES1_0 'Descripcion', 
+				                                                                QTY_0 'Cantidad UV', 
+				                                                                SAU_0 'Unidad venta', 
+				                                                                SAUSTUCOE_0 'Coeficiente UV-US', 
+				                                                                QTYSTU_0 'Cantidad US', 
+				                                                                STU_0 'Unidad stock', 
+				                                                                GROPRI_0 'Precio bruto', 
+				                                                                DISCRGVAL1_0 'Descuento 1', 
+				                                                                DISCRGVAL2_0 'Descuento 2', 
+				                                                                DISCRGVAL3_0 'Descuento 3',
+				                                                                NETPRI_0 'Precio neto', 
+				                                                                CPRPRI_0 'Coste', 
+				                                                                PFM_0 'Margen', 
+				                                                                REP1_0 'Representante 1', 
+				                                                                REP2_0 'Representante 2'
+				                                                                FROM " & CurrentSchema & ".SDELIVERY SDH
+				                                                                LEFT JOIN " & CurrentSchema & ".APLSTD M490 ON SDH.SDHCAT_0 = M490.LANNUM_0 AND M490.LANCHP_0 = 490 AND M490.LAN_0 = 'SPA'
+				                                                                LEFT JOIN " & CurrentSchema & ".BPCUSTOMER BPC ON SDH.BPCGRU_0 = BPC.BPCNUM_0
+				                                                                LEFT JOIN " & CurrentSchema & ".ATEXTRA ATX1 ON SDH.YTIPPED_0 = ATX1.IDENT2_0 AND ATX1.CODFIC_0 = 'ATABDIV' AND ATX1.IDENT1_0 = '6001' AND ATX1.ZONE_0 = 'LNGDES' AND ATX1.LANGUE_0 = 'SPA'
+				                                                                INNER JOIN " & CurrentSchema & ".SDELIVERYD SDD ON SDD.SDHNUM_0 = SDH.SDHNUM_0
+				                                                            " ]),
+				    #"Tipo cambiado" = Table.TransformColumnTypes(Origen,{{"Fecha", type date}})
+				in
+				    #"Tipo cambiado"
+				```
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

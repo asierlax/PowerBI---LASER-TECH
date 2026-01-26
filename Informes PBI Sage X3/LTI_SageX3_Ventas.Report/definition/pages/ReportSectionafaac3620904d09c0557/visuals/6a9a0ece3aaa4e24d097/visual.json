@@ -20,7 +20,7 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Address"
+                      "Entity": "Direcciones"
                     }
                   },
                   "Property": "Provincia Nombre"
@@ -39,7 +39,7 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Saleperson"
+                      "Entity": "Representantes"
                     }
                   },
                   "Property": "Comercial"
@@ -58,7 +58,7 @@
                     "Column": {
                       "Expression": {
                         "SourceRef": {
-                          "Entity": "Saleperson"
+                          "Entity": "Representantes"
                         }
                       },
                       "Property": "Nombre Comercial"
@@ -251,7 +251,7 @@
           "Column": {
             "Expression": {
               "SourceRef": {
-                "Entity": "Address"
+                "Entity": "Direcciones"
               }
             },
             "Property": "Provincia Nombre"
@@ -263,7 +263,7 @@
           "From": [
             {
               "Name": "a",
-              "Entity": "Address",
+              "Entity": "Direcciones",
               "Type": 0
             }
           ],

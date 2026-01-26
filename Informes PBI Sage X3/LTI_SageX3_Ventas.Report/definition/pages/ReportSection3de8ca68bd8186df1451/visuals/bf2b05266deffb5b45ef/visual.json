@@ -20,7 +20,7 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Item"
+                      "Entity": "Articulos"
                     }
                   },
                   "Property": "Subsidiary ID"
@@ -33,7 +33,7 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Item"
+                      "Entity": "Articulos"
                     }
                   },
                   "Property": "IdItem"
@@ -47,7 +47,7 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Item"
+                      "Entity": "Articulos"
                     }
                   },
                   "Property": "Descripcion 1"
@@ -99,7 +99,7 @@
                     "Column": {
                       "Expression": {
                         "SourceRef": {
-                          "Entity": "Price"
+                          "Entity": "TarifasCompra"
                         }
                       },
                       "Property": "Purchase price"
@@ -133,7 +133,7 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Customer"
+                      "Entity": "Clientes"
                     }
                   },
                   "Property": "Moneda"
@@ -160,7 +160,7 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Item"
+                      "Entity": "Articulos"
                     }
                   },
                   "Property": "Purchased from VYGON"
@@ -173,7 +173,7 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Item"
+                      "Entity": "Articulos"
                     }
                   },
                   "Property": "Supplier"
@@ -186,7 +186,7 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Item"
+                      "Entity": "Articulos"
                     }
                   },
                   "Property": "Vygon Item Number"
@@ -199,7 +199,7 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Item"
+                      "Entity": "Articulos"
                     }
                   },
                   "Property": "EOR"
@@ -217,7 +217,7 @@
               "Column": {
                 "Expression": {
                   "SourceRef": {
-                    "Entity": "Item"
+                    "Entity": "Articulos"
                   }
                 },
                 "Property": "Subsidiary ID"

@@ -3,9 +3,9 @@ table Metricas
 
 	measure Rentabilidad = ```
 			
-			var nVentas = COUNT('Sales Invoice Line'[Documento])
-			var totalVentas = SUMX('Sales Invoice Line', 'Sales Invoice Line'[Precio Neto])
-			var margenBeneficio = SUMX('Sales Invoice Line', 'Sales Invoice Line'[Margen Beneficio])
+			var nVentas = COUNT('DocumentosLinea'[Documento])
+			var totalVentas = SUMX('DocumentosLinea', 'DocumentosLinea'[Precio Neto])
+			var margenBeneficio = SUMX('DocumentosLinea', 'DocumentosLinea'[Margen])
 			
 			return 
 			    IF(
@@ -19,23 +19,23 @@ table Metricas
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-	measure 'Items Media' = DIVIDE(SUM('Sales Invoice Line'[Cantidad]), DISTINCTCOUNT('Sales Invoice Line'[Documento]), 0)
-		displayFolder: Items
+	measure 'Items Media' = DIVIDE(SUM('DocumentosLinea'[Cantidad US]), DISTINCTCOUNT('DocumentosLinea'[Documento]), 0)
+		displayFolder: Articulos
 		lineageTag: 44d6cb82-4984-40ad-9232-b75a50f8b698
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
 	measure ClientesNuevos =
 			
-			var anteriores = CALCULATE(DISTINCTCOUNT('Sales Invoice Line'[IdCliente]), DATESBETWEEN(Fecha[Fecha], DATE(1990,1,1), [MinSelectedDate]))
-			var actuales = CALCULATE(DISTINCTCOUNT('Sales Invoice Line'[IdCliente]), DATESBETWEEN(Fecha[Fecha], DATE(1990,1,1), [MaxSelectedDate]))
+			var anteriores = CALCULATE(DISTINCTCOUNT('DocumentosLinea'[IdCliente]), DATESBETWEEN(Fecha[Fecha], DATE(1990,1,1), [MinSelectedDate]))
+			var actuales = CALCULATE(DISTINCTCOUNT('DocumentosLinea'[IdCliente]), DATESBETWEEN(Fecha[Fecha], DATE(1990,1,1), [MaxSelectedDate]))
 			var dif = actuales - anteriores
 			return IF(dif < 0, 0, dif)
 		formatString: 0
 		displayFolder: Clientes
 		lineageTag: 917d877f-72a8-456c-8a03-81ff08681382
 
-	measure 'Margen Beneficio' = SUMX('Sales Invoice Line', 'Sales Invoice Line'[Margen Beneficio] * 'Sales Invoice Line'[Cantidad]*'Sales Invoice Line'[Sentido Cargo/Abono])
+	measure 'Margen Beneficio' = SUMX('DocumentosLinea', 'DocumentosLinea'[Margen] * 'DocumentosLinea'[Cantidad US]*'DocumentosLinea'[Sentido])
 		formatString: #,0.00\ "€";-#,0.00\ "€";#,0.00\ "€"
 		displayFolder: Margen
 		lineageTag: 054aa74d-3da4-4027-b545-d537c6d1551a
@@ -87,7 +87,7 @@ table Metricas
 		displayFolder: Ayuda
 		lineageTag: efb17981-ad15-4583-b60c-015e69bba046
 
-	measure Clientes = DISTINCTCOUNT('Sales Invoice Line'[IdCliente])
+	measure Clientes = DISTINCTCOUNT('DocumentosLinea'[IdCliente])
 		formatString: 0
 		displayFolder: Clientes
 		lineageTag: 289ac24a-e925-4680-9312-71cac53dba10
@@ -108,8 +108,8 @@ table Metricas
 			var MaxSelctedDatePA = [MinSelectedDate] - 1
 			var minSelectedPA = MaxSelctedDatePA - difPeriodoActual
 			
-			var anteriores = CALCULATE(DISTINCTCOUNT('Sales Invoice Line'[IdCliente]), DATESBETWEEN(Fecha[Fecha], DATE(1990,1,1), minSelectedPA))
-			var actuales = CALCULATE(DISTINCTCOUNT('Sales Invoice Line'[IdCliente]), DATESBETWEEN(Fecha[Fecha], DATE(1990,1,1), MaxSelctedDatePA))
+			var anteriores = CALCULATE(DISTINCTCOUNT('DocumentosLinea'[IdCliente]), DATESBETWEEN(Fecha[Fecha], DATE(1990,1,1), minSelectedPA))
+			var actuales = CALCULATE(DISTINCTCOUNT('DocumentosLinea'[IdCliente]), DATESBETWEEN(Fecha[Fecha], DATE(1990,1,1), MaxSelctedDatePA))
 			var dif = actuales - anteriores
 			return IF(dif < 0, 0, dif)
 		formatString: 0
@@ -151,40 +151,41 @@ table Metricas
 		displayFolder: Clientes
 		lineageTag: 2ba4e33a-bc6b-4282-a353-09e084ea0e51
 
-	measure FechaPrimeraCompra = FIRSTNONBLANK('Sales Invoice Line'[Fecha Factura], 'Sales Invoice Line'[Fecha Factura])
+	measure FechaPrimeraCompra = FIRSTNONBLANK('DocumentosLinea'[Fecha], 'DocumentosLinea'[Fecha])
 		formatString: General Date
 		displayFolder: Ayuda
 		lineageTag: 9357bc3d-8685-4e2a-b1ab-20c5d7e200cc
 
-	measure FechaUltimaCompra = LASTNONBLANK('Sales Invoice Header'[Fecha Factura],'Sales Invoice Header'[Fecha Factura])
+	measure FechaUltimaCompra = LASTNONBLANK('DocumentosCabecera'[Fecha Factura],'DocumentosCabecera'[Fecha Factura])
 		formatString: dd/mm/yyyy
 		displayFolder: Ayuda
 		lineageTag: 0fee209a-42a8-4fc1-ab83-bb1564ca30ca
 
 		annotation PBI_FormatHint = {"isDateTimeCustom":true}
 
-	measure Frecuencia_Media = DIVIDE(DISTINCTCOUNT('Sales Invoice Line'[Documento]), [Clientes], 0)
+	measure Frecuencia_Media = DIVIDE(DISTINCTCOUNT('DocumentosLinea'[Documento]), [Clientes], 0)
 		formatString: 0
 		displayFolder: Clientes
 		lineageTag: eab7f544-64e4-4330-b22d-163f9038653b
 
 		annotation PBI_FormatHint = {"isDecimal":true}
 
-	measure 'Importe Medio' = DIVIDE(SUM('Sales Invoice Line'[Total Linea Sin Impuesto]), DISTINCTCOUNT('Sales Invoice Line'[Documento]), 0)
+	measure 'Importe Medio' = DIVIDE(SUM('DocumentosLinea'[Total Linea AI]), DISTINCTCOUNT('DocumentosLinea'[Documento]), 0)
 		formatString: #,0.00\ "€";-#,0.00\ "€";#,0.00\ "€"
 		displayFolder: Importe
 		lineageTag: c601e16b-6841-4110-a9b7-dd2c8ad02a70
 
 	measure 'Items Media AA' = CALCULATE([Items Media], SAMEPERIODLASTYEAR(Fecha[Fecha]))
-		displayFolder: Items
+		displayFolder: Articulos
 		lineageTag: 2901974c-f05c-4e70-8c2e-88d73a2774e6
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-	measure 'Total Ventas' = SUMX('Sales Invoice Line',[Total Linea Sin Impuesto]*'Sales Invoice Line'[Sentido Cargo/Abono] )
-		formatString: #,0.00\ "€";-#,0.00\ "€";#,0.00\ "€"
+	measure 'Total Ventas' = SUMX('DocumentosLinea',[Total Linea AI]*'DocumentosLinea'[Sentido] )
 		displayFolder: Ventas
 		lineageTag: 099ceaa1-7306-4b09-bc53-76b2c5197720
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
 	measure 'Total Ventas AA' = ```
 			CALCULATE([Total Ventas], SAMEPERIODLASTYEAR(Fecha[Fecha])) 
@@ -204,7 +205,7 @@ table Metricas
 	measure '# Clientes In' =
 			
 			var ClientesIn = //CALCULATETABLE(cliente,  Cliente[IdCliente] in VALUES(FacturasClientes_AUX[IdCliente]))
-			                TREATAS(VALUES('Sales Invoice Line'[IdCliente]), Customer[IdCliente])
+			                TREATAS(VALUES('DocumentosLinea'[IdCliente]), Clientes[IdCliente])
 			Return COUNTROWS(ClientesIn)
 		formatString: 0
 		displayFolder: Clientes
@@ -212,7 +213,7 @@ table Metricas
 
 	measure '# Clientes seleccionados' = ```
 			
-			    COUNTROWS(filter(all(Customer[IdCliente]), [Total Ventas]<>BLANK()))
+			    COUNTROWS(filter(all(Clientes[IdCliente]), [Total Ventas]<>BLANK()))
 			```
 		formatString: 0
 		displayFolder: Clientes
@@ -220,7 +221,7 @@ table Metricas
 
 	measure '% Clientes s/Total' =
 			
-			var ClientesIn = CALCULATETABLE(all(customer), TREATAS( VALUES('Sales Invoice Line'[IdCliente]),Customer[IdCliente]))
+			var ClientesIn = CALCULATETABLE(all(Clientes), TREATAS( VALUES('DocumentosLinea'[IdCliente]),Clientes[IdCliente]))
 			Return DIVIDE([# Clientes seleccionados]
 			    , [# Clientes In]
 			    )
@@ -230,7 +231,7 @@ table Metricas
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-	measure 'Coste Ventas' = SUMX('Sales Invoice Line', 'Sales Invoice Line'[Precio Coste] * 'Sales Invoice Line'[Cantidad])
+	measure 'Coste Ventas' = SUMX('DocumentosLinea', 'DocumentosLinea'[Precio Coste] * 'DocumentosLinea'[Cantidad US])
 		formatString: #,0.00\ "€";-#,0.00\ "€";#,0.00\ "€"
 		displayFolder: Ventas
 		lineageTag: df78f0fd-2c52-407f-8ff7-de32d411142e
@@ -261,38 +262,38 @@ table Metricas
 		displayFolder: Margen
 		lineageTag: 4bb071a6-a001-4d25-b7af-902af0291cb9
 
-	measure 'Total Cantidad' = SUM('Sales Invoice Line'[Cantidad])
+	measure 'Total Cantidad' = SUM('DocumentosLinea'[Cantidad US])
 		formatString: 0
-		displayFolder: Items
+		displayFolder: Articulos
 		lineageTag: 27fcb0a5-596e-4853-94e7-f8394e422e46
 
 		annotation PBI_FormatHint = {"isDecimal":true}
 
 	measure 'Cantidad AA' = calculate( [Total Cantidad], SAMEPERIODLASTYEAR(Fecha[Fecha]))
 		formatString: 0
-		displayFolder: Items
+		displayFolder: Articulos
 		lineageTag: b8df87c9-a590-4a8e-aa4a-59adb4ee8398
 
 		annotation PBI_FormatHint = {"isDecimal":true}
 
 	measure 'Variacion Cantidad AA %' = divide([Total Cantidad]-[Cantidad AA],[Cantidad AA])
 		formatString: 0.00\ %;-0.00\ %;0.00\ %
-		displayFolder: Items
+		displayFolder: Articulos
 		lineageTag: ef2e7060-b6de-47da-a39a-5600fe3384b2
 
 	measure 'Variacion Facturas AA %' = divide([Total Facturas]-[Total Facturas AA], [Total Facturas AA])
 		formatString: 0.00\ %;-0.00\ %;0.00\ %
-		displayFolder: Items
+		displayFolder: Articulos
 		lineageTag: 814fb326-4f62-4675-a181-36e1826c2ebb
 
-	measure 'Total Facturas' = DISTINCTCOUNT('Sales Invoice Line'[Documento])
+	measure 'Total Facturas' = DISTINCTCOUNT('DocumentosLinea'[Documento])
 		formatString: 0
-		displayFolder: Items
+		displayFolder: Articulos
 		lineageTag: a86a998c-8da2-4bdb-b618-e0a7d8af8ff0
 
 	measure 'Total Facturas AA' = CALCULATE([Total Facturas], SAMEPERIODLASTYEAR(Fecha[Fecha]))
 		formatString: 0
-		displayFolder: Items
+		displayFolder: Articulos
 		lineageTag: 919f6d90-132b-4d8e-b636-4ab0a20f464f
 
 	measure Warning = ```
@@ -340,11 +341,76 @@ table Metricas
 		displayFolder: Ayuda
 		lineageTag: 5e10b96c-f99b-4854-bae0-661e2b311257
 
-	measure 'Coste Lineas Factura' = SUMX('Sales Invoice Line', 'Sales Invoice Line'[Precio Coste] * 'Sales Invoice Line'[Cantidad])
+	measure 'Coste Lineas Factura' = SUMX('DocumentosLinea', 'DocumentosLinea'[Precio Coste] * 'DocumentosLinea'[Cantidad US])
 		displayFolder: Importe
 		lineageTag: d60bca4a-5161-4465-9b6f-4028a3e91712
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Count Intervenciones' = COUNT(Intervenciones[Intervencion])
+		formatString: 0
+		displayFolder: Intervenciones
+		lineageTag: 9def452f-8d76-4d8c-ae61-a02cc78ba855
+
+	measure 'Int En garantia' = CALCULATE([Count Intervenciones], Intervenciones[Int. con garantia] = "SI" )
+		formatString: 0
+		displayFolder: Intervenciones
+		lineageTag: 688702a6-e52e-4c09-ad7a-3fca07dd8a17
+
+	measure 'Int Sin garantia' = CALCULATE([Count Intervenciones], Intervenciones[Int. con garantia] = "NO" )
+		formatString: 0
+		displayFolder: Intervenciones
+		lineageTag: e50aefb3-3ca1-4f65-8bf1-8a2956e3984a
+
+	measure 'Int En garantia LTI' = CALCULATE([Count Intervenciones], Intervenciones[Int. con garantia] = "SI", Intervenciones[Codigo cliente] = "01020" )
+		formatString: 0
+		displayFolder: Intervenciones
+		lineageTag: 9a33bcf8-bf15-45f4-984e-6d1526e272c3
+
+	measure 'Int En garantia Clientes' = CALCULATE([Count Intervenciones], Intervenciones[Int. con garantia] = "SI", Intervenciones[Codigo cliente] <> "01020" )
+		formatString: 0
+		displayFolder: Intervenciones
+		lineageTag: b59f79f5-97c3-48da-9a49-64499bc7e793
+
+	measure 'Int Instalacion' = CALCULATE([Count Intervenciones],Intervenciones[Int. instalacion] = "SI" )
+		formatString: 0
+		displayFolder: Intervenciones
+		lineageTag: 4310055f-51a1-4327-85d7-3fa91e0f8fa5
+
+	measure 'Int contrato' = CALCULATE([Count Intervenciones], Intervenciones[Int. contrato] = "SI" )
+		formatString: 0
+		displayFolder: Intervenciones
+		lineageTag: b23e0bf2-f8ea-4c85-a004-9b970b92709d
+
+	measure 'Int revision' = CALCULATE([Count Intervenciones], Intervenciones[Motivo] = "C1 - Revision" )
+		formatString: 0
+		displayFolder: Intervenciones
+		lineageTag: 9dd9be44-a4b5-410c-b7e1-efa22e3b85f0
+
+	measure 'Int reincidencia' = CALCULATE([Count Intervenciones], Intervenciones[Motivo] = "A1 - Reincidencia Averia" )
+		formatString: 0
+		displayFolder: Intervenciones
+		lineageTag: 4947d28e-02bd-4b41-96d1-b70a3446ecd9
+
+	measure 'Int Contrato Standard' = CALCULATE([Count Intervenciones], Intervenciones[Tipo contrato] = "A1 - Contrato Standard" )
+		formatString: 0
+		displayFolder: Intervenciones
+		lineageTag: 0e84d594-b85e-4266-8212-5d66285d24b6
+
+	measure 'Int Contrato FullRisk' = CALCULATE([Count Intervenciones], Intervenciones[Tipo contrato] = "C1 - Contrato Full Risk" )
+		formatString: 0
+		displayFolder: Intervenciones
+		lineageTag: 5ee77393-adc3-4e20-984a-d587722be3b1
+
+	measure '% en Garantia' = DIVIDE([Int En garantia Clientes],[Count Intervenciones])
+		formatString: 0.00\ %;-0.00\ %;0.00\ %
+		displayFolder: Intervenciones
+		lineageTag: da5ceb93-5cd2-4b68-af74-0b638c71c606
+
+	measure '% Reincidencias averias' = DIVIDE([Int reincidencia],[Count Intervenciones])
+		formatString: 0.00\ %;-0.00\ %;0.00\ %
+		displayFolder: Intervenciones
+		lineageTag: ba36a3d2-6986-4cd3-af5f-eb324d45be76
 
 	partition Metricas-6395655b-e65a-43af-b3d7-1807b8438801 = m
 		mode: import

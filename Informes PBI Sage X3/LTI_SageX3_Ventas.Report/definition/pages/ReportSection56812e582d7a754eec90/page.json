@@ -13,7 +13,7 @@
           "Column": {
             "Expression": {
               "SourceRef": {
-                "Entity": "Item"
+                "Entity": "Articulos"
               }
             },
             "Property": "Descripcion 1"
@@ -25,7 +25,7 @@
           "From": [
             {
               "Name": "i",
-              "Entity": "Item",
+              "Entity": "Articulos",
               "Type": 0
             }
           ],
@@ -74,7 +74,7 @@
           "Column": {
             "Expression": {
               "SourceRef": {
-                "Entity": "Item"
+                "Entity": "Articulos"
               }
             },
             "Property": "Descripcion 1"

@@ -132,7 +132,7 @@
                         "Hierarchy": {
                           "Expression": {
                             "SourceRef": {
-                              "Entity": "Address"
+                              "Entity": "Direcciones"
                             }
                           },
                           "Hierarchy": "Pais Jerarquía"
@@ -152,7 +152,7 @@
                         "Hierarchy": {
                           "Expression": {
                             "SourceRef": {
-                              "Entity": "Address"
+                              "Entity": "Direcciones"
                             }
                           },
                           "Hierarchy": "Pais Jerarquía"
@@ -172,7 +172,7 @@
                         "Hierarchy": {
                           "Expression": {
                             "SourceRef": {
-                              "Entity": "Address"
+                              "Entity": "Direcciones"
                             }
                           },
                           "Hierarchy": "Pais Jerarquía"
@@ -211,7 +211,7 @@
                         "Hierarchy": {
                           "Expression": {
                             "SourceRef": {
-                              "Entity": "Address"
+                              "Entity": "Direcciones"
                             }
                           },
                           "Hierarchy": "Pais Jerarquía"
@@ -459,7 +459,7 @@
                     "Column": {
                       "Expression": {
                         "SourceRef": {
-                          "Entity": "Customer"
+                          "Entity": "Clientes"
                         }
                       },
                       "Property": "Cliente"
@@ -586,7 +586,7 @@
                     "Column": {
                       "Expression": {
                         "SourceRef": {
-                          "Entity": "Saleperson"
+                          "Entity": "Representantes"
                         }
                       },
                       "Property": "Nombre Comercial"
@@ -621,7 +621,7 @@
                     "Column": {
                       "Expression": {
                         "SourceRef": {
-                          "Entity": "Saleperson"
+                          "Entity": "Representantes"
                         }
                       },
                       "Property": "Nombre Comercial"
@@ -635,7 +635,7 @@
                     "Column": {
                       "Expression": {
                         "SourceRef": {
-                          "Entity": "Saleperson"
+                          "Entity": "Representantes"
                         }
                       },
                       "Property": "Nombre Comercial"
@@ -728,7 +728,7 @@
                     "Column": {
                       "Expression": {
                         "SourceRef": {
-                          "Entity": "Item"
+                          "Entity": "Articulos"
                         }
                       },
                       "Property": "Familia"
@@ -758,7 +758,7 @@
                     "Column": {
                       "Expression": {
                         "SourceRef": {
-                          "Entity": "Item"
+                          "Entity": "Articulos"
                         }
                       },
                       "Property": "Subfamilia"
@@ -773,7 +773,7 @@
                     "Column": {
                       "Expression": {
                         "SourceRef": {
-                          "Entity": "Item"
+                          "Entity": "Articulos"
                         }
                       },
                       "Property": "Descripcion 1"
@@ -807,7 +807,7 @@
                     "Column": {
                       "Expression": {
                         "SourceRef": {
-                          "Entity": "Item"
+                          "Entity": "Articulos"
                         }
                       },
                       "Property": "Familia"
@@ -817,7 +817,7 @@
                     "Column": {
                       "Expression": {
                         "SourceRef": {
-                          "Entity": "Item"
+                          "Entity": "Articulos"
                         }
                       },
                       "Property": "Subfamilia"
@@ -1106,7 +1106,7 @@
                     "Column": {
                       "Expression": {
                         "SourceRef": {
-                          "Entity": "Company"
+                          "Entity": "Sociedades"
                         }
                       },
                       "Property": "Empresa"
@@ -1141,7 +1141,7 @@
                     "Column": {
                       "Expression": {
                         "SourceRef": {
-                          "Entity": "Company"
+                          "Entity": "Sociedades"
                         }
                       },
                       "Property": "Empresa"
@@ -1161,7 +1161,7 @@
                     "Column": {
                       "Expression": {
                         "SourceRef": {
-                          "Entity": "Sales Invoice Header"
+                          "Entity": "DocumentosCabecera"
                         }
                       },
                       "Property": "Tipo Factura"
@@ -1180,7 +1180,7 @@
                     "Column": {
                       "Expression": {
                         "SourceRef": {
-                          "Entity": "Sales Invoice Header"
+                          "Entity": "DocumentosCabecera"
                         }
                       },
                       "Property": "Tipo Factura"
@@ -1203,7 +1203,7 @@
                     "Column": {
                       "Expression": {
                         "SourceRef": {
-                          "Entity": "Item"
+                          "Entity": "Articulos"
                         }
                       },
                       "Property": "Familia"
@@ -1222,7 +1222,7 @@
                     "Column": {
                       "Expression": {
                         "SourceRef": {
-                          "Entity": "Item"
+                          "Entity": "Articulos"
                         }
                       },
                       "Property": "Familia"
@@ -1245,7 +1245,7 @@
                     "Column": {
                       "Expression": {
                         "SourceRef": {
-                          "Entity": "Item"
+                          "Entity": "Articulos"
                         }
                       },
                       "Property": "Subfamilia"
@@ -1264,7 +1264,7 @@
                     "Column": {
                       "Expression": {
                         "SourceRef": {
-                          "Entity": "Item"
+                          "Entity": "Articulos"
                         }
                       },
                       "Property": "Subfamilia"
@@ -1287,7 +1287,7 @@
                     "Column": {
                       "Expression": {
                         "SourceRef": {
-                          "Entity": "Item"
+                          "Entity": "Articulos"
                         }
                       },
                       "Property": "IdArticulo_descripcion"
@@ -1306,7 +1306,7 @@
                     "Column": {
                       "Expression": {
                         "SourceRef": {
-                          "Entity": "Item"
+                          "Entity": "Articulos"
                         }
                       },
                       "Property": "IdArticulo_descripcion"
@@ -1329,7 +1329,7 @@
                     "Column": {
                       "Expression": {
                         "SourceRef": {
-                          "Entity": "Customer"
+                          "Entity": "Clientes"
                         }
                       },
                       "Property": "Cliente"
@@ -1348,7 +1348,7 @@
                     "Column": {
                       "Expression": {
                         "SourceRef": {
-                          "Entity": "Customer"
+                          "Entity": "Clientes"
                         }
                       },
                       "Property": "Cliente"
@@ -1371,7 +1371,7 @@
                     "Column": {
                       "Expression": {
                         "SourceRef": {
-                          "Entity": "Sales Invoice Header"
+                          "Entity": "DocumentosCabecera"
                         }
                       },
                       "Property": "Planta Venta"
@@ -1390,7 +1390,7 @@
                     "Column": {
                       "Expression": {
                         "SourceRef": {
-                          "Entity": "Sales Invoice Header"
+                          "Entity": "DocumentosCabecera"
                         }
                       },
                       "Property": "Planta Venta"
@@ -1413,7 +1413,7 @@
                     "Column": {
                       "Expression": {
                         "SourceRef": {
-                          "Entity": "Sales Invoice Header"
+                          "Entity": "DocumentosCabecera"
                         }
                       },
                       "Property": "Fecha Factura"
@@ -1432,7 +1432,7 @@
                     "Column": {
                       "Expression": {
                         "SourceRef": {
-                          "Entity": "Sales Invoice Header"
+                          "Entity": "DocumentosCabecera"
                         }
                       },
                       "Property": "Fecha Factura"
@@ -1455,7 +1455,7 @@
                     "Column": {
                       "Expression": {
                         "SourceRef": {
-                          "Entity": "Sales Invoice Header"
+                          "Entity": "DocumentosCabecera"
                         }
                       },
                       "Property": "Regimen Tercero"
@@ -1474,7 +1474,7 @@
                     "Column": {
                       "Expression": {
                         "SourceRef": {
-                          "Entity": "Sales Invoice Header"
+                          "Entity": "DocumentosCabecera"
                         }
                       },
                       "Property": "Regimen Tercero"
@@ -1497,7 +1497,7 @@
                     "Column": {
                       "Expression": {
                         "SourceRef": {
-                          "Entity": "Sales Invoice Line"
+                          "Entity": "DocumentosLinea"
                         }
                       },
                       "Property": "Tipo IVA"
@@ -1516,7 +1516,7 @@
                     "Column": {
                       "Expression": {
                         "SourceRef": {
-                          "Entity": "Sales Invoice Line"
+                          "Entity": "DocumentosLinea"
                         }
                       },
                       "Property": "Tipo IVA"
@@ -1539,7 +1539,7 @@
                     "Column": {
                       "Expression": {
                         "SourceRef": {
-                          "Entity": "Saleperson"
+                          "Entity": "Representantes"
                         }
                       },
                       "Property": "Codigo Usuario"
@@ -1558,7 +1558,7 @@
                     "Column": {
                       "Expression": {
                         "SourceRef": {
-                          "Entity": "Saleperson"
+                          "Entity": "Representantes"
                         }
                       },
                       "Property": "Codigo Usuario"
@@ -2439,7 +2439,7 @@
                     "Column": {
                       "Expression": {
                         "SourceRef": {
-                          "Entity": "Company"
+                          "Entity": "Sociedades"
                         }
                       },
                       "Property": "Planta Principal"
@@ -2458,7 +2458,7 @@
                     "Column": {
                       "Expression": {
                         "SourceRef": {
-                          "Entity": "Company"
+                          "Entity": "Sociedades"
                         }
                       },
                       "Property": "Planta Principal"
@@ -2481,7 +2481,7 @@
                     "Column": {
                       "Expression": {
                         "SourceRef": {
-                          "Entity": "Sales Invoice Line"
+                          "Entity": "DocumentosLinea"
                         }
                       },
                       "Property": "Tipo IVA"
@@ -2500,7 +2500,7 @@
                     "Column": {
                       "Expression": {
                         "SourceRef": {
-                          "Entity": "Sales Invoice Line"
+                          "Entity": "DocumentosLinea"
                         }
                       },
                       "Property": "Tipo IVA"
@@ -2523,7 +2523,7 @@
                     "Column": {
                       "Expression": {
                         "SourceRef": {
-                          "Entity": "Saleperson"
+                          "Entity": "Representantes"
                         }
                       },
                       "Property": "Comercial"
@@ -2542,7 +2542,7 @@
                     "Column": {
                       "Expression": {
                         "SourceRef": {
-                          "Entity": "Saleperson"
+                          "Entity": "Representantes"
                         }
                       },
                       "Property": "Comercial"

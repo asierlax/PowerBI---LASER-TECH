@@ -194,9 +194,11 @@ table 'Analitica Facturas'
 
 		annotation SummarizationSetBy = Automatic
 
-	column Id_Documento_Linea = CONCATENATE('Analitica Facturas'[Documento],'Analitica Facturas'[Linea])
-		lineageTag: 3d845a0d-de24-4b10-8ce6-23e40e1eb963
+	column ID_Documento_Linea
+		dataType: string
+		lineageTag: c7e55c8d-5d07-4c77-8093-3d9fd27a7a1f
 		summarizeBy: none
+		sourceColumn: ID_Documento_Linea
 
 		annotation SummarizationSetBy = Automatic
 
@@ -208,31 +210,32 @@ table 'Analitica Facturas'
 				    CurrentDatabase = BaseDeDatos,
 				    CurrentSchema = Esquema,
 				    Origen = Sql.Database(CurrentServer, CurrentDatabase, [Query="
-				SELECT 
-				VCRNUM_0 as Documento, 
-				VCRLIN_0 as Linea,
-				COA_0 as PlanCuentas, 
-				ACC_0 as CuentaContable,
-				DIE_0 as CodEje1,
-				CCE_0 as EjeAnalitico1,
-				DIE_1 as CodEje2, 
-				CCE_1 as EjeAnalitico2, 
-				DIE_2 as CodEje3, 
-				CCE_2 as EjeAnalitico3, 
-				DIE_3 as CodEje4, 
-				CCE_3 as EjeAnalitico4, 
-				DIE_4 as CodEje5, 
-				CCE_4 as EjeAnalitico5,
-				DIE_5 as CodEje6,  
-				CCE_5 as EjeAnalitico6, 
-				DIE_6 as CodEje7, 
-				CCE_6 as EjeAnalitico7, 
-				DIE_7 as CodEje8, 
-				CCE_7 as EjeAnalitico8, 
-				DIE_8 as CodEje9, 
-				CCE_8 as EjeAnalitico9, 
-				DIE_9 as CodEje10, 
-				CCE_9 as EjeAnalitico10
+				                                                                    SELECT 
+				                                                                    VCRNUM_0 as Documento, 
+				                                                                    VCRLIN_0 as Linea,
+				                                                                    (VCRNUM_0 + '/' + cast(VCRLIN_0 as varchar)) AS ID_Documento_Linea,
+				                                                                    COA_0 as PlanCuentas, 
+				                                                                    ACC_0 as CuentaContable,
+				                                                                    DIE_0 as CodEje1,
+				                                                                    CCE_0 as EjeAnalitico1,
+				                                                                    DIE_1 as CodEje2, 
+				                                                                    CCE_1 as EjeAnalitico2, 
+				                                                                    DIE_2 as CodEje3, 
+				                                                                    CCE_2 as EjeAnalitico3, 
+				                                                                    DIE_3 as CodEje4, 
+				                                                                    CCE_3 as EjeAnalitico4, 
+				                                                                    DIE_4 as CodEje5, 
+				                                                                    CCE_4 as EjeAnalitico5,
+				                                                                    DIE_5 as CodEje6,  
+				                                                                    CCE_5 as EjeAnalitico6, 
+				                                                                    DIE_6 as CodEje7, 
+				                                                                    CCE_6 as EjeAnalitico7, 
+				                                                                    DIE_7 as CodEje8, 
+				                                                                    CCE_7 as EjeAnalitico8, 
+				                                                                    DIE_8 as CodEje9, 
+				                                                                    CCE_8 as EjeAnalitico9, 
+				                                                                    DIE_9 as CodEje10, 
+				                                                                    CCE_9 as EjeAnalitico10
 				
 				                                                                    FROM " & CurrentSchema &".CPTANALIN
 				                                                                    WHERE ABRFIC_0 = 'SID'"

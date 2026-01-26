@@ -49,7 +49,7 @@
                     "Hierarchy": {
                       "Expression": {
                         "SourceRef": {
-                          "Entity": "Address"
+                          "Entity": "Direcciones"
                         }
                       },
                       "Hierarchy": "Nombre Pais Jerarquía"
@@ -67,7 +67,7 @@
                     "Hierarchy": {
                       "Expression": {
                         "SourceRef": {
-                          "Entity": "Address"
+                          "Entity": "Direcciones"
                         }
                       },
                       "Hierarchy": "Nombre Pais Jerarquía"
@@ -83,7 +83,7 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Item"
+                      "Entity": "Articulos"
                     }
                   },
                   "Property": "Familia"
@@ -96,7 +96,7 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Item"
+                      "Entity": "Articulos"
                     }
                   },
                   "Property": "Subfamilia"
@@ -109,7 +109,7 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Item"
+                      "Entity": "Articulos"
                     }
                   },
                   "Property": "Descripcion 1"
@@ -123,7 +123,7 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Saleperson"
+                      "Entity": "Representantes"
                     }
                   },
                   "Property": "Nombre Comercial"
@@ -276,7 +276,7 @@
           "Column": {
             "Expression": {
               "SourceRef": {
-                "Entity": "Company"
+                "Entity": "Sociedades"
               }
             },
             "Property": "Empresa"
@@ -288,7 +288,7 @@
           "From": [
             {
               "Name": "c",
-              "Entity": "Company",
+              "Entity": "Sociedades",
               "Type": 0
             }
           ],
@@ -330,7 +330,7 @@
           "Column": {
             "Expression": {
               "SourceRef": {
-                "Entity": "Item"
+                "Entity": "Articulos"
               }
             },
             "Property": "Descripcion 1"
@@ -342,7 +342,7 @@
           "From": [
             {
               "Name": "i",
-              "Entity": "Item",
+              "Entity": "Articulos",
               "Type": 0
             }
           ],

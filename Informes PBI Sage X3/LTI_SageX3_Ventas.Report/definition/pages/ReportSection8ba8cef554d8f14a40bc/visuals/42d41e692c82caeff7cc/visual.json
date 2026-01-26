@@ -54,7 +54,7 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Sales Invoice Header"
+                      "Entity": "DocumentosCabecera"
                     }
                   },
                   "Property": "Planta Venta"
@@ -69,7 +69,7 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Customer"
+                      "Entity": "Clientes"
                     }
                   },
                   "Property": "Cliente"
@@ -83,7 +83,7 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Item"
+                      "Entity": "Articulos"
                     }
                   },
                   "Property": "Familia"
@@ -97,7 +97,7 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Item"
+                      "Entity": "Articulos"
                     }
                   },
                   "Property": "Subfamilia"
@@ -111,13 +111,14 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Sales Invoice Line"
+                      "Entity": "DocumentosLinea"
                     }
                   },
-                  "Property": "Descripcion 1"
+                  "Property": "Descripcion"
                 }
               },
-              "queryRef": "Sales Invoice Line.Descripcion 1",
+              "queryRef": "Sales Invoice Line.Descripcion",
+              "nativeQueryRef": "Descripcion",
               "active": false
             },
             {
@@ -125,21 +126,7 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Sales Invoice Line"
-                    }
-                  },
-                  "Property": "Articulo VYGON"
-                }
-              },
-              "queryRef": "Sales Invoice Line.Articulo VYGON",
-              "active": false
-            },
-            {
-              "field": {
-                "Column": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "Sales Invoice Header"
+                      "Entity": "DocumentosCabecera"
                     }
                   },
                   "Property": "Documento"
@@ -243,7 +230,7 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Sales Invoice Header"
+                      "Entity": "DocumentosCabecera"
                     }
                   },
                   "Property": "Planta Venta"
@@ -262,7 +249,7 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Customer"
+                      "Entity": "Clientes"
                     }
                   },
                   "Property": "Cliente"
@@ -281,7 +268,7 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Item"
+                      "Entity": "Articulos"
                     }
                   },
                   "Property": "Familia"
@@ -300,7 +287,7 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Item"
+                      "Entity": "Articulos"
                     }
                   },
                   "Property": "Subfamilia"
@@ -311,40 +298,9 @@
           },
           {
             "queryRefs": [
-              "Sales Invoice Line.Descripcion 1"
+              "Sales Invoice Line.Descripcion"
             ],
             "isCollapsed": true,
-            "identityKeys": [
-              {
-                "Column": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "Sales Invoice Line"
-                    }
-                  },
-                  "Property": "Descripcion 1"
-                }
-              }
-            ],
-            "isPinned": true
-          },
-          {
-            "queryRefs": [
-              "Sales Invoice Line.Articulo VYGON"
-            ],
-            "isCollapsed": true,
-            "identityKeys": [
-              {
-                "Column": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "Sales Invoice Line"
-                    }
-                  },
-                  "Property": "Articulo VYGON"
-                }
-              }
-            ],
             "isPinned": true
           },
           {
@@ -1444,7 +1400,7 @@
           "Column": {
             "Expression": {
               "SourceRef": {
-                "Entity": "Sales Invoice Header"
+                "Entity": "DocumentosCabecera"
               }
             },
             "Property": "Planta Venta"
@@ -1466,6 +1422,160 @@
             }
           ]
         }
+      },
+      {
+        "name": "3694d7958327e072d3c5",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Clientes"
+              }
+            },
+            "Property": "Cliente"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "aada8c077da01200a086",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Metricas"
+              }
+            },
+            "Property": "Margen %"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "1c618fa2a2bec092010d",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Metricas"
+              }
+            },
+            "Property": "Margen Beneficio"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "277bbf0103074270786d",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Fecha"
+              }
+            },
+            "Property": "Ano"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "4d04552cd94e40e977c4",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Metricas"
+              }
+            },
+            "Property": "Variacion Ventas AA %"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "09d5528f39be6e368a91",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Fecha"
+              }
+            },
+            "Property": "Nombre Mes"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "6551f664000de1d3068b",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Metricas"
+              }
+            },
+            "Property": "Total Ventas"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "ecbe5f2fd829da156501",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Articulos"
+              }
+            },
+            "Property": "Familia"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "112fb66ad0d68e404e5b",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Articulos"
+              }
+            },
+            "Property": "Subfamilia"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "78f5e5a51bc74bb768a7",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "DocumentosCabecera"
+              }
+            },
+            "Property": "Documento"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "0077bc5700591e565b36",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "DocumentosLinea"
+              }
+            },
+            "Property": "Descripcion"
+          }
+        },
+        "type": "Categorical"
       }
     ]
   }

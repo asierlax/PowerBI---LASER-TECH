@@ -373,6 +373,48 @@
           ]
         },
         "howCreated": "User"
+      },
+      {
+        "name": "de47819e62eb86dd0570",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "ABC by Year"
+              }
+            },
+            "Property": "Customers ABC"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "51c0d00034aa9975515e",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "ABC by Year"
+              }
+            },
+            "Property": "ABC AA"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "c824b2f4505b4b70c43b",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Fecha"
+              }
+            },
+            "Property": "Ano"
+          }
+        },
+        "type": "Advanced"
       }
     ]
   }

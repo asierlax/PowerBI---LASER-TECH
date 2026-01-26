@@ -27,7 +27,7 @@
                             "From": [
                               {
                                 "Name": "i",
-                                "Entity": "Item",
+                                "Entity": "Articulos",
                                 "Type": 0
                               },
                               {
@@ -285,7 +285,7 @@
                             "From": [
                               {
                                 "Name": "i",
-                                "Entity": "Item",
+                                "Entity": "Articulos",
                                 "Type": 0
                               },
                               {
@@ -536,7 +536,7 @@
                             "From": [
                               {
                                 "Name": "i",
-                                "Entity": "Item",
+                                "Entity": "Articulos",
                                 "Type": 0
                               },
                               {
@@ -794,7 +794,7 @@
                             "From": [
                               {
                                 "Name": "i",
-                                "Entity": "Item",
+                                "Entity": "Articulos",
                                 "Type": 0
                               },
                               {
@@ -1045,7 +1045,7 @@
                             "From": [
                               {
                                 "Name": "i",
-                                "Entity": "Item",
+                                "Entity": "Articulos",
                                 "Type": 0
                               },
                               {
@@ -1303,7 +1303,7 @@
                             "From": [
                               {
                                 "Name": "i",
-                                "Entity": "Item",
+                                "Entity": "Articulos",
                                 "Type": 0
                               },
                               {
@@ -1559,7 +1559,7 @@
                               },
                               {
                                 "Name": "i",
-                                "Entity": "Item",
+                                "Entity": "Articulos",
                                 "Type": 0
                               }
                             ],
@@ -1770,7 +1770,7 @@
                               },
                               {
                                 "Name": "i",
-                                "Entity": "Item",
+                                "Entity": "Articulos",
                                 "Type": 0
                               }
                             ],
@@ -1988,7 +1988,7 @@
                               },
                               {
                                 "Name": "i",
-                                "Entity": "Item",
+                                "Entity": "Articulos",
                                 "Type": 0
                               }
                             ],
@@ -2194,7 +2194,7 @@
                             "From": [
                               {
                                 "Name": "i",
-                                "Entity": "Item",
+                                "Entity": "Articulos",
                                 "Type": 0
                               },
                               {
@@ -2657,7 +2657,7 @@
                             "From": [
                               {
                                 "Name": "i",
-                                "Entity": "Item",
+                                "Entity": "Articulos",
                                 "Type": 0
                               },
                               {
@@ -3127,7 +3127,7 @@
                             "From": [
                               {
                                 "Name": "i",
-                                "Entity": "Item",
+                                "Entity": "Articulos",
                                 "Type": 0
                               },
                               {
@@ -3590,7 +3590,7 @@
                             "From": [
                               {
                                 "Name": "i",
-                                "Entity": "Item",
+                                "Entity": "Articulos",
                                 "Type": 0
                               },
                               {
@@ -4060,7 +4060,7 @@
                             "From": [
                               {
                                 "Name": "i",
-                                "Entity": "Item",
+                                "Entity": "Articulos",
                                 "Type": 0
                               },
                               {
@@ -4523,7 +4523,7 @@
                             "From": [
                               {
                                 "Name": "i",
-                                "Entity": "Item",
+                                "Entity": "Articulos",
                                 "Type": 0
                               },
                               {
@@ -4993,7 +4993,7 @@
                             "From": [
                               {
                                 "Name": "i",
-                                "Entity": "Item",
+                                "Entity": "Articulos",
                                 "Type": 0
                               },
                               {
@@ -5456,7 +5456,7 @@
                             "From": [
                               {
                                 "Name": "i",
-                                "Entity": "Item",
+                                "Entity": "Articulos",
                                 "Type": 0
                               },
                               {
@@ -5919,7 +5919,7 @@
                             "From": [
                               {
                                 "Name": "i",
-                                "Entity": "Item",
+                                "Entity": "Articulos",
                                 "Type": 0
                               },
                               {
@@ -6389,7 +6389,7 @@
                             "From": [
                               {
                                 "Name": "i",
-                                "Entity": "Item",
+                                "Entity": "Articulos",
                                 "Type": 0
                               },
                               {
@@ -6859,7 +6859,7 @@
                             "From": [
                               {
                                 "Name": "i",
-                                "Entity": "Item",
+                                "Entity": "Articulos",
                                 "Type": 0
                               },
                               {
@@ -7322,7 +7322,7 @@
                             "From": [
                               {
                                 "Name": "c",
-                                "Entity": "Customer",
+                                "Entity": "Clientes",
                                 "Type": 0
                               },
                               {
@@ -7334,12 +7334,12 @@
                                       "From": [
                                         {
                                           "Name": "sc",
-                                          "Entity": "Customer",
+                                          "Entity": "Clientes",
                                           "Type": 0
                                         },
                                         {
                                           "Name": "ss",
-                                          "Entity": "Sales Invoice Line",
+                                          "Entity": "DocumentosLinea",
                                           "Type": 0
                                         }
                                       ],
@@ -7404,7 +7404,7 @@
                               },
                               {
                                 "Name": "s",
-                                "Entity": "Sales Invoice Line",
+                                "Entity": "DocumentosLinea",
                                 "Type": 0
                               }
                             ],
@@ -7884,7 +7884,7 @@
                             "From": [
                               {
                                 "Name": "s",
-                                "Entity": "Saleperson",
+                                "Entity": "Representantes",
                                 "Type": 0
                               },
                               {
@@ -7896,12 +7896,12 @@
                                       "From": [
                                         {
                                           "Name": "ss",
-                                          "Entity": "Sales Invoice Line",
+                                          "Entity": "DocumentosLinea",
                                           "Type": 0
                                         },
                                         {
                                           "Name": "ss1",
-                                          "Entity": "Saleperson",
+                                          "Entity": "Representantes",
                                           "Type": 0
                                         }
                                       ],
@@ -7966,7 +7966,7 @@
                               },
                               {
                                 "Name": "s1",
-                                "Entity": "Sales Invoice Line",
+                                "Entity": "DocumentosLinea",
                                 "Type": 0
                               }
                             ],

@@ -1,31 +1,26 @@
 relationship 47a9ba8d-e77c-4976-9823-018072520445
 	isActive: false
-	fromColumn: 'Sales Invoice Header'.Empresa
-	toColumn: Company.Empresa
-
-relationship 50d03596-fb85-4554-a222-32c4991bd5b7
-	crossFilteringBehavior: bothDirections
-	fromColumn: Address.Entidad
-	toColumn: Customer.IdCliente
+	fromColumn: DocumentosCabecera.Empresa
+	toColumn: Sociedades.Empresa
 
 relationship 3daf2cfc-19f2-4dcd-b840-eb8e5d9e40fa
 	isActive: false
-	fromColumn: Address.IdDireccion
-	toColumn: Company.IdDireccion
+	fromColumn: Direcciones.IdDireccion
+	toColumn: Sociedades.IdDireccion
 
 relationship d8667d06-1140-4fab-9a20-e68e81530537
 	crossFilteringBehavior: bothDirections
-	fromColumn: 'Sales Invoice Line'.Id_Fecha
+	fromColumn: DocumentosLinea.Id_Fecha
 	toColumn: 'ABCD by Year'.Id_Fecha
 
 relationship ae26f843-3556-4b11-9c56-5627b99447c2
 	crossFilteringBehavior: bothDirections
-	fromColumn: 'Sales Invoice Line'.Id_Fecha
+	fromColumn: DocumentosLinea.Id_Fecha
 	toColumn: 'ABC by Year'.Id_Fecha
 
 relationship 28bfaa34-2dbf-4b9f-b299-ade78101fc66
 	crossFilteringBehavior: bothDirections
-	fromColumn: 'Sales Invoice Line'.Id_Fecha
+	fromColumn: DocumentosLinea.Id_Fecha
 	toColumn: RFM.Id_Fecha
 
 relationship 685b8689-5ef5-4fd8-9c9e-25dd45ba81c8
@@ -33,11 +28,62 @@ relationship 685b8689-5ef5-4fd8-9c9e-25dd45ba81c8
 	fromColumn: RFM.RFScore
 	toColumn: Segmentos.RF
 
-relationship 6d6d27b0-e4d9-45a1-9215-ced8395d79f8
-	fromColumn: 'Analitica Facturas'.Id_Documento_Linea
-	toColumn: 'Sales Invoice Line'.Id_Documento_Linea
+relationship f3e346c2-b4c0-d5ca-0577-0c8c9ccec2b1
+	fromColumn: DocumentosLinea.'Comercial 1'
+	toColumn: Representantes.Comercial
+
+relationship a2272193-31e6-f40f-cec3-788be8b6134c
+	isActive: false
+	fromColumn: DocumentosLinea.'Comercial 2'
+	toColumn: Representantes.Comercial
+
+relationship da42d8e5-2b7a-8625-b0cf-cfd5be8825e3
+	fromColumn: DocumentosLinea.Documento
+	toColumn: DocumentosCabecera.Documento
+
+relationship 5e1ddcb2-a16f-d0f8-1a63-db12804aed85
+	fromColumn: 'Analitica Facturas'.ID_Documento_Linea
+	toColumn: DocumentosLinea.Id_Documento_Linea
+
+relationship 10914dcc-0eca-33d2-e16f-c50ce30df5f0
+	fromColumn: DocumentosLinea.IdArticulo
+	toColumn: Articulos.CodArticulo
+
+relationship cf3a6933-d495-5dda-4a16-090e1a921d99
+	fromColumn: TarifasCompra.IdArticulo
+	toColumn: Articulos.CodArticulo
+
+relationship 0e82a900-9127-7093-4785-bdf01ae67408
+	fromColumn: DocumentosLinea.Empresa
+	toColumn: Sociedades.Empresa
+
+relationship 6d4e71b9-c370-749b-9456-c3fb74e8567a
+	fromColumn: Intervenciones.'Codigo cliente'
+	toColumn: Clientes.IdCliente
+
+relationship ecd61387-5062-d123-0118-16ab576bb0e8
+	fromColumn: Albaranes.Cliente
+	toColumn: Clientes.IdCliente
+
+relationship 2082db3a-d9c3-315d-a318-8fe01d55bbd0
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: Articulos.CodArticulo
+	toColumn: Stock.IdArticulo
+
+relationship 8fd85810-1284-fb45-80f8-3a21c89f5a3b
+	fromColumn: DocumentosLinea.IdCliente
+	toColumn: Clientes.IdCliente
 
 relationship f617aecb-ae9b-4334-ade3-a63b99c2a199
-	fromColumn: 'Sales Invoice Header'.'Fecha Factura'
+	fromColumn: DocumentosCabecera.'Fecha Factura'
+	toColumn: Fecha.Fecha
+
+relationship 07aecbd1-4ae4-f70a-98c1-522936168570
+	fromColumn: Albaranes.Fecha
+	toColumn: Fecha.Fecha
+
+relationship 8041d0a7-7806-71b4-c07e-f1d771c524f7
+	fromColumn: Intervenciones.'Fecha intervencion'
 	toColumn: Fecha.Fecha
 

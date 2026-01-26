@@ -20,7 +20,7 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Company"
+                      "Entity": "Sociedades"
                     }
                   },
                   "Property": "Empresa"

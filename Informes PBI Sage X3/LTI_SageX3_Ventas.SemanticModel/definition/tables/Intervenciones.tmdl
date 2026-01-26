@@ -1,0 +1,287 @@
+table Intervenciones
+	lineageTag: a811d9c7-1fbc-4ced-a0de-dc14be13f171
+
+	column 'Solicitud servicio'
+		dataType: string
+		lineageTag: d1da373a-68da-4fc7-875d-3565ec32ca16
+		summarizeBy: none
+		sourceColumn: Solicitud servicio
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Fecha creacion SS'
+		dataType: dateTime
+		formatString: dd/mm/yyyy
+		lineageTag: f616d801-d26c-4d71-b8eb-dec08a1ac8e7
+		summarizeBy: none
+		sourceColumn: Fecha creacion SS
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+		annotation PBI_FormatHint = {"isDateTimeCustom":true}
+
+	column 'Planta stock'
+		dataType: string
+		lineageTag: abe05489-da5c-4744-8f1f-b2e6aa387a86
+		summarizeBy: none
+		sourceColumn: Planta stock
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Id Parque'
+		dataType: string
+		lineageTag: 539dc8a5-bd9e-48c9-935f-9be7ea88fddc
+		summarizeBy: none
+		sourceColumn: Id Parque
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'AN Linea negocio'
+		dataType: string
+		lineageTag: 6de69aa0-89ec-4f98-94dd-77dea9020ca7
+		summarizeBy: none
+		sourceColumn: AN Linea negocio
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'AN Sector mercado'
+		dataType: string
+		lineageTag: 78073980-4e7e-4ef1-b9c8-fdc88c466b7b
+		summarizeBy: none
+		sourceColumn: AN Sector mercado
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'AN Departamento'
+		dataType: string
+		lineageTag: 918a3243-389d-4fed-9903-fca9c3fef266
+		summarizeBy: none
+		sourceColumn: AN Departamento
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'AN Planta'
+		dataType: string
+		lineageTag: 422b83d8-62a9-4f5d-9074-117492c53cdf
+		summarizeBy: none
+		sourceColumn: AN Planta
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Modo comunicacion'
+		dataType: string
+		lineageTag: 9b33c391-e901-4dfb-9b10-2954584d339c
+		summarizeBy: none
+		sourceColumn: Modo comunicacion
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Fam est 2 SS'
+		dataType: string
+		lineageTag: 6cd169e1-bbd7-46e8-b333-21923e70e83a
+		summarizeBy: none
+		sourceColumn: Fam est 2 SS
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Lugar de realizacion'
+		dataType: string
+		lineageTag: fca9af5b-50da-4716-8e38-b91d19f28aad
+		summarizeBy: none
+		sourceColumn: Lugar de realizacion
+
+		annotation SummarizationSetBy = Automatic
+
+	column Motivo
+		dataType: string
+		lineageTag: 15435534-e8f6-4ce6-8740-abb4dcb94d10
+		summarizeBy: none
+		sourceColumn: Motivo
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Tipo contrato'
+		dataType: string
+		lineageTag: e3f04d8b-19d7-41d4-b37c-1b5dfde02e60
+		summarizeBy: none
+		sourceColumn: Tipo contrato
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Titulo SS'
+		dataType: string
+		lineageTag: dd2f0572-3756-4abc-b6e8-b11e79c9192e
+		summarizeBy: none
+		sourceColumn: Titulo SS
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'SS intervencion'
+		dataType: string
+		lineageTag: 7aaf490a-eed2-4944-a3b7-6bf4dfe8943e
+		summarizeBy: none
+		sourceColumn: SS intervencion
+
+		annotation SummarizationSetBy = Automatic
+
+	column Intervencion
+		dataType: string
+		lineageTag: c4fdb103-716d-4674-adfb-90d3a5cfea62
+		summarizeBy: none
+		sourceColumn: Intervencion
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Codigo cliente'
+		dataType: string
+		lineageTag: ef76bae7-0e4d-4a92-92cf-4889d83b16cb
+		summarizeBy: none
+		sourceColumn: Codigo cliente
+
+		annotation SummarizationSetBy = Automatic
+
+	column Cliente
+		dataType: string
+		lineageTag: 937f13eb-a411-47e3-a8b2-9dbef83e1bce
+		summarizeBy: none
+		sourceColumn: Cliente
+
+		annotation SummarizationSetBy = Automatic
+
+	column Sector
+		dataType: string
+		lineageTag: 8cc4dcca-fe55-410a-86b2-e5526dc90701
+		summarizeBy: none
+		sourceColumn: Sector
+
+		annotation SummarizationSetBy = Automatic
+
+	column Anomalia
+		dataType: string
+		lineageTag: 6f83ff84-a24f-4be7-8c8e-4e073545558b
+		summarizeBy: none
+		sourceColumn: Anomalia
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Fecha intervencion'
+		dataType: dateTime
+		formatString: dd/mm/yyyy
+		lineageTag: eff2cafe-f911-4929-b812-9757799a356b
+		summarizeBy: none
+		sourceColumn: Fecha intervencion
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+		annotation PBI_FormatHint = {"isDateTimeCustom":true}
+
+	column 'Nº serie maquina'
+		dataType: string
+		lineageTag: e5e36133-396c-45b6-bded-ee049f1007b5
+		summarizeBy: none
+		sourceColumn: Nº serie maquina
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Int. sin garantia'
+		dataType: string
+		lineageTag: 4084492e-d6f6-464e-ae7f-c21d4436c064
+		summarizeBy: none
+		sourceColumn: Int. sin garantia
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Int. con garantia'
+		dataType: string
+		lineageTag: 3a679887-3212-4ab7-ac74-0f4bb81f97cc
+		summarizeBy: none
+		sourceColumn: Int. con garantia
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Int. instalacion'
+		dataType: string
+		lineageTag: 6be4539d-9636-4be4-b627-b364c29eed73
+		summarizeBy: none
+		sourceColumn: Int. instalacion
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Int. contrato'
+		dataType: string
+		lineageTag: f3d53d29-1178-42b2-bc9b-e8ab141328d4
+		summarizeBy: none
+		sourceColumn: Int. contrato
+
+		annotation SummarizationSetBy = Automatic
+
+	column Tecnico
+		dataType: string
+		lineageTag: 46756238-98d0-46b1-99ce-ef526ccaff13
+		summarizeBy: none
+		sourceColumn: Tecnico
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Intervenciones = m
+		mode: import
+		source = ```
+				let
+				    CurrentServer = Instancia,
+				    CurrentDatabase = BaseDeDatos,
+				    CurrentSchema = Esquema,
+				    CurrentRows = Registros,
+				    CurrentPeriod = Periodo,
+				    CurrentCompany = Empresa,
+				    Origen = Sql.Database(CurrentServer, CurrentDatabase, [Query="
+				                                                                SELECT SRE.SRENUM_0 'Solicitud servicio', 
+				                                                                SRE.CREDAT_0 'Fecha creacion SS', 
+				                                                                SRE.STOFCY_0 'Planta stock', 
+				                                                                SRE.SREMAC_0 'Id Parque', 
+				                                                                SRE.CCE_0 'AN Linea negocio', 
+				                                                                SRE.CCE_1 'AN Sector mercado', 
+				                                                                SRE.CCE_2 'AN Departamento', 
+				                                                                SRE.CCE_3 'AN Planta',
+				                                                                ISNULL(SRE.TSDCOD_0 + ' - ' + TV445.TEXTE_0,'') AS 'Modo comunicacion', 
+				                                                                ISNULL(SRE.TSDCOD_1 + ' - ' + TV446.TEXTE_0,'') AS 'Fam est 2 SS', 
+				                                                                ISNULL(SRE.TSDCOD_2 + ' - ' + TV447.TEXTE_0,'') AS 'Lugar de realizacion', 
+				                                                                ISNULL(SRE.TSDCOD_3 + ' - ' + TV448.TEXTE_0,'') AS 'Motivo', 
+				                                                                ISNULL(SRE.TSDCOD_4 + ' - ' + TV449.TEXTE_0,'') AS 'Tipo contrato', 
+				                                                                SRE.SRETTR_0 'Titulo SS',
+				                                                                ITN.SRVDEMNUM_0 'SS intervencion', 
+				                                                                ITN.NUM_0 'Intervencion', 
+				                                                                ITN.BPC_0 'Codigo cliente', 
+				                                                                (ITN.BPC_0 + ' - ' + BPC.BPCNAM_0) AS 'Cliente', 
+				                                                                ISNULL(BPC.TSCCOD_1 + ' - ' + TV31.TEXTE_0,'') AS 'Sector', 
+				                                                                ITN.YANOMALIA_0 'Anomalia', 
+				                                                                ITN.DAT_0 'Fecha intervencion', 
+				                                                                ITN.YMACSERNUM_0 'Nº serie maquina', 
+				                                                                CASE ITN.YCSGARANTI_0 WHEN 2 THEN 'SI' ELSE 'NO' END AS 'Int. sin garantia', 
+				                                                                CASE ITN.YCGARANTIA_0 WHEN 2 THEN 'SI' ELSE 'NO' END AS 'Int. con garantia', 
+				                                                                CASE ITN.YCINSTALA_0 WHEN 2 THEN 'SI' ELSE 'NO' END AS 'Int. instalacion', 
+				                                                                CASE ITN.YCCONTRATO_0 WHEN 2 THEN 'SI' ELSE 'NO' END AS 'Int. contrato', 
+				                                                                ISNULL(ITN.REP_0 + ' - ' + USR.NOMUSR_0,'') AS 'Tecnico'
+				                                                                FROM " & CurrentSchema & ".SERREQUEST SRE
+				                                                                LEFT JOIN " & CurrentSchema & ".INTERVEN ITN ON SRE.SRENUM_0 = ITN.SRVDEMNUM_0
+				                                                                LEFT JOIN " & CurrentSchema & ".ATEXTRA TV445 ON SRE.TSDCOD_0 = TV445.IDENT2_0 AND TV445.CODFIC_0 = 'ATABDIV' AND TV445.IDENT1_0 = '445' AND TV445.ZONE_0 = 'LNGDES' AND TV445.LANGUE_0  = 'SPA'
+				                                                                LEFT JOIN " & CurrentSchema & ".ATEXTRA TV446 ON SRE.TSDCOD_1 = TV446.IDENT2_0 AND TV446.CODFIC_0 = 'ATABDIV' AND TV446.IDENT1_0 = '446' AND TV446.ZONE_0 = 'LNGDES' AND TV446.LANGUE_0  = 'SPA'
+				                                                                LEFT JOIN " & CurrentSchema & ".ATEXTRA TV447 ON SRE.TSDCOD_2 = TV447.IDENT2_0 AND TV447.CODFIC_0 = 'ATABDIV' AND TV447.IDENT1_0 = '447' AND TV447.ZONE_0 = 'LNGDES' AND TV447.LANGUE_0  = 'SPA'
+				                                                                LEFT JOIN " & CurrentSchema & ".ATEXTRA TV448 ON SRE.TSDCOD_3 = TV448.IDENT2_0 AND TV448.CODFIC_0 = 'ATABDIV' AND TV448.IDENT1_0 = '448' AND TV448.ZONE_0 = 'LNGDES' AND TV448.LANGUE_0  = 'SPA'
+				                                                                LEFT JOIN " & CurrentSchema & ".ATEXTRA TV449 ON SRE.TSDCOD_4 = TV449.IDENT2_0 AND TV449.CODFIC_0 = 'ATABDIV' AND TV449.IDENT1_0 = '449' AND TV449.ZONE_0 = 'LNGDES' AND TV449.LANGUE_0  = 'SPA'
+				                                                                LEFT JOIN " & CurrentSchema & ".BPCUSTOMER BPC ON ITN.BPC_0 = BPC.BPCNUM_0
+				                                                                LEFT JOIN " & CurrentSchema & ".ATEXTRA TV31 ON BPC.TSCCOD_1 = TV31.IDENT2_0 AND TV31.CODFIC_0 = 'ATABDIV' AND TV31.IDENT1_0 = '31' AND TV31.ZONE_0 = 'LNGDES' AND TV31.LANGUE_0  = 'SPA'
+				                                                                LEFT JOIN " & CurrentSchema & ".AUTILIS USR ON ITN.REP_0 = USR.USR_0
+				                                                            " ]),
+				    #"Tipo cambiado" = Table.TransformColumnTypes(Origen,{{"Fecha creacion SS", type date}, {"Fecha intervencion", type date}})
+				in
+				    #"Tipo cambiado"
+				```
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

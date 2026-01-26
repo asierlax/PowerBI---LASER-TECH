@@ -1,0 +1,265 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
+  "name": "2862dd2a84360039cb7c",
+  "position": {
+    "x": 47.255216693418944,
+    "y": 121.21990369181381,
+    "z": 45000,
+    "height": 238.33065810593902,
+    "width": 1200.8988764044943,
+    "tabOrder": 45000
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Intervenciones"
+                    }
+                  },
+                  "Property": "Solicitud servicio"
+                }
+              },
+              "queryRef": "Intervenciones.Solicitud servicio",
+              "nativeQueryRef": "Solicitud servicio"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Intervenciones"
+                    }
+                  },
+                  "Property": "Intervencion"
+                }
+              },
+              "queryRef": "Intervenciones.Intervencion",
+              "nativeQueryRef": "Intervencion"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Intervenciones"
+                    }
+                  },
+                  "Property": "Fecha intervencion"
+                }
+              },
+              "queryRef": "Intervenciones.Fecha intervencion",
+              "nativeQueryRef": "Fecha intervencion"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Intervenciones"
+                    }
+                  },
+                  "Property": "Cliente"
+                }
+              },
+              "queryRef": "Intervenciones.Cliente",
+              "nativeQueryRef": "Cliente"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Intervenciones"
+                    }
+                  },
+                  "Property": "Anomalia"
+                }
+              },
+              "queryRef": "Intervenciones.Anomalia",
+              "nativeQueryRef": "Anomalia"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Intervenciones"
+                    }
+                  },
+                  "Property": "Id Parque"
+                }
+              },
+              "queryRef": "Intervenciones.Id Parque",
+              "nativeQueryRef": "Id Parque"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Intervenciones"
+                    }
+                  },
+                  "Property": "Nº serie maquina"
+                }
+              },
+              "queryRef": "Intervenciones.Nº serie maquina",
+              "nativeQueryRef": "Nº serie maquina"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Intervenciones"
+                    }
+                  },
+                  "Property": "Motivo"
+                }
+              },
+              "queryRef": "Intervenciones.Motivo",
+              "nativeQueryRef": "Motivo"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Intervenciones"
+                    }
+                  },
+                  "Property": "Modo comunicacion"
+                }
+              },
+              "queryRef": "Intervenciones.Modo comunicacion",
+              "nativeQueryRef": "Modo comunicacion"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Intervenciones"
+                    }
+                  },
+                  "Property": "Tipo contrato"
+                }
+              },
+              "queryRef": "Intervenciones.Tipo contrato",
+              "nativeQueryRef": "Tipo contrato"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Intervenciones"
+                    }
+                  },
+                  "Property": "Lugar de realizacion"
+                }
+              },
+              "queryRef": "Intervenciones.Lugar de realizacion",
+              "nativeQueryRef": "Lugar de realizacion"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Intervenciones"
+                    }
+                  },
+                  "Property": "Sector"
+                }
+              },
+              "queryRef": "Intervenciones.Sector",
+              "nativeQueryRef": "Sector"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Intervenciones"
+                    }
+                  },
+                  "Property": "Int. con garantia"
+                }
+              },
+              "queryRef": "Intervenciones.Int. con garantia",
+              "nativeQueryRef": "Int. con garantia"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Intervenciones"
+                    }
+                  },
+                  "Property": "Int. sin garantia"
+                }
+              },
+              "queryRef": "Intervenciones.Int. sin garantia",
+              "nativeQueryRef": "Int. sin garantia"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Intervenciones"
+                    }
+                  },
+                  "Property": "Int. instalacion"
+                }
+              },
+              "queryRef": "Intervenciones.Int. instalacion",
+              "nativeQueryRef": "Int. instalacion"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Intervenciones"
+                    }
+                  },
+                  "Property": "Tecnico"
+                }
+              },
+              "queryRef": "Intervenciones.Tecnico",
+              "nativeQueryRef": "Tecnico"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Intervenciones"
+                  }
+                },
+                "Property": "Int. sin garantia"
+              }
+            },
+            "direction": "Ascending"
+          }
+        ]
+      }
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

@@ -20,7 +20,7 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Sales Invoice Header"
+                      "Entity": "DocumentosCabecera"
                     }
                   },
                   "Property": "Fecha Factura"
@@ -33,7 +33,7 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Sales Invoice Header"
+                      "Entity": "DocumentosCabecera"
                     }
                   },
                   "Property": "Documento"
@@ -46,7 +46,7 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Item"
+                      "Entity": "Articulos"
                     }
                   },
                   "Property": "IdArticulo_descripcion"
@@ -93,7 +93,7 @@
               "Column": {
                 "Expression": {
                   "SourceRef": {
-                    "Entity": "Sales Invoice Header"
+                    "Entity": "DocumentosCabecera"
                   }
                 },
                 "Property": "Fecha Factura"

@@ -22,7 +22,7 @@ table 'ABC by Year'
 			VAR RemapFilterAbc =
 			    TREATAS (
 			        'ABC by Year',           -- Remap the columns of ABC by Year
-			        'Customer'[IdCliente],   -- so that only the specific
+			        'Clientes'[IdCliente],   -- so that only the specific
 			        'Fecha'[Ano],   -- combinations of product and year
 			        'ABC by Year'[ABC Class],
 			        'ABC by Year'[Id_Fecha] -- are included in the filter context
@@ -42,7 +42,7 @@ table 'ABC by Year'
 			VAR RemapFilterAbc =
 			    TREATAS (
 			        'ABC by Year',           -- Remap the columns of ABC by Year
-			        'Customer'[IdCliente],   -- so that only the specific
+			        'Clientes'[IdCliente],   -- so that only the specific
 			        'Fecha'[Ano],            -- combinations of product and year
 			        'ABC by Year'[ABC Class],
 			        'ABC by Year'[Id_Fecha] -- are included in the filter context
@@ -50,7 +50,7 @@ table 'ABC by Year'
 			         
 			VAR Result =
 			    CALCULATE (
-			        DISTINCTCOUNT ( 'Sales Invoice Line'[IdCliente] ),
+			        DISTINCTCOUNT ( 'DocumentosLinea'[IdCliente] ),
 			        KEEPFILTERS ( RemapFilterAbc )
 			    )
 			RETURN
@@ -96,8 +96,8 @@ table 'ABC by Year'
 				
 				VAR CustomersByYear =
 				    SUMMARIZE (
-				        'Sales Invoice Line',
-				        Customer[IdCliente],
+				        'DocumentosLinea',
+				        Clientes[IdCliente],
 				        'Fecha'[Ano]
 				    )
 				VAR SaleByYearCustomer =
@@ -106,7 +106,7 @@ table 'ABC by Year'
 				        "@CustomerSales", [Total Ventas],
 				        "@YearlySales", CALCULATE (
 				            [Total Ventas],
-				            ALL ( 'Customer' )
+				            ALL ( 'Clientes' )
 				        )
 				    )
 				VAR CumulatedSalesByYearProduct =
@@ -150,7 +150,7 @@ table 'ABC by Year'
 				VAR Result =
 				    SELECTCOLUMNS (
 				        ClassByYearProduct,
-				        "Cliente ID", 'Customer'[IdCliente],
+				        "Cliente ID", 'Clientes'[IdCliente],
 				        "Calendar Year", 'Fecha'[Ano],
 				        "ABC Class", [@AbcClass]
 				        

@@ -6,7 +6,7 @@ table 'ABCD by Year'
 			VAR RemapFilterAbc =
 			    TREATAS (
 			        'ABCD by Year',           -- Remap the columns of ABC by Year
-			        'Customer'[IdCliente],   -- so that only the specific
+			        'Clientes'[IdCliente],   -- so that only the specific
 			        'Fecha'[Ano],            -- combinations of product and year
 			        'ABCD by Year'[ABCD Class], -- are included in the filter context
 			        'ABCD by Year'[Margen],
@@ -16,7 +16,7 @@ table 'ABCD by Year'
 			          )
 			VAR Result =
 			    CALCULATE (
-			        DISTINCTCOUNT ( 'Sales Invoice Line'[IdCliente] ),
+			        DISTINCTCOUNT ( 'DocumentosLinea'[IdCliente] ),
 			        KEEPFILTERS ( RemapFilterAbc )
 			    )
 			RETURN
@@ -30,7 +30,7 @@ table 'ABCD by Year'
 			VAR RemapFilterAbc = 
 			    TREATAS ( 
 			        'ABCD by Year',           -- Remap the columns of ABCD by Year 
-			        'Customer'[IdCliente],   -- so that only the specific 
+			        'Clientes'[IdCliente],   -- so that only the specific 
 			        'Fecha'[Ano],   -- combinations of product and year 
 			        'ABCD by Year'[ABCD Class], -- are included in the filter context 
 			        'ABCD by Year'[Margen],
@@ -109,8 +109,8 @@ table 'ABCD by Year'
 				
 				VAR CustomersByYear =
 				    SUMMARIZE (
-				        'Sales Invoice Line',
-				        Customer[IdCliente],
+				        'DocumentosLinea',
+				        Clientes[IdCliente],
 				        'Fecha'[Ano]
 				    )
 				VAR SaleByYearCustomer =
@@ -119,7 +119,7 @@ table 'ABCD by Year'
 				        "@CustomerMargen", [Margen Beneficio],
 				        "@YearlySales", CALCULATE (
 				            [Margen Beneficio],
-				            ALL ( 'Customer' )
+				            ALL ( 'Clientes' )
 				        )
 				    )
 				VAR CumulatedSalesByYearProduct =
@@ -165,7 +165,7 @@ table 'ABCD by Year'
 				VAR Result =
 				    SELECTCOLUMNS (
 				        ClassByYearProduct,
-				        "Cliente ID", 'Customer'[IdCliente],
+				        "Cliente ID", 'Clientes'[IdCliente],
 				        "Calendar Year", 'Fecha'[Ano],
 				        "ABCD Class", [@AbcdClass],
 				        "Margen", [@CustomerMargen]

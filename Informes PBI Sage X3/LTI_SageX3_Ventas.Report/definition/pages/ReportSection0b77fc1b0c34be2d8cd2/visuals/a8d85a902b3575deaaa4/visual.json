@@ -20,7 +20,7 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Sales Invoice Line"
+                      "Entity": "DocumentosLinea"
                     }
                   },
                   "Property": "Tipo IVA"
