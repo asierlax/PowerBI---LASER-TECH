@@ -172,51 +172,5 @@
     },
     "drillFilterOtherVisuals": true
   },
-  "parentGroupName": "26d85be32e7b92243038",
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "780004411ed317860ed3",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Metricas"
-              }
-            },
-            "Property": "Total Ventas"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "11bc37edb47492b00b0a",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Metricas"
-              }
-            },
-            "Property": "Total Ventas AA"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "c785ffe66c4ec4e9d620",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Metricas"
-              }
-            },
-            "Property": "Variacion Ventas AA %"
-          }
-        },
-        "type": "Advanced"
-      }
-    ]
-  }
+  "parentGroupName": "26d85be32e7b92243038"
 }

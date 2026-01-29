@@ -4,10 +4,10 @@
   "position": {
     "x": 69.526462395543177,
     "y": 209.47075208913651,
-    "z": 40000,
+    "z": 39000,
     "height": 461.72701949860726,
     "width": 1026.8523676880222,
-    "tabOrder": 40000
+    "tabOrder": 39000
   },
   "visual": {
     "visualType": "tableEx",
@@ -46,26 +46,28 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Articulos"
+                      "Entity": "DocumentosLinea"
                     }
                   },
-                  "Property": "IdItem"
+                  "Property": "IdArticulo"
                 }
               },
-              "queryRef": "Item.IdItem"
+              "queryRef": "DocumentosLinea.IdArticulo",
+              "nativeQueryRef": "IdArticulo"
             },
             {
               "field": {
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Articulos"
+                      "Entity": "DocumentosLinea"
                     }
                   },
-                  "Property": "IdArticulo_descripcion"
+                  "Property": "Descripcion"
                 }
               },
-              "queryRef": "Item.IdArticulo_descripcion"
+              "queryRef": "DocumentosLinea.Descripcion",
+              "nativeQueryRef": "Descripcion"
             },
             {
               "field": {
@@ -121,23 +123,6 @@
             }
           ]
         }
-      },
-      "sortDefinition": {
-        "sort": [
-          {
-            "field": {
-              "Column": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "Articulos"
-                  }
-                },
-                "Property": "IdItem"
-              }
-            },
-            "direction": "Ascending"
-          }
-        ]
       }
     },
     "drillFilterOtherVisuals": true

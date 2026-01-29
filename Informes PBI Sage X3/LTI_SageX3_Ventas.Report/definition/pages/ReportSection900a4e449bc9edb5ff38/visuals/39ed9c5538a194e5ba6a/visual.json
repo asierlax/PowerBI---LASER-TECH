@@ -44,42 +44,6 @@
             },
             {
               "field": {
-                "HierarchyLevel": {
-                  "Expression": {
-                    "Hierarchy": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "Direcciones"
-                        }
-                      },
-                      "Hierarchy": "Nombre Pais Jerarquía"
-                    }
-                  },
-                  "Level": "País"
-                }
-              },
-              "queryRef": "Address.Nombre Pais Jerarquía.País"
-            },
-            {
-              "field": {
-                "HierarchyLevel": {
-                  "Expression": {
-                    "Hierarchy": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "Direcciones"
-                        }
-                      },
-                      "Hierarchy": "Nombre Pais Jerarquía"
-                    }
-                  },
-                  "Level": "Provincia"
-                }
-              },
-              "queryRef": "Address.Nombre Pais Jerarquía.Provincia"
-            },
-            {
-              "field": {
                 "Column": {
                   "Expression": {
                     "SourceRef": {

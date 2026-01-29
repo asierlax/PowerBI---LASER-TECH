@@ -8210,7 +8210,7 @@ cultureInfo es-ES
 			          }
 			        },
 			        {
-			          "Items": {
+			          "Cantidad": {
 			            "State": "Suggested",
 			            "Source": {
 			              "Type": "External",
@@ -8220,7 +8220,7 @@ cultureInfo es-ES
 			          }
 			        },
 			        {
-			          "Cantidad": {
+			          "Items": {
 			            "State": "Suggested",
 			            "Source": {
 			              "Type": "External",
@@ -10778,7 +10778,7 @@ cultureInfo es-ES
 			          }
 			        },
 			        {
-			          "Count Int.": {
+			          "Total Intervenciones": {
 			            "State": "Suggested",
 			            "Source": {
 			              "Type": "External",
@@ -13088,23 +13088,106 @@ cultureInfo es-ES
 			        }
 			      ]
 			    },
-			    "articulos.iditem": {
+			    "metrica.ejercicio_seleccionado": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "Articulos",
-			          "ConceptualProperty": "IdItem"
+			          "ConceptualEntity": "Metricas",
+			          "ConceptualProperty": "Ejercicio seleccionado"
 			        }
 			      },
 			      "State": "Generated",
 			      "Terms": [
 			        {
-			          "Item": {
+			          "ejercicio seleccionado": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "metrica.reincidencias_averias": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Metricas",
+			          "ConceptualProperty": "% Reincidencias averias"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "% reincidencias averias": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "percentage reincidencia averia": {
+			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
-			              "Type": "External",
-			              "Agent": "PowerBI.VisualColumnRename"
+			              "Agent": "Thesaurus"
 			            },
-			            "Weight": 0.9
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "pct reincidencia averia": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        }
+			      ]
+			    },
+			    "metrica.en_garantia": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Metricas",
+			          "ConceptualProperty": "% en Garantia"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "% en garantia": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "percentage en garantia": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "pct en garantia": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        }
+			      ]
+			    },
+			    "fecha.ano_semestre": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Fecha",
+			          "ConceptualProperty": "Ano Semestre"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "ano semestre": {
+			            "State": "Generated"
 			          }
 			        }
 			      ]
@@ -13129,216 +13212,9 @@ cultureInfo es-ES
 			          }
 			        }
 			      ]
-			    },
-			    "documentoslinea.iditem": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "DocumentosLinea",
-			          "ConceptualProperty": "IdItem"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "Item": {
-			            "State": "Suggested",
-			            "Source": {
-			              "Type": "External",
-			              "Agent": "PowerBI.VisualColumnRename"
-			            },
-			            "Weight": 0.9
-			          }
-			        }
-			      ]
-			    },
-			    "documentoslinea.descripcion_1": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "DocumentosLinea",
-			          "ConceptualProperty": "Descripcion 1"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "Descripcion": {
-			            "State": "Suggested",
-			            "Source": {
-			              "Type": "External",
-			              "Agent": "PowerBI.VisualColumnRename"
-			            },
-			            "Weight": 0.9
-			          }
-			        }
-			      ]
 			    }
 			  },
 			  "Relationships": {
-			    "fecha_MesAno_hierarchy_has_me": {
-			      "Binding": {
-			        "ConceptualEntity": "Fecha"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "fecha.MesAno_hierarchy": {
-			          "Target": {
-			            "Entity": "fecha.MesAno_hierarchy"
-			          }
-			        },
-			        "fecha.MesAno_hierarchy.me": {
-			          "Target": {
-			            "Entity": "fecha.MesAno_hierarchy.me"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "fecha.MesAno_hierarchy"
-			            },
-			            "Object": {
-			              "Role": "fecha.MesAno_hierarchy.me"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "MesAno_hierarchies_have_me"
-			        }
-			      ]
-			    },
-			    "fecha_MesAno_hierarchy_has_mes_ano": {
-			      "Binding": {
-			        "ConceptualEntity": "Fecha"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "fecha.MesAno_hierarchy": {
-			          "Target": {
-			            "Entity": "fecha.MesAno_hierarchy"
-			          }
-			        },
-			        "fecha.MesAno_hierarchy.mes_ano": {
-			          "Target": {
-			            "Entity": "fecha.MesAno_hierarchy.mes_ano"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "fecha.MesAno_hierarchy"
-			            },
-			            "Object": {
-			              "Role": "fecha.MesAno_hierarchy.mes_ano"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "MesAno_hierarchies_have_mes_anos"
-			        }
-			      ]
-			    },
-			    "documentos_linea_Id_Fecha_hierarchy_has_id_fecha": {
-			      "Binding": {
-			        "ConceptualEntity": "DocumentosLinea"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "documentos_linea.Id_Fecha_hierarchy": {
-			          "Target": {
-			            "Entity": "documentos_linea.Id_Fecha_hierarchy"
-			          }
-			        },
-			        "documentos_linea.Id_Fecha_hierarchy.id_fecha": {
-			          "Target": {
-			            "Entity": "documentos_linea.Id_Fecha_hierarchy.id_fecha"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "documentos_linea.Id_Fecha_hierarchy"
-			            },
-			            "Object": {
-			              "Role": "documentos_linea.Id_Fecha_hierarchy.id_fecha"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "Id_Fecha_hierarchies_have_id_fechas"
-			        }
-			      ]
-			    },
-			    "fecha_ano_jerarquía_me_has_fecha_ano_jerarquía_dia": {
-			      "Binding": {
-			        "ConceptualEntity": "Fecha"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "fecha.ano_jerarquía.me": {
-			          "Target": {
-			            "Entity": "fecha.ano_jerarquía.me"
-			          }
-			        },
-			        "fecha.ano_jerarquía.dia": {
-			          "Target": {
-			            "Entity": "fecha.ano_jerarquía.dia"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "fecha.ano_jerarquía.me"
-			            },
-			            "Object": {
-			              "Role": "fecha.ano_jerarquía.dia"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "me_have_dias"
-			        },
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "fecha.ano_jerarquía.dia"
-			            },
-			            "Object": {
-			              "Role": "fecha.ano_jerarquía.me"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "dias_have_me"
-			        },
-			        {
-			          "Preposition": {
-			            "Subject": {
-			              "Role": "fecha.ano_jerarquía.dia"
-			            },
-			            "Prepositions": [
-			              {
-			                "in": {
-			                  "State": "Generated"
-			                }
-			              }
-			            ],
-			            "Object": {
-			              "Role": "fecha.ano_jerarquía.me"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "dias_are_in_me"
-			        }
-			      ]
-			    },
 			    "fecha_ano_jerarquía_trimestre_has_fecha_ano_jerarquía_me": {
 			      "Binding": {
 			        "ConceptualEntity": "Fecha"
@@ -13636,52 +13512,6 @@ cultureInfo es-ES
 			        }
 			      ]
 			    },
-			    "intervencione_has_cliente1": {
-			      "Binding": {
-			        "ConceptualEntity": "Intervenciones"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "intervencione": {
-			          "Target": {
-			            "Entity": "intervencione"
-			          }
-			        },
-			        "cliente": {
-			          "Target": {
-			            "Entity": "cliente"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "intervencione"
-			            },
-			            "Object": {
-			              "Role": "cliente"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "intervenciones_have_clientes"
-			        },
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "cliente"
-			            },
-			            "Object": {
-			              "Role": "intervencione"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "clientes_have_intervenciones"
-			        }
-			      ]
-			    },
 			    "intervencione_has_fecha": {
 			      "Binding": {
 			        "ConceptualEntity": "Intervenciones"
@@ -13728,15 +13558,15 @@ cultureInfo es-ES
 			        }
 			      ]
 			    },
-			    "albarane_has_cliente": {
+			    "intervencione_has_cliente1": {
 			      "Binding": {
-			        "ConceptualEntity": "Albaranes"
+			        "ConceptualEntity": "Intervenciones"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "albarane": {
+			        "intervencione": {
 			          "Target": {
-			            "Entity": "albarane"
+			            "Entity": "intervencione"
 			          }
 			        },
 			        "cliente": {
@@ -13749,7 +13579,7 @@ cultureInfo es-ES
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "albarane"
+			              "Role": "intervencione"
 			            },
 			            "Object": {
 			              "Role": "cliente"
@@ -13757,7 +13587,7 @@ cultureInfo es-ES
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "albaranes_have_clientes"
+			          "ID": "intervenciones_have_clientes"
 			        },
 			        {
 			          "Attribute": {
@@ -13765,12 +13595,12 @@ cultureInfo es-ES
 			              "Role": "cliente"
 			            },
 			            "Object": {
-			              "Role": "albarane"
+			              "Role": "intervencione"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "clientes_have_albaranes"
+			          "ID": "clientes_have_intervenciones"
 			        }
 			      ]
 			    },
@@ -13817,6 +13647,52 @@ cultureInfo es-ES
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "fechas_have_albaranes"
+			        }
+			      ]
+			    },
+			    "albarane_has_cliente": {
+			      "Binding": {
+			        "ConceptualEntity": "Albaranes"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "albarane": {
+			          "Target": {
+			            "Entity": "albarane"
+			          }
+			        },
+			        "cliente": {
+			          "Target": {
+			            "Entity": "cliente"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "albarane"
+			            },
+			            "Object": {
+			              "Role": "cliente"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "albaranes_have_clientes"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "cliente"
+			            },
+			            "Object": {
+			              "Role": "albarane"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "clientes_have_albaranes"
 			        }
 			      ]
 			    },
@@ -14442,6 +14318,138 @@ cultureInfo es-ES
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "ABCD_by_year_have_documentos_linea"
+			        }
+			      ]
+			    },
+			    "fecha_has_ano_semestre": {
+			      "Binding": {
+			        "ConceptualEntity": "Fecha"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fecha": {
+			          "Target": {
+			            "Entity": "fecha"
+			          }
+			        },
+			        "fecha.ano_semestre": {
+			          "Target": {
+			            "Entity": "fecha.ano_semestre"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fecha"
+			            },
+			            "Object": {
+			              "Role": "fecha.ano_semestre"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fechas_have_ano_semestres"
+			        }
+			      ]
+			    },
+			    "intervencione_has_metrica_en_garantia": {
+			      "Binding": {
+			        "ConceptualEntity": "Intervenciones"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "intervencione": {
+			          "Target": {
+			            "Entity": "intervencione"
+			          }
+			        },
+			        "metrica.en_garantia": {
+			          "Target": {
+			            "Entity": "metrica.en_garantia"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "intervencione"
+			            },
+			            "Object": {
+			              "Role": "metrica.en_garantia"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "intervenciones_have__en_garantia"
+			        }
+			      ]
+			    },
+			    "intervencione_has_metrica_reincidencias_averias": {
+			      "Binding": {
+			        "ConceptualEntity": "Intervenciones"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "intervencione": {
+			          "Target": {
+			            "Entity": "intervencione"
+			          }
+			        },
+			        "metrica.reincidencias_averias": {
+			          "Target": {
+			            "Entity": "metrica.reincidencias_averias"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "intervencione"
+			            },
+			            "Object": {
+			              "Role": "metrica.reincidencias_averias"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "intervenciones_have__reincidencias_averias"
+			        }
+			      ]
+			    },
+			    "fecha_has_metrica_ejercicio_seleccionado": {
+			      "Binding": {
+			        "ConceptualEntity": "Fecha"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fecha": {
+			          "Target": {
+			            "Entity": "fecha"
+			          }
+			        },
+			        "metrica.ejercicio_seleccionado": {
+			          "Target": {
+			            "Entity": "metrica.ejercicio_seleccionado"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fecha"
+			            },
+			            "Object": {
+			              "Role": "metrica.ejercicio_seleccionado"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fechas_have_ejercicio_seleccionado"
 			        }
 			      ]
 			    },
@@ -26286,6 +26294,171 @@ cultureInfo es-ES
 			          "State": "Generated",
 			          "Weight": 0.9,
 			          "ID": "fechas_are_selected_on_max_selected_date"
+			        }
+			      ]
+			    },
+			    "fecha_ano_jerarquía_me_has_fecha_ano_jerarquía_dia": {
+			      "Binding": {
+			        "ConceptualEntity": "Fecha"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fecha.ano_jerarquía.me": {
+			          "Target": {
+			            "Entity": "fecha.ano_jerarquía.me"
+			          }
+			        },
+			        "fecha.ano_jerarquía.dia": {
+			          "Target": {
+			            "Entity": "fecha.ano_jerarquía.dia"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fecha.ano_jerarquía.me"
+			            },
+			            "Object": {
+			              "Role": "fecha.ano_jerarquía.dia"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "me_have_dias"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fecha.ano_jerarquía.dia"
+			            },
+			            "Object": {
+			              "Role": "fecha.ano_jerarquía.me"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dias_have_me"
+			        },
+			        {
+			          "Preposition": {
+			            "Subject": {
+			              "Role": "fecha.ano_jerarquía.dia"
+			            },
+			            "Prepositions": [
+			              {
+			                "in": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "fecha.ano_jerarquía.me"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dias_are_in_me"
+			        }
+			      ]
+			    },
+			    "documentos_linea_Id_Fecha_hierarchy_has_id_fecha": {
+			      "Binding": {
+			        "ConceptualEntity": "DocumentosLinea"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "documentos_linea.Id_Fecha_hierarchy": {
+			          "Target": {
+			            "Entity": "documentos_linea.Id_Fecha_hierarchy"
+			          }
+			        },
+			        "documentos_linea.Id_Fecha_hierarchy.id_fecha": {
+			          "Target": {
+			            "Entity": "documentos_linea.Id_Fecha_hierarchy.id_fecha"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "documentos_linea.Id_Fecha_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "documentos_linea.Id_Fecha_hierarchy.id_fecha"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "Id_Fecha_hierarchies_have_id_fechas"
+			        }
+			      ]
+			    },
+			    "fecha_MesAno_hierarchy_has_mes_ano": {
+			      "Binding": {
+			        "ConceptualEntity": "Fecha"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fecha.MesAno_hierarchy": {
+			          "Target": {
+			            "Entity": "fecha.MesAno_hierarchy"
+			          }
+			        },
+			        "fecha.MesAno_hierarchy.mes_ano": {
+			          "Target": {
+			            "Entity": "fecha.MesAno_hierarchy.mes_ano"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fecha.MesAno_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "fecha.MesAno_hierarchy.mes_ano"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "MesAno_hierarchies_have_mes_anos"
+			        }
+			      ]
+			    },
+			    "fecha_MesAno_hierarchy_has_me": {
+			      "Binding": {
+			        "ConceptualEntity": "Fecha"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fecha.MesAno_hierarchy": {
+			          "Target": {
+			            "Entity": "fecha.MesAno_hierarchy"
+			          }
+			        },
+			        "fecha.MesAno_hierarchy.me": {
+			          "Target": {
+			            "Entity": "fecha.MesAno_hierarchy.me"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fecha.MesAno_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "fecha.MesAno_hierarchy.me"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "MesAno_hierarchies_have_me"
 			        }
 			      ]
 			    },

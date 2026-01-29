@@ -218,13 +218,14 @@
                           "Entity": "DocumentosLinea"
                         }
                       },
-                      "Property": "Cantidad"
+                      "Property": "Cantidad US"
                     }
                   },
                   "Function": 0
                 }
               },
-              "queryRef": "Sum(Sales Invoice Line.Cantidad)"
+              "queryRef": "Sum(DocumentosLinea.Cantidad US)",
+              "nativeQueryRef": "Cantidad US"
             }
           ]
         }
@@ -1246,20 +1247,6 @@
           },
           "selector": {
             "metadata": "Metricas.Margen Beneficio"
-          }
-        },
-        {
-          "properties": {
-            "value": {
-              "expr": {
-                "Literal": {
-                  "Value": "200.93636233424473D"
-                }
-              }
-            }
-          },
-          "selector": {
-            "metadata": "Sum(Sales Invoice Line.Cantidad)"
           }
         },
         {

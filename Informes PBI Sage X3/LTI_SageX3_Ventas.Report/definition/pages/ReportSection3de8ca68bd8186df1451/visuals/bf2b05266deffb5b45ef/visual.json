@@ -4,10 +4,10 @@
   "position": {
     "x": 55.2046783625731,
     "y": 175.906432748538,
-    "z": 40000,
+    "z": 39000,
     "height": 544.56140350877183,
     "width": 1153.6842105263156,
-    "tabOrder": 40000
+    "tabOrder": 39000
   },
   "visual": {
     "visualType": "tableEx",
@@ -15,33 +15,6 @@
       "queryState": {
         "Values": {
           "projections": [
-            {
-              "field": {
-                "Column": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "Articulos"
-                    }
-                  },
-                  "Property": "Subsidiary ID"
-                }
-              },
-              "queryRef": "Item.Subsidiary ID"
-            },
-            {
-              "field": {
-                "Column": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "Articulos"
-                    }
-                  },
-                  "Property": "IdItem"
-                }
-              },
-              "queryRef": "Item.IdItem",
-              "displayName": "Item"
-            },
             {
               "field": {
                 "Column": {
@@ -58,91 +31,6 @@
             },
             {
               "field": {
-                "Aggregation": {
-                  "Expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "Stock"
-                        }
-                      },
-                      "Property": "Quantity"
-                    }
-                  },
-                  "Function": 0
-                }
-              },
-              "queryRef": "Sum(Stock.Quantity)"
-            },
-            {
-              "field": {
-                "Aggregation": {
-                  "Expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "Stock"
-                        }
-                      },
-                      "Property": "Value"
-                    }
-                  },
-                  "Function": 0
-                }
-              },
-              "queryRef": "Sum(Stock.Value)"
-            },
-            {
-              "field": {
-                "Aggregation": {
-                  "Expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "TarifasCompra"
-                        }
-                      },
-                      "Property": "Purchase price"
-                    }
-                  },
-                  "Function": 0
-                }
-              },
-              "queryRef": "Sum(Price.Purchase price)"
-            },
-            {
-              "field": {
-                "Aggregation": {
-                  "Expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "Stock"
-                        }
-                      },
-                      "Property": "Standard Cost"
-                    }
-                  },
-                  "Function": 0
-                }
-              },
-              "queryRef": "Sum(Stock.Standard Cost)"
-            },
-            {
-              "field": {
-                "Column": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "Clientes"
-                    }
-                  },
-                  "Property": "Moneda"
-                }
-              },
-              "queryRef": "Customer.Moneda"
-            },
-            {
-              "field": {
                 "Column": {
                   "Expression": {
                     "SourceRef": {
@@ -154,78 +42,9 @@
               },
               "queryRef": "Fecha.AnoMesStock",
               "displayName": "Año Mes"
-            },
-            {
-              "field": {
-                "Column": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "Articulos"
-                    }
-                  },
-                  "Property": "Purchased from VYGON"
-                }
-              },
-              "queryRef": "Item.Purchased from VYGON"
-            },
-            {
-              "field": {
-                "Column": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "Articulos"
-                    }
-                  },
-                  "Property": "Supplier"
-                }
-              },
-              "queryRef": "Item.Supplier"
-            },
-            {
-              "field": {
-                "Column": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "Articulos"
-                    }
-                  },
-                  "Property": "Vygon Item Number"
-                }
-              },
-              "queryRef": "Item.Vygon Item Number"
-            },
-            {
-              "field": {
-                "Column": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "Articulos"
-                    }
-                  },
-                  "Property": "EOR"
-                }
-              },
-              "queryRef": "Item.EOR"
             }
           ]
         }
-      },
-      "sortDefinition": {
-        "sort": [
-          {
-            "field": {
-              "Column": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "Articulos"
-                  }
-                },
-                "Property": "Subsidiary ID"
-              }
-            },
-            "direction": "Ascending"
-          }
-        ]
       }
     },
     "drillFilterOtherVisuals": true

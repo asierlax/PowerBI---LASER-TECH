@@ -4,10 +4,10 @@
   "position": {
     "x": 28.07017543859649,
     "y": 174.03508771929822,
-    "z": 40000,
+    "z": 39000,
     "height": 535.20467836257308,
     "width": 1173.3333333333333,
-    "tabOrder": 40000
+    "tabOrder": 39000
   },
   "visual": {
     "visualType": "tableEx",
@@ -15,60 +15,6 @@
       "queryState": {
         "Values": {
           "projections": [
-            {
-              "field": {
-                "Column": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "Articulos"
-                    }
-                  },
-                  "Property": "Subsidiary ID"
-                }
-              },
-              "queryRef": "Item.Subsidiary ID"
-            },
-            {
-              "field": {
-                "Column": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "DocumentosLinea"
-                    }
-                  },
-                  "Property": "IdItem"
-                }
-              },
-              "queryRef": "Sales Invoice Line.IdItem",
-              "displayName": "Item"
-            },
-            {
-              "field": {
-                "Column": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "DocumentosLinea"
-                    }
-                  },
-                  "Property": "Descripcion 1"
-                }
-              },
-              "queryRef": "Sales Invoice Line.Descripcion 1",
-              "displayName": "Descripcion"
-            },
-            {
-              "field": {
-                "Column": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "DocumentosLinea"
-                    }
-                  },
-                  "Property": "Quantity"
-                }
-              },
-              "queryRef": "Sales Invoice Line.Quantity"
-            },
             {
               "field": {
                 "Aggregation": {
@@ -123,19 +69,6 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Clientes"
-                    }
-                  },
-                  "Property": "Moneda"
-                }
-              },
-              "queryRef": "Customer.Moneda"
-            },
-            {
-              "field": {
-                "Column": {
-                  "Expression": {
-                    "SourceRef": {
                       "Entity": "Fecha"
                     }
                   },
@@ -144,71 +77,6 @@
               },
               "queryRef": "Fecha.AnoMes",
               "displayName": "Año Mes"
-            },
-            {
-              "field": {
-                "Column": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "Articulos"
-                    }
-                  },
-                  "Property": "Purchased from VYGON"
-                }
-              },
-              "queryRef": "Item.Purchased from VYGON"
-            },
-            {
-              "field": {
-                "Column": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "DocumentosLinea"
-                    }
-                  },
-                  "Property": "Codigo Proveedor"
-                }
-              },
-              "queryRef": "Sales Invoice Line.Codigo Proveedor"
-            },
-            {
-              "field": {
-                "Column": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "DocumentosLinea"
-                    }
-                  },
-                  "Property": "Nombre Proveedor"
-                }
-              },
-              "queryRef": "Sales Invoice Line.Nombre Proveedor"
-            },
-            {
-              "field": {
-                "Column": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "DocumentosLinea"
-                    }
-                  },
-                  "Property": "Articulo VYGON"
-                }
-              },
-              "queryRef": "Sales Invoice Line.Articulo VYGON"
-            },
-            {
-              "field": {
-                "Column": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "Articulos"
-                    }
-                  },
-                  "Property": "EOR"
-                }
-              },
-              "queryRef": "Item.EOR"
             }
           ]
         }

@@ -2,12 +2,12 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
   "name": "2056e909adcd84ab2c39",
   "position": {
-    "x": 38.908807482462976,
-    "y": 97.770849571317214,
-    "z": 47000,
-    "height": 309.27513639906465,
-    "width": 1217.1473109898675,
-    "tabOrder": 46003
+    "x": 35.258764607679467,
+    "y": 411.35225375626044,
+    "z": 44000,
+    "height": 308.78130217028382,
+    "width": 1218.0300500834726,
+    "tabOrder": 43000
   },
   "visual": {
     "visualType": "pivotTable",
@@ -367,105 +367,7 @@
   "filterConfig": {
     "filters": [
       {
-        "name": "43f7348acd2753f12125",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Fecha"
-              }
-            },
-            "Property": "MesAno"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "79019303ee0e48c49f20",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Metricas"
-              }
-            },
-            "Property": "Count Intervenciones"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "a630fbea5a367ba2268c",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Fecha"
-              }
-            },
-            "Property": "Mes"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "1026a7315bbba4a986aa",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Metricas"
-              }
-            },
-            "Property": "Int En garantia"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "d7da1cb28830d323c477",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Metricas"
-              }
-            },
-            "Property": "Int Sin garantia"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "eb29333d38c0d02ea0c6",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Metricas"
-              }
-            },
-            "Property": "Int En garantia LTI"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "b3782453206122a4c556",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Metricas"
-              }
-            },
-            "Property": "Int En garantia Clientes"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "379003240dd4724cd10a",
+        "name": "05d8fcd9c87d1ba8f837",
         "field": {
           "Column": {
             "Expression": {
@@ -479,91 +381,7 @@
         "type": "Advanced"
       },
       {
-        "name": "d07e33add138ba06f062",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Metricas"
-              }
-            },
-            "Property": "Int Instalacion"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "2665ebed411cc7fe76cf",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Metricas"
-              }
-            },
-            "Property": "Int contrato"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "7e4d30c890cfaf79b31a",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Metricas"
-              }
-            },
-            "Property": "Int revision"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "e6c4d9777d0fdac4b36f",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Metricas"
-              }
-            },
-            "Property": "Int reincidencia"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "d157cb6a010cef276775",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Metricas"
-              }
-            },
-            "Property": "Int Contrato Standard"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "b1e4b3cf5d9263763058",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Metricas"
-              }
-            },
-            "Property": "Int Contrato FullRisk"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "921fe08856859a432ee0",
+        "name": "10059eba33e10e2b5f39",
         "field": {
           "Column": {
             "Expression": {
@@ -577,7 +395,189 @@
         "type": "Categorical"
       },
       {
-        "name": "3231c8694b340ec12e22",
+        "name": "83382d8ca1d9c75d57f0",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Fecha"
+              }
+            },
+            "Property": "Mes"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "e30b157b833e43b2a7d5",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Fecha"
+              }
+            },
+            "Property": "MesAno"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "682481b34295c342c752",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Metricas"
+              }
+            },
+            "Property": "Count Intervenciones"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "d135a63d1b97eda2cb8d",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Metricas"
+              }
+            },
+            "Property": "Int En garantia"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "1a0963933091a5407f94",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Metricas"
+              }
+            },
+            "Property": "Int Sin garantia"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "69f71ad444383b5f2aef",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Metricas"
+              }
+            },
+            "Property": "Int En garantia LTI"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "8e5af9c66d2dab3b89e9",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Metricas"
+              }
+            },
+            "Property": "Int En garantia Clientes"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "106dc3ba82262655c8dd",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Metricas"
+              }
+            },
+            "Property": "Int Instalacion"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "47268898f79dd2b9d329",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Metricas"
+              }
+            },
+            "Property": "Int contrato"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "897ea16d7b8e82bda63e",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Metricas"
+              }
+            },
+            "Property": "Int revision"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "e4c62c1d609208eb804d",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Metricas"
+              }
+            },
+            "Property": "Int reincidencia"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "40b932e1483721461472",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Metricas"
+              }
+            },
+            "Property": "Int Contrato Standard"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "4fd2647a5f6e9e38c2a0",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Metricas"
+              }
+            },
+            "Property": "Int Contrato FullRisk"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "8b8d69e357699b114e6e",
         "field": {
           "Measure": {
             "Expression": {
@@ -591,7 +591,7 @@
         "type": "Advanced"
       },
       {
-        "name": "95d6a6d8b6efa9ed4a48",
+        "name": "dc8408d967121d6844c8",
         "field": {
           "Measure": {
             "Expression": {

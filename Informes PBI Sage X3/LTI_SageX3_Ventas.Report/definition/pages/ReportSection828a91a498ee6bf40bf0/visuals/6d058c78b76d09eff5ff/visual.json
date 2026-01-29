@@ -4,10 +4,10 @@
   "position": {
     "x": 34.213836477987421,
     "y": 237.48427672955975,
-    "z": 42000,
+    "z": 41000,
     "height": 454.84276729559747,
     "width": 863.39622641509436,
-    "tabOrder": 42000
+    "tabOrder": 41000
   },
   "visual": {
     "visualType": "tableEx",
@@ -23,36 +23,10 @@
                       "Entity": "Articulos"
                     }
                   },
-                  "Property": "Codigo Business Unit Analisis"
-                }
-              },
-              "queryRef": "Item.Codigo Famlia Analisis"
-            },
-            {
-              "field": {
-                "Column": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "Articulos"
-                    }
-                  },
                   "Property": "Familia"
                 }
               },
               "queryRef": "Item.Familia"
-            },
-            {
-              "field": {
-                "Column": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "Articulos"
-                    }
-                  },
-                  "Property": "Codigo Familia Analisis"
-                }
-              },
-              "queryRef": "Item.Codigo Subfamilia Analisis"
             },
             {
               "field": {

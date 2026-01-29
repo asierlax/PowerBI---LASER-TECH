@@ -23,12 +23,12 @@
                       "Entity": "Direcciones"
                     }
                   },
-                  "Property": "Provincia Nombre"
+                  "Property": "Provincia"
                 }
               },
-              "queryRef": "Address.Provincia Nombre",
-              "active": true,
-              "displayName": "Provincia"
+              "queryRef": "Direcciones.Provincia",
+              "nativeQueryRef": "Provincia",
+              "active": true
             }
           ]
         },
@@ -242,62 +242,5 @@
     },
     "drillFilterOtherVisuals": true
   },
-  "parentGroupName": "fc2cdc1e008b105b7c75",
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "Filter95d7db4bb67a8c18549f",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Direcciones"
-              }
-            },
-            "Property": "Provincia Nombre"
-          }
-        },
-        "type": "Categorical",
-        "filter": {
-          "Version": 2,
-          "From": [
-            {
-              "Name": "a",
-              "Entity": "Direcciones",
-              "Type": 0
-            }
-          ],
-          "Where": [
-            {
-              "Condition": {
-                "In": {
-                  "Expressions": [
-                    {
-                      "Column": {
-                        "Expression": {
-                          "SourceRef": {
-                            "Source": "a"
-                          }
-                        },
-                        "Property": "Provincia Nombre"
-                      }
-                    }
-                  ],
-                  "Values": [
-                    [
-                      {
-                        "Literal": {
-                          "Value": "'Barcelona'"
-                        }
-                      }
-                    ]
-                  ]
-                }
-              }
-            }
-          ]
-        }
-      }
-    ]
-  }
+  "parentGroupName": "fc2cdc1e008b105b7c75"
 }

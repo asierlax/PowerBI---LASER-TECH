@@ -347,57 +347,57 @@ table Metricas
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-	measure 'Count Intervenciones' = COUNT(Intervenciones[Intervencion])
+	measure 'Count Intervenciones' = COUNT(Intervenciones[Intervencion]) + 0
 		formatString: 0
 		displayFolder: Intervenciones
 		lineageTag: 9def452f-8d76-4d8c-ae61-a02cc78ba855
 
-	measure 'Int En garantia' = CALCULATE([Count Intervenciones], Intervenciones[Int. con garantia] = "SI" )
+	measure 'Int En garantia' = CALCULATE([Count Intervenciones], Intervenciones[Int. con garantia] = "SI" ) + 0
 		formatString: 0
 		displayFolder: Intervenciones
 		lineageTag: 688702a6-e52e-4c09-ad7a-3fca07dd8a17
 
-	measure 'Int Sin garantia' = CALCULATE([Count Intervenciones], Intervenciones[Int. con garantia] = "NO" )
+	measure 'Int Sin garantia' = CALCULATE([Count Intervenciones], Intervenciones[Int. con garantia] = "NO" ) + 0
 		formatString: 0
 		displayFolder: Intervenciones
 		lineageTag: e50aefb3-3ca1-4f65-8bf1-8a2956e3984a
 
-	measure 'Int En garantia LTI' = CALCULATE([Count Intervenciones], Intervenciones[Int. con garantia] = "SI", Intervenciones[Codigo cliente] = "01020" )
+	measure 'Int En garantia LTI' = CALCULATE([Count Intervenciones], Intervenciones[Int. con garantia] = "SI", Intervenciones[Codigo cliente] = "01020" ) + 0
 		formatString: 0
 		displayFolder: Intervenciones
 		lineageTag: 9a33bcf8-bf15-45f4-984e-6d1526e272c3
 
-	measure 'Int En garantia Clientes' = CALCULATE([Count Intervenciones], Intervenciones[Int. con garantia] = "SI", Intervenciones[Codigo cliente] <> "01020" )
+	measure 'Int En garantia Clientes' = CALCULATE([Count Intervenciones], Intervenciones[Int. con garantia] = "SI", Intervenciones[Codigo cliente] <> "01020" ) + 0
 		formatString: 0
 		displayFolder: Intervenciones
 		lineageTag: b59f79f5-97c3-48da-9a49-64499bc7e793
 
-	measure 'Int Instalacion' = CALCULATE([Count Intervenciones],Intervenciones[Int. instalacion] = "SI" )
+	measure 'Int Instalacion' = CALCULATE([Count Intervenciones],Intervenciones[Int. instalacion] = "SI" ) + 0
 		formatString: 0
 		displayFolder: Intervenciones
 		lineageTag: 4310055f-51a1-4327-85d7-3fa91e0f8fa5
 
-	measure 'Int contrato' = CALCULATE([Count Intervenciones], Intervenciones[Int. contrato] = "SI" )
+	measure 'Int contrato' = CALCULATE([Count Intervenciones], Intervenciones[Int. contrato] = "SI" ) + 0
 		formatString: 0
 		displayFolder: Intervenciones
 		lineageTag: b23e0bf2-f8ea-4c85-a004-9b970b92709d
 
-	measure 'Int revision' = CALCULATE([Count Intervenciones], Intervenciones[Motivo] = "C1 - Revision" )
+	measure 'Int revision' = CALCULATE([Count Intervenciones], Intervenciones[Motivo] = "C1 - Revision" ) + 0
 		formatString: 0
 		displayFolder: Intervenciones
 		lineageTag: 9dd9be44-a4b5-410c-b7e1-efa22e3b85f0
 
-	measure 'Int reincidencia' = CALCULATE([Count Intervenciones], Intervenciones[Motivo] = "A1 - Reincidencia Averia" )
+	measure 'Int reincidencia' = CALCULATE([Count Intervenciones], Intervenciones[Motivo] = "A1 - Reincidencia Averia" ) + 0
 		formatString: 0
 		displayFolder: Intervenciones
 		lineageTag: 4947d28e-02bd-4b41-96d1-b70a3446ecd9
 
-	measure 'Int Contrato Standard' = CALCULATE([Count Intervenciones], Intervenciones[Tipo contrato] = "A1 - Contrato Standard" )
+	measure 'Int Contrato Standard' = CALCULATE([Count Intervenciones], Intervenciones[Tipo contrato] = "A1 - Contrato Standard" ) + 0
 		formatString: 0
 		displayFolder: Intervenciones
 		lineageTag: 0e84d594-b85e-4266-8212-5d66285d24b6
 
-	measure 'Int Contrato FullRisk' = CALCULATE([Count Intervenciones], Intervenciones[Tipo contrato] = "C1 - Contrato Full Risk" )
+	measure 'Int Contrato FullRisk' = CALCULATE([Count Intervenciones], Intervenciones[Tipo contrato] = "C1 - Contrato Full Risk" ) + 0
 		formatString: 0
 		displayFolder: Intervenciones
 		lineageTag: 5ee77393-adc3-4e20-984a-d587722be3b1
@@ -411,6 +411,12 @@ table Metricas
 		formatString: 0.00\ %;-0.00\ %;0.00\ %
 		displayFolder: Intervenciones
 		lineageTag: ba36a3d2-6986-4cd3-af5f-eb324d45be76
+
+	measure 'Ejercicio seleccionado' = SELECTEDVALUE(Fecha[Ano],"Todos los años")
+		displayFolder: Intervenciones
+		lineageTag: 794848ed-7ae3-4288-870d-73f11a08a909
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
 	partition Metricas-6395655b-e65a-43af-b3d7-1807b8438801 = m
 		mode: import
