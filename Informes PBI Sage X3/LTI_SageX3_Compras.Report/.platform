@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Report",
+    "displayName": "LTI_SageX3_Compras"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "d5015034-aa1e-4a02-a226-33ba0b677d2e"
+  }
+}

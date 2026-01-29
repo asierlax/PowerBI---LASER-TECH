@@ -1,0 +1,31 @@
+model Model
+	culture: es-ES
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	sourceQueryCulture: es-ES
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+queryGroup Ayuda
+
+	annotation PBI_QueryGroupOrder = 0
+
+annotation __PBI_TimeIntelligenceEnabled = 0
+
+annotation PBI_QueryOrder = ["Presupuesto","Factura Compras","Lineas Contables Analiticas","Proveedor","Recurso","Direccion","Fecha","Items","Empresa","Metricas","UltimaActualizacion","Instancia","BaseDeDatos","Esquema"]
+
+annotation PBI_ProTooling = ["DevMode"]
+
+ref table 'Factura Compras'
+ref table Proveedor
+ref table Direccion
+ref table Fecha
+ref table Items
+ref table Empresa
+ref table Metricas
+ref table UltimaActualizacion
+ref table 'Lineas Contables Analiticas'
+ref table Presupuesto
+
+ref cultureInfo es-ES
+

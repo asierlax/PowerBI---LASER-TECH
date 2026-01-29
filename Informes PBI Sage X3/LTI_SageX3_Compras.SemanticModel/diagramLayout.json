@@ -1,0 +1,148 @@
+{
+  "version": "1.1.0",
+  "diagrams": [
+    {
+      "ordinal": 0,
+      "scrollPosition": {
+        "x": 524.9767170135807,
+        "y": 366.90361713932572
+      },
+      "nodes": [
+        {
+          "location": {
+            "x": 192.87818608510008,
+            "y": 176.95549565510515
+          },
+          "nodeIndex": "Metricas",
+          "nodeLineageTag": "919c610d-b7f0-4d45-a6f4-3139cf630a85",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 1538.8,
+            "y": 504.6
+          },
+          "nodeIndex": "Direccion",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 1172.8586889435273,
+            "y": 250.53537714382026
+          },
+          "nodeIndex": "Empresa",
+          "nodeLineageTag": "c891fb5c-310c-4c83-8912-6eb73c8f7084",
+          "size": {
+            "height": 296,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 845.2,
+            "y": 488.6
+          },
+          "nodeIndex": "Factura Compras",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 844.61167030649722,
+            "y": 988.57267602335128
+          },
+          "nodeIndex": "Fecha",
+          "nodeLineageTag": "f7cc7aa8-aa2d-46dc-883f-19461f666627",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 912.4,
+            "y": 0
+          },
+          "nodeIndex": "Items",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 477.13580099472404,
+            "y": 553.75911279443085
+          },
+          "nodeIndex": "Lineas Contables Analiticas",
+          "nodeLineageTag": "b2d20480-d1b3-44ff-b07f-d4500fcb9545",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 1961.4,
+            "y": 481.5
+          },
+          "nodeIndex": "Presupuesto",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 1177.1089008689789,
+            "y": 751.9650467070835
+          },
+          "nodeIndex": "Proveedor",
+          "nodeLineageTag": "9e0c0cb7-2c08-45c6-a25a-ec1acb666fd2",
+          "size": {
+            "height": 248,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 1967.7891773953106,
+            "y": 821.685391550464
+          },
+          "nodeIndex": "UltimaActualizacion",
+          "nodeLineageTag": "696452d9-d517-4a55-9e02-ec2b82f3f4e9",
+          "size": {
+            "height": 104,
+            "width": 234
+          },
+          "zIndex": 0
+        }
+      ],
+      "name": "Todas las tablas",
+      "zoomValue": 68.955439025810236,
+      "pinKeyFieldsToTop": false,
+      "showExtraHeaderInfo": false,
+      "hideKeyFieldsWhenCollapsed": false,
+      "tablesLocked": false
+    }
+  ],
+  "selectedDiagram": "Todas las tablas",
+  "defaultDiagram": "Todas las tablas"
+}

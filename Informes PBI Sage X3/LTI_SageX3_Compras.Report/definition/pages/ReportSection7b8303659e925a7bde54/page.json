@@ -1,0 +1,30 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/page/2.0.0/schema.json",
+  "name": "ReportSection7b8303659e925a7bde54",
+  "displayName": "Análisis por Proveedor",
+  "displayOption": "FitToPage",
+  "height": 720,
+  "width": 1280,
+  "visualInteractions": [
+    {
+      "source": "fb6a89400b3ca0bd4e0d",
+      "target": "7dd132e760eb51346e20",
+      "type": "DataFilter"
+    },
+    {
+      "source": "fb6a89400b3ca0bd4e0d",
+      "target": "bd5696276d3f3da0997a",
+      "type": "DataFilter"
+    },
+    {
+      "source": "bd5696276d3f3da0997a",
+      "target": "7dd132e760eb51346e20",
+      "type": "DataFilter"
+    },
+    {
+      "source": "7dd132e760eb51346e20",
+      "target": "bd5696276d3f3da0997a",
+      "type": "DataFilter"
+    }
+  ]
+}

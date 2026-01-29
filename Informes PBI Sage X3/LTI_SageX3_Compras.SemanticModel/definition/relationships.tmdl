@@ -1,0 +1,35 @@
+relationship c427b0bf-6888-444f-b8d0-87f10907b4a3
+	fromColumn: 'Factura Compras'.'Fecha Contable'
+	toColumn: Fecha.Fecha
+
+relationship 2442feac-dbe4-466e-b011-64b09e5da4a2
+	fromColumn: 'Factura Compras'.ProveedorID
+	toColumn: Proveedor.ProveedorID
+
+relationship 851c9137-26c6-4509-b1be-f87719c24313
+	fromColumn: 'Factura Compras'.Empresa
+	toColumn: Empresa.Empresa
+
+relationship d5ccd7e0-278d-4702-9bb5-a4011daafaec
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: 'Lineas Contables Analiticas'.DocumentoLinea
+	toColumn: 'Factura Compras'.DocumentoLinea
+
+relationship 98e4e267-0aa6-45b5-93ab-58838eed471c
+	fromColumn: 'Factura Compras'.ItemID
+	toColumn: Items.IdItem
+
+relationship 660c3ee9-b21f-4a81-a8d0-031d51a6770c
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: Direccion.IdDireccion
+	toColumn: Proveedor.IdDireccion
+
+relationship e77592fa-4236-4aab-8bc2-7767babb1c69
+	isActive: false
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: Empresa.IdDireccion
+	toColumn: Direccion.IdDireccion
+

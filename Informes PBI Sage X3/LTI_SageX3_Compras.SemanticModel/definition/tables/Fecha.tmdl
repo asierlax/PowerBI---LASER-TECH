@@ -1,0 +1,187 @@
+table Fecha
+	lineageTag: f7cc7aa8-aa2d-46dc-883f-19461f666627
+
+	measure MaxSelectedDate = CALCULATE(MAX('Fecha'[Fecha]), ALLSELECTED('Fecha'))
+		formatString: General Date
+		lineageTag: acdda248-6ade-4646-a3fa-5204d9889bf2
+
+	measure MinSelectedDate = CALCULATE(MIN('Fecha'[Fecha]), ALLSELECTED('Fecha'))
+		formatString: General Date
+		lineageTag: d3a3fab3-d3ab-4542-829a-5aed583bd93f
+
+	column Fecha
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 824bdb5e-4464-4ae1-a94d-c9e1906f829c
+		summarizeBy: none
+		sourceColumn: Fecha
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column Año
+		dataType: int64
+		formatString: 0
+		lineageTag: 0a11ee45-365b-43bd-8ea2-bc4619f3dd65
+		summarizeBy: none
+		sourceColumn: Año
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Mes Nombre'
+		dataType: string
+		lineageTag: 97035766-995e-4dd1-b274-568f8c3383e1
+		summarizeBy: none
+		sourceColumn: Mes Nombre
+		sortByColumn: 'Mes del año'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isText":true}
+
+	column MonthYearKey
+		dataType: int64
+		formatString: 0
+		lineageTag: 897661ee-3e7c-4e33-a5b0-ac71f2e07d80
+		summarizeBy: none
+		sourceColumn: MonthYearKey
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Mes, Año'
+		dataType: string
+		lineageTag: a0e1aaf6-fe4c-4c7c-b54b-1decfcfcb175
+		summarizeBy: none
+		sourceColumn: Mes, Año
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isText":true}
+
+	column 'Mes 3L'
+		dataType: string
+		lineageTag: a988e635-f120-4bf2-b622-d5c99828c176
+		summarizeBy: none
+		sourceColumn: Mes 3L
+		sortByColumn: 'Mes del año'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isText":true}
+
+	column 'Fin Month'
+		dataType: int64
+		formatString: 0
+		lineageTag: 388e8506-60e8-446d-985a-bb1e84c9e1e8
+		summarizeBy: none
+		sourceColumn: Fin Month
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Dia Nombre'
+		dataType: string
+		lineageTag: 36595a97-1bdc-49d8-8b32-e2a55abbbabb
+		summarizeBy: none
+		sourceColumn: Dia Nombre
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isText":true}
+
+	column 'Dia Nombre 3L'
+		dataType: string
+		lineageTag: f2c66c68-38b8-4e2c-a4a4-90b1079893be
+		summarizeBy: none
+		sourceColumn: Dia Nombre 3L
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isText":true}
+
+	column 'Dia numero semana'
+		dataType: int64
+		formatString: 0
+		lineageTag: de626915-31ce-4575-97ce-b8f802453298
+		summarizeBy: none
+		sourceColumn: Dia numero semana
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Mes del año'
+		dataType: int64
+		formatString: 0
+		lineageTag: 8b0bc40f-db53-406b-901f-56bdad83e7f0
+		summarizeBy: none
+		sourceColumn: Mes del año
+
+		annotation SummarizationSetBy = Automatic
+
+	column MesAno = (Fecha[Mes] & "-" & Fecha[Año])
+		dataType: dateTime
+		formatString: yyyy-mm
+		lineageTag: 721ffb73-1491-4fc8-95c9-347c05d866c9
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+		annotation PBI_FormatHint = {"isDateTimeCustom":true}
+
+	column Mes = UPPER( mid(FORMAT([Fecha],"MMM"),1,1)) & mid(FORMAT([Fecha],"MMM"),2,100)
+		lineageTag: c57df17a-5de3-460f-aca0-82638d5b1f0e
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isText":true}
+
+	hierarchy 'Mes, Año Jerarquía'
+		lineageTag: ec76a543-3c55-4d24-9c27-a1d89e26b274
+
+		level 'Mes, Año'
+			lineageTag: 847983b6-d069-44d8-8d03-7692eac47597
+			column: 'Mes, Año'
+
+		level 'Mes Nombre'
+			lineageTag: 08081d81-a418-42d4-bc0a-f7a87c3df1db
+			column: 'Mes Nombre'
+
+	partition Fecha-ac314f56-316a-46c0-9c56-82b1662ffe02 = m
+		mode: import
+		source = ```
+				let
+				    MinDateYear = 2020, 
+				    //Date.Year(List.Min(#"Factura Compras"[Fecha Contable])),
+				    StartDate= Date.From(Text.From(MinDateYear)&"-01-01"),
+				    MaxDateYear = 2023,
+				    //Date.Year(List.Max(#"Factura Compras"[Fecha Contable])),
+				    Length = Duration.Days(Date.From(#date(MaxDateYear,12,31)) - StartDate)+1,
+				    
+				
+				    Source = List.Dates(StartDate, Length, #duration(1, 0, 0, 0)),
+				    #"Converted to Table" = Table.FromList(Source, Splitter.SplitByNothing(), null, null, ExtraValues.Error),
+				    #"Renamed Columns" = Table.RenameColumns(#"Converted to Table",{{"Column1", "Date"}}),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Renamed Columns",{{"Date", type date}}),
+				    Custom1 = #"Changed Type",
+				    #"Inserted Year" = Table.AddColumn(Custom1, "Year", each Date.Year([Date]), Int64.Type),
+				    #"Inserted Month Name" = Table.AddColumn(#"Inserted Year", "Month Name", each Date.MonthName([Date]), type text),
+				    #"Inserted Month Year Key" = Table.AddColumn(#"Inserted Month Name" , "MonthYearKey", each Date.Year([Date]) * 100 + Date.Month([Date]), Int32.Type),
+				    #"Inserted Month Year" = Table.AddColumn(#"Inserted Month Year Key" , "Month Year", each Text.Start([Month Name],3) & ", " & Text.From([Year]), type text),
+				    #"Inserted Day Name" = Table.AddColumn(#"Inserted Month Year" , "Day Name", each Date.DayOfWeekName([Date]), type text),
+				    #"Inserted Month" = Table.AddColumn(#"Inserted Day Name", "Fin Month", each if Date.Month([Date]) >=7 then Date.Month([Date])-6 else Date.Month([Date])+6  , Int64.Type),
+				    #"Inserted Day of Week" = Table.AddColumn(#"Inserted Month", "Day of Week", each Date.DayOfWeek([Date])+1, Int64.Type),
+				    #"Inserted First Characters" = Table.AddColumn(#"Inserted Day of Week", "MMM", each Text.Start([Month Name], 3), type text),
+				    #"Inserted First Characters1" = Table.AddColumn(#"Inserted First Characters", "DDD", each Text.Start([Day Name], 3), type text),
+				    #"Reordered Columns" = Table.ReorderColumns(#"Inserted First Characters1",{"Date", "Year", "Month Name", "MMM", "Fin Month", "Day Name", "DDD", "Day of Week"}),
+				    #"Added MonthID" = Table.AddColumn(#"Reordered Columns" , "MonthID", each Date.Month([Date]), Int64.Type),
+				    #"Columns names translation to Spanish" = Table.RenameColumns(#"Added MonthID",{{"Date", "Fecha"}, {"Year", "Año"}, {"Month Name", "Mes Nombre"}, {"Month Year", "Mes, Año"}, {"MMM", "Mes 3L"}, {"Day Name", "Dia Nombre"}, {"DDD", "Dia Nombre 3L"}, {"Day of Week", "Dia numero semana"}, {"MonthID", "Mes del año"}})
+				in
+				    #"Columns names translation to Spanish"
+				```
+
+	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navegación
+

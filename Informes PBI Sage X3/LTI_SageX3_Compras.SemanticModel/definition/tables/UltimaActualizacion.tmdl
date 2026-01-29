@@ -1,0 +1,26 @@
+table UltimaActualizacion
+	lineageTag: 696452d9-d517-4a55-9e02-ec2b82f3f4e9
+
+	column Fecha
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 455f00ca-1594-489e-b344-861a4d934555
+		summarizeBy: none
+		sourceColumn: Fecha
+
+		annotation SummarizationSetBy = Automatic
+
+	partition UltimaActualizacion-2bea9172-8fd6-46e6-a471-bae152bf5ae6 = m
+		mode: import
+		source =
+				let
+				    FechaHoraDeHoy = DateTime.From(DateTimeZone.SwitchZone(DateTimeZone.FixedLocalNow(),1)),
+				    ConvierteATabla = #table(1, {{FechaHoraDeHoy}}),
+				    RenombreColumna = Table.RenameColumns(ConvierteATabla,{{"Column1", "Última actualización"}}),
+				    TipoFechaHora = Table.TransformColumnTypes(RenombreColumna,{{"Última actualización", type datetime}}),
+				    #"Columnas con nombre cambiado" = Table.RenameColumns(TipoFechaHora,{{"Última actualización", "Fecha"}})
+				in
+				    #"Columnas con nombre cambiado"
+
+	annotation PBI_ResultType = Table
+

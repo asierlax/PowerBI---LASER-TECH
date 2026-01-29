@@ -1,0 +1,94 @@
+table Proveedor
+	lineageTag: 9e0c0cb7-2c08-45c6-a25a-ec1acb666fd2
+
+	column ProveedorID
+		dataType: string
+		lineageTag: 62488f1f-a3fc-4829-a3a3-e324353c23e3
+		summarizeBy: none
+		sourceColumn: ProveedorID
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isText":true}
+
+	column Proveedor
+		dataType: string
+		lineageTag: 97f3eda2-63c9-4cf7-9b88-24bd3b774191
+		summarizeBy: none
+		sourceColumn: Proveedor
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isText":true}
+
+	column 'Tipo Proveedor'
+		dataType: int64
+		formatString: 0
+		lineageTag: adab85d8-b2c3-4465-bf45-4495a4f23cc1
+		summarizeBy: none
+		sourceColumn: Tipo Proveedor
+
+		annotation SummarizationSetBy = Automatic
+
+	column Categoria
+		dataType: string
+		lineageTag: ef111b42-8e83-462e-a14d-247db5c7dc14
+		summarizeBy: none
+		sourceColumn: Categoria
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isText":true}
+
+	column 'Categoria ABC'
+		dataType: int64
+		formatString: 0
+		lineageTag: f29c78a0-26b1-462f-ba97-993c1100367d
+		summarizeBy: none
+		sourceColumn: Categoria ABC
+
+		annotation SummarizationSetBy = Automatic
+
+	column Direccion
+		dataType: string
+		lineageTag: 13af9576-876e-41e9-8c26-21a049916609
+		summarizeBy: none
+		sourceColumn: Direccion
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isText":true}
+
+	column IdDireccion
+		dataType: string
+		lineageTag: 48f9eb06-63c5-4cb4-bf8c-8bfe87c7b67a
+		summarizeBy: none
+		sourceColumn: IdDireccion
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isText":true}
+
+	partition Proveedor-7172a95a-0cdf-47ee-939d-d8ef4c2860bb = m
+		mode: import
+		source =
+				let
+				    CurrentServer = Instancia,
+				    CurrentDatabase = BaseDeDatos,
+				    CurrentSchema = Esquema,
+				    Origen = Sql.Database(CurrentServer, CurrentDatabase, [Query="
+				                                                                SELECT
+				                                                                         [BPSNUM_0] as ProveedorID
+				                                                                        ,[BPSNAM_0] as Proveedor
+				                                                                        ,[BPSTYP_0] as 'Tipo Proveedor'
+				                                                                        ,[BSGCOD_0] as Categoria
+				                                                                        ,[ABCCLS_0] as 'Categoria ABC'
+				                                                                        ,[BPAADD_0] as Direccion
+				                                                                FROM "&CurrentSchema&".BPSUPPLIER"
+				                                                          ]),
+				    #"Personalizada agregada" = Table.AddColumn(Origen, "IdDireccion", each [ProveedorID] &"-"&[Direccion])
+				in
+				    #"Personalizada agregada"
+
+	annotation PBI_ResultType = Table
+

@@ -1,0 +1,921 @@
+table 'Lineas Contables Analiticas'
+	lineageTag: b2d20480-d1b3-44ff-b07f-d4500fcb9545
+
+	column DocumentoLinea
+		dataType: string
+		lineageTag: 9e909bd9-0776-4d48-977d-a4e4d1d3e17d
+		summarizeBy: none
+		sourceColumn: DocumentoLinea
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isText":true}
+
+	column Tabla
+		dataType: string
+		lineageTag: 08d836c3-6488-40b6-85d9-1ebbdbf66b25
+		summarizeBy: none
+		sourceColumn: Tabla
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isText":true}
+
+	column VCRTYP_0
+		dataType: int64
+		formatString: 0
+		lineageTag: fab74a82-d9d6-4c7a-93a2-186a0ae1e8ab
+		summarizeBy: sum
+		sourceColumn: VCRTYP_0
+
+		annotation SummarizationSetBy = Automatic
+
+	column Documento
+		dataType: string
+		lineageTag: 2590b527-3994-4567-a846-ab8076017cf9
+		summarizeBy: none
+		sourceColumn: Documento
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isText":true}
+
+	column Linea
+		dataType: int64
+		formatString: 0
+		lineageTag: 3548b3f4-e3b3-4429-8f32-0690f6c68603
+		summarizeBy: sum
+		sourceColumn: Linea
+
+		annotation SummarizationSetBy = Automatic
+
+	column Secuencia
+		dataType: int64
+		formatString: 0
+		lineageTag: 05da0d90-f320-49fb-b975-45d39a383343
+		summarizeBy: sum
+		sourceColumn: Secuencia
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Complemento Clave'
+		dataType: string
+		lineageTag: 2c8e89be-e6bc-4aad-9802-7a336cc54d94
+		summarizeBy: none
+		sourceColumn: Complemento Clave
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isText":true}
+
+	column 'Numero Orden'
+		dataType: int64
+		formatString: 0
+		lineageTag: 96e5c227-477d-45a8-a3ae-f82d72161dd9
+		summarizeBy: sum
+		sourceColumn: Numero Orden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Referencial_0
+		dataType: string
+		lineageTag: 7d0d7aca-9989-47dc-8761-2d6062956d69
+		summarizeBy: none
+		sourceColumn: Referencial_0
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isText":true}
+
+	column Referencial_1
+		dataType: string
+		lineageTag: 23631281-e3f2-4074-8c12-2fa6baeace60
+		summarizeBy: none
+		sourceColumn: Referencial_1
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isText":true}
+
+	column Referencial_2
+		dataType: string
+		lineageTag: c7a24dac-7258-46e4-8d11-fcd73b89687d
+		summarizeBy: none
+		sourceColumn: Referencial_2
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isText":true}
+
+	column Referencial_3
+		dataType: string
+		lineageTag: c55de1a7-edc4-4da8-9667-15ae4fb20199
+		summarizeBy: none
+		sourceColumn: Referencial_3
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isText":true}
+
+	column Referencial_4
+		dataType: string
+		lineageTag: 34b38985-1f3f-4845-820f-3c978023de98
+		summarizeBy: none
+		sourceColumn: Referencial_4
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isText":true}
+
+	column Referencial_5
+		dataType: string
+		lineageTag: 68398238-ca6c-4908-a3af-889055410ccc
+		summarizeBy: none
+		sourceColumn: Referencial_5
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isText":true}
+
+	column Referencial_6
+		dataType: string
+		lineageTag: 242d08f1-6239-414f-9cd5-259cf8cc90e9
+		summarizeBy: none
+		sourceColumn: Referencial_6
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isText":true}
+
+	column Referencial_7
+		dataType: string
+		lineageTag: 5a81ee0f-427a-489e-a4f4-72baad6a0450
+		summarizeBy: none
+		sourceColumn: Referencial_7
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isText":true}
+
+	column Referencial_8
+		dataType: string
+		lineageTag: e4a9920f-c238-4b86-9576-6ef66d7c32c8
+		summarizeBy: none
+		sourceColumn: Referencial_8
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isText":true}
+
+	column Referencial_9
+		dataType: string
+		lineageTag: 96a656ff-84bb-4145-bc5f-e81a4c6960da
+		summarizeBy: none
+		sourceColumn: Referencial_9
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isText":true}
+
+	column CodigoPlan_0
+		dataType: string
+		lineageTag: a052abff-2229-4d0a-a2e8-982cba96662f
+		summarizeBy: none
+		sourceColumn: CodigoPlan_0
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isText":true}
+
+	column CodigoPlan_1
+		dataType: string
+		lineageTag: 8563050a-e902-45e5-9167-8053802b096d
+		summarizeBy: none
+		sourceColumn: CodigoPlan_1
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isText":true}
+
+	column CodigoPlan_2
+		dataType: string
+		lineageTag: 8b547599-df0c-422e-a8dd-a7987351338b
+		summarizeBy: none
+		sourceColumn: CodigoPlan_2
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isText":true}
+
+	column CodigoPlan_3
+		dataType: string
+		lineageTag: 4af8e650-a9a2-4faa-8b11-3da9d4418c7f
+		summarizeBy: none
+		sourceColumn: CodigoPlan_3
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isText":true}
+
+	column CodigoPlan_4
+		dataType: string
+		lineageTag: 51bd705d-67f4-47fc-b7e1-fe7f946ebaf6
+		summarizeBy: none
+		sourceColumn: CodigoPlan_4
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isText":true}
+
+	column CodigoPlan_5
+		dataType: string
+		lineageTag: b5f9fdad-51ad-4b7f-884d-0661c639b26a
+		summarizeBy: none
+		sourceColumn: CodigoPlan_5
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isText":true}
+
+	column CodigoPlan_6
+		dataType: string
+		lineageTag: f003262c-f0a3-4c95-9781-2419144a524e
+		summarizeBy: none
+		sourceColumn: CodigoPlan_6
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isText":true}
+
+	column CodigoPlan_7
+		dataType: string
+		lineageTag: 975cf5ba-a3ea-4c8b-ba75-ac78002d4aa5
+		summarizeBy: none
+		sourceColumn: CodigoPlan_7
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isText":true}
+
+	column CodigoPlan_8
+		dataType: string
+		lineageTag: 1fc50c64-1af1-4294-a8e9-93b064298a05
+		summarizeBy: none
+		sourceColumn: CodigoPlan_8
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isText":true}
+
+	column CodigoPlan_9
+		dataType: string
+		lineageTag: 56df5e4c-e99b-4da2-a804-1d922857640e
+		summarizeBy: none
+		sourceColumn: CodigoPlan_9
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isText":true}
+
+	column 'Cuentas Generales_0'
+		dataType: string
+		lineageTag: 389a3d27-1020-4173-910e-326a3bfe57a2
+		summarizeBy: none
+		sourceColumn: Cuentas Generales_0
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isText":true}
+
+	column 'Cuentas Generales_1'
+		dataType: string
+		lineageTag: cd568be7-e9d8-4c5e-8ed1-ca3ebe45ebff
+		summarizeBy: none
+		sourceColumn: Cuentas Generales_1
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isText":true}
+
+	column 'Cuentas Generales_2'
+		dataType: string
+		lineageTag: dc03ea02-8844-46f4-adf3-9c1ca4aaccf0
+		summarizeBy: none
+		sourceColumn: Cuentas Generales_2
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isText":true}
+
+	column 'Cuentas Generales_3'
+		dataType: string
+		lineageTag: 8ab1984d-aa20-47b4-a58b-3140c347ac8b
+		summarizeBy: none
+		sourceColumn: Cuentas Generales_3
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isText":true}
+
+	column 'Cuentas Generales_4'
+		dataType: string
+		lineageTag: 6eab11bb-01e2-4797-a781-04c712150261
+		summarizeBy: none
+		sourceColumn: Cuentas Generales_4
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isText":true}
+
+	column 'Cuentas Generales_5'
+		dataType: string
+		lineageTag: f29f418a-22f1-40dd-b0d2-4b7f7991f4e6
+		summarizeBy: none
+		sourceColumn: Cuentas Generales_5
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isText":true}
+
+	column 'Cuentas Generales_6'
+		dataType: string
+		lineageTag: 14b13da4-8dc8-4a38-b5ea-6c82251d7fcc
+		summarizeBy: none
+		sourceColumn: Cuentas Generales_6
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isText":true}
+
+	column 'Cuentas Generales_7'
+		dataType: string
+		lineageTag: 9d62f281-4269-40d3-ae3b-d59426e26102
+		summarizeBy: none
+		sourceColumn: Cuentas Generales_7
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isText":true}
+
+	column 'Cuentas Generales_8'
+		dataType: string
+		lineageTag: 5d070477-ddab-445b-84e8-ab6a803d358e
+		summarizeBy: none
+		sourceColumn: Cuentas Generales_8
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isText":true}
+
+	column 'Cuentas Generales_9'
+		dataType: string
+		lineageTag: 42ed0257-4fca-4c0d-9e32-31ebe17836d4
+		summarizeBy: none
+		sourceColumn: Cuentas Generales_9
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isText":true}
+
+	column Distribucion
+		dataType: string
+		lineageTag: f0555d6d-5a50-4757-81ba-67a40a63c94d
+		summarizeBy: none
+		sourceColumn: Distribucion
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isText":true}
+
+	column CodigoEje_0
+		dataType: string
+		lineageTag: c0ebbf00-d836-4afe-b9f7-1e1ba3d32d2f
+		summarizeBy: none
+		sourceColumn: CodigoEje_0
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isText":true}
+
+	column CodigoEje_1
+		dataType: string
+		lineageTag: 584f26aa-13a7-4feb-80cc-35d22d799d9d
+		summarizeBy: none
+		sourceColumn: CodigoEje_1
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isText":true}
+
+	column CodigoEje_2
+		dataType: string
+		lineageTag: 2b806981-37bf-49cf-8686-e2090b72b91a
+		summarizeBy: none
+		sourceColumn: CodigoEje_2
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isText":true}
+
+	column CodigoEje_3
+		dataType: string
+		lineageTag: ce7cb7b9-1ad1-4a45-93d6-fdff4d10719b
+		summarizeBy: none
+		sourceColumn: CodigoEje_3
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isText":true}
+
+	column CodigoEje_4
+		dataType: string
+		lineageTag: 6dc0d84b-4b15-4347-b26b-6361ab17c160
+		summarizeBy: none
+		sourceColumn: CodigoEje_4
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isText":true}
+
+	column CodigoEje_5
+		dataType: string
+		lineageTag: d4c546c5-0105-4fb6-baa7-37b0a5953f6b
+		summarizeBy: none
+		sourceColumn: CodigoEje_5
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isText":true}
+
+	column CodigoEje_6
+		dataType: string
+		lineageTag: 8ef42abe-de10-4e15-9403-1fa69d8f70db
+		summarizeBy: none
+		sourceColumn: CodigoEje_6
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isText":true}
+
+	column CodigoEje_7
+		dataType: string
+		lineageTag: 930fb230-cf09-475e-80fb-186cb883892a
+		summarizeBy: none
+		sourceColumn: CodigoEje_7
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isText":true}
+
+	column CodigoEje_8
+		dataType: string
+		lineageTag: 2b57217b-9eb6-4c70-8640-a24200665905
+		summarizeBy: none
+		sourceColumn: CodigoEje_8
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isText":true}
+
+	column CodigoEje_9
+		dataType: string
+		lineageTag: 421a895e-6055-4bdb-b357-918382ffa731
+		summarizeBy: none
+		sourceColumn: CodigoEje_9
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isText":true}
+
+	column CodigoEje_10
+		dataType: string
+		lineageTag: b4387fc1-5712-44bf-b637-9f35ec75389c
+		summarizeBy: none
+		sourceColumn: CodigoEje_10
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isText":true}
+
+	column CodigoEje_11
+		dataType: string
+		lineageTag: 014ddb9c-7681-412c-a557-c52433199949
+		summarizeBy: none
+		sourceColumn: CodigoEje_11
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isText":true}
+
+	column CodigoEje_12
+		dataType: string
+		lineageTag: 0b7151c6-c9d5-4117-9918-0ee1bbecdb6b
+		summarizeBy: none
+		sourceColumn: CodigoEje_12
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isText":true}
+
+	column CodigoEje_13
+		dataType: string
+		lineageTag: b7d0bcf0-cf03-4dbe-aefd-d7ebd89a7832
+		summarizeBy: none
+		sourceColumn: CodigoEje_13
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isText":true}
+
+	column CodigoEje_14
+		dataType: string
+		lineageTag: 7a55015f-afe3-4b45-81c7-034017ce35ea
+		summarizeBy: none
+		sourceColumn: CodigoEje_14
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isText":true}
+
+	column CodigoEje_15
+		dataType: string
+		lineageTag: c66a1f69-ac82-48bb-96ce-6b51016dc640
+		summarizeBy: none
+		sourceColumn: CodigoEje_15
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isText":true}
+
+	column CodigoEje_16
+		dataType: string
+		lineageTag: 9441ee31-6446-4f53-af83-af4c6f4ffd91
+		summarizeBy: none
+		sourceColumn: CodigoEje_16
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isText":true}
+
+	column CodigoEje_17
+		dataType: string
+		lineageTag: cb79f3eb-f35e-4dda-b3b4-0a0bf153de18
+		summarizeBy: none
+		sourceColumn: CodigoEje_17
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isText":true}
+
+	column CodigoEje_18
+		dataType: string
+		lineageTag: 76bb95fb-2b25-44c1-86e2-42481634d6ae
+		summarizeBy: none
+		sourceColumn: CodigoEje_18
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isText":true}
+
+	column CodigoEje_19
+		dataType: string
+		lineageTag: 44e2883d-61ae-4f8a-9a69-668ce73a9a6e
+		summarizeBy: none
+		sourceColumn: CodigoEje_19
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isText":true}
+
+	column 'Seccion Analitica_0'
+		dataType: string
+		lineageTag: 9df22c51-18cf-4d3b-8276-24f43d6d780f
+		summarizeBy: none
+		sourceColumn: Seccion Analitica_0
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isText":true}
+
+	column 'Seccion Analitica_1'
+		dataType: string
+		lineageTag: c5f6d096-81a9-444c-a44d-7088c5d47c58
+		summarizeBy: none
+		sourceColumn: Seccion Analitica_1
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isText":true}
+
+	column 'Seccion Analitica_2'
+		dataType: string
+		lineageTag: 052a7a0b-173e-488c-a887-60a31f5a2b3e
+		summarizeBy: none
+		sourceColumn: Seccion Analitica_2
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isText":true}
+
+	column 'Seccion Analitica_3'
+		dataType: string
+		lineageTag: 4a635c21-a60f-4329-b49d-e8ede99eb2a6
+		summarizeBy: none
+		sourceColumn: Seccion Analitica_3
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isText":true}
+
+	column 'Seccion Analitica_4'
+		dataType: string
+		lineageTag: 76b1231f-e30f-49d1-9065-52517a25dab7
+		summarizeBy: none
+		sourceColumn: Seccion Analitica_4
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isText":true}
+
+	column 'Seccion Analitica_5'
+		dataType: string
+		lineageTag: fa3019f6-8ce1-4e24-a8c5-af0f1421b913
+		summarizeBy: none
+		sourceColumn: Seccion Analitica_5
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isText":true}
+
+	column 'Seccion Analitica_6'
+		dataType: string
+		lineageTag: 5eb4181b-d232-46b9-9fea-b36c133c57cf
+		summarizeBy: none
+		sourceColumn: Seccion Analitica_6
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isText":true}
+
+	column 'Seccion Analitica_7'
+		dataType: string
+		lineageTag: 798c6acf-570e-4b7d-9aa0-42ae652f8db4
+		summarizeBy: none
+		sourceColumn: Seccion Analitica_7
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isText":true}
+
+	column 'Seccion Analitica_8'
+		dataType: string
+		lineageTag: c2debc79-f020-4158-a9a8-0056befa23ba
+		summarizeBy: none
+		sourceColumn: Seccion Analitica_8
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isText":true}
+
+	column 'Seccion Analitica_9'
+		dataType: string
+		lineageTag: 3f37365c-2362-4a6e-addc-d3d717ea9221
+		summarizeBy: none
+		sourceColumn: Seccion Analitica_9
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isText":true}
+
+	column 'Seccion Analitica_10'
+		dataType: string
+		lineageTag: bc5d3a94-1c8e-48a9-b934-58fcf39d5da3
+		summarizeBy: none
+		sourceColumn: Seccion Analitica_10
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isText":true}
+
+	column 'Seccion Analitica_11'
+		dataType: string
+		lineageTag: 1514d379-85ec-4eb4-82ab-a2b8074c7c0c
+		summarizeBy: none
+		sourceColumn: Seccion Analitica_11
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isText":true}
+
+	column 'Seccion Analitica_12'
+		dataType: string
+		lineageTag: 61b3047e-b6b9-4dc6-a710-e417be3d2f7b
+		summarizeBy: none
+		sourceColumn: Seccion Analitica_12
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isText":true}
+
+	column 'Seccion Analitica_13'
+		dataType: string
+		lineageTag: c3a40959-8499-4148-ac4c-24cb76b1299b
+		summarizeBy: none
+		sourceColumn: Seccion Analitica_13
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isText":true}
+
+	column 'Seccion Analitica_14'
+		dataType: string
+		lineageTag: 932c8fd1-74b2-43f2-a4c7-1897307ac6bf
+		summarizeBy: none
+		sourceColumn: Seccion Analitica_14
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isText":true}
+
+	column 'Seccion Analitica_15'
+		dataType: string
+		lineageTag: 79078843-5f94-4046-985d-33fdd5873ef7
+		summarizeBy: none
+		sourceColumn: Seccion Analitica_15
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isText":true}
+
+	column 'Seccion Analitica_16'
+		dataType: string
+		lineageTag: ad1e91c7-22c1-4ba4-8b26-c8c390ac97d9
+		summarizeBy: none
+		sourceColumn: Seccion Analitica_16
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isText":true}
+
+	column 'Seccion Analitica_17'
+		dataType: string
+		lineageTag: aea9a311-64dc-459d-8e69-72147412c048
+		summarizeBy: none
+		sourceColumn: Seccion Analitica_17
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isText":true}
+
+	column 'Seccion Analitica_18'
+		dataType: string
+		lineageTag: c58fda9f-3e5e-4d75-aa7f-238e6c1bd86f
+		summarizeBy: none
+		sourceColumn: Seccion Analitica_18
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isText":true}
+
+	column 'Seccion Analitica_19'
+		dataType: string
+		lineageTag: de716cbf-b4b6-4625-80c6-2096ef2fa8ba
+		summarizeBy: none
+		sourceColumn: Seccion Analitica_19
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isText":true}
+
+	column 'Unidad Obra_0'
+		dataType: string
+		lineageTag: 9f5d4127-582c-430a-b7c2-a0c595dd94a3
+		summarizeBy: none
+		sourceColumn: Unidad Obra_0
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isText":true}
+
+	column Cantidad
+		dataType: double
+		lineageTag: 07d58818-b690-40e5-a344-7d47a986daeb
+		summarizeBy: sum
+		sourceColumn: Cantidad
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Moneda
+		dataType: string
+		lineageTag: 53ea5218-a62f-4b39-98fa-41479663882c
+		summarizeBy: none
+		sourceColumn: Moneda
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isText":true}
+
+	partition 'Lineas Contables Analiticas-230a389d-a009-4914-846e-c0afae8a9557' = m
+		mode: import
+		source = ```
+				let
+				    CurrentServer = Instancia,
+				    CurrentDatabase = BaseDeDatos,
+				    CurrentSchema = Esquema,
+				    Origen = Sql.Database(CurrentServer, CurrentDatabase, [Query="
+				                                                                SELECT
+				                                                                         [ABRFIC_0]
+				                                                                        ,[VCRTYP_0]
+				                                                                        ,[VCRNUM_0]
+				                                                                        ,[VCRLIN_0]
+				                                                                        ,[VCRSEQ_0]
+				                                                                        ,[CPLCLE_0]
+				                                                                        ,[ANALIG_0]
+				                                                                        ,[LED_0]
+				                                                                        ,[LED_1]
+				                                                                        ,[LED_2]
+				                                                                        ,[LED_3]
+				                                                                        ,[LED_4]
+				                                                                        ,[LED_5]
+				                                                                        ,[LED_6]
+				                                                                        ,[LED_7]
+				                                                                        ,[LED_8]
+				                                                                        ,[LED_9]
+				                                                                        ,[COA_0]
+				                                                                        ,[COA_1]
+				                                                                        ,[COA_2]
+				                                                                        ,[COA_3]
+				                                                                        ,[COA_4]
+				                                                                        ,[COA_5]
+				                                                                        ,[COA_6]
+				                                                                        ,[COA_7]
+				                                                                        ,[COA_8]
+				                                                                        ,[COA_9]
+				                                                                        ,[ACC_0]
+				                                                                        ,[ACC_1]
+				                                                                        ,[ACC_2]
+				                                                                        ,[ACC_3]
+				                                                                        ,[ACC_4]
+				                                                                        ,[ACC_5]
+				                                                                        ,[ACC_6]
+				                                                                        ,[ACC_7]
+				                                                                        ,[ACC_8]
+				                                                                        ,[ACC_9]
+				                                                                        ,[DSP_0]
+				                                                                        ,[DIE_0]
+				                                                                        ,[DIE_1]
+				                                                                        ,[DIE_2]
+				                                                                        ,[DIE_3]
+				                                                                        ,[DIE_4]
+				                                                                        ,[DIE_5]
+				                                                                        ,[DIE_6]
+				                                                                        ,[DIE_7]
+				                                                                        ,[DIE_8]
+				                                                                        ,[DIE_9]
+				                                                                        ,[DIE_10]
+				                                                                        ,[DIE_11]
+				                                                                        ,[DIE_12]
+				                                                                        ,[DIE_13]
+				                                                                        ,[DIE_14]
+				                                                                        ,[DIE_15]
+				                                                                        ,[DIE_16]
+				                                                                        ,[DIE_17]
+				                                                                        ,[DIE_18]
+				                                                                        ,[DIE_19]
+				                                                                        ,[CCE_0]
+				                                                                        ,[CCE_1]
+				                                                                        ,[CCE_2]
+				                                                                        ,[CCE_3]
+				                                                                        ,[CCE_4]
+				                                                                        ,[CCE_5]
+				                                                                        ,[CCE_6]
+				                                                                        ,[CCE_7]
+				                                                                        ,[CCE_8]
+				                                                                        ,[CCE_9]
+				                                                                        ,[CCE_10]
+				                                                                        ,[CCE_11]
+				                                                                        ,[CCE_12]
+				                                                                        ,[CCE_13]
+				                                                                        ,[CCE_14]
+				                                                                        ,[CCE_15]
+				                                                                        ,[CCE_16]
+				                                                                        ,[CCE_17]
+				                                                                        ,[CCE_18]
+				                                                                        ,[CCE_19]
+				                                                                        ,[GLU_0]
+				                                                                        ,[QTY_0]
+				                                                                        ,[CUR_0]
+				                                                                FROM "&CurrentSchema&".[CPTANALIN] where ABRFIC_0 like 'PID'"
+				                                                          ]),
+				    #"Columnas con nombre cambiado" = Table.RenameColumns(Origen,{{"ABRFIC_0", "Tabla"}, {"VCRNUM_0", "Documento"}, {"VCRLIN_0", "Linea"}, {"VCRSEQ_0", "Secuencia"}, {"CPLCLE_0", "Complemento Clave"}, {"ANALIG_0", "Numero Orden"}, {"LED_0", "Referencial_0"}, {"LED_1", "Referencial_1"}, {"LED_2", "Referencial_2"}, {"LED_3", "Referencial_3"}, {"LED_4", "Referencial_4"}, {"LED_5", "Referencial_5"}, {"LED_6", "Referencial_6"}, {"LED_7", "Referencial_7"}, {"LED_8", "Referencial_8"}, {"LED_9", "Referencial_9"}, {"COA_0", "CodigoPlan_0"}, {"COA_1", "CodigoPlan_1"}, {"COA_2", "CodigoPlan_2"}, {"COA_3", "CodigoPlan_3"}, {"COA_4", "CodigoPlan_4"}, {"COA_5", "CodigoPlan_5"}, {"COA_6", "CodigoPlan_6"}, {"COA_7", "CodigoPlan_7"}, {"COA_8", "CodigoPlan_8"}, {"COA_9", "CodigoPlan_9"}, {"ACC_0", "Cuentas Generales_0"}, {"ACC_1", "Cuentas Generales_1"}, {"ACC_2", "Cuentas Generales_2"}, {"ACC_3", "Cuentas Generales_3"}, {"ACC_4", "Cuentas Generales_4"}, {"ACC_5", "Cuentas Generales_5"}, {"ACC_6", "Cuentas Generales_6"}, {"ACC_7", "Cuentas Generales_7"}, {"ACC_8", "Cuentas Generales_8"}, {"ACC_9", "Cuentas Generales_9"}, {"DSP_0", "Distribucion"}, {"DIE_0", "CodigoEje_0"}, {"DIE_1", "CodigoEje_1"}, {"DIE_2", "CodigoEje_2"}, {"DIE_3", "CodigoEje_3"}, {"DIE_4", "CodigoEje_4"}, {"DIE_5", "CodigoEje_5"}, {"DIE_6", "CodigoEje_6"}, {"DIE_7", "CodigoEje_7"}, {"DIE_8", "CodigoEje_8"}, {"DIE_9", "CodigoEje_9"}, {"DIE_10", "CodigoEje_10"}, {"DIE_11", "CodigoEje_11"}, {"DIE_12", "CodigoEje_12"}, {"DIE_13", "CodigoEje_13"}, {"DIE_14", "CodigoEje_14"}, {"DIE_15", "CodigoEje_15"}, {"DIE_16", "CodigoEje_16"}, {"DIE_17", "CodigoEje_17"}, {"DIE_18", "CodigoEje_18"}, {"DIE_19", "CodigoEje_19"}, {"CCE_0", "Seccion Analitica_0"}, {"CCE_1", "Seccion Analitica_1"}, {"CCE_2", "Seccion Analitica_2"}, {"CCE_3", "Seccion Analitica_3"}, {"CCE_4", "Seccion Analitica_4"}, {"CCE_5", "Seccion Analitica_5"}, {"CCE_6", "Seccion Analitica_6"}, {"CCE_7", "Seccion Analitica_7"}, {"CCE_8", "Seccion Analitica_8"}, {"CCE_9", "Seccion Analitica_9"}, {"CCE_10", "Seccion Analitica_10"}, {"CCE_11", "Seccion Analitica_11"}, {"CCE_12", "Seccion Analitica_12"}, {"CCE_13", "Seccion Analitica_13"}, {"CCE_14", "Seccion Analitica_14"}, {"CCE_15", "Seccion Analitica_15"}, {"CCE_16", "Seccion Analitica_16"}, {"CCE_17", "Seccion Analitica_17"}, {"CCE_18", "Seccion Analitica_18"}, {"CCE_19", "Seccion Analitica_19"}, {"GLU_0", "Unidad Obra_0"}, {"QTY_0", "Cantidad"}, {"CUR_0", "Moneda"}}),
+				    #"Personalizada agregada" = Table.AddColumn(#"Columnas con nombre cambiado", "DocumentoLinea", each [Documento] & "-" & Number.ToText([Linea])),
+				    #"Columnas reordenadas" = Table.ReorderColumns(#"Personalizada agregada",{"DocumentoLinea", "Tabla", "VCRTYP_0", "Documento", "Linea", "Secuencia", "Complemento Clave", "Numero Orden", "Referencial_0", "Referencial_1", "Referencial_2", "Referencial_3", "Referencial_4", "Referencial_5", "Referencial_6", "Referencial_7", "Referencial_8", "Referencial_9", "CodigoPlan_0", "CodigoPlan_1", "CodigoPlan_2", "CodigoPlan_3", "CodigoPlan_4", "CodigoPlan_5", "CodigoPlan_6", "CodigoPlan_7", "CodigoPlan_8", "CodigoPlan_9", "Cuentas Generales_0", "Cuentas Generales_1", "Cuentas Generales_2", "Cuentas Generales_3", "Cuentas Generales_4", "Cuentas Generales_5", "Cuentas Generales_6", "Cuentas Generales_7", "Cuentas Generales_8", "Cuentas Generales_9", "Distribucion", "CodigoEje_0", "CodigoEje_1", "CodigoEje_2", "CodigoEje_3", "CodigoEje_4", "CodigoEje_5", "CodigoEje_6", "CodigoEje_7", "CodigoEje_8", "CodigoEje_9", "CodigoEje_10", "CodigoEje_11", "CodigoEje_12", "CodigoEje_13", "CodigoEje_14", "CodigoEje_15", "CodigoEje_16", "CodigoEje_17", "CodigoEje_18", "CodigoEje_19", "Seccion Analitica_0", "Seccion Analitica_1", "Seccion Analitica_2", "Seccion Analitica_3", "Seccion Analitica_4", "Seccion Analitica_5", "Seccion Analitica_6", "Seccion Analitica_7", "Seccion Analitica_8", "Seccion Analitica_9", "Seccion Analitica_10", "Seccion Analitica_11", "Seccion Analitica_12", "Seccion Analitica_13", "Seccion Analitica_14", "Seccion Analitica_15", "Seccion Analitica_16", "Seccion Analitica_17", "Seccion Analitica_18", "Seccion Analitica_19", "Unidad Obra_0", "Cantidad", "Moneda"})
+				    
+				in
+				    #"Columnas reordenadas"
+				```
+
+	annotation PBI_ResultType = Table
+

@@ -1,0 +1,30 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/page/2.0.0/schema.json",
+  "name": "ReportSection",
+  "displayName": "Análisis por Familias",
+  "displayOption": "FitToPage",
+  "height": 720,
+  "width": 1280,
+  "visualInteractions": [
+    {
+      "source": "ec3ccf10c77a39bddc16",
+      "target": "8cfbb183c3707b82e100",
+      "type": "DataFilter"
+    },
+    {
+      "source": "ec3ccf10c77a39bddc16",
+      "target": "5391259188e504c66ac8",
+      "type": "DataFilter"
+    },
+    {
+      "source": "5391259188e504c66ac8",
+      "target": "8cfbb183c3707b82e100",
+      "type": "DataFilter"
+    },
+    {
+      "source": "8cfbb183c3707b82e100",
+      "target": "5391259188e504c66ac8",
+      "type": "DataFilter"
+    }
+  ]
+}

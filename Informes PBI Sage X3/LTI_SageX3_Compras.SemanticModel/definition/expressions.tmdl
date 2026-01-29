@@ -1,0 +1,45 @@
+/// Instancia en la que se encuetra el servidor
+expression Instancia = "10.0.0.16\SAGEX3" meta [IsParameterQuery=true, Type="Text", IsParameterQueryRequired=true]
+	lineageTag: a5184ae6-406f-475c-b2fc-3697719d7289
+	queryGroup: Ayuda
+
+	annotation PBI_ResultType = Text
+
+	annotation PBI_NavigationStepName = Navegación
+
+/// Base de datos donde se encuentra la información de Sage x3
+expression BaseDeDatos = "sagex3v12" meta [IsParameterQuery=true, Type="Text", IsParameterQueryRequired=true]
+	lineageTag: 96eca6c5-25a5-4159-8b51-bf286c61a2d3
+	queryGroup: Ayuda
+
+	annotation PBI_ResultType = Text
+
+	annotation PBI_NavigationStepName = Navegación
+
+/// Esquema de los datos
+expression Esquema = "LASERTECH" meta [IsParameterQuery=true, Type="Text", IsParameterQueryRequired=true]
+	lineageTag: 7bc12684-3eb0-46eb-9cdb-dee6347be560
+	queryGroup: Ayuda
+
+	annotation PBI_ResultType = Text
+
+	annotation PBI_NavigationStepName = Navegación
+
+expression Recurso =
+		let
+		    CurrentServer = Instancia,
+		    CurrentDatabase = BaseDeDatos,
+		    CurrentSchema = Esquema,
+		    Origen = Sql.Database(CurrentServer, CurrentDatabase, [Query="
+		                                                                SELECT
+		                                                                        *
+		                                                                FROM "&CurrentSchema&".CACCE WHERE DIE_0='REC'"
+		                                                          ])
+		in
+		    Origen
+	lineageTag: 70ba99f8-0711-4b0a-9a06-4cf2a7dc2987
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

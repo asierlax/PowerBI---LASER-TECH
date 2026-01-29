@@ -1,0 +1,30 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/page/2.0.0/schema.json",
+  "name": "ReportSectionc74630bfd2417cb18670",
+  "displayName": "Compras por Línea de Negocio",
+  "displayOption": "FitToPage",
+  "height": 720,
+  "width": 1280,
+  "visualInteractions": [
+    {
+      "source": "2195ef8e64174205c018",
+      "target": "15ab01901fe53ac2e5ba",
+      "type": "DataFilter"
+    },
+    {
+      "source": "15ab01901fe53ac2e5ba",
+      "target": "2195ef8e64174205c018",
+      "type": "DataFilter"
+    },
+    {
+      "source": "2d619d2310243b6a9995",
+      "target": "2195ef8e64174205c018",
+      "type": "DataFilter"
+    },
+    {
+      "source": "2d619d2310243b6a9995",
+      "target": "15ab01901fe53ac2e5ba",
+      "type": "DataFilter"
+    }
+  ]
+}

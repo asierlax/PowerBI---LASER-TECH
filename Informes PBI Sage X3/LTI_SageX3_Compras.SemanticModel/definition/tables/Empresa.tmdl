@@ -1,0 +1,120 @@
+table Empresa
+	lineageTag: c891fb5c-310c-4c83-8912-6eb73c8f7084
+
+	column IdDireccion
+		dataType: string
+		lineageTag: 92c8f0e3-6085-47f9-aaf9-914d04ef24e5
+		summarizeBy: none
+		sourceColumn: IdDireccion
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isText":true}
+
+	column Empresa
+		dataType: string
+		lineageTag: 221de0fd-e38d-4081-ba45-70ce19c7e90a
+		summarizeBy: none
+		sourceColumn: Empresa
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isText":true}
+
+	column 'Nombre Empresa'
+		dataType: string
+		lineageTag: ea6733c0-a116-4436-aeb4-1a05ffc9d0ba
+		summarizeBy: none
+		sourceColumn: Nombre Empresa
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isText":true}
+
+	column Direccion
+		dataType: string
+		lineageTag: ea00fb9d-f981-4083-9059-5cbec98a03c7
+		summarizeBy: none
+		sourceColumn: Direccion
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isText":true}
+
+	column 'Sociedad Juridica'
+		dataType: int64
+		formatString: 0
+		lineageTag: 11a87ba2-53aa-458e-a1cb-a7fcb0f8788b
+		summarizeBy: none
+		sourceColumn: Sociedad Juridica
+
+		annotation SummarizationSetBy = Automatic
+
+	column Legislacion
+		dataType: string
+		lineageTag: 8506a57b-7723-439e-8ea4-c91b7a60098d
+		summarizeBy: none
+		sourceColumn: Legislacion
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isText":true}
+
+	column 'Modelo Contable'
+		dataType: string
+		lineageTag: 744820b4-5a37-4183-8bc5-3898cca87d3c
+		summarizeBy: none
+		sourceColumn: Modelo Contable
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isText":true}
+
+	column 'Planta Principal'
+		dataType: string
+		lineageTag: f0218c2a-0079-4d19-b1db-6d900bb33fed
+		summarizeBy: none
+		sourceColumn: Planta Principal
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isText":true}
+
+	column Pais
+		dataType: string
+		lineageTag: 17ab8173-47b9-4b6d-aef8-29fd74d39066
+		summarizeBy: none
+		sourceColumn: Pais
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isText":true}
+
+	partition Empresa-817e30da-cf7b-4367-ad88-22b69a7892b2 = m
+		mode: import
+		source = ```
+				let
+				    CurrentServer = Instancia,
+				    CurrentDatabase = BaseDeDatos,
+				    CurrentSchema = Esquema,
+				    Origen = Sql.Database(CurrentServer, CurrentDatabase, [Query="
+				                                                                SELECT  
+				                                                                     [CPY_0]
+				                                                                    ,[CPYNAM_0]
+				                                                                    ,[BPAADD_0]
+				                                                                    ,[CPYLEGFLG_0]
+				                                                                    ,[LEG_0]
+				                                                                    ,[ACM_0]
+				                                                                    ,[MAIFCY_0]
+				                                                                    ,[CRY_0]   
+				                                                                FROM " & CurrentSchema & ".COMPANY"
+				                                                          ]),
+				    #"Columnas con nombre cambiado" = Table.RenameColumns(Origen,{{"CPY_0", "Empresa"}, {"CPYNAM_0", "Nombre Empresa"}, {"CPYLEGFLG_0", "Sociedad Juridica"}, {"LEG_0", "Legislacion"}, {"ACM_0", "Modelo Contable"}, {"MAIFCY_0", "Planta Principal"}, {"CRY_0", "Pais"}, {"BPAADD_0", "Direccion"}}),
+				    #"Personalizada agregada" = Table.AddColumn(#"Columnas con nombre cambiado", "IdDireccion", each [Empresa]&"-"&[Direccion]),
+				    #"Columnas reordenadas" = Table.ReorderColumns(#"Personalizada agregada",{"IdDireccion", "Empresa", "Nombre Empresa", "Direccion", "Sociedad Juridica", "Legislacion", "Modelo Contable", "Planta Principal", "Pais"})
+				in
+				    #"Columnas reordenadas"
+				```
+
+	annotation PBI_ResultType = Table
+

@@ -1,0 +1,162 @@
+table Metricas
+	lineageTag: 919c610d-b7f0-4d45-a6f4-3139cf630a85
+
+	measure 'Total Compras' = SUMX( 'Factura Compras', 'Factura Compras'[Importe Linea AI]*[Sentido] )
+		formatString: #,0.00\ "€";-#,0.00\ "€";#,0.00\ "€"
+		lineageTag: 2aa08c01-aa5b-462f-98cf-cf4e3805db71
+
+	measure 'Total Compras AA' = CALCULATE([Total Compras], SAMEPERIODLASTYEAR(Fecha[Fecha]))
+		formatString: #,0.00\ "€";-#,0.00\ "€";#,0.00\ "€"
+		lineageTag: 1dae9be3-1827-49d2-b14e-33a8e2096e11
+
+	measure Descuento =
+			
+			var desc1 = SUM('Factura Compras'[Valor Descuento1])
+			var desc2 = SUM('Factura Compras'[Valor Descuento2])
+			var desc3 = SUM('Factura Compras'[Valor Descuento3])
+			return desc1 + desc2 + desc3
+		formatString: #,0.00\ "€";-#,0.00\ "€";#,0.00\ "€"
+		lineageTag: d244f30b-6ada-43db-aedc-43e24326a110
+
+	measure 'Descuento AA' = ```
+			CALCULATE([Descuento], SAMEPERIODLASTYEAR(Fecha[Fecha])) 
+			```
+		lineageTag: 166f38aa-1bb3-4edf-b992-9f8d52655be0
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Compra Neta' = [Total Compras] - [Descuento]
+		formatString: #,0.00\ "€";-#,0.00\ "€";#,0.00\ "€"
+		lineageTag: 4094fd6b-c859-4e72-bc87-82cc5fa828dc
+
+	measure 'Descuento %' = CALCULATE([Descuento] / [Total Compras])
+		formatString: 0.00\ %;-0.00\ %;0.00\ %
+		lineageTag: 67c9c067-38c7-4ddd-bb42-dae7227767e6
+
+	measure 'Compra Neta AA' = ```
+			CALCULATE([Compra Neta], SAMEPERIODLASTYEAR(Fecha[Fecha])) 
+			```
+		lineageTag: 0d76ebc8-16f8-4662-8fd2-9ce614afaefd
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Descuento AA %' = ```
+			CALCULATE([Descuento %], SAMEPERIODLASTYEAR(Fecha[Fecha])) 
+			```
+		formatString: 0.00\ %;-0.00\ %;0.00\ %
+		lineageTag: 7e9b21c2-cdf0-4493-b3b7-dc523e7f4de3
+
+	measure FirstOfDate = FIRSTDATE(Fecha[Fecha])
+		formatString: General Date
+		displayFolder: Ayuda
+		lineageTag: 4fd64a87-a696-4bf3-a838-1680ab5293a6
+
+	measure EndOfDate = LASTDATE(Fecha[Fecha])
+		formatString: General Date
+		displayFolder: Ayuda
+		lineageTag: 944050c5-f7e0-49ce-8657-fe55f2cc4e9e
+
+	measure TXT_Periodo =
+			
+			var ultimaActu = FIRSTDATE(UltimaActualizacion[Fecha])
+			return "Analizando periodo " & [FirstOfDate] & " a " & [EndOfDate] & " | Última actualización: " & ultimaActu
+		displayFolder: Ayuda
+		lineageTag: 9e863212-6348-437e-8a13-0e19ee533a0b
+
+		annotation PBI_FormatHint = {"isText":true}
+
+	measure 'Variación Compras AA' = [Total Compras] - [Total Compras AA]
+		formatString: #,0.00\ "€";-#,0.00\ "€";#,0.00\ "€"
+		lineageTag: a7b0a6ed-0b6c-49c4-871d-e4bbad00d8b5
+
+	measure FechaUltimaCompra = LASTNONBLANK('Factura Compras'[Fecha Contable],'Factura Compras'[Fecha Contable])
+		formatString: dd/mm/yyyy
+		lineageTag: efd69506-36a8-4ca2-a207-2d9eb88a564b
+
+		annotation PBI_FormatHint = {"isDateTimeCustom":true}
+
+	measure NProveedores = DISTINCTCOUNT('Factura Compras'[ProveedorID])
+		formatString: 0
+		lineageTag: 0e148be9-46f6-4fd7-9bbe-4ac6280ba878
+
+	measure 'Frecuencia Media' = DIVIDE(DISTINCTCOUNT('Factura Compras'[ItemID]), [NProveedores], 0)
+		lineageTag: 32c2b0b6-c26b-480b-8f02-dcdb346dde77
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Importe Medio' = DIVIDE([Total Compras],[Total Facturas], 0)
+		formatString: #,0.00\ "€";-#,0.00\ "€";#,0.00\ "€"
+		lineageTag: 2f43fe14-b65d-4d19-932d-023bff0c89c8
+
+	measure FechaPrimeraCompra = FIRSTNONBLANK('Factura Compras'[Fecha Contable],'Factura Compras'[Fecha Contable])
+		formatString: General Date
+		lineageTag: aaec302a-e88e-4dbf-b78f-f77ec6c85bb7
+
+	measure Antiguedad =
+			
+			--var fp = CALCULATE(FIRSTNONBLANK('Facturas a clientes'[Fecha de Orden], 'Facturas a clientes'[Fecha de Orden]), ALL('Facturas a clientes'))
+			DATEDIFF(calculate([FechaPrimeraCompra],all(Fecha[Fecha])), TODAY(), day) / 365.25
+		formatString: 0.0
+		lineageTag: b8c8cc63-48b0-475f-92ea-53d8029d82f5
+
+	measure 'Media Items' = DIVIDE(SUM('Factura Compras'[Cantidad]), DISTINCTCOUNT('Factura Compras'[ItemID]),0)
+		lineageTag: 744e3b8c-0fd4-47b3-a193-e8bedd192568
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Variacion % Total Compras AA' = DIVIDE([Total Compras]-[Total Compras AA],[Total Compras AA])
+		formatString: 0.00\ %;-0.00\ %;0.00\ %
+		lineageTag: d36b5391-88c8-4149-90ed-90c67acbe9e1
+
+	measure 'Total Cantidad' = sum('Factura Compras'[Cantidad])
+		formatString: 0
+		lineageTag: 8aa4f0c0-27f5-482f-8ba3-d4567d135655
+
+		annotation PBI_FormatHint = {"isDecimal":true}
+
+	measure 'Total Cantidad AA' = CALCULATE([Total Cantidad],SAMEPERIODLASTYEAR(Fecha[Fecha]))
+		formatString: 0
+		lineageTag: d09a6a4d-fe6b-4f74-b7ae-438ed32fa03a
+
+		annotation PBI_FormatHint = {"isDecimal":true}
+
+	measure 'Variacion TotalCantidad AA' = divide([Total Cantidad] - [Total Cantidad AA],[Total Cantidad AA])
+		formatString: 0.00\ %;-0.00\ %;0.00\ %
+		lineageTag: 8fb20ef0-88c9-4421-993e-9dcaa5979b5b
+
+	measure 'Total Facturas' = DISTINCTCOUNT('Factura Compras'[Documento])
+		formatString: 0
+		lineageTag: df1629c5-52be-4a1d-96e4-6a778b47ac7a
+
+	measure 'Total Facturas AA' = calculate([Total Facturas],SAMEPERIODLASTYEAR(Fecha[Fecha]))
+		formatString: 0
+		lineageTag: 7d41a519-8a27-45da-9a53-fd381522a21e
+
+	measure 'Variación FacturasTotal AA' = DIVIDE([Total Facturas] - [Total Facturas AA],[Total Facturas AA])
+		formatString: 0.00\ %;-0.00\ %;0.00\ %
+		lineageTag: 0b312ddf-c524-488a-8251-f0dde328ea3d
+
+	measure 'Variacion CompraNeta AA' = DIVIDE([Compra Neta]-[Compra Neta AA],[Compra Neta AA])
+		formatString: 0.00\ %;-0.00\ %;0.00\ %
+		lineageTag: 5fab7f9e-2582-4e80-9064-84ff95d106c9
+
+	measure 'Variacion Descuento % AA' = [Descuento %]-[Descuento AA %]
+		formatString: 0.00\ %;-0.00\ %;0.00\ %
+		lineageTag: bdef5df8-ea1d-416b-9bb6-b36b6ac3e7d0
+
+	measure 'Variacion Descuento AA' = DIVIDE([Descuento]-[Descuento AA],[Descuento AA])
+		formatString: 0.00\ %;-0.00\ %;0.00\ %
+		lineageTag: 3da3f035-627c-4a6e-af28-f4666e306d6a
+
+	partition Metricas-f6c63909-fea0-42bb-accd-c4ede5072810 = m
+		mode: import
+		source =
+				let
+				    Origen = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText("i44FAA==", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type nullable text) meta [Serialized.Text = true]) in type table [Columna1 = _t]),
+				    #"Tipo cambiado" = Table.TransformColumnTypes(Origen,{{"Columna1", type text}}),
+				    #"Columnas quitadas" = Table.RemoveColumns(#"Tipo cambiado",{"Columna1"})
+				in
+				    #"Columnas quitadas"
+
+	annotation PBI_ResultType = Table
+

@@ -1,0 +1,50 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/page/2.0.0/schema.json",
+  "name": "ReportSectionb06fd5fb00bd841e3221",
+  "displayName": "Inicio",
+  "displayOption": "FitToPage",
+  "height": 720,
+  "width": 1280,
+  "visualInteractions": [
+    {
+      "source": "8d06efc7cae9ada774e9",
+      "target": "06f855be504a30498258",
+      "type": "DataFilter"
+    },
+    {
+      "source": "06f855be504a30498258",
+      "target": "8d06efc7cae9ada774e9",
+      "type": "DataFilter"
+    },
+    {
+      "source": "cce7b4f60adc68302103",
+      "target": "8d06efc7cae9ada774e9",
+      "type": "DataFilter"
+    },
+    {
+      "source": "cce7b4f60adc68302103",
+      "target": "06f855be504a30498258",
+      "type": "DataFilter"
+    },
+    {
+      "source": "2d3f6e3e7b67863e5d73",
+      "target": "06f855be504a30498258",
+      "type": "DataFilter"
+    },
+    {
+      "source": "2d3f6e3e7b67863e5d73",
+      "target": "8d06efc7cae9ada774e9",
+      "type": "DataFilter"
+    },
+    {
+      "source": "ddf141169d5760851040",
+      "target": "06f855be504a30498258",
+      "type": "DataFilter"
+    },
+    {
+      "source": "ddf141169d5760851040",
+      "target": "8d06efc7cae9ada774e9",
+      "type": "DataFilter"
+    }
+  ]
+}
