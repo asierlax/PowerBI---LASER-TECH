@@ -11,283 +11,206 @@ table Direccion
 
 		annotation PBI_FormatHint = {"isText":true}
 
-	column 'Tipo Entidad'
+	column 'Tipo dir'
 		dataType: int64
 		formatString: 0
-		lineageTag: 7b70b012-6769-4c67-b340-1e6bed7b0f84
+		lineageTag: 117f4250-9154-45f0-91aa-8431a3f6dcf2
 		summarizeBy: sum
-		sourceColumn: Tipo Entidad
+		sourceColumn: Tipo dir
 
 		annotation SummarizationSetBy = Automatic
 
-	column Entidad
+	column IdTercero
 		dataType: string
-		lineageTag: b6238580-9b06-426e-9078-63453ff63d70
+		lineageTag: 37b8e322-54b7-4b87-a31a-b35775d2e4f5
 		summarizeBy: none
-		sourceColumn: Entidad
+		sourceColumn: IdTercero
 
 		annotation SummarizationSetBy = Automatic
 
-		annotation PBI_FormatHint = {"isText":true}
-
-	column Direccion
+	column CodDireccion
 		dataType: string
-		lineageTag: b0d09d3b-4b80-4df8-9410-e5e7f0f2a2f1
+		lineageTag: 8dea742e-6cec-4b46-9dd9-034c679fc697
 		summarizeBy: none
-		sourceColumn: Direccion
+		sourceColumn: CodDireccion
 
 		annotation SummarizationSetBy = Automatic
-
-		annotation PBI_FormatHint = {"isText":true}
 
 	column Descripcion
 		dataType: string
-		lineageTag: 32622f8a-af22-4481-987c-75a2e03817a7
+		lineageTag: f9914230-317a-4083-9a14-8edaf603bc5c
 		summarizeBy: none
 		sourceColumn: Descripcion
 
 		annotation SummarizationSetBy = Automatic
 
-		annotation PBI_FormatHint = {"isText":true}
-
-	column 'Linea Direcion'
+	column 'Direccion linea 1'
 		dataType: string
-		lineageTag: f677bcc7-55b5-4b2c-97cb-8b8c35c15f27
+		lineageTag: b5ee7140-0454-4b23-9b60-079b68e242a2
 		summarizeBy: none
-		sourceColumn: Linea Direcion
+		sourceColumn: Direccion linea 1
 
 		annotation SummarizationSetBy = Automatic
 
-		annotation PBI_FormatHint = {"isText":true}
-
-	column 'Linea Direcion 1'
+	column 'Direccion linea 2'
 		dataType: string
-		lineageTag: 1a163533-00f1-4389-a59e-bab559a171e5
+		lineageTag: 362925f8-1c21-4d05-b555-8eac41686f14
 		summarizeBy: none
-		sourceColumn: Linea Direcion 1
+		sourceColumn: Direccion linea 2
 
 		annotation SummarizationSetBy = Automatic
 
-		annotation PBI_FormatHint = {"isText":true}
-
-	column 'Linea Direcion 2'
+	column 'Direccion linea 3'
 		dataType: string
-		lineageTag: 1fda0ccf-fb59-4c2b-89ff-bcb8a5dbd397
+		lineageTag: 8453e7e6-08a7-4e51-a51a-dd5c0c76ee09
 		summarizeBy: none
-		sourceColumn: Linea Direcion 2
+		sourceColumn: Direccion linea 3
 
 		annotation SummarizationSetBy = Automatic
 
-		annotation PBI_FormatHint = {"isText":true}
-
-	column 'Codigo Postal'
+	column 'Codigo postal'
 		dataType: string
-		lineageTag: 1c54e0e2-906d-4d0b-b9e8-e45a1949b226
+		lineageTag: f2c480c9-877a-460d-a8da-b2f715faf090
 		summarizeBy: none
-		sourceColumn: Codigo Postal
+		sourceColumn: Codigo postal
 
 		annotation SummarizationSetBy = Automatic
-
-		annotation PBI_FormatHint = {"isText":true}
 
 	column Ciudad
 		dataType: string
-		lineageTag: 1e90b38c-2be5-49f5-bb47-69620636fd09
+		lineageTag: 8601823c-7351-49b5-a804-999f7844e2da
 		summarizeBy: none
 		sourceColumn: Ciudad
 
 		annotation SummarizationSetBy = Automatic
 
-		annotation PBI_FormatHint = {"isText":true}
-
 	column Provincia
 		dataType: string
-		lineageTag: 74d02e85-ad6a-4769-961a-ac4cb19b2c4f
+		lineageTag: 7c25b04a-fa00-4887-ba81-197aa50dce6d
 		summarizeBy: none
 		sourceColumn: Provincia
 
 		annotation SummarizationSetBy = Automatic
 
-		annotation PBI_FormatHint = {"isText":true}
-
 	column Pais
 		dataType: string
-		lineageTag: 90504853-3ae1-46ee-a4bd-d94431743135
+		lineageTag: 2fb66942-53de-4f9a-aef1-1ba736f0b388
 		summarizeBy: none
 		sourceColumn: Pais
 
 		annotation SummarizationSetBy = Automatic
 
-		annotation PBI_FormatHint = {"isText":true}
-
 	column 'Nombre Pais'
 		dataType: string
-		lineageTag: d78613e1-2a29-4cf1-a666-57eb706a1769
+		lineageTag: 3fd4dbe4-61df-4720-a754-680da7ab507e
 		summarizeBy: none
 		sourceColumn: Nombre Pais
 
 		annotation SummarizationSetBy = Automatic
 
-		annotation PBI_FormatHint = {"isText":true}
-
 	column 'Telefono 1'
 		dataType: string
-		lineageTag: 2cd66d12-4abf-43e0-bf9b-93aa18c484a6
+		lineageTag: 7d458208-bcac-4e5a-9090-ab098f2ecba7
 		summarizeBy: none
 		sourceColumn: Telefono 1
 
 		annotation SummarizationSetBy = Automatic
 
-		annotation PBI_FormatHint = {"isText":true}
-
 	column 'Telefono 2'
 		dataType: string
-		lineageTag: eb6fd62e-a425-453e-a739-3bdaf54ea196
+		lineageTag: b70e0417-57a0-4fe4-9e62-27146ea2701c
 		summarizeBy: none
 		sourceColumn: Telefono 2
 
 		annotation SummarizationSetBy = Automatic
 
-		annotation PBI_FormatHint = {"isText":true}
-
 	column 'Telefono 3'
 		dataType: string
-		lineageTag: 77e45a20-42d7-446c-8e46-6441ba9c5c8c
+		lineageTag: 0ea2ca75-cbfd-447d-bd0a-949e59948f5b
 		summarizeBy: none
 		sourceColumn: Telefono 3
 
 		annotation SummarizationSetBy = Automatic
 
-		annotation PBI_FormatHint = {"isText":true}
-
 	column 'Telefono 4'
 		dataType: string
-		lineageTag: b74aee86-08b9-4321-a4ec-ceef57abfb59
+		lineageTag: 52faddbd-f169-4377-bc7b-180f8f1e10e5
 		summarizeBy: none
 		sourceColumn: Telefono 4
 
 		annotation SummarizationSetBy = Automatic
 
-		annotation PBI_FormatHint = {"isText":true}
-
 	column 'Telefono 5'
 		dataType: string
-		lineageTag: 62822fab-5d00-4395-a22d-1510c47651d3
+		lineageTag: 464a706f-824e-46b4-a40a-8ef2a33ca0b9
 		summarizeBy: none
 		sourceColumn: Telefono 5
 
 		annotation SummarizationSetBy = Automatic
 
-		annotation PBI_FormatHint = {"isText":true}
-
 	column Fax
 		dataType: string
-		lineageTag: 6da97a8e-b2df-4952-841f-5b636927c0ee
+		lineageTag: ca2975f6-6869-459f-b7fd-f43fc37c73a0
 		summarizeBy: none
 		sourceColumn: Fax
 
 		annotation SummarizationSetBy = Automatic
 
-		annotation PBI_FormatHint = {"isText":true}
-
 	column Movil
 		dataType: string
-		lineageTag: 8368908e-0fe1-4615-840d-a37cdf5b1ef9
+		lineageTag: fc54d3eb-28ef-464b-abe6-2cfc13420b1f
 		summarizeBy: none
 		sourceColumn: Movil
 
 		annotation SummarizationSetBy = Automatic
 
-		annotation PBI_FormatHint = {"isText":true}
-
-	column 'Correo 1'
+	column 'Email 1'
 		dataType: string
-		lineageTag: b02f9a6c-e83b-46b0-9421-ab8b3d31130c
+		lineageTag: 7dd11b61-c8df-482b-b191-51177e6d0376
 		summarizeBy: none
-		sourceColumn: Correo 1
+		sourceColumn: Email 1
 
 		annotation SummarizationSetBy = Automatic
 
-		annotation PBI_FormatHint = {"isText":true}
-
-	column 'Correo 2'
+	column 'Email 2'
 		dataType: string
-		lineageTag: 45b90562-ae42-4c0a-a1e7-057d844266d4
+		lineageTag: 17b06919-5560-4611-a3b0-5edc9e8f3b8d
 		summarizeBy: none
-		sourceColumn: Correo 2
+		sourceColumn: Email 2
 
 		annotation SummarizationSetBy = Automatic
 
-		annotation PBI_FormatHint = {"isText":true}
-
-	column 'Correo 3'
+	column 'Email 3'
 		dataType: string
-		lineageTag: 1321794d-b299-48b7-a3e5-d0a48778b049
+		lineageTag: 3e92564d-21dd-4efa-8f1d-1490d7223c5d
 		summarizeBy: none
-		sourceColumn: Correo 3
+		sourceColumn: Email 3
 
 		annotation SummarizationSetBy = Automatic
 
-		annotation PBI_FormatHint = {"isText":true}
-
-	column 'Correo 4'
+	column 'Email 4'
 		dataType: string
-		lineageTag: ebe7b4ee-fed8-4c60-ac33-887f2a53a6b5
+		lineageTag: 586bf59a-e80f-4bd1-8428-322735a8a956
 		summarizeBy: none
-		sourceColumn: Correo 4
+		sourceColumn: Email 4
 
 		annotation SummarizationSetBy = Automatic
 
-		annotation PBI_FormatHint = {"isText":true}
-
-	column 'Correo 5'
+	column 'Email 5'
 		dataType: string
-		lineageTag: 2fedd798-67e9-4b0a-9888-6ddd00a16dc8
+		lineageTag: cd5c389f-2d6f-47d2-b592-56b2ae0b350d
 		summarizeBy: none
-		sourceColumn: Correo 5
+		sourceColumn: Email 5
 
 		annotation SummarizationSetBy = Automatic
 
-		annotation PBI_FormatHint = {"isText":true}
-
-	column 'Sitio Web'
+	column 'Sitio web'
 		dataType: string
-		lineageTag: 9188f5a0-3833-48e7-a33b-464d237da5f2
+		lineageTag: f608fd80-c03a-4765-9b50-60808c051db6
 		summarizeBy: none
-		sourceColumn: Sitio Web
+		sourceColumn: Sitio web
 
 		annotation SummarizationSetBy = Automatic
-
-		annotation PBI_FormatHint = {"isText":true}
-
-	column 'Provincia Nombre'
-		dataType: string
-		lineageTag: f894daca-ae3f-44e6-84d0-d136ac33d35f
-		summarizeBy: none
-		sourceColumn: Provincia Nombre
-
-		annotation SummarizationSetBy = Automatic
-
-		annotation PBI_FormatHint = {"isText":true}
-
-	hierarchy 'Pais Hierarchy'
-		lineageTag: cffea85b-633d-4d65-97ca-036221f06b20
-
-		level 'Nombre Pais'
-			lineageTag: ac2185e4-ad0b-4042-b385-9f61231c79c6
-			column: 'Nombre Pais'
-
-		level Pais
-			lineageTag: 2c926754-06ab-4d61-846d-09847a797d82
-			column: Pais
-
-		level Provincia
-			lineageTag: f2ce99eb-ea67-4ca4-9427-f2a5c85d78bc
-			column: Provincia
-
-		level Ciudad
-			lineageTag: 2c6bedba-e5a7-4174-94ad-a00347f02184
-			column: Ciudad
 
 	partition Direccion-57074845-8b5f-4a4d-9876-d5f2ef4b0d37 = m
 		mode: import
@@ -297,44 +220,41 @@ table Direccion
 				    CurrentDatabase = BaseDeDatos,
 				    CurrentSchema = Esquema,
 				    Origen = Sql.Database(CurrentServer, CurrentDatabase, [Query="
-				                                                                SELECT  distinct
-				                                                                         [BPATYP_0]
-				                                                                        ,[BPANUM_0]
-				                                                                        ,[BPAADD_0]
-				                                                                        ,[BPADES_0]
-				                                                                        ,[BPAADDLIG_0]
-				                                                                        ,[BPAADDLIG_1]
-				                                                                        ,[BPAADDLIG_2]
-				                                                                        ,[POSCOD_0]
-				                                                                        ,[CTY_0]
-				                                                                        ,[SAT_0]
-				                                                                        ,ADR.[CRY_0]
-				                                                                        ,[CRYNAM_0]
-				                                                                        ,[TEL_0]
-				                                                                        ,[TEL_1]
-				                                                                        ,[TEL_2]
-				                                                                        ,[TEL_3]
-				                                                                        ,[TEL_4]
-				                                                                        ,[FAX_0]
-				                                                                        ,[MOB_0]
-				                                                                        ,[WEB_0]
-				                                                                        ,[WEB_1]
-				                                                                        ,[WEB_2]
-				                                                                        ,[WEB_3]
-				                                                                        ,[WEB_4]
-				                                                                        ,[FCYWEB_0]
-				                                                                        ,AXX.TEXTE_0
-				 FROM " & CurrentSchema & ".BPADDRESS ADR 
-				 left join " & CurrentSchema & ".TABSUBDIV TSD on TSD.CRY_0=ADR.CRY_0 and ADR.SAT_0=TSD.COD_0 and TSD.TYP_0 = 3
-				 left join " & CurrentSchema & ".ATEXTRA AXX on (AXX.CODFIC_0 = 'TABSUBDIV' and AXX.ZONE_0 = 'INTIT' and AXX.LANGUE_0 = 'SPA' and AXX.IDENT1_0 = TSD.CRYTYP_0 and AXX.IDENT2_0 = TSD.COD_0)"
-				                                                          ]),
-				    #"Columnas con nombre cambiado" = Table.RenameColumns(Origen,{{"BPATYP_0", "Tipo Entidad"}, {"BPANUM_0", "Entidad"}, {"BPAADD_0", "Direccion"}, {"BPADES_0", "Descripcion"}, {"BPAADDLIG_0", "Linea Direcion"}, {"BPAADDLIG_1", "Linea Direcion 1"}, {"BPAADDLIG_2", "Linea Direcion 2"}, {"POSCOD_0", "Codigo Postal"}, {"CTY_0", "Ciudad"}, {"SAT_0", "Provincia"}, {"CRY_0", "Pais"}, {"CRYNAM_0", "Nombre Pais"}, {"TEL_0", "Telefono 1"}, {"TEL_1", "Telefono 2"}, {"TEL_2", "Telefono 3"}, {"TEL_3", "Telefono 4"}, {"TEL_4", "Telefono 5"}, {"FAX_0", "Fax"}, {"MOB_0", "Movil"}, {"WEB_0", "Correo 1"}, {"WEB_1", "Correo 2"}, {"WEB_2", "Correo 3"}, {"WEB_3", "Correo 4"}, {"WEB_4", "Correo 5"}, {"FCYWEB_0", "Sitio Web"},{"TEXTE_0", "Provincia Nombre"}}),
-				    #"Personalizada agregada" = Table.AddColumn(#"Columnas con nombre cambiado", "IdDireccion", each [Entidad]&"-"&[Direccion]),
-				    #"Columnas reordenadas" = Table.ReorderColumns(#"Personalizada agregada",{"IdDireccion", "Tipo Entidad", "Entidad", "Direccion", "Descripcion", "Linea Direcion", "Linea Direcion 1", "Linea Direcion 2", "Codigo Postal", "Ciudad", "Provincia", "Pais", "Nombre Pais", "Telefono 1", "Telefono 2", "Telefono 3", "Telefono 4", "Telefono 5", "Fax", "Movil", "Correo 1", "Correo 2", "Correo 3", "Correo 4", "Correo 5", "Sitio Web"}),
-				    #"Removed Duplicates" = Table.Distinct(#"Columnas reordenadas", {"IdDireccion"})
+				                                                                SELECT  
+				                                                                BPATYP_0 'Tipo dir',
+				                                                                BPANUM_0 'IdTercero',
+				                                                                BPAADD_0 'CodDireccion',
+				                                                                (BPANUM_0 + '-' + BPAADD_0 + '-' + cast(BPATYP_0 as varchar)) 'IdDireccion',
+				                                                                BPADES_0 'Descripcion',
+				                                                                BPAADDLIG_0 'Direccion linea 1',
+				                                                                BPAADDLIG_1 'Direccion linea 2',
+				                                                                BPAADDLIG_2 'Direccion linea 3',
+				                                                                POSCOD_0 'Codigo postal',
+				                                                                CTY_0 'Ciudad',
+				                                                                SAT_0 'Provincia',
+				                                                                CRY_0 'Pais',
+				                                                                CRYNAM_0 'Nombre Pais',
+				                                                                TEL_0 'Telefono 1',
+				                                                                TEL_1 'Telefono 2',
+				                                                                TEL_2 'Telefono 3',
+				                                                                TEL_3 'Telefono 4',
+				                                                                TEL_4 'Telefono 5',
+				                                                                FAX_0 'Fax',
+				                                                                MOB_0 'Movil',
+				                                                                WEB_0 'Email 1',
+				                                                                WEB_1 'Email 2',
+				                                                                WEB_2 'Email 3',
+				                                                                WEB_3 'Email 4',
+				                                                                WEB_4 'Email 5',
+				                                                                FCYWEB_0 'Sitio web'                                                               
+				                                                                FROM " & CurrentSchema & ".BPADDRESS BPA  
+				                                                                
+				                                                          "])
 				in
-				    #"Removed Duplicates"
+				    #"Origen"
 				```
 
 	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navegación
 

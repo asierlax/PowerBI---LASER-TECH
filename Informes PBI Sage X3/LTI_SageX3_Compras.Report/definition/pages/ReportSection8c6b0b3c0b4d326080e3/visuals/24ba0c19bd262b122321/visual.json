@@ -20,15 +20,15 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Direccion"
+                      "Entity": "Factura Compras"
                     }
                   },
-                  "Property": "Provincia Nombre"
+                  "Property": "Provincia"
                 }
               },
-              "queryRef": "Direccion.Provincia Nombre",
-              "active": true,
-              "displayName": "Provincia"
+              "queryRef": "Factura Compras.Provincia",
+              "nativeQueryRef": "Provincia",
+              "active": true
             }
           ]
         },
@@ -124,5 +124,37 @@
       ]
     },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "0b09812c9a120f63ee32",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Metricas"
+              }
+            },
+            "Property": "Total Compras"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "cf25e4f4ee98043bfe8e",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Factura Compras"
+              }
+            },
+            "Property": "Provincia"
+          }
+        },
+        "type": "Categorical"
+      }
+    ]
   }
 }

@@ -37,10 +37,10 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Items"
+                      "Entity": "Articulos"
                     }
                   },
-                  "Property": "Business Unit"
+                  "Property": "Familia"
                 }
               },
               "queryRef": "Items.Familia",
@@ -51,7 +51,7 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Items"
+                      "Entity": "Articulos"
                     }
                   },
                   "Property": "Descripcion 1"
@@ -66,10 +66,10 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Items"
+                      "Entity": "Articulos"
                     }
                   },
-                  "Property": "Familia"
+                  "Property": "Subfamilia"
                 }
               },
               "queryRef": "Items.Subfamilia",
@@ -113,10 +113,10 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Items"
+                      "Entity": "Articulos"
                     }
                   },
-                  "Property": "Business Unit"
+                  "Property": "Familia"
                 }
               }
             ],
@@ -132,7 +132,7 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Items"
+                      "Entity": "Articulos"
                     }
                   },
                   "Property": "Descripcion 1"
@@ -151,10 +151,10 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Items"
+                      "Entity": "Articulos"
                     }
                   },
-                  "Property": "Familia"
+                  "Property": "Subfamilia"
                 }
               }
             ],

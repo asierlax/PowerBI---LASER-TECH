@@ -67,29 +67,29 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Items"
+                      "Entity": "Articulos"
                     }
                   },
-                  "Property": "Codigo Contable"
+                  "Property": "Categoria"
                 }
               },
-              "queryRef": "Items.Codigo Contable",
-              "active": false,
-              "displayName": "Línea Negocio"
+              "queryRef": "Articulos.Categoria",
+              "nativeQueryRef": "Categoria",
+              "active": true
             },
             {
               "field": {
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Items"
+                      "Entity": "Articulos"
                     }
                   },
                   "Property": "Descripcion 1"
                 }
               },
               "queryRef": "Items.Descripcion 1",
-              "active": false,
+              "active": true,
               "displayName": "Artículos"
             },
             {
@@ -100,12 +100,12 @@
                       "Entity": "Factura Compras"
                     }
                   },
-                  "Property": "Tipo Factura"
+                  "Property": "Documento"
                 }
               },
-              "queryRef": "Factura Compras.Tipo Factura",
-              "active": false,
-              "displayName": "Factura"
+              "queryRef": "Factura Compras.Documento",
+              "nativeQueryRef": "Documento",
+              "active": true
             }
           ]
         },
@@ -224,7 +224,7 @@
           },
           {
             "queryRefs": [
-              "Items.Codigo Contable"
+              "Articulos.Categoria"
             ],
             "isCollapsed": true,
             "identityKeys": [
@@ -232,10 +232,10 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Items"
+                      "Entity": "Articulos"
                     }
                   },
-                  "Property": "Codigo Contable"
+                  "Property": "Categoria"
                 }
               }
             ],
@@ -251,7 +251,7 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Items"
+                      "Entity": "Articulos"
                     }
                   },
                   "Property": "Descripcion 1"
@@ -262,9 +262,10 @@
           },
           {
             "queryRefs": [
-              "Factura Compras.Tipo Factura"
+              "Factura Compras.Documento"
             ],
-            "isCollapsed": true
+            "isCollapsed": true,
+            "isPinned": true
           }
         ],
         "root": {
@@ -273,20 +274,33 @@
               "identityValues": [
                 {
                   "Literal": {
-                    "Value": "'CONCEPCION ALONSO ALONSO ASTORGA - LEON'"
+                    "Value": "'ACABADOS DEL NOROESTE VIGO, S.L.'"
                   }
                 }
               ],
+              "isToggled": true,
               "children": [
                 {
                   "identityValues": [
                     {
                       "Literal": {
-                        "Value": "'MER'"
+                        "Value": "'MATERIAL PUBLICITARIO'"
                       }
                     }
                   ],
-                  "isToggled": true
+                  "isToggled": true,
+                  "children": [
+                    {
+                      "identityValues": [
+                        {
+                          "Literal": {
+                            "Value": "'FLYER COOLPEEL'"
+                          }
+                        }
+                      ],
+                      "isToggled": true
+                    }
+                  ]
                 }
               ]
             }
@@ -601,5 +615,177 @@
       ]
     },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "9e1b4bf6a11f0a1cbe28",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Fecha"
+              }
+            },
+            "Property": "Año"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "61825d5c601983e11cd2",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Fecha"
+              }
+            },
+            "Property": "Mes 3L"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "0216afbb2522db6b28b9",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Proveedor"
+              }
+            },
+            "Property": "Proveedor"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "0e358a74783ee98f38ff",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Articulos"
+              }
+            },
+            "Property": "Descripcion 1"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "9f06aa652337588f2669",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Metricas"
+              }
+            },
+            "Property": "Total Compras"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "972e5930a2f86091f7bc",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Metricas"
+              }
+            },
+            "Property": "Total Compras AA"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "d989d9b5cb494994e03f",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Metricas"
+              }
+            },
+            "Property": "Variacion % Total Compras AA"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "4eba8029791f5fca50e5",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Metricas"
+              }
+            },
+            "Property": "Descuento %"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "094faec54302628761f3",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Metricas"
+              }
+            },
+            "Property": "Descuento"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "753001d47408d1032e7f",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Metricas"
+              }
+            },
+            "Property": "Compra Neta"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "3fc35d61b3715627e147",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Articulos"
+              }
+            },
+            "Property": "Categoria"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "8adf212a090a9cb34110",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Factura Compras"
+              }
+            },
+            "Property": "Documento"
+          }
+        },
+        "type": "Categorical"
+      }
+    ]
   }
 }

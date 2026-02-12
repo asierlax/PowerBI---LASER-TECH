@@ -13,7 +13,7 @@
           "Column": {
             "Expression": {
               "SourceRef": {
-                "Entity": "Items"
+                "Entity": "Articulos"
               }
             },
             "Property": "Descripcion 1"
@@ -24,8 +24,8 @@
           "Version": 2,
           "From": [
             {
-              "Name": "i",
-              "Entity": "Items",
+              "Name": "a",
+              "Entity": "Articulos",
               "Type": 0
             }
           ],
@@ -38,7 +38,7 @@
                       "Column": {
                         "Expression": {
                           "SourceRef": {
-                            "Source": "i"
+                            "Source": "a"
                           }
                         },
                         "Property": "Descripcion 1"
@@ -49,7 +49,7 @@
                     [
                       {
                         "Literal": {
-                          "Value": "'Artículo prueba'"
+                          "Value": "'MOTUS AX'"
                         }
                       }
                     ]
@@ -74,7 +74,7 @@
           "Column": {
             "Expression": {
               "SourceRef": {
-                "Entity": "Items"
+                "Entity": "Articulos"
               }
             },
             "Property": "Descripcion 1"

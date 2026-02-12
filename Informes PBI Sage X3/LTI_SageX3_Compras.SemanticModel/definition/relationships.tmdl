@@ -6,10 +6,6 @@ relationship 2442feac-dbe4-466e-b011-64b09e5da4a2
 	fromColumn: 'Factura Compras'.ProveedorID
 	toColumn: Proveedor.ProveedorID
 
-relationship 851c9137-26c6-4509-b1be-f87719c24313
-	fromColumn: 'Factura Compras'.Empresa
-	toColumn: Empresa.Empresa
-
 relationship d5ccd7e0-278d-4702-9bb5-a4011daafaec
 	crossFilteringBehavior: bothDirections
 	fromCardinality: one
@@ -18,7 +14,7 @@ relationship d5ccd7e0-278d-4702-9bb5-a4011daafaec
 
 relationship 98e4e267-0aa6-45b5-93ab-58838eed471c
 	fromColumn: 'Factura Compras'.ItemID
-	toColumn: Items.IdItem
+	toColumn: Articulos.IdItem
 
 relationship 660c3ee9-b21f-4a81-a8d0-031d51a6770c
 	crossFilteringBehavior: bothDirections
@@ -32,4 +28,8 @@ relationship e77592fa-4236-4aab-8bc2-7767babb1c69
 	fromCardinality: one
 	fromColumn: Empresa.IdDireccion
 	toColumn: Direccion.IdDireccion
+
+relationship AutoDetected_91bdcf6b-1ccf-4acf-b24e-0d089c27d08f
+	fromColumn: 'Factura Compras'.Empresa
+	toColumn: Empresa.Empresa
 

@@ -96,7 +96,7 @@
                       "Column": {
                         "Expression": {
                           "SourceRef": {
-                            "Entity": "Items"
+                            "Entity": "Articulos"
                           }
                         },
                         "Property": "Codigo Contable"
@@ -138,7 +138,7 @@
                       "Column": {
                         "Expression": {
                           "SourceRef": {
-                            "Entity": "Items"
+                            "Entity": "Articulos"
                           }
                         },
                         "Property": "Codigo Contable"
@@ -180,7 +180,7 @@
                       "Column": {
                         "Expression": {
                           "SourceRef": {
-                            "Entity": "Items"
+                            "Entity": "Articulos"
                           }
                         },
                         "Property": "Codigo Contable"
@@ -222,7 +222,7 @@
                       "Column": {
                         "Expression": {
                           "SourceRef": {
-                            "Entity": "Items"
+                            "Entity": "Articulos"
                           }
                         },
                         "Property": "Codigo Contable"
@@ -264,7 +264,7 @@
                       "Column": {
                         "Expression": {
                           "SourceRef": {
-                            "Entity": "Items"
+                            "Entity": "Articulos"
                           }
                         },
                         "Property": "Codigo Contable"
@@ -306,7 +306,7 @@
                       "Column": {
                         "Expression": {
                           "SourceRef": {
-                            "Entity": "Items"
+                            "Entity": "Articulos"
                           }
                         },
                         "Property": "Codigo Contable"
@@ -348,7 +348,7 @@
                       "Column": {
                         "Expression": {
                           "SourceRef": {
-                            "Entity": "Items"
+                            "Entity": "Articulos"
                           }
                         },
                         "Property": "Codigo Contable"
@@ -389,7 +389,7 @@
                       "Column": {
                         "Expression": {
                           "SourceRef": {
-                            "Entity": "Items"
+                            "Entity": "Articulos"
                           }
                         },
                         "Property": "Codigo Contable"

@@ -402,7 +402,7 @@ table Metricas
 		displayFolder: Intervenciones
 		lineageTag: 5ee77393-adc3-4e20-984a-d587722be3b1
 
-	measure '% en Garantia' = DIVIDE([Int En garantia Clientes],[Count Intervenciones])
+	measure '% en Garantia' = DIVIDE([Int En garantia Clientes]  - [Int Instalacion],[Count Intervenciones])
 		formatString: 0.00\ %;-0.00\ %;0.00\ %
 		displayFolder: Intervenciones
 		lineageTag: da5ceb93-5cd2-4b68-af74-0b638c71c606

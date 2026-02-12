@@ -20,10 +20,10 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Items"
+                      "Entity": "Articulos"
                     }
                   },
-                  "Property": "Business Unit"
+                  "Property": "Familia"
                 }
               },
               "queryRef": "Items.Familia",
@@ -34,10 +34,10 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Items"
+                      "Entity": "Articulos"
                     }
                   },
-                  "Property": "Familia"
+                  "Property": "Subfamilia"
                 }
               },
               "queryRef": "Items.Subfamilia",

@@ -78,17 +78,19 @@ table Proveedor
 				    CurrentSchema = Esquema,
 				    Origen = Sql.Database(CurrentServer, CurrentDatabase, [Query="
 				                                                                SELECT
-				                                                                         [BPSNUM_0] as ProveedorID
-				                                                                        ,[BPSNAM_0] as Proveedor
-				                                                                        ,[BPSTYP_0] as 'Tipo Proveedor'
-				                                                                        ,[BSGCOD_0] as Categoria
-				                                                                        ,[ABCCLS_0] as 'Categoria ABC'
-				                                                                        ,[BPAADD_0] as Direccion
-				                                                                FROM "&CurrentSchema&".BPSUPPLIER"
-				                                                          ]),
-				    #"Personalizada agregada" = Table.AddColumn(Origen, "IdDireccion", each [ProveedorID] &"-"&[Direccion])
+				                                                                    BPSNUM_0 AS 'ProveedorID',
+				                                                                    BPSNAM_0 AS 'Proveedor',
+				                                                                    BPSTYP_0 AS 'Tipo Proveedor',
+				                                                                    BSGCOD_0 AS 'Categoria',
+				                                                                    ABCCLS_0 AS 'Categoria ABC',
+				                                                                    BPAADD_0 AS 'Direccion',
+				                                                                    (BPSNUM_0 + '-' + BPAADD_0 + '-1') AS 'IdDireccion'
+				                                                                FROM " & CurrentSchema & ".BPSUPPLIER"
+				                                                          ])
 				in
-				    #"Personalizada agregada"
+				    #"Origen"
 
 	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navegación
 

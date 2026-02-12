@@ -51,7 +51,7 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Items"
+                      "Entity": "Articulos"
                     }
                   },
                   "Property": "Descripcion 1"
@@ -410,5 +410,51 @@
     },
     "drillFilterOtherVisuals": true
   },
-  "parentGroupName": "597f0df9ab01b3f2caa6"
+  "parentGroupName": "597f0df9ab01b3f2caa6",
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "029e74bd2e2825757e71",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Metricas"
+              }
+            },
+            "Property": "Total Compras"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "0c7bf7868757de62afad",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Proveedor"
+              }
+            },
+            "Property": "Proveedor"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "1c9e38f6b705300d9bca",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Articulos"
+              }
+            },
+            "Property": "Descripcion 1"
+          }
+        },
+        "type": "Categorical"
+      }
+    ]
+  }
 }

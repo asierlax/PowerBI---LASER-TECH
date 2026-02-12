@@ -172,5 +172,37 @@
       ]
     },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "3f4ac404ecc6e043a3e0",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Lineas Contables Analiticas"
+              }
+            },
+            "Property": "Seccion Analitica_2"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "bfe5b69a66ae875d52eb",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Metricas"
+              }
+            },
+            "Property": "Total Compras"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
   }
 }

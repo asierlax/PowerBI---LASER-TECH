@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
   "name": "1ec5d989e2f21ca08cd8",
   "position": {
-    "x": 6.9095816464237521,
-    "y": 6.0458839406207829,
+    "x": 10.146938082160709,
+    "y": 4.6949721443648436,
     "z": 2000,
-    "height": 42.321187584345481,
-    "width": 270.33738191632932,
+    "height": 43.760683760683762,
+    "width": 340.13986013986016,
     "tabOrder": 18000
   },
   "visual": {
@@ -55,7 +55,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'DETALLE BUSINESS UNIT Y FAMILIA'"
+                  "Value": "'DETALLE POR FAMILIA'"
                 }
               }
             },

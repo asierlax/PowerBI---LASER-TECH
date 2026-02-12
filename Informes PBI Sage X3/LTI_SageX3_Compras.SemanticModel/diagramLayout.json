@@ -4,8 +4,8 @@
     {
       "ordinal": 0,
       "scrollPosition": {
-        "x": 524.9767170135807,
-        "y": 366.90361713932572
+        "x": 192.87818608510008,
+        "y": 0
       },
       "nodes": [
         {
@@ -73,35 +73,11 @@
         },
         {
           "location": {
-            "x": 912.4,
-            "y": 0
-          },
-          "nodeIndex": "Items",
-          "size": {
-            "height": 300,
-            "width": 234
-          },
-          "zIndex": 0
-        },
-        {
-          "location": {
             "x": 477.13580099472404,
             "y": 553.75911279443085
           },
           "nodeIndex": "Lineas Contables Analiticas",
           "nodeLineageTag": "b2d20480-d1b3-44ff-b07f-d4500fcb9545",
-          "size": {
-            "height": 300,
-            "width": 234
-          },
-          "zIndex": 0
-        },
-        {
-          "location": {
-            "x": 1961.4,
-            "y": 481.5
-          },
-          "nodeIndex": "Presupuesto",
           "size": {
             "height": 300,
             "width": 234
@@ -130,6 +106,18 @@
           "nodeLineageTag": "696452d9-d517-4a55-9e02-ec2b82f3f4e9",
           "size": {
             "height": 104,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 912.4,
+            "y": 0
+          },
+          "nodeIndex": "Articulos",
+          "size": {
+            "height": 300,
             "width": 234
           },
           "zIndex": 0

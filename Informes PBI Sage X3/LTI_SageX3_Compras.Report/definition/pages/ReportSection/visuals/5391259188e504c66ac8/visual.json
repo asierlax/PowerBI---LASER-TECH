@@ -20,15 +20,15 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Lineas Contables Analiticas"
+                      "Entity": "Articulos"
                     }
                   },
-                  "Property": "Seccion Analitica_2"
+                  "Property": "Familia"
                 }
               },
-              "queryRef": "Lineas Contables Analiticas.Seccion Analitica_2",
-              "active": true,
-              "displayName": "Línea de Negocio"
+              "queryRef": "Articulos.Familia",
+              "nativeQueryRef": "Familia",
+              "active": true
             }
           ]
         },
@@ -178,6 +178,20 @@
           }
         },
         "type": "Advanced"
+      },
+      {
+        "name": "f2850a5ad357b1f1857f",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Articulos"
+              }
+            },
+            "Property": "Familia"
+          }
+        },
+        "type": "Categorical"
       }
     ],
     "filterSortOrder": "Custom"

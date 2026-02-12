@@ -20,7 +20,7 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Items"
+                      "Entity": "Articulos"
                     }
                   },
                   "Property": "Descripcion 1"
@@ -38,7 +38,7 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Items"
+                      "Entity": "Articulos"
                     }
                   },
                   "Property": "IdCategoria"

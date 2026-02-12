@@ -67,28 +67,14 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Items"
-                    }
-                  },
-                  "Property": "Business Unit"
-                }
-              },
-              "queryRef": "Items.Familia",
-              "active": false
-            },
-            {
-              "field": {
-                "Column": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "Items"
+                      "Entity": "Articulos"
                     }
                   },
                   "Property": "Familia"
                 }
               },
-              "queryRef": "Items.Subfamilia",
-              "active": false
+              "queryRef": "Items.Familia",
+              "active": true
             },
             {
               "field": {
@@ -102,21 +88,21 @@
                 }
               },
               "queryRef": "Proveedor.Proveedor",
-              "active": false
+              "active": true
             },
             {
               "field": {
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Items"
+                      "Entity": "Articulos"
                     }
                   },
                   "Property": "Descripcion 1"
                 }
               },
               "queryRef": "Items.Descripcion 1",
-              "active": false,
+              "active": true,
               "displayName": "Artículos"
             },
             {
@@ -127,12 +113,12 @@
                       "Entity": "Factura Compras"
                     }
                   },
-                  "Property": "Tipo Factura"
+                  "Property": "Documento"
                 }
               },
-              "queryRef": "Factura Compras.Tipo Factura",
-              "active": false,
-              "displayName": "Factura"
+              "queryRef": "Factura Compras.Documento",
+              "nativeQueryRef": "Documento",
+              "active": true
             }
           ]
         },
@@ -245,26 +231,7 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Items"
-                    }
-                  },
-                  "Property": "Business Unit"
-                }
-              }
-            ],
-            "isPinned": true
-          },
-          {
-            "queryRefs": [
-              "Items.Subfamilia"
-            ],
-            "isCollapsed": true,
-            "identityKeys": [
-              {
-                "Column": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "Items"
+                      "Entity": "Articulos"
                     }
                   },
                   "Property": "Familia"
@@ -302,7 +269,7 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Items"
+                      "Entity": "Articulos"
                     }
                   },
                   "Property": "Descripcion 1"
@@ -313,12 +280,84 @@
           },
           {
             "queryRefs": [
-              "Factura Compras.Tipo Factura"
+              "Factura Compras.Documento"
             ],
-            "isCollapsed": true
+            "isCollapsed": true,
+            "identityKeys": [
+              {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Factura Compras"
+                    }
+                  },
+                  "Property": "Documento"
+                }
+              }
+            ],
+            "isPinned": true
           }
         ],
-        "root": {}
+        "root": {
+          "children": [
+            {
+              "identityValues": [
+                {
+                  "Literal": {
+                    "Value": "'CEN'"
+                  }
+                }
+              ],
+              "isToggled": true,
+              "children": [
+                {
+                  "identityValues": [
+                    {
+                      "Literal": {
+                        "Value": "'Alejandrita'"
+                      }
+                    }
+                  ],
+                  "isToggled": true,
+                  "children": [
+                    {
+                      "identityValues": [
+                        {
+                          "Literal": {
+                            "Value": "'EL.EN, S.p.A.'"
+                          }
+                        }
+                      ],
+                      "isToggled": true,
+                      "children": [
+                        {
+                          "identityValues": [
+                            {
+                              "Literal": {
+                                "Value": "'MOTUS AX'"
+                              }
+                            }
+                          ],
+                          "isToggled": true
+                        },
+                        {
+                          "identityValues": [
+                            {
+                              "Literal": {
+                                "Value": "'MOTUS AX PRO MOVEO'"
+                              }
+                            }
+                          ],
+                          "isToggled": true
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
       }
     ],
     "objects": {
@@ -1171,5 +1210,177 @@
       ]
     },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "00b07458608c428452c1",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Fecha"
+              }
+            },
+            "Property": "Año"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "8a2518768da59af6335c",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Fecha"
+              }
+            },
+            "Property": "Mes 3L"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "5e667e5fb45199056bcf",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Factura Compras"
+              }
+            },
+            "Property": "Planta Linea"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "c880617de54edf0eee74",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Articulos"
+              }
+            },
+            "Property": "Familia"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "0200889779ffa9a59cd8",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Proveedor"
+              }
+            },
+            "Property": "Proveedor"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "9e9fbc39ee5236e6403f",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Articulos"
+              }
+            },
+            "Property": "Descripcion 1"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "134bf220c40d0ab9e120",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Metricas"
+              }
+            },
+            "Property": "Total Compras"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "3d6a41cdf69db40073f4",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Metricas"
+              }
+            },
+            "Property": "Variacion % Total Compras AA"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "c60cea307c91759ebd41",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Metricas"
+              }
+            },
+            "Property": "Descuento %"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "774d7887279332e1e206",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Metricas"
+              }
+            },
+            "Property": "Descuento"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "271a0265a35ea74e64f6",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Metricas"
+              }
+            },
+            "Property": "Compra Neta"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "cdaffa4eda656278a70c",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Factura Compras"
+              }
+            },
+            "Property": "Documento"
+          }
+        },
+        "type": "Categorical"
+      }
+    ]
   }
 }

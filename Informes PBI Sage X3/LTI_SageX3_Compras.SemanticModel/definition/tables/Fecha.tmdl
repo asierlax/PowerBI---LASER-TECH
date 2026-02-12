@@ -155,7 +155,7 @@ table Fecha
 				    MinDateYear = 2020, 
 				    //Date.Year(List.Min(#"Factura Compras"[Fecha Contable])),
 				    StartDate= Date.From(Text.From(MinDateYear)&"-01-01"),
-				    MaxDateYear = 2023,
+				    MaxDateYear = 2026,
 				    //Date.Year(List.Max(#"Factura Compras"[Fecha Contable])),
 				    Length = Duration.Days(Date.From(#date(MaxDateYear,12,31)) - StartDate)+1,
 				    

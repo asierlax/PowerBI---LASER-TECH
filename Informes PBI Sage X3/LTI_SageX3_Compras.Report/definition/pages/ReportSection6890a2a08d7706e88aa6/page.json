@@ -13,10 +13,10 @@
           "Column": {
             "Expression": {
               "SourceRef": {
-                "Entity": "Items"
+                "Entity": "Articulos"
               }
             },
-            "Property": "Business Unit"
+            "Property": "Familia"
           }
         },
         "type": "Categorical",
@@ -24,8 +24,8 @@
           "Version": 2,
           "From": [
             {
-              "Name": "i",
-              "Entity": "Items",
+              "Name": "a",
+              "Entity": "Articulos",
               "Type": 0
             }
           ],
@@ -38,10 +38,10 @@
                       "Column": {
                         "Expression": {
                           "SourceRef": {
-                            "Source": "i"
+                            "Source": "a"
                           }
                         },
-                        "Property": "Business Unit"
+                        "Property": "Familia"
                       }
                     }
                   ],
@@ -49,7 +49,7 @@
                     [
                       {
                         "Literal": {
-                          "Value": "'ANAESTHESIA Y EMERGENCY'"
+                          "Value": "'Alejandrita'"
                         }
                       }
                     ]
@@ -74,10 +74,10 @@
           "Column": {
             "Expression": {
               "SourceRef": {
-                "Entity": "Items"
+                "Entity": "Articulos"
               }
             },
-            "Property": "Business Unit"
+            "Property": "Familia"
           }
         }
       }

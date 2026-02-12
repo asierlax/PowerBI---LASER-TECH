@@ -67,43 +67,28 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Lineas Contables Analiticas"
+                      "Entity": "Articulos"
                     }
                   },
-                  "Property": "Seccion Analitica_2"
-                }
-              },
-              "queryRef": "Lineas Contables Analiticas.Seccion Analitica_2",
-              "active": false,
-              "displayName": "Línea de Negocio"
-            },
-            {
-              "field": {
-                "Column": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "Items"
-                    }
-                  },
-                  "Property": "Business Unit"
+                  "Property": "Familia"
                 }
               },
               "queryRef": "Items.Familia",
-              "active": false
+              "active": true
             },
             {
               "field": {
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Items"
+                      "Entity": "Articulos"
                     }
                   },
                   "Property": "Descripcion 1"
                 }
               },
               "queryRef": "Items.Descripcion 1",
-              "active": false,
+              "active": true,
               "displayName": "Artículos"
             },
             {
@@ -216,23 +201,10 @@
               "Column": {
                 "Expression": {
                   "SourceRef": {
-                    "Entity": "Lineas Contables Analiticas"
+                    "Entity": "Articulos"
                   }
                 },
-                "Property": "Seccion Analitica_2"
-              }
-            },
-            "direction": "Ascending"
-          },
-          {
-            "field": {
-              "Column": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "Items"
-                  }
-                },
-                "Property": "Business Unit"
+                "Property": "Familia"
               }
             },
             "direction": "Ascending"
@@ -267,25 +239,6 @@
           },
           {
             "queryRefs": [
-              "Lineas Contables Analiticas.Seccion Analitica_2"
-            ],
-            "isCollapsed": true,
-            "identityKeys": [
-              {
-                "Column": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "Lineas Contables Analiticas"
-                    }
-                  },
-                  "Property": "Seccion Analitica_2"
-                }
-              }
-            ],
-            "isPinned": true
-          },
-          {
-            "queryRefs": [
               "Items.Familia"
             ],
             "isCollapsed": true,
@@ -294,10 +247,10 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Items"
+                      "Entity": "Articulos"
                     }
                   },
-                  "Property": "Business Unit"
+                  "Property": "Familia"
                 }
               }
             ],
@@ -313,7 +266,7 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Items"
+                      "Entity": "Articulos"
                     }
                   },
                   "Property": "Descripcion 1"
@@ -345,79 +298,53 @@
                   "identityValues": [
                     {
                       "Literal": {
-                        "Value": "''"
+                        "Value": "null"
                       }
                     }
                   ],
-                  "isToggled": true,
-                  "children": [
-                    {
-                      "identityValues": [
-                        {
-                          "Literal": {
-                            "Value": "null"
-                          }
-                        }
-                      ],
-                      "isToggled": true,
-                      "children": [
-                        {
-                          "identityValues": [
-                            {
-                              "Literal": {
-                                "Value": "'Ecografo DEMO'"
-                              }
-                            }
-                          ],
-                          "isToggled": true
-                        }
-                      ]
-                    }
-                  ]
+                  "isToggled": true
                 },
                 {
                   "identityValues": [
                     {
                       "Literal": {
-                        "Value": "'AYE'"
+                        "Value": "'ANAESTHESIA Y EMERGENCY'"
                       }
                     }
                   ],
-                  "isToggled": true,
-                  "children": [
+                  "isToggled": true
+                }
+              ]
+            },
+            {
+              "identityValues": [
+                {
+                  "Literal": {
+                    "Value": "'CEN'"
+                  }
+                }
+              ],
+              "isToggled": true,
+              "children": [
+                {
+                  "identityValues": [
                     {
-                      "identityValues": [
-                        {
-                          "Literal": {
-                            "Value": "'ANAESTHESIA Y EMERGENCY'"
-                          }
-                        }
-                      ],
-                      "isToggled": true,
-                      "children": [
-                        {
-                          "identityValues": [
-                            {
-                              "Literal": {
-                                "Value": "'AIG QUINCKE 18G90MM NEURAFIT'"
-                              }
-                            }
-                          ],
-                          "isToggled": true
-                        },
-                        {
-                          "identityValues": [
-                            {
-                              "Literal": {
-                                "Value": "'AIG QUINCKE 20G38MM NEURAFIT'"
-                              }
-                            }
-                          ],
-                          "isToggled": true
-                        }
-                      ]
+                      "Literal": {
+                        "Value": "null"
+                      }
                     }
-                  ]
+                  ],
+                  "isToggled": true
+                },
+                {
+                  "identityValues": [
+                    {
+                      "Literal": {
+                        "Value": "'Alejandrita'"
+                      }
+                    }
+                  ],
+                  "isToggled": true
                 }
               ]
             }
@@ -697,5 +624,163 @@
     },
     "drillFilterOtherVisuals": true
   },
-  "parentGroupName": "dcbef173c757d5e69893"
+  "parentGroupName": "dcbef173c757d5e69893",
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "f76388359a009a9f1a19",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Fecha"
+              }
+            },
+            "Property": "Año"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "1672379a9f098c529c96",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Fecha"
+              }
+            },
+            "Property": "Mes 3L"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "9405c650944e6ab08387",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Empresa"
+              }
+            },
+            "Property": "Planta Principal"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "48fcf483eca16dd52d4e",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Articulos"
+              }
+            },
+            "Property": "Familia"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "d275a1e53f4e9679c12f",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Articulos"
+              }
+            },
+            "Property": "Descripcion 1"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "a029a9a17e566ae9da66",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Factura Compras"
+              }
+            },
+            "Property": "Tipo Factura"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "6b35c31f1d2013ecb5c1",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Metricas"
+              }
+            },
+            "Property": "Total Compras"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "bc40852371ed0699d6fb",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Metricas"
+              }
+            },
+            "Property": "Variacion % Total Compras AA"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "9c8a0d30f530d5205a40",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Metricas"
+              }
+            },
+            "Property": "Descuento %"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "3f9abc99f20a5cd09a41",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Metricas"
+              }
+            },
+            "Property": "Descuento"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "a23370f6ef44b2aa67ba",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Metricas"
+              }
+            },
+            "Property": "Compra Neta"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
+  }
 }

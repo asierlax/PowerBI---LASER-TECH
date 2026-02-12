@@ -1,7 +1,7 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/page/2.0.0/schema.json",
   "name": "ReportSectionc74630bfd2417cb18670",
-  "displayName": "Compras por Línea de Negocio",
+  "displayName": "Compras por Familias",
   "displayOption": "FitToPage",
   "height": 720,
   "width": 1280,

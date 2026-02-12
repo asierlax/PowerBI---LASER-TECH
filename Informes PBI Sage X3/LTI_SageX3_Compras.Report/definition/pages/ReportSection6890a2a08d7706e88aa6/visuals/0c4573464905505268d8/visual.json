@@ -19,7 +19,7 @@
               {
                 "textRuns": [
                   {
-                    "value": "DETALLE BUSINESS UNIT: ",
+                    "value": "DETALLE FAMILIA: ",
                     "textStyle": {
                       "fontWeight": "bold",
                       "fontFamily": "Segoe UI",
@@ -65,7 +65,7 @@
                             "From": [
                               {
                                 "Name": "i",
-                                "Entity": "Items",
+                                "Entity": "Articulos",
                                 "Type": 0
                               }
                             ],
@@ -77,7 +77,7 @@
                                       "Source": "i"
                                     }
                                   },
-                                  "Property": "Business Unit"
+                                  "Property": "Familia"
                                 },
                                 "Name": "Items.Familia"
                               }
@@ -92,7 +92,7 @@
                                         "Source": "i"
                                       }
                                     },
-                                    "Property": "Business Unit"
+                                    "Property": "Familia"
                                   }
                                 }
                               }

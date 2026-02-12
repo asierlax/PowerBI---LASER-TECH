@@ -13,38 +13,32 @@ table Empresa
 
 	column Empresa
 		dataType: string
-		lineageTag: 221de0fd-e38d-4081-ba45-70ce19c7e90a
+		lineageTag: c643a60c-0e38-4475-9205-5ce3b7c7b9bb
 		summarizeBy: none
 		sourceColumn: Empresa
 
 		annotation SummarizationSetBy = Automatic
 
-		annotation PBI_FormatHint = {"isText":true}
-
 	column 'Nombre Empresa'
 		dataType: string
-		lineageTag: ea6733c0-a116-4436-aeb4-1a05ffc9d0ba
+		lineageTag: ab4aa4ff-365c-4c59-a16d-6495253d2455
 		summarizeBy: none
 		sourceColumn: Nombre Empresa
 
 		annotation SummarizationSetBy = Automatic
 
-		annotation PBI_FormatHint = {"isText":true}
-
 	column Direccion
 		dataType: string
-		lineageTag: ea00fb9d-f981-4083-9059-5cbec98a03c7
+		lineageTag: 42925bb8-155b-4037-b844-6dc5dc577b59
 		summarizeBy: none
 		sourceColumn: Direccion
 
 		annotation SummarizationSetBy = Automatic
 
-		annotation PBI_FormatHint = {"isText":true}
-
 	column 'Sociedad Juridica'
 		dataType: int64
 		formatString: 0
-		lineageTag: 11a87ba2-53aa-458e-a1cb-a7fcb0f8788b
+		lineageTag: c9d6e130-f92c-4d37-9202-41a0377a2390
 		summarizeBy: none
 		sourceColumn: Sociedad Juridica
 
@@ -52,43 +46,35 @@ table Empresa
 
 	column Legislacion
 		dataType: string
-		lineageTag: 8506a57b-7723-439e-8ea4-c91b7a60098d
+		lineageTag: a2e4b95a-a32f-43cf-85a4-f34ce9a9955d
 		summarizeBy: none
 		sourceColumn: Legislacion
 
 		annotation SummarizationSetBy = Automatic
 
-		annotation PBI_FormatHint = {"isText":true}
-
 	column 'Modelo Contable'
 		dataType: string
-		lineageTag: 744820b4-5a37-4183-8bc5-3898cca87d3c
+		lineageTag: 236da5f4-0028-423a-88fa-a636e6c1918f
 		summarizeBy: none
 		sourceColumn: Modelo Contable
 
 		annotation SummarizationSetBy = Automatic
 
-		annotation PBI_FormatHint = {"isText":true}
-
 	column 'Planta Principal'
 		dataType: string
-		lineageTag: f0218c2a-0079-4d19-b1db-6d900bb33fed
+		lineageTag: ba025fbf-41ac-48da-b487-4dc427a4ff5c
 		summarizeBy: none
 		sourceColumn: Planta Principal
 
 		annotation SummarizationSetBy = Automatic
 
-		annotation PBI_FormatHint = {"isText":true}
-
 	column Pais
 		dataType: string
-		lineageTag: 17ab8173-47b9-4b6d-aef8-29fd74d39066
+		lineageTag: 67486054-63c2-4bb9-a86e-0047df393401
 		summarizeBy: none
 		sourceColumn: Pais
 
 		annotation SummarizationSetBy = Automatic
-
-		annotation PBI_FormatHint = {"isText":true}
 
 	partition Empresa-817e30da-cf7b-4367-ad88-22b69a7892b2 = m
 		mode: import
@@ -98,23 +84,23 @@ table Empresa
 				    CurrentDatabase = BaseDeDatos,
 				    CurrentSchema = Esquema,
 				    Origen = Sql.Database(CurrentServer, CurrentDatabase, [Query="
-				                                                                SELECT  
-				                                                                     [CPY_0]
-				                                                                    ,[CPYNAM_0]
-				                                                                    ,[BPAADD_0]
-				                                                                    ,[CPYLEGFLG_0]
-				                                                                    ,[LEG_0]
-				                                                                    ,[ACM_0]
-				                                                                    ,[MAIFCY_0]
-				                                                                    ,[CRY_0]   
+				                                                                SELECT
+				                                                                    CPY_0 AS 'Empresa',
+				                                                                    CPYNAM_0 AS 'Nombre Empresa',
+				                                                                    BPAADD_0 AS 'Direccion',
+				                                                                    (CPY_0 + '-' + BPAADD_0 + '-2') AS 'IdDireccion',
+				                                                                    CPYLEGFLG_0 AS 'Sociedad Juridica',
+				                                                                    LEG_0 AS 'Legislacion',
+				                                                                    ACM_0 AS 'Modelo Contable',
+				                                                                    MAIFCY_0 AS 'Planta Principal',
+				                                                                    CRY_0 AS 'Pais'   
 				                                                                FROM " & CurrentSchema & ".COMPANY"
-				                                                          ]),
-				    #"Columnas con nombre cambiado" = Table.RenameColumns(Origen,{{"CPY_0", "Empresa"}, {"CPYNAM_0", "Nombre Empresa"}, {"CPYLEGFLG_0", "Sociedad Juridica"}, {"LEG_0", "Legislacion"}, {"ACM_0", "Modelo Contable"}, {"MAIFCY_0", "Planta Principal"}, {"CRY_0", "Pais"}, {"BPAADD_0", "Direccion"}}),
-				    #"Personalizada agregada" = Table.AddColumn(#"Columnas con nombre cambiado", "IdDireccion", each [Empresa]&"-"&[Direccion]),
-				    #"Columnas reordenadas" = Table.ReorderColumns(#"Personalizada agregada",{"IdDireccion", "Empresa", "Nombre Empresa", "Direccion", "Sociedad Juridica", "Legislacion", "Modelo Contable", "Planta Principal", "Pais"})
+				                                                          ])
 				in
-				    #"Columnas reordenadas"
+				    #"Origen"
 				```
 
 	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navegación
 

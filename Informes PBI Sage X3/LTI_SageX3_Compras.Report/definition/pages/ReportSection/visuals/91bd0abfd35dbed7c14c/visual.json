@@ -55,7 +55,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'DESCOMPOSICIÓN ARTÍCULOS POR BUSINESS UNIT'"
+                  "Value": "'DESCOMPOSICIÓN ARTÍCULOS POR FAMILIA'"
                 }
               }
             }

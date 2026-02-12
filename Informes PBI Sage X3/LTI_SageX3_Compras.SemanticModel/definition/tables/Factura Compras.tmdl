@@ -10,16 +10,6 @@ table 'Factura Compras'
 
 		annotation SummarizationSetBy = Automatic
 
-	column Documento
-		dataType: string
-		lineageTag: 8d2e9b7d-106a-495f-86b9-4d71a025c94b
-		summarizeBy: none
-		sourceColumn: Documento
-
-		annotation SummarizationSetBy = Automatic
-
-		annotation PBI_FormatHint = {"isText":true}
-
 	column 'Tipo Factura'
 		dataType: string
 		lineageTag: c7c6bc9b-21a1-4eb3-936e-cf7b35441f04
@@ -236,33 +226,6 @@ table 'Factura Compras'
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-	column 'Motivo Descuento1'
-		dataType: int64
-		formatString: 0
-		lineageTag: cb63726c-61d6-487f-996b-13333a142d7a
-		summarizeBy: sum
-		sourceColumn: Motivo Descuento1
-
-		annotation SummarizationSetBy = Automatic
-
-	column 'Motivo Descuento2'
-		dataType: int64
-		formatString: 0
-		lineageTag: c55847da-be81-49c3-ab1b-fa0877f884d1
-		summarizeBy: sum
-		sourceColumn: Motivo Descuento2
-
-		annotation SummarizationSetBy = Automatic
-
-	column 'Motivo Descuento3'
-		dataType: int64
-		formatString: 0
-		lineageTag: 7a13b831-62f3-448c-9d74-1c1a4ee55df3
-		summarizeBy: sum
-		sourceColumn: Motivo Descuento3
-
-		annotation SummarizationSetBy = Automatic
-
 	column 'Precio Neto'
 		dataType: double
 		lineageTag: 657e118f-d59c-4a94-9f62-bcdd9408832f
@@ -354,26 +317,6 @@ table 'Factura Compras'
 		lineageTag: 070d9e03-b883-4a50-ae19-9fb743de46a8
 		summarizeBy: none
 		sourceColumn: Familia Estadisitca2
-
-		annotation SummarizationSetBy = Automatic
-
-		annotation PBI_FormatHint = {"isText":true}
-
-	column 'Provincia Salida'
-		dataType: string
-		lineageTag: 366b8e47-e423-4293-b71a-50555654769e
-		summarizeBy: none
-		sourceColumn: Provincia Salida
-
-		annotation SummarizationSetBy = Automatic
-
-		annotation PBI_FormatHint = {"isText":true}
-
-	column 'Provincia Entrada'
-		dataType: string
-		lineageTag: edea9668-ec7c-4abf-b4ea-d1fadc7ba41a
-		summarizeBy: none
-		sourceColumn: Provincia Entrada
 
 		annotation SummarizationSetBy = Automatic
 
@@ -506,6 +449,22 @@ table 'Factura Compras'
 
 		annotation SummarizationSetBy = Automatic
 
+	column Documento
+		dataType: string
+		lineageTag: 787a883a-332b-4bdf-a42c-71ecafd9fcea
+		summarizeBy: none
+		sourceColumn: Documento
+
+		annotation SummarizationSetBy = Automatic
+
+	column Provincia
+		dataType: string
+		lineageTag: 52bdd1ab-f536-4b8f-8439-72d10a154509
+		summarizeBy: none
+		sourceColumn: Provincia
+
+		annotation SummarizationSetBy = Automatic
+
 	partition 'Factura Compras-10dd8a7f-1a2c-4adf-997d-b873d9d587f1' = m
 		mode: import
 		source =
@@ -515,65 +474,65 @@ table 'Factura Compras'
 				    CurrentSchema = Esquema,
 				    Origen = Sql.Database(CurrentServer, CurrentDatabase, [Query="
 				                                                                SELECT
-				                                                                         L.[INVTYP_0] AS 'Categoria Factura'
-				                                                                        ,L.[NUM_0] as 'Numero Asiento'
-				                                                                        ,[PIDLIN_0] as 'Linea'
-				                                                                        ,L.[PIVTYP_0] as 'Tipo Factura'
-				                                                                        ,L.[PIHTYP_0] as 'Categoria Factura Compras'
-				                                                                        ,L.[CPY_0] as 'Empresa'
-				                                                                        ,L.[FCY_0] as 'Planta'
-				                                                                        ,L.[ACCDAT_0] as 'Fecha Contable'
-				                                                                        ,L.[BPR_0] as 'ProveedorID'
-				                                                                        ,[FCYLIN_0] as 'Planta Linea'
-				                                                                        ,[TYPORI_0] as 'Origen Linea'
-				                                                                        ,[NUMORI_0] as 'Numero Origen'
-				                                                                        ,[LINORI_0] as 'Linea Origen'
-				                                                                        ,[ITMREF_0] AS 'ItemID'
-				                                                                        ,[ITMDES1_0] as 'Item Des'
-				                                                                        ,[ITMDES_0] as 'Item Des 1'
-				                                                                        ,[UOM_0] as 'Unidad Facturacion'
-				                                                                        ,[QTYUOM_0] as 'Cantidad'
-				                                                                        ,[GROPRI_0] as 'Precio Bruto'
-				                                                                        ,[PRIREN_0] as 'Motivo Precio'
-				                                                                        ,[DISCRGVAL1_0] as 'Valor Descuento1'
-				                                                                        ,[DISCRGVAL2_0] as 'Valor Descuento2'
-				                                                                        ,[DISCRGVAL3_0] as 'Valor Descuento3'
-				                                                                        ,[DISCRGREN1_0] as 'Motivo Descuento1'
-				                                                                        ,[DISCRGREN2_0] as 'Motivo Descuento2'
-				                                                                        ,[DISCRGREN3_0] as 'Motivo Descuento3'
-				                                                                        ,[NETPRI_0] as 'Precio Neto'
-				                                                                        ,[LINPURTYP_0] as 'Tipo Compra'
-				                                                                        ,[NETCUR_0] as 'Divisa'
-				                                                                        ,[POHNUM_0] as 'Numero Pedido'
-				                                                                        ,[POPLIN_0] as 'Linea Pedido Compra'
-				                                                                        ,[PTHNUM_0] as 'Numero Recepcion'
-				                                                                        ,[PTDLIN_0] as 'Linea2'
-				                                                                        ,L.[INVNUM_0] as 'Numero Factura'
-				                                                                        ,[INVLIN_0] as 'Linea factura'
-				                                                                        ,[TSICOD_0] as 'Familia Estadisitca1'
-				                                                                        ,[TSICOD_1] as 'Familia Estadisitca2'
-				                                                                        ,[SATISS_0] as 'Provincia Salida'
-				                                                                        ,[SATRCP_0] as 'Provincia Entrada'
-				                                                                        ,[VAT_0] as 'Tipo Impuesto'
-				                                                                        ,[AMTNOTLIN_0] as 'Importe Linea AI'
-				                                                                        ,[AMTATILIN_0] as 'Importe Linea II'
-				                                                                        ,[AMTDEPLIN_0] as 'Importe Descuento'
-				                                                                        ,[AMTTAXLIN1_0] as 'Importe Impuesto'
-				                                                                        ,[DEDTAXLIN1_0] as 'Impuesto deducible'
-				                                                                        ,[CPR_0] as 'Precio Coste'
-				                                                                        ,[LINAMTCPR_0] as 'Coste Stock'
-				                                                                        ,[LINCSTPUR_0] as 'Coste Compra'
-				                                                                        ,[PRTFLG_0] as 'Fra Parcial'
-																						,STA_0 AS 'Validacion'
-																						,SNS_0 AS 'Sentido'
-				                                                                FROM "&CurrentSchema&".PINVOICED F INNER JOIN "&CurrentSchema&".PINVOICE AS L ON F.NUM_0 = L.NUM_0
-																			                             "
-				                                                          ]),
-				    #"Columnas con nombre cambiado" = Table.RenameColumns(Origen,{{"Numero Asiento", "Documento"}}),
-				    #"Personalizada agregada" = Table.AddColumn(#"Columnas con nombre cambiado", "DocumentoLinea", each [Documento] & "-" & Number.ToText([Linea])),
-				    #"Columnas reordenadas" = Table.ReorderColumns(#"Personalizada agregada",{"DocumentoLinea", "Categoria Factura", "Documento", "Linea", "Tipo Factura", "Categoria Factura Compras", "Empresa", "Planta", "Fecha Contable", "ProveedorID", "Planta Linea", "Origen Linea", "Numero Origen", "Linea Origen", "ItemID", "Item Des", "Item Des 1", "Unidad Facturacion", "Cantidad", "Precio Bruto", "Motivo Precio", "Valor Descuento1", "Valor Descuento2", "Valor Descuento3", "Motivo Descuento1", "Motivo Descuento2", "Motivo Descuento3", "Precio Neto", "Tipo Compra", "Divisa", "Numero Pedido", "Linea Pedido Compra", "Numero Recepcion", "Linea2", "Numero Factura", "Linea factura", "Familia Estadisitca1", "Familia Estadisitca2", "Provincia Salida", "Provincia Entrada", "Tipo Impuesto", "Importe Linea AI", "Importe Linea II", "Importe Descuento", "Importe Impuesto", "Impuesto deducible", "Precio Coste", "Coste Stock", "Coste Compra", "Fra Parcial"})
+				                                                                    -- Campos de Cabecera (PIH)
+				                                                                    PIH.INVTYP_0 AS 'Categoria Factura',
+				                                                                    PIH.NUM_0 AS 'Documento',
+				                                                                    PIH.PIVTYP_0 AS 'Tipo Factura',
+				                                                                    PIH.PIHTYP_0 AS 'Categoria Factura Compras',
+				                                                                    PIH.CPY_0 AS 'Empresa',
+				                                                                    PIH.FCY_0 AS 'Planta',
+				                                                                    PIH.ACCDAT_0 AS 'Fecha Contable',
+				                                                                    PIH.BPR_0 AS 'ProveedorID',
+				                                                                    PIH.INVNUM_0 AS 'Numero Factura',
+				                                                                    PIH.STA_0 AS 'Validacion',
+				                                                                    PIH.SNS_0 AS 'Sentido',
+				                                                                    PIH.SAT_0 AS 'Provincia',
+				
+				                                                                    -- Campos de Línea (PID)
+				                                                                    PID.PIDLIN_0 AS 'Linea',
+				                                                                    (PIH.NUM_0 + '-' + cast(PID.PIDLIN_0 as varchar)) AS 'DocumentoLinea',
+				                                                                    PID.FCYLIN_0 AS 'Planta Linea',
+				                                                                    PID.TYPORI_0 AS 'Origen Linea',
+				                                                                    PID.NUMORI_0 AS 'Numero Origen',
+				                                                                    PID.LINORI_0 AS 'Linea Origen',
+				                                                                    PID.ITMREF_0 AS 'ItemID',
+				                                                                    PID.ITMDES1_0 AS 'Item Des',
+				                                                                    PID.ITMDES_0 AS 'Item Des 1',
+				                                                                    PID.UOM_0 AS 'Unidad Facturacion',
+				                                                                    PID.QTYUOM_0 AS 'Cantidad',
+				                                                                    PID.GROPRI_0 AS 'Precio Bruto',
+				                                                                    PID.PRIREN_0 AS 'Motivo Precio',
+				                                                                    PID.NETPRI_0 AS 'Precio Neto',
+				                                                                    PID.DISCRGVAL1_0 AS 'Valor Descuento1',
+				                                                                    PID.DISCRGVAL2_0 AS 'Valor Descuento2',
+				                                                                    PID.DISCRGVAL3_0 AS 'Valor Descuento3',
+				                                                                    PID.LINPURTYP_0 AS 'Tipo Compra',
+				                                                                    PID.NETCUR_0 AS 'Divisa',
+				                                                                    PID.POHNUM_0 AS 'Numero Pedido',
+				                                                                    PID.POPLIN_0 AS 'Linea Pedido Compra',
+				                                                                    PID.PTHNUM_0 AS 'Numero Recepcion',
+				                                                                    PID.PTDLIN_0 AS 'Linea2',
+				                                                                    PID.INVLIN_0 AS 'Linea factura',
+				                                                                    PID.TSICOD_0 AS 'Familia Estadisitca1',
+				                                                                    PID.TSICOD_1 AS 'Familia Estadisitca2',
+				                                                                    PID.VAT_0 AS 'Tipo Impuesto',
+				                                                                    PID.AMTNOTLIN_0 AS 'Importe Linea AI',
+				                                                                    PID.AMTATILIN_0 AS 'Importe Linea II',
+				                                                                    PID.AMTDEPLIN_0 AS 'Importe Descuento',
+				                                                                    PID.AMTTAXLIN1_0 AS 'Importe Impuesto',
+				                                                                    PID.DEDTAXLIN1_0 AS 'Impuesto deducible',
+				                                                                    PID.CPR_0 AS 'Precio Coste',
+				                                                                    PID.LINAMTCPR_0 AS 'Coste Stock',
+				                                                                    PID.LINCSTPUR_0 AS 'Coste Compra',
+				                                                                    PID.PRTFLG_0 AS 'Fra Parcial'
+				
+				                                                                FROM " & CurrentSchema & ".PINVOICE AS PIH
+				                                                                INNER JOIN "&CurrentSchema&". PINVOICED AS PID ON PIH.NUM_0 = PID.NUM_0          "
+				                                                          ])
 				in
-				    #"Columnas reordenadas"
+				    Origen
 
 	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navegación
 
