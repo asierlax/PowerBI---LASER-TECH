@@ -233,6 +233,20 @@
                       "Entity": "Intervenciones"
                     }
                   },
+                  "Property": "Estado facturado"
+                }
+              },
+              "queryRef": "Intervenciones.Estado facturado",
+              "nativeQueryRef": "Estado facturado"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Intervenciones"
+                    }
+                  },
                   "Property": "Tecnico"
                 }
               },
@@ -484,6 +498,20 @@
               }
             },
             "Property": "Tecnico"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "71e84f812fdab80dc84d",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Intervenciones"
+              }
+            },
+            "Property": "Estado facturado"
           }
         },
         "type": "Categorical"

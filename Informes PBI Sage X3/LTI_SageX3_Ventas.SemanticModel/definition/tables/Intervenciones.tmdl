@@ -227,6 +227,14 @@ table Intervenciones
 
 		annotation SummarizationSetBy = Automatic
 
+	column 'Estado facturado'
+		dataType: string
+		lineageTag: 624cad4f-1a12-474a-9e64-2126dc55cf9f
+		summarizeBy: none
+		sourceColumn: Estado facturado
+
+		annotation SummarizationSetBy = Automatic
+
 	partition Intervenciones = m
 		mode: import
 		source = ```
@@ -264,7 +272,8 @@ table Intervenciones
 				                                                                CASE ITN.YCGARANTIA_0 WHEN 2 THEN 'SI' ELSE 'NO' END AS 'Int. con garantia', 
 				                                                                CASE ITN.YCINSTALA_0 WHEN 2 THEN 'SI' ELSE 'NO' END AS 'Int. instalacion', 
 				                                                                CASE ITN.YCCONTRATO_0 WHEN 2 THEN 'SI' ELSE 'NO' END AS 'Int. contrato', 
-				                                                                ISNULL(ITN.REP_0 + ' - ' + USR.NOMUSR_0,'') AS 'Tecnico'
+				                                                                ISNULL(ITN.REP_0 + ' - ' + USR.NOMUSR_0,'') AS 'Tecnico',
+				                                                                (cast(SRE.SREINVFLG_0 as varchar) + ' - ' + M3004.LANMES_0 ) AS 'Estado facturado'
 				                                                                FROM " & CurrentSchema & ".SERREQUEST SRE
 				                                                                LEFT JOIN " & CurrentSchema & ".INTERVEN ITN ON SRE.SRENUM_0 = ITN.SRVDEMNUM_0
 				                                                                LEFT JOIN " & CurrentSchema & ".ATEXTRA TV445 ON SRE.TSDCOD_0 = TV445.IDENT2_0 AND TV445.CODFIC_0 = 'ATABDIV' AND TV445.IDENT1_0 = '445' AND TV445.ZONE_0 = 'LNGDES' AND TV445.LANGUE_0  = 'SPA'
@@ -275,6 +284,7 @@ table Intervenciones
 				                                                                LEFT JOIN " & CurrentSchema & ".BPCUSTOMER BPC ON ITN.BPC_0 = BPC.BPCNUM_0
 				                                                                LEFT JOIN " & CurrentSchema & ".ATEXTRA TV31 ON BPC.TSCCOD_1 = TV31.IDENT2_0 AND TV31.CODFIC_0 = 'ATABDIV' AND TV31.IDENT1_0 = '31' AND TV31.ZONE_0 = 'LNGDES' AND TV31.LANGUE_0  = 'SPA'
 				                                                                LEFT JOIN " & CurrentSchema & ".AUTILIS USR ON ITN.REP_0 = USR.USR_0
+				                                                                LEFT JOIN " & CurrentSchema & ".APLSTD M3004 ON SRE.SREINVFLG_0 = M3004.LANNUM_0 AND M3004.LANCHP_0 = '3004' AND M3004.LAN_0 = 'SPA'
 				                                                            " ]),
 				    #"Tipo cambiado" = Table.TransformColumnTypes(Origen,{{"Fecha creacion SS", type date}, {"Fecha intervencion", type date}})
 				in
