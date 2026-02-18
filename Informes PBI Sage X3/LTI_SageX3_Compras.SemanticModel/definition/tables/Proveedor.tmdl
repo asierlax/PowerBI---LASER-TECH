@@ -25,7 +25,7 @@ table Proveedor
 		dataType: int64
 		formatString: 0
 		lineageTag: adab85d8-b2c3-4465-bf45-4495a4f23cc1
-		summarizeBy: none
+		summarizeBy: sum
 		sourceColumn: Tipo Proveedor
 
 		annotation SummarizationSetBy = Automatic
@@ -44,7 +44,7 @@ table Proveedor
 		dataType: int64
 		formatString: 0
 		lineageTag: f29c78a0-26b1-462f-ba97-993c1100367d
-		summarizeBy: none
+		summarizeBy: sum
 		sourceColumn: Categoria ABC
 
 		annotation SummarizationSetBy = Automatic

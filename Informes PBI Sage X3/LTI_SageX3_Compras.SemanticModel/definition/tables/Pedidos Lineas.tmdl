@@ -1,0 +1,232 @@
+table 'Pedidos Lineas'
+	lineageTag: aa62e44d-c444-4ef7-a109-3a11dbb2a308
+
+	column Documento
+		dataType: string
+		lineageTag: c5bc4e92-6eed-4ec2-9840-9874ac9a97b7
+		summarizeBy: none
+		sourceColumn: Documento
+
+		annotation SummarizationSetBy = Automatic
+
+	column IdLinea
+		dataType: int64
+		formatString: 0
+		lineageTag: 1a68993d-f3ee-4b80-ac07-8f26f62391e4
+		summarizeBy: sum
+		sourceColumn: IdLinea
+
+		annotation SummarizationSetBy = Automatic
+
+	column IdArticulo
+		dataType: string
+		isHidden
+		lineageTag: 92d31f95-b9ec-405e-8fbb-1dc606ad15cf
+		summarizeBy: none
+		sourceColumn: IdArticulo
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Ref. proveedor'
+		dataType: string
+		lineageTag: 65232b63-f9f1-4871-9a96-bad556e3149e
+		summarizeBy: none
+		sourceColumn: Ref. proveedor
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Descripcion linea'
+		dataType: string
+		lineageTag: a57f2181-6f33-451a-b9a8-50206f14dccd
+		summarizeBy: none
+		sourceColumn: Descripcion linea
+
+		annotation SummarizationSetBy = Automatic
+
+	column Planta
+		dataType: string
+		lineageTag: cd9bbf70-2eb2-485a-8070-e3f86254589c
+		summarizeBy: none
+		sourceColumn: Planta
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Ctd. pedida'
+		dataType: double
+		lineageTag: d9eab8c6-fddb-401c-a0aa-abea7640722a
+		summarizeBy: sum
+		sourceColumn: Ctd. pedida
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Uni.'
+		dataType: string
+		lineageTag: aaf7921e-fa9a-4dad-8d9a-b812a13e755d
+		summarizeBy: none
+		sourceColumn: Uni.
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Coef. UC-US'
+		dataType: double
+		lineageTag: d3d5bede-a05e-4191-b373-86c327cd1787
+		summarizeBy: sum
+		sourceColumn: Coef. UC-US
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Ctd. US'
+		dataType: double
+		lineageTag: f89b09b1-1249-4dfb-bd60-c1c96d80fb11
+		summarizeBy: sum
+		sourceColumn: Ctd. US
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Uni. stock'
+		dataType: string
+		lineageTag: 4641a9f2-680e-4e08-8dcf-0a9a1681f163
+		summarizeBy: none
+		sourceColumn: Uni. stock
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Fecha recepcion'
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 5730ccfc-b0fc-4089-9772-3c24b50b7d3c
+		summarizeBy: none
+		sourceColumn: Fecha recepcion
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column 'Fecha OCC'
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 7d2756fd-0088-4a2d-8f2a-4183b1c34efc
+		summarizeBy: none
+		sourceColumn: Fecha OCC
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column Precio
+		dataType: double
+		lineageTag: 98e3c1ab-8eb0-4ee6-873a-0d33a01d82a1
+		summarizeBy: sum
+		sourceColumn: Precio
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Dto1
+		dataType: double
+		lineageTag: 6b176998-ee21-4a8a-83c9-131bc2208146
+		summarizeBy: sum
+		sourceColumn: Dto1
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Dto2
+		dataType: double
+		lineageTag: eb476abf-9ea1-4c1f-826a-320f03cd8a18
+		summarizeBy: sum
+		sourceColumn: Dto2
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Dto3
+		dataType: double
+		lineageTag: 08714672-777f-4d8e-b1f7-9e94555c9dba
+		summarizeBy: sum
+		sourceColumn: Dto3
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Precio neto'
+		dataType: double
+		lineageTag: b510672d-282b-4e31-8731-314a65161f55
+		summarizeBy: sum
+		sourceColumn: Precio neto
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Importe linea'
+		dataType: double
+		lineageTag: 094f7f5f-d7a9-4423-b3f2-ac5e1234c387
+		summarizeBy: sum
+		sourceColumn: Importe linea
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Linea saldada'
+		dataType: string
+		lineageTag: 85f3ecfc-7749-4286-847f-dda492e96ce4
+		summarizeBy: none
+		sourceColumn: Linea saldada
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Pedidos Lineas' = m
+		mode: import
+		source = ```
+				let
+				    CurrentServer = Instancia,
+				    CurrentDatabase = BaseDeDatos,
+				    CurrentSchema = Esquema,
+				    Origen = Sql.Database(CurrentServer, CurrentDatabase, [Query="
+				                                                                SELECT
+				                                                                    POQ.POHNUM_0 AS 'Documento',
+				                                                                    POQ.POPLIN_0 AS 'IdLinea',
+				                                                                    POQ.ITMREF_0 AS 'IdArticulo',
+				                                                                    POQ.ITMREFBPS_0 AS 'Ref. proveedor',
+				                                                                    POP.ITMDES_0 AS 'Descripcion linea',
+				                                                                    POQ.PRHFCY_0 AS 'Planta',
+				                                                                    POQ.QTYUOM_0 AS 'Ctd. pedida',
+				                                                                    POQ.UOM_0 AS 'Uni.',
+				                                                                    POQ.UOMPUUCOE_0 AS 'Coef. UC-US',
+				                                                                    POQ.QTYSTU_0 AS 'Ctd. US',
+				                                                                    POQ.STU_0 AS 'Uni. stock',
+				                                                                    POQ.EXTRCPDAT_0 AS 'Fecha recepcion',
+				                                                                    POQ.XFECHAOCC_0 AS 'Fecha OCC', 
+				                                                                    POP.GROPRI_0 AS 'Precio',
+				                                                                    POP.DISCRGVAL1_0 AS 'Dto1',
+				                                                                    POP.DISCRGVAL2_0 AS 'Dto2',
+				                                                                    POP.DISCRGVAL3_0 AS 'Dto3',
+				                                                                    POP.NETPRI_0 AS 'Precio neto',
+				                                                                    (POQ.QTYUOM_0 * POP.NETPRI_0) AS 'Importe linea',
+				                                                                    CASE POQ.LINCLEFLG_0 WHEN 2 THEN 'Si' ELSE 'No' END AS 'Linea saldada'
+				                                                                FROM " & CurrentSchema & ".PORDERQ POQ
+				                                                                INNER JOIN " & CurrentSchema & ".PORDERP POP ON POQ.POHNUM_0 = POP.POHNUM_0 AND POQ.POPLIN_0 = POP.POPLIN_0
+				                                                          "]),
+				    #"Tipo cambiado" = Table.TransformColumnTypes(Origen,{{"Fecha recepcion", type date}, {"Fecha OCC", type date}})
+				in
+				    #"Tipo cambiado"
+				```
+
+	annotation PBI_NavigationStepName = Navegación
+
+	annotation PBI_ResultType = Table
+

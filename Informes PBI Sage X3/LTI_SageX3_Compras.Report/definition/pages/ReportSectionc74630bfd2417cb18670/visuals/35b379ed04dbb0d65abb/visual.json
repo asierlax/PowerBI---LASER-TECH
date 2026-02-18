@@ -168,5 +168,23 @@
     },
     "drillFilterOtherVisuals": true
   },
-  "parentGroupName": "44a7708678d697b8a076"
+  "parentGroupName": "44a7708678d697b8a076",
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "bbcf215752213c7ae95d",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Fecha"
+              }
+            },
+            "Property": "Año"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
+  }
 }

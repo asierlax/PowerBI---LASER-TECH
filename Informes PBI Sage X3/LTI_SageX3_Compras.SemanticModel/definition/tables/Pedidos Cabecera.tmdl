@@ -1,0 +1,248 @@
+table 'Pedidos Cabecera'
+	lineageTag: 4fbc5562-a25c-4790-865f-e8257b9fb192
+
+	column Documento
+		dataType: string
+		lineageTag: df6e37fb-1a9e-4917-82c3-e11a4349790a
+		summarizeBy: none
+		sourceColumn: Documento
+
+		annotation SummarizationSetBy = Automatic
+
+	column IdSociedad
+		dataType: string
+		lineageTag: 77cc7c6b-ba66-4121-92a6-c8cb4f571479
+		summarizeBy: none
+		sourceColumn: IdSociedad
+
+		annotation SummarizationSetBy = Automatic
+
+	column Planta
+		dataType: string
+		lineageTag: a45a850a-f9da-424d-9f3d-cadd4b60900b
+		summarizeBy: none
+		sourceColumn: Planta
+
+		annotation SummarizationSetBy = Automatic
+
+	column Fecha
+		dataType: dateTime
+		isHidden
+		formatString: dd/mm/yyyy
+		lineageTag: 39593bd9-816e-4e9f-bec0-46852205b62e
+		summarizeBy: none
+		sourceColumn: Fecha
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+		annotation PBI_FormatHint = {"isDateTimeCustom":true}
+
+	column 'Nº OCC'
+		dataType: string
+		lineageTag: f2d72c6a-812d-4846-a25c-39ddbb5d0fb5
+		summarizeBy: none
+		sourceColumn: Nº OCC
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Nº de report'
+		dataType: string
+		lineageTag: b9558387-49ea-4161-8b5d-c1ef4ad8938c
+		summarizeBy: none
+		sourceColumn: Nº de report
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Clase pedido'
+		dataType: string
+		lineageTag: a7266d19-291e-4f50-a8d1-a9bd8b6ea88b
+		summarizeBy: none
+		sourceColumn: Clase pedido
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Tipo pedido'
+		dataType: string
+		lineageTag: 4fc02cab-8681-4aa5-a2c5-b6ea9aad16e6
+		summarizeBy: none
+		sourceColumn: Tipo pedido
+
+		annotation SummarizationSetBy = Automatic
+
+	column IdProveedor
+		dataType: string
+		isHidden
+		lineageTag: 1ae74d1a-2cf6-4508-9150-3f95e9559204
+		summarizeBy: none
+		sourceColumn: IdProveedor
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Proveedor
+		dataType: string
+		lineageTag: dbe1b3d1-c2a3-4d2c-9a65-aabe30d1700a
+		summarizeBy: none
+		sourceColumn: Proveedor
+
+		annotation SummarizationSetBy = Automatic
+
+	column IdDireccion
+		dataType: string
+		lineageTag: ad56329c-f444-4127-8cb2-f7c49a9b5d21
+		summarizeBy: none
+		sourceColumn: IdDireccion
+
+		annotation SummarizationSetBy = Automatic
+
+	column Comprador
+		dataType: string
+		lineageTag: 1a49f0eb-78fb-469b-a382-483085643714
+		summarizeBy: none
+		sourceColumn: Comprador
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Codigo postal'
+		dataType: string
+		lineageTag: 23d62b86-886b-454b-ba2d-1e21322eca8b
+		summarizeBy: none
+		sourceColumn: Codigo postal
+
+		annotation SummarizationSetBy = Automatic
+
+	column Provincia
+		dataType: string
+		lineageTag: 0cceaca9-60af-400c-aaf0-036463ae7c9b
+		summarizeBy: none
+		sourceColumn: Provincia
+
+		annotation SummarizationSetBy = Automatic
+
+	column Ciudad
+		dataType: string
+		lineageTag: e0814a7c-76df-43fd-9c0d-fa5c3fe9a038
+		summarizeBy: none
+		sourceColumn: Ciudad
+
+		annotation SummarizationSetBy = Automatic
+
+	column IdPais
+		dataType: string
+		lineageTag: fbf10a91-2709-43eb-9e20-5951d612917a
+		summarizeBy: none
+		sourceColumn: IdPais
+
+		annotation SummarizationSetBy = Automatic
+
+	column Pais
+		dataType: string
+		lineageTag: 28c92057-231d-4eea-b416-677e544abe17
+		summarizeBy: none
+		sourceColumn: Pais
+
+		annotation SummarizationSetBy = Automatic
+
+	column IdCondPago
+		dataType: string
+		lineageTag: 50b0a1e2-b5b9-426c-a21b-ddb074b6c850
+		summarizeBy: none
+		sourceColumn: IdCondPago
+
+		annotation SummarizationSetBy = Automatic
+
+	column IdTransportista
+		dataType: string
+		lineageTag: cac25a67-aa19-4d94-9b04-40d46642c91e
+		summarizeBy: none
+		sourceColumn: IdTransportista
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Regimen impuesto'
+		dataType: string
+		lineageTag: d3ee5471-f85a-40bc-aa24-58a5d3fef3d2
+		summarizeBy: none
+		sourceColumn: Regimen impuesto
+
+		annotation SummarizationSetBy = Automatic
+
+	column Divisa
+		dataType: string
+		lineageTag: 72d42aff-8682-4d7f-9b88-1fab9a309674
+		summarizeBy: none
+		sourceColumn: Divisa
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Importe BI'
+		dataType: double
+		lineageTag: 10b0ca4a-217e-4ca4-b0a7-a678a856cff8
+		summarizeBy: sum
+		sourceColumn: Importe BI
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Importe II'
+		dataType: double
+		lineageTag: cb1d4e76-cc0b-4f0b-bee6-c75fd13f0875
+		summarizeBy: sum
+		sourceColumn: Importe II
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	partition 'Pedidos Cabecera' = m
+		mode: import
+		source = ```
+				let
+				    CurrentServer = Instancia,
+				    CurrentDatabase = BaseDeDatos,
+				    CurrentSchema = Esquema,
+				    Origen = Sql.Database(CurrentServer, CurrentDatabase, [Query="
+				                                                                SELECT 
+				                                                                    POHNUM_0 AS 'Documento',
+				                                                                    CPY_0 AS 'IdSociedad',
+				                                                                    POHFCY_0 AS 'Planta',
+				                                                                    ORDDAT_0 AS 'Fecha',
+				                                                                    ORDREF_0 AS 'Nº OCC',
+				                                                                    ZNUM_REPORT_0 AS 'Nº de report', 
+				                                                                    (cast(XREFERENCI_0 as varchar) + ' - ' + M6200.LANMES_0) AS 'Clase pedido',
+				                                                                    (YTIPPED_0 + ' - ' + ATX6001.TEXTE_0 ) AS 'Tipo pedido',
+				                                                                    BPSNUM_0 AS 'IdProveedor',
+				                                                                    BPRNAM_0 AS 'Proveedor',
+				                                                                    BPAADD_0 AS 'IdDireccion',
+				                                                                    BUY_0 AS 'Comprador',
+				                                                                    POSCOD_0 AS 'Codigo postal',
+				                                                                    SAT_0 AS 'Provincia',
+				                                                                    CTY_0 AS 'Ciudad',
+				                                                                    CRY_0 AS 'IdPais',
+				                                                                    CRYNAM_0 AS 'Pais',
+				                                                                    PTE_0 AS 'IdCondPago',
+				                                                                    BPTNUM_0 AS 'IdTransportista',
+				                                                                    VACBPR_0 AS 'Regimen impuesto',
+				                                                                    CUR_0 AS 'Divisa',
+				                                                                    TOTLINAMT_0 AS 'Importe BI',
+				                                                                    TOTLINATI_0 AS 'Importe II'
+				                                                                FROM " & CurrentSchema & ".PORDER POH
+				                                                                LEFT JOIN " & CurrentSchema & ".APLSTD M6200 ON POH.XREFERENCI_0 = M6200.LANNUM_0 AND M6200.LANCHP_0 = '6200' AND M6200.LAN_0 = 'SPA'
+				                                                                LEFT JOIN " & CurrentSchema & ".ATEXTRA ATX6001 ON POH.YTIPPED_0 = ATX6001.IDENT2_0 AND ATX6001.CODFIC_0 = 'ATABDIV' AND ATX6001.IDENT1_0 = '6001' AND ATX6001.ZONE_0 = 'LNGDES'
+				
+				                                                          "]),
+				    #"Tipo cambiado" = Table.TransformColumnTypes(Origen,{{"Fecha", type date}})
+				in
+				    #"Tipo cambiado"
+				```
+
+	annotation PBI_NavigationStepName = Navegación
+
+	annotation PBI_ResultType = Table
+

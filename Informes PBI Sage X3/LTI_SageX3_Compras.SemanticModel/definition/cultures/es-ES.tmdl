@@ -5833,129 +5833,6 @@ cultureInfo es-ES
 			        }
 			      ]
 			    },
-			    "item.id_item": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "Articulos",
-			          "ConceptualProperty": "IdItem"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "id item": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "IdItem": {
-			            "Type": "Noun",
-			            "State": "Generated",
-			            "Weight": 0.99
-			          }
-			        },
-			        {
-			          "id product": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "OfficeThesaurus"
-			            },
-			            "Weight": 0.75
-			          }
-			        },
-			        {
-			          "id element": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "OfficeThesaurus"
-			            },
-			            "Weight": 0.75
-			          }
-			        },
-			        {
-			          "id entry": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "OfficeThesaurus"
-			            },
-			            "Weight": 0.75
-			          }
-			        },
-			        {
-			          "id article": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "OfficeThesaurus"
-			            },
-			            "Weight": 0.727
-			          }
-			        },
-			        {
-			          "id object": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "OfficeThesaurus"
-			            },
-			            "Weight": 0.727
-			          }
-			        },
-			        {
-			          "id piece": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "OfficeThesaurus"
-			            },
-			            "Weight": 0.727
-			          }
-			        },
-			        {
-			          "id token": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "OfficeThesaurus"
-			            },
-			            "Weight": 0.727
-			          }
-			        },
-			        {
-			          "identification item": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "OfficeThesaurus"
-			            },
-			            "Weight": 0.6
-			          }
-			        },
-			        {
-			          "identity item": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "OfficeThesaurus"
-			            },
-			            "Weight": 0.6
-			          }
-			        },
-			        {
-			          "identifier item": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "OfficeThesaurus"
-			            },
-			            "Weight": 0.6
-			          }
-			        }
-			      ]
-			    },
 			    "item.sociedad": {
 			      "Definition": {
 			        "Binding": {
@@ -6047,16 +5924,6 @@ cultureInfo es-ES
 			        {
 			          "codigo contable": {
 			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "Línea Negocio": {
-			            "State": "Suggested",
-			            "Source": {
-			              "Type": "External",
-			              "Agent": "PowerBI.VisualColumnRename"
-			            },
-			            "Weight": 0.9
 			          }
 			        }
 			      ]
@@ -7191,19 +7058,7 @@ cultureInfo es-ES
 			          "ConceptualProperty": "Provincia Nombre"
 			        }
 			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "Provincia": {
-			            "State": "Suggested",
-			            "Source": {
-			              "Type": "External",
-			              "Agent": "PowerBI.VisualColumnRename"
-			            },
-			            "Weight": 0.9
-			          }
-			        }
-			      ]
+			      "State": "Generated"
 			    }
 			  },
 			  "Relationships": {

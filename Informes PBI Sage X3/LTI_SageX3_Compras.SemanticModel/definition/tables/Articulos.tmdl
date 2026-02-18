@@ -1,16 +1,6 @@
 table Articulos
 	lineageTag: f3514044-18e3-4e8f-842d-93188140c17d
 
-	column IdItem
-		dataType: string
-		lineageTag: b3e333f2-7eae-4536-88fa-9411518c22d3
-		summarizeBy: none
-		sourceColumn: IdItem
-
-		annotation SummarizationSetBy = Automatic
-
-		annotation PBI_FormatHint = {"isText":true}
-
 	column Sociedad
 		dataType: string
 		lineageTag: c51014fa-0eee-427e-8e79-e284c38077c3
@@ -104,7 +94,7 @@ table Articulos
 	column 'Precio Base'
 		dataType: double
 		lineageTag: 441e6d03-0b99-463b-b9cd-2778d5c355fa
-		summarizeBy: none
+		summarizeBy: sum
 		sourceColumn: Precio Base
 
 		annotation SummarizationSetBy = Automatic
@@ -114,7 +104,7 @@ table Articulos
 	column 'Coef Gastos Entrega'
 		dataType: double
 		lineageTag: 376aaaa9-eeab-4cb7-9463-c87964912370
-		summarizeBy: none
+		summarizeBy: sum
 		sourceColumn: Coef Gastos Entrega
 
 		annotation SummarizationSetBy = Automatic
@@ -124,7 +114,7 @@ table Articulos
 	column 'Coste Fijo Unitario'
 		dataType: double
 		lineageTag: 6f793a00-2b16-4d56-9d00-a522ba6e96e5
-		summarizeBy: none
+		summarizeBy: sum
 		sourceColumn: Coste Fijo Unitario
 
 		annotation SummarizationSetBy = Automatic
@@ -164,7 +154,7 @@ table Articulos
 	column 'Cantidad Minima'
 		dataType: double
 		lineageTag: 1c425f63-e469-4a9c-97a9-a4a1d4807d8d
-		summarizeBy: none
+		summarizeBy: sum
 		sourceColumn: Cantidad Minima
 
 		annotation SummarizationSetBy = Automatic
@@ -174,7 +164,7 @@ table Articulos
 	column 'Margen Minimo'
 		dataType: double
 		lineageTag: 25aec526-ae7b-4fe3-a265-2f674300e4e6
-		summarizeBy: none
+		summarizeBy: sum
 		sourceColumn: Margen Minimo
 
 		annotation SummarizationSetBy = Automatic
@@ -184,7 +174,7 @@ table Articulos
 	column 'Precio Minimo'
 		dataType: double
 		lineageTag: c62c553c-158e-4fbd-9cfe-c8062b6ee1fd
-		summarizeBy: none
+		summarizeBy: sum
 		sourceColumn: Precio Minimo
 
 		annotation SummarizationSetBy = Automatic
@@ -194,7 +184,7 @@ table Articulos
 	column 'Precio Teorico'
 		dataType: double
 		lineageTag: c070fb54-31eb-4208-8ef9-218c4aa79035
-		summarizeBy: none
+		summarizeBy: sum
 		sourceColumn: Precio Teorico
 
 		annotation SummarizationSetBy = Automatic
@@ -204,7 +194,7 @@ table Articulos
 	column 'Precio Base Ventas'
 		dataType: double
 		lineageTag: ed885bae-2f2f-43bd-b436-04cd670683a0
-		summarizeBy: none
+		summarizeBy: sum
 		sourceColumn: Precio Base Ventas
 
 		annotation SummarizationSetBy = Automatic
@@ -246,12 +236,20 @@ table Articulos
 	column 'Cantidad Maxima'
 		dataType: double
 		lineageTag: 34c9a8a6-1f40-40dd-b9f5-c333d2eaafc1
-		summarizeBy: none
+		summarizeBy: sum
 		sourceColumn: Cantidad Maxima
 
 		annotation SummarizationSetBy = Automatic
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column IdArticulo
+		dataType: string
+		lineageTag: 8ddd26cf-5aeb-4066-b3e8-2c7a9ddb4626
+		summarizeBy: none
+		sourceColumn: IdArticulo
+
+		annotation SummarizationSetBy = Automatic
 
 	partition Articulos-b82692f0-a25b-4f0e-8615-4429edd05937 = m
 		mode: import
@@ -263,7 +261,7 @@ table Articulos
 				    Origen = Sql.Database(CurrentServer, CurrentDatabase, [Query="
 				                                                                SELECT
 				                                                                    -- 1. IDENTIFICACIÓN Y CATEGORIZACIÓN
-				                                                                    ITM.ITMREF_0        AS 'IdItem',
+				                                                                    ITM.ITMREF_0        AS 'IdArticulo',
 				                                                                    ITM.CPY_0           AS 'Sociedad',
 				                                                                    ITM.TCLCOD_0        AS 'IdCategoria',
 				                                                                    TXCAT.TEXTE_0       AS 'Categoria',

@@ -52,10 +52,13 @@ table 'Factura Compras'
 
 	column 'Fecha Contable'
 		dataType: dateTime
+		isHidden
 		formatString: dd/mm/yyyy
 		lineageTag: 5e11f295-41b1-4df1-9a99-a9e89131217f
 		summarizeBy: none
 		sourceColumn: Fecha Contable
+
+		changedProperty = IsHidden
 
 		annotation SummarizationSetBy = Automatic
 
@@ -129,9 +132,12 @@ table 'Factura Compras'
 
 	column ItemID
 		dataType: string
+		isHidden
 		lineageTag: bc89b20c-22c8-4222-a8a8-a456abb0038c
 		summarizeBy: none
 		sourceColumn: ItemID
+
+		changedProperty = IsHidden
 
 		annotation SummarizationSetBy = Automatic
 

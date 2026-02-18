@@ -39,7 +39,7 @@ table Empresa
 		dataType: int64
 		formatString: 0
 		lineageTag: c9d6e130-f92c-4d37-9202-41a0377a2390
-		summarizeBy: none
+		summarizeBy: sum
 		sourceColumn: Sociedad Juridica
 
 		annotation SummarizationSetBy = Automatic
