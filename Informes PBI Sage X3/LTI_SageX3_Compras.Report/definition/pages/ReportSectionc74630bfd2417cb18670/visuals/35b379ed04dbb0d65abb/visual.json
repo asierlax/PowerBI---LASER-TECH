@@ -1,5 +1,5 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.5.0/schema.json",
   "name": "35b379ed04dbb0d65abb",
   "position": {
     "x": 792,
@@ -168,23 +168,5 @@
     },
     "drillFilterOtherVisuals": true
   },
-  "parentGroupName": "44a7708678d697b8a076",
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "bbcf215752213c7ae95d",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Fecha"
-              }
-            },
-            "Property": "Año"
-          }
-        },
-        "type": "Advanced"
-      }
-    ]
-  }
+  "parentGroupName": "44a7708678d697b8a076"
 }

@@ -1,10 +1,10 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.5.0/schema.json",
   "name": "7dd132e760eb51346e20",
   "position": {
     "x": 915.79579579579593,
     "y": 455.49549549549556,
-    "z": 33500,
+    "z": 33000,
     "height": 241.20120120120123,
     "width": 339.21921921921927,
     "tabOrder": 4000
@@ -161,37 +161,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "e44d60f1538f00b42604",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Metricas"
-              }
-            },
-            "Property": "Total Compras"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "4acd427d8ebcdd3abeac",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Lineas Contables Analiticas"
-              }
-            },
-            "Property": "Seccion Analitica_2"
-          }
-        },
-        "type": "Categorical"
-      }
-    ]
   }
 }

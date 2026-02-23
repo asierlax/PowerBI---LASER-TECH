@@ -1,5 +1,5 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.5.0/schema.json",
   "name": "ddf141169d5760851040",
   "position": {
     "x": 36.516516516516518,
@@ -240,65 +240,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "5851698b751b85477c14",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Proveedor"
-              }
-            },
-            "Property": "Proveedor"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "ba066af69cfb740f0e52",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Metricas"
-              }
-            },
-            "Property": "Total Compras"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "e91c5be77a8d981e5dbb",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Metricas"
-              }
-            },
-            "Property": "Descuento %"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "ec1637e9a0cbe612255f",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Metricas"
-              }
-            },
-            "Property": "Compra Neta"
-          }
-        },
-        "type": "Advanced"
-      }
-    ]
   }
 }

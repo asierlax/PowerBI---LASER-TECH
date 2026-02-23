@@ -1,5 +1,5 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.5.0/schema.json",
   "name": "47dae80762c6890e379d",
   "position": {
     "x": 362.07951070336389,
@@ -402,93 +402,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "3404e97f380fd66853d7",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Factura Compras"
-              }
-            },
-            "Property": "Fecha Contable"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "eeff70cdd0cb505c1436",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Articulos"
-              }
-            },
-            "Property": "Descripcion 1"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "874e3519564f07608a9e",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Metricas"
-              }
-            },
-            "Property": "Total Compras"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "4f5c30445d37890ea41a",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Metricas"
-              }
-            },
-            "Property": "Descuento %"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "1c732d2616ac3744eedb",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Metricas"
-              }
-            },
-            "Property": "Compra Neta"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "18916090caf3256b8b91",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Metricas"
-              }
-            },
-            "Property": "Total Cantidad"
-          }
-        },
-        "type": "Advanced"
-      }
-    ]
   }
 }

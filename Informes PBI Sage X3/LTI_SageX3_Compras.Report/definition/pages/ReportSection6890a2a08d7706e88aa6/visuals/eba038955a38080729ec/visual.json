@@ -1,5 +1,5 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.5.0/schema.json",
   "name": "eba038955a38080729ec",
   "position": {
     "x": 8.8118146502974568,
@@ -410,51 +410,5 @@
     },
     "drillFilterOtherVisuals": true
   },
-  "parentGroupName": "597f0df9ab01b3f2caa6",
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "029e74bd2e2825757e71",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Metricas"
-              }
-            },
-            "Property": "Total Compras"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "0c7bf7868757de62afad",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Proveedor"
-              }
-            },
-            "Property": "Proveedor"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "1c9e38f6b705300d9bca",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Articulos"
-              }
-            },
-            "Property": "Descripcion 1"
-          }
-        },
-        "type": "Categorical"
-      }
-    ]
-  }
+  "parentGroupName": "597f0df9ab01b3f2caa6"
 }
