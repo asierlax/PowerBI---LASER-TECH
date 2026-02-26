@@ -1,5 +1,5 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.5.0/schema.json",
   "name": "fcfd63e9dd6093e81ec5",
   "position": {
     "x": 23.505843071786312,
@@ -182,6 +182,20 @@
               },
               "queryRef": "Intervenciones.Sector",
               "nativeQueryRef": "Sector"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Intervenciones"
+                    }
+                  },
+                  "Property": "Fam est 2 SS"
+                }
+              },
+              "queryRef": "Intervenciones.Fam est 2 SS",
+              "nativeQueryRef": "Fam est 2 SS"
             },
             {
               "field": {
@@ -512,6 +526,20 @@
               }
             },
             "Property": "Estado facturado"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "b0da68b54d00daab5c08",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Intervenciones"
+              }
+            },
+            "Property": "Fam est 2 SS"
           }
         },
         "type": "Categorical"

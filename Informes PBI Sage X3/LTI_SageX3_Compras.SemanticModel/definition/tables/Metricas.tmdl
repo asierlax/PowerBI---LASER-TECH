@@ -148,6 +148,10 @@ table Metricas
 		formatString: 0.00\ %;-0.00\ %;0.00\ %
 		lineageTag: 3da3f035-627c-4a6e-af28-f4666e306d6a
 
+	measure 'Count Lin pedidos' = COUNT('Pedidos Lineas'[DocIdLinea]) + 0
+		displayFolder: KPI Pedidos
+		lineageTag: 909c3a4d-1d27-42a9-a274-b9ac7668acad
+
 	partition Metricas-f6c63909-fea0-42bb-accd-c4ede5072810 = m
 		mode: import
 		source =

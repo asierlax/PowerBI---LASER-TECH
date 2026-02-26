@@ -101,7 +101,7 @@ table 'Pedidos Lineas'
 
 	column 'Fecha recepcion'
 		dataType: dateTime
-		formatString: Long Date
+		formatString: dd/mm/yyyy
 		lineageTag: 5730ccfc-b0fc-4089-9772-3c24b50b7d3c
 		summarizeBy: none
 		sourceColumn: Fecha recepcion
@@ -110,9 +110,11 @@ table 'Pedidos Lineas'
 
 		annotation UnderlyingDateTimeDataType = Date
 
+		annotation PBI_FormatHint = {"isDateTimeCustom":true}
+
 	column 'Fecha OCC'
 		dataType: dateTime
-		formatString: Long Date
+		formatString: dd/mm/yyyy
 		lineageTag: 7d2756fd-0088-4a2d-8f2a-4183b1c34efc
 		summarizeBy: none
 		sourceColumn: Fecha OCC
@@ -120,6 +122,8 @@ table 'Pedidos Lineas'
 		annotation SummarizationSetBy = Automatic
 
 		annotation UnderlyingDateTimeDataType = Date
+
+		annotation PBI_FormatHint = {"isDateTimeCustom":true}
 
 	column Precio
 		dataType: double
@@ -186,6 +190,13 @@ table 'Pedidos Lineas'
 		lineageTag: 85f3ecfc-7749-4286-847f-dda492e96ce4
 		summarizeBy: none
 		sourceColumn: Linea saldada
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Diferenia dias OCC' = DATEDIFF('Pedidos Lineas'[Fecha OCC],'Pedidos Lineas'[Fecha recepcion],DAY)
+		formatString: 0
+		lineageTag: 554443a7-05ae-4c64-aa29-ecbceec1f8a8
+		summarizeBy: sum
 
 		annotation SummarizationSetBy = Automatic
 

@@ -265,9 +265,9 @@ table Intervenciones
 				                                                                ITN.BPC_0 'Codigo cliente', 
 				                                                                (ITN.BPC_0 + ' - ' + BPC.BPCNAM_0) AS 'Cliente', 
 				                                                                ISNULL(BPC.TSCCOD_1 + ' - ' + TV31.TEXTE_0,'') AS 'Sector', 
-				                                                                ITN.YANOMALIA_0 'Anomalia', 
+				                                                                CASE ITN.YANOMALIA_0 WHEN '' THEN SRE.SRETTR_0 ELSE ITN.YANOMALIA_0 END AS 'Anomalia', 
 				                                                                ITN.DAT_0 'Fecha intervencion', 
-				                                                                ITN.YMACSERNUM_0 'Nº serie maquina', 
+				                                                                CASE ITN.YMACSERNUM_0 WHEN '' THEN MAC.MACSERNUM_0 ELSE ITN.YMACSERNUM_0 END AS 'Nº serie maquina', 
 				                                                                CASE ITN.YCSGARANTI_0 WHEN 2 THEN 'SI' ELSE 'NO' END AS 'Int. sin garantia', 
 				                                                                CASE ITN.YCGARANTIA_0 WHEN 2 THEN 'SI' ELSE 'NO' END AS 'Int. con garantia', 
 				                                                                CASE ITN.YCINSTALA_0 WHEN 2 THEN 'SI' ELSE 'NO' END AS 'Int. instalacion', 
@@ -285,6 +285,7 @@ table Intervenciones
 				                                                                LEFT JOIN " & CurrentSchema & ".ATEXTRA TV31 ON BPC.TSCCOD_1 = TV31.IDENT2_0 AND TV31.CODFIC_0 = 'ATABDIV' AND TV31.IDENT1_0 = '31' AND TV31.ZONE_0 = 'LNGDES' AND TV31.LANGUE_0  = 'SPA'
 				                                                                LEFT JOIN " & CurrentSchema & ".AUTILIS USR ON ITN.REP_0 = USR.USR_0
 				                                                                LEFT JOIN " & CurrentSchema & ".APLSTD M3004 ON SRE.SREINVFLG_0 = M3004.LANNUM_0 AND M3004.LANCHP_0 = '3004' AND M3004.LAN_0 = 'SPA'
+				                                                                LEFT JOIN " & CurrentSchema & ".MACHINES MAC ON SRE.SREMAC_0 = MAC.MACNUM_0
 				                                                            " ]),
 				    #"Tipo cambiado" = Table.TransformColumnTypes(Origen,{{"Fecha creacion SS", type date}, {"Fecha intervencion", type date}})
 				in
