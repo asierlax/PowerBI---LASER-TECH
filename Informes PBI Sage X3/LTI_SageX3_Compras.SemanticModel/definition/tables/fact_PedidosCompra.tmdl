@@ -1,0 +1,404 @@
+table fact_PedidosCompra
+	lineageTag: be0c0e73-ae1a-40b1-9f37-07ceb96495f0
+
+	column Documento
+		dataType: string
+		lineageTag: 3241ce13-e223-4248-a456-9ff467421d8e
+		summarizeBy: none
+		sourceColumn: Documento
+
+		annotation SummarizationSetBy = Automatic
+
+	column IdSociedad
+		dataType: string
+		lineageTag: 8ef9f5ea-6931-43c4-a3bf-7730f3d8a6bb
+		summarizeBy: none
+		sourceColumn: IdSociedad
+
+		annotation SummarizationSetBy = Automatic
+
+	column Planta
+		dataType: string
+		lineageTag: 5ec0dee1-b7f2-420e-aad4-0cf8da15b5a6
+		summarizeBy: none
+		sourceColumn: Planta
+
+		annotation SummarizationSetBy = Automatic
+
+	column Fecha
+		dataType: dateTime
+		formatString: dd/mm/yyyy
+		lineageTag: 49cb3f02-1b68-41c2-8f02-ff8dae124a2b
+		summarizeBy: none
+		sourceColumn: Fecha
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+		annotation PBI_FormatHint = {"isDateTimeCustom":true}
+
+	column 'Nº OCC'
+		dataType: string
+		lineageTag: 76bf3e8c-652c-4504-aef1-d78fcbb0deca
+		summarizeBy: none
+		sourceColumn: Nº OCC
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Nº de report'
+		dataType: string
+		lineageTag: 9bb5eb8a-cf52-4dea-89e5-f51350505f4f
+		summarizeBy: none
+		sourceColumn: Nº de report
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Clase pedido'
+		dataType: string
+		lineageTag: 87668d0a-ab6d-4bf7-b3c7-17cab70a9d21
+		summarizeBy: none
+		sourceColumn: Clase pedido
+
+		annotation SummarizationSetBy = Automatic
+
+	column IdTipoPedido
+		dataType: string
+		lineageTag: 774b336d-4c67-4382-b529-02ab5415c868
+		summarizeBy: none
+		sourceColumn: IdTipoPedido
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Tipo pedido'
+		dataType: string
+		lineageTag: efeaf8c8-bd8b-46c5-93af-714e8d0c7cc2
+		summarizeBy: none
+		sourceColumn: Tipo pedido
+
+		annotation SummarizationSetBy = Automatic
+
+	column IdProveedor
+		dataType: string
+		lineageTag: cdecc0f7-c69a-4f3c-ad56-f3f7488bba51
+		summarizeBy: none
+		sourceColumn: IdProveedor
+
+		annotation SummarizationSetBy = Automatic
+
+	column Proveedor
+		dataType: string
+		lineageTag: 83ccdb1f-3261-40d8-b480-04c8c2db8abf
+		summarizeBy: none
+		sourceColumn: Proveedor
+
+		annotation SummarizationSetBy = Automatic
+
+	column IdDireccion
+		dataType: string
+		lineageTag: 99e76174-ba79-410f-b199-f44919d7b717
+		summarizeBy: none
+		sourceColumn: IdDireccion
+
+		annotation SummarizationSetBy = Automatic
+
+	column Comprador
+		dataType: string
+		lineageTag: 14fedf4e-0e5d-4152-947b-75a4419aee3d
+		summarizeBy: none
+		sourceColumn: Comprador
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Codigo postal'
+		dataType: string
+		lineageTag: e7f6bdcc-3a0c-4a97-af75-2290fa143bb6
+		summarizeBy: none
+		sourceColumn: Codigo postal
+
+		annotation SummarizationSetBy = Automatic
+
+	column Provincia
+		dataType: string
+		lineageTag: eed8d466-6488-4881-9b45-5125e614434c
+		summarizeBy: none
+		sourceColumn: Provincia
+
+		annotation SummarizationSetBy = Automatic
+
+	column Ciudad
+		dataType: string
+		lineageTag: 2963bd54-b8bf-4ea2-9735-b0c1163328df
+		summarizeBy: none
+		sourceColumn: Ciudad
+
+		annotation SummarizationSetBy = Automatic
+
+	column IdPais
+		dataType: string
+		lineageTag: 4d348dbd-26cf-4425-b1fb-81507fd21889
+		summarizeBy: none
+		sourceColumn: IdPais
+
+		annotation SummarizationSetBy = Automatic
+
+	column Pais
+		dataType: string
+		lineageTag: 0d9796aa-8394-46ee-8b53-6b712e408c16
+		summarizeBy: none
+		sourceColumn: Pais
+
+		annotation SummarizationSetBy = Automatic
+
+	column IdCondPago
+		dataType: string
+		lineageTag: 40f785af-a4d5-4d15-b4f3-c8a088d25144
+		summarizeBy: none
+		sourceColumn: IdCondPago
+
+		annotation SummarizationSetBy = Automatic
+
+	column IdTransportista
+		dataType: string
+		lineageTag: 1364a94e-a5fd-4108-8e71-f461d33c2c63
+		summarizeBy: none
+		sourceColumn: IdTransportista
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Regimen impuesto'
+		dataType: string
+		lineageTag: da78a99d-09bc-4cc4-a76d-4a1c50d54186
+		summarizeBy: none
+		sourceColumn: Regimen impuesto
+
+		annotation SummarizationSetBy = Automatic
+
+	column Divisa
+		dataType: string
+		lineageTag: 79226a8e-ef9c-4404-8632-5dcc41a823af
+		summarizeBy: none
+		sourceColumn: Divisa
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Importe BI'
+		dataType: double
+		lineageTag: 1a09d1b0-3ab4-4a6f-a963-aec7a9b645ee
+		summarizeBy: sum
+		sourceColumn: Importe BI
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Importe II'
+		dataType: double
+		lineageTag: 2fbbb482-4e4f-493b-962d-b453ccd98a6f
+		summarizeBy: sum
+		sourceColumn: Importe II
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column DocumentoLinea
+		dataType: string
+		lineageTag: 687eed5f-d360-4200-b1f0-b4facd252eb2
+		summarizeBy: none
+		sourceColumn: DocumentoLinea
+
+		annotation SummarizationSetBy = Automatic
+
+	column IdLinea
+		dataType: int64
+		formatString: 0
+		lineageTag: 62ba38d4-ac01-4703-9218-59980b4b82a6
+		summarizeBy: sum
+		sourceColumn: IdLinea
+
+		annotation SummarizationSetBy = Automatic
+
+	column DocIdLinea
+		dataType: string
+		lineageTag: 3704ad1d-69fb-48b2-bafc-61fff31c1834
+		summarizeBy: none
+		sourceColumn: DocIdLinea
+
+		annotation SummarizationSetBy = Automatic
+
+	column IdArticulo
+		dataType: string
+		lineageTag: d1f3dcf2-96c2-414d-83e8-1348b5c25ce3
+		summarizeBy: none
+		sourceColumn: IdArticulo
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Ref. proveedor'
+		dataType: string
+		lineageTag: 71574096-9829-41d9-b9f0-29468952a04c
+		summarizeBy: none
+		sourceColumn: Ref. proveedor
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Descripcion linea'
+		dataType: string
+		lineageTag: 4241ad81-192d-49d1-bf8e-68f78c51083b
+		summarizeBy: none
+		sourceColumn: Descripcion linea
+
+		annotation SummarizationSetBy = Automatic
+
+	column Planta2
+		dataType: string
+		lineageTag: 2b87c9df-ef3d-4cbb-8a0e-e57dbefc0523
+		summarizeBy: none
+		sourceColumn: Planta2
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Ctd. pedida'
+		dataType: double
+		lineageTag: 86899882-02ba-4889-9ccb-a5bc53101165
+		summarizeBy: sum
+		sourceColumn: Ctd. pedida
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Uni.'
+		dataType: string
+		lineageTag: b197f179-711b-49cb-829a-cb18986f7283
+		summarizeBy: none
+		sourceColumn: Uni.
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Coef. UC-US'
+		dataType: double
+		lineageTag: e1882ae8-0a2b-490f-bbe4-c5f8c27dca98
+		summarizeBy: sum
+		sourceColumn: Coef. UC-US
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Ctd. US'
+		dataType: double
+		lineageTag: 8eef317c-6ca8-4f8c-a647-240919312c7d
+		summarizeBy: sum
+		sourceColumn: Ctd. US
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Uni. stock'
+		dataType: string
+		lineageTag: 4a2011e3-7223-4a9f-935e-76c99a73802c
+		summarizeBy: none
+		sourceColumn: Uni. stock
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Fecha recepcion'
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 1b768bd7-bd00-4649-bd45-de262f872b90
+		summarizeBy: none
+		sourceColumn: Fecha recepcion
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Fecha OCC'
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 69f0c215-130f-4c7f-aa4b-41723878b988
+		summarizeBy: none
+		sourceColumn: Fecha OCC
+
+		annotation SummarizationSetBy = Automatic
+
+	column Precio
+		dataType: double
+		lineageTag: e2e5055e-00ce-4d47-a178-2b281fe1cc64
+		summarizeBy: sum
+		sourceColumn: Precio
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Dto1
+		dataType: double
+		lineageTag: 6262565e-312c-4238-82cb-9c8b58f03281
+		summarizeBy: sum
+		sourceColumn: Dto1
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Dto2
+		dataType: double
+		lineageTag: 214be2af-baa1-4d31-b8b3-3ec672fb1bb7
+		summarizeBy: sum
+		sourceColumn: Dto2
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Dto3
+		dataType: double
+		lineageTag: 5d6b878f-4445-481d-8439-67dc00b5241c
+		summarizeBy: sum
+		sourceColumn: Dto3
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Precio neto'
+		dataType: double
+		lineageTag: 18de7f71-14d6-4f77-bde1-37c6a44ac5b3
+		summarizeBy: sum
+		sourceColumn: Precio neto
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Importe linea'
+		dataType: double
+		lineageTag: c75c1eee-9b45-4645-a54b-ce0b7f2f1729
+		summarizeBy: sum
+		sourceColumn: Importe linea
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Linea saldada'
+		dataType: string
+		lineageTag: c3824bd6-d650-4fe4-8a4b-b8787edc9d90
+		summarizeBy: none
+		sourceColumn: Linea saldada
+
+		annotation SummarizationSetBy = Automatic
+
+	partition fact_PedidosCompra = m
+		mode: import
+		source =
+				let
+				    Origen = PowerBI.Dataflows(null),
+				    #"cd25238f-048e-4509-ab9f-29f918c14d4c" = Origen{[workspaceId="cd25238f-048e-4509-ab9f-29f918c14d4c"]}[Data],
+				    #"83e92cc2-2615-4e7e-af83-e12f28b5827e" = #"cd25238f-048e-4509-ab9f-29f918c14d4c"{[dataflowId="83e92cc2-2615-4e7e-af83-e12f28b5827e"]}[Data],
+				    fact_PedidosCompra1 = #"83e92cc2-2615-4e7e-af83-e12f28b5827e"{[entity="fact_PedidosCompra"]}[Data]
+				in
+				    fact_PedidosCompra1
+

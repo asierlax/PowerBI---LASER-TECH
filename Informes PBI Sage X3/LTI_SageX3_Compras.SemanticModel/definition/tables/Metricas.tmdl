@@ -1,7 +1,7 @@
 table Metricas
 	lineageTag: 919c610d-b7f0-4d45-a6f4-3139cf630a85
 
-	measure 'Total Compras' = SUMX( 'Factura Compras', 'Factura Compras'[Importe Linea AI]*[Sentido] )
+	measure 'Total Compras' = SUMX( 'fact_FacturasCompra', 'fact_FacturasCompra'[Importe Linea AI]*[Sentido] )
 		formatString: #,0.00\ "€";-#,0.00\ "€";#,0.00\ "€"
 		lineageTag: 2aa08c01-aa5b-462f-98cf-cf4e3805db71
 
@@ -11,9 +11,9 @@ table Metricas
 
 	measure Descuento =
 			
-			var desc1 = SUM('Factura Compras'[Valor Descuento1])
-			var desc2 = SUM('Factura Compras'[Valor Descuento2])
-			var desc3 = SUM('Factura Compras'[Valor Descuento3])
+			var desc1 = SUM('fact_FacturasCompra'[Valor Descuento1])
+			var desc2 = SUM('fact_FacturasCompra'[Valor Descuento2])
+			var desc3 = SUM('fact_FacturasCompra'[Valor Descuento3])
 			return desc1 + desc2 + desc3
 		formatString: #,0.00\ "€";-#,0.00\ "€";#,0.00\ "€"
 		lineageTag: d244f30b-6ada-43db-aedc-43e24326a110
@@ -69,17 +69,17 @@ table Metricas
 		formatString: #,0.00\ "€";-#,0.00\ "€";#,0.00\ "€"
 		lineageTag: a7b0a6ed-0b6c-49c4-871d-e4bbad00d8b5
 
-	measure FechaUltimaCompra = LASTNONBLANK('Factura Compras'[Fecha Contable],'Factura Compras'[Fecha Contable])
+	measure FechaUltimaCompra = LASTNONBLANK('fact_FacturasCompra'[Fecha Contable],'fact_FacturasCompra'[Fecha Contable])
 		formatString: dd/mm/yyyy
 		lineageTag: efd69506-36a8-4ca2-a207-2d9eb88a564b
 
 		annotation PBI_FormatHint = {"isDateTimeCustom":true}
 
-	measure NProveedores = DISTINCTCOUNT('Factura Compras'[ProveedorID])
+	measure NProveedores = DISTINCTCOUNT('fact_FacturasCompra'[ProveedorID])
 		formatString: 0
 		lineageTag: 0e148be9-46f6-4fd7-9bbe-4ac6280ba878
 
-	measure 'Frecuencia Media' = DIVIDE(DISTINCTCOUNT('Factura Compras'[ItemID]), [NProveedores], 0)
+	measure 'Frecuencia Media' = DIVIDE(DISTINCTCOUNT('fact_FacturasCompra'[ItemID]), [NProveedores], 0)
 		lineageTag: 32c2b0b6-c26b-480b-8f02-dcdb346dde77
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
@@ -88,7 +88,7 @@ table Metricas
 		formatString: #,0.00\ "€";-#,0.00\ "€";#,0.00\ "€"
 		lineageTag: 2f43fe14-b65d-4d19-932d-023bff0c89c8
 
-	measure FechaPrimeraCompra = FIRSTNONBLANK('Factura Compras'[Fecha Contable],'Factura Compras'[Fecha Contable])
+	measure FechaPrimeraCompra = FIRSTNONBLANK('fact_FacturasCompra'[Fecha Contable],'fact_FacturasCompra'[Fecha Contable])
 		formatString: General Date
 		lineageTag: aaec302a-e88e-4dbf-b78f-f77ec6c85bb7
 
@@ -99,7 +99,7 @@ table Metricas
 		formatString: 0.0
 		lineageTag: b8c8cc63-48b0-475f-92ea-53d8029d82f5
 
-	measure 'Media Items' = DIVIDE(SUM('Factura Compras'[Cantidad]), DISTINCTCOUNT('Factura Compras'[ItemID]),0)
+	measure 'Media Items' = DIVIDE(SUM('fact_FacturasCompra'[Cantidad]), DISTINCTCOUNT('fact_FacturasCompra'[ItemID]),0)
 		lineageTag: 744e3b8c-0fd4-47b3-a193-e8bedd192568
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
@@ -108,7 +108,7 @@ table Metricas
 		formatString: 0.00\ %;-0.00\ %;0.00\ %
 		lineageTag: d36b5391-88c8-4149-90ed-90c67acbe9e1
 
-	measure 'Total Cantidad' = sum('Factura Compras'[Cantidad])
+	measure 'Total Cantidad' = sum('fact_FacturasCompra'[Cantidad])
 		formatString: 0
 		lineageTag: 8aa4f0c0-27f5-482f-8ba3-d4567d135655
 
@@ -124,7 +124,7 @@ table Metricas
 		formatString: 0.00\ %;-0.00\ %;0.00\ %
 		lineageTag: 8fb20ef0-88c9-4421-993e-9dcaa5979b5b
 
-	measure 'Total Facturas' = DISTINCTCOUNT('Factura Compras'[Documento])
+	measure 'Total Facturas' = DISTINCTCOUNT('fact_FacturasCompra'[Documento])
 		formatString: 0
 		lineageTag: df1629c5-52be-4a1d-96e4-6a778b47ac7a
 

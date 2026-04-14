@@ -84,7 +84,7 @@ table dim_Articulos
 	column 'Precio Base'
 		dataType: double
 		lineageTag: e24ff0cd-b150-433d-ba02-2da83c1848d5
-		summarizeBy: none
+		summarizeBy: sum
 		sourceColumn: Precio Base
 
 		annotation SummarizationSetBy = Automatic
@@ -94,7 +94,7 @@ table dim_Articulos
 	column 'Coef Gastos Entrega'
 		dataType: double
 		lineageTag: 218054af-74c7-417c-a707-c94dd888eab5
-		summarizeBy: none
+		summarizeBy: sum
 		sourceColumn: Coef Gastos Entrega
 
 		annotation SummarizationSetBy = Automatic
@@ -104,7 +104,7 @@ table dim_Articulos
 	column 'Coste Fijo Unitario'
 		dataType: double
 		lineageTag: c0e6ec87-f47b-481c-a9b6-37054a21e6d0
-		summarizeBy: none
+		summarizeBy: sum
 		sourceColumn: Coste Fijo Unitario
 
 		annotation SummarizationSetBy = Automatic
@@ -178,7 +178,7 @@ table dim_Articulos
 	column 'Cantidad Minima'
 		dataType: double
 		lineageTag: 1e2edfe0-dd85-4abc-8f82-c1e01635c59e
-		summarizeBy: none
+		summarizeBy: sum
 		sourceColumn: Cantidad Minima
 
 		annotation SummarizationSetBy = Automatic
@@ -188,7 +188,7 @@ table dim_Articulos
 	column 'Margen Minimo'
 		dataType: double
 		lineageTag: 368e5166-9783-4292-b4cf-8056659e1865
-		summarizeBy: none
+		summarizeBy: sum
 		sourceColumn: Margen Minimo
 
 		annotation SummarizationSetBy = Automatic
@@ -198,7 +198,7 @@ table dim_Articulos
 	column 'Precio Minimo'
 		dataType: double
 		lineageTag: ab685dbf-38b5-47f9-a2ec-698cd1f8e22a
-		summarizeBy: none
+		summarizeBy: sum
 		sourceColumn: Precio Minimo
 
 		annotation SummarizationSetBy = Automatic
@@ -208,7 +208,7 @@ table dim_Articulos
 	column 'Precio Base Ventas'
 		dataType: double
 		lineageTag: 6e3ad537-dccf-48b2-ab73-5f4f9c05a28b
-		summarizeBy: none
+		summarizeBy: sum
 		sourceColumn: Precio Base Ventas
 
 		annotation SummarizationSetBy = Automatic

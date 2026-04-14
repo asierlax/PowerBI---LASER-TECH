@@ -1,0 +1,223 @@
+table dim_Direcciones
+	lineageTag: 2f708c74-57c4-4bdb-8a58-fdee1ffe55f8
+
+	column 'Tipo dir'
+		dataType: int64
+		formatString: 0
+		lineageTag: 27114bd9-86ac-4f6f-b5f2-b10c6584f0bd
+		summarizeBy: sum
+		sourceColumn: Tipo dir
+
+		annotation SummarizationSetBy = Automatic
+
+	column IdTercero
+		dataType: string
+		lineageTag: 2ffd5c01-e104-4f80-b1b2-4591aa8caf2f
+		summarizeBy: none
+		sourceColumn: IdTercero
+
+		annotation SummarizationSetBy = Automatic
+
+	column CodDireccion
+		dataType: string
+		lineageTag: 15a983c4-eca2-43c6-b09d-ba7910d83e6a
+		summarizeBy: none
+		sourceColumn: CodDireccion
+
+		annotation SummarizationSetBy = Automatic
+
+	column IdDireccion
+		dataType: string
+		lineageTag: 3f610e29-f81c-4e53-a31d-6590ef6b240f
+		summarizeBy: none
+		sourceColumn: IdDireccion
+
+		annotation SummarizationSetBy = Automatic
+
+	column Descripcion
+		dataType: string
+		lineageTag: 223089ea-93b8-4122-a803-5007f95f941a
+		summarizeBy: none
+		sourceColumn: Descripcion
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Direccion linea 1'
+		dataType: string
+		lineageTag: 2f237d27-17fc-4c20-9a1a-b3a5d458c8ad
+		summarizeBy: none
+		sourceColumn: Direccion linea 1
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Direccion linea 2'
+		dataType: string
+		lineageTag: 25d47b3e-2492-4274-b852-c737c258938a
+		summarizeBy: none
+		sourceColumn: Direccion linea 2
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Direccion linea 3'
+		dataType: string
+		lineageTag: c7a301c0-2f65-47ca-9e1b-69de9c24196a
+		summarizeBy: none
+		sourceColumn: Direccion linea 3
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Codigo postal'
+		dataType: string
+		lineageTag: 14e60bc8-f8a6-4ac4-b4be-fdf7bd163218
+		summarizeBy: none
+		sourceColumn: Codigo postal
+
+		annotation SummarizationSetBy = Automatic
+
+	column Ciudad
+		dataType: string
+		lineageTag: f6cd4168-17de-4c0a-a843-4b807917833c
+		summarizeBy: none
+		sourceColumn: Ciudad
+
+		annotation SummarizationSetBy = Automatic
+
+	column Provincia
+		dataType: string
+		lineageTag: a09941e6-2076-47f9-b14d-d8507b525b3b
+		summarizeBy: none
+		sourceColumn: Provincia
+
+		annotation SummarizationSetBy = Automatic
+
+	column Pais
+		dataType: string
+		lineageTag: 4263ef83-3954-4445-985e-ec2d83875761
+		summarizeBy: none
+		sourceColumn: Pais
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Nombre Pais'
+		dataType: string
+		lineageTag: bc513313-09c6-4068-be63-2477b35119bf
+		summarizeBy: none
+		sourceColumn: Nombre Pais
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Telefono 1'
+		dataType: string
+		lineageTag: 0a4a118f-440b-4cfd-ac21-11a3d5be7885
+		summarizeBy: none
+		sourceColumn: Telefono 1
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Telefono 2'
+		dataType: string
+		lineageTag: 8a1a8980-fd18-4048-a38b-ee2bad5d650f
+		summarizeBy: none
+		sourceColumn: Telefono 2
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Telefono 3'
+		dataType: string
+		lineageTag: 22217837-2dce-4c9e-9b0f-9449d5ad098a
+		summarizeBy: none
+		sourceColumn: Telefono 3
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Telefono 4'
+		dataType: string
+		lineageTag: b4e79bec-a3fa-4278-8cbb-408229ccccd7
+		summarizeBy: none
+		sourceColumn: Telefono 4
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Telefono 5'
+		dataType: string
+		lineageTag: aa1f04cd-aeda-4a14-94a3-ebee5f28f146
+		summarizeBy: none
+		sourceColumn: Telefono 5
+
+		annotation SummarizationSetBy = Automatic
+
+	column Fax
+		dataType: string
+		lineageTag: 0519ba39-88f5-4bde-9d6c-09f360ebee95
+		summarizeBy: none
+		sourceColumn: Fax
+
+		annotation SummarizationSetBy = Automatic
+
+	column Movil
+		dataType: string
+		lineageTag: 3120ded2-08c4-406b-8eee-8ba46da64e35
+		summarizeBy: none
+		sourceColumn: Movil
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Email 1'
+		dataType: string
+		lineageTag: ab341c33-bfb8-4c38-a4dd-05728c050f0b
+		summarizeBy: none
+		sourceColumn: Email 1
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Email 2'
+		dataType: string
+		lineageTag: a7ae4f26-bebf-45cc-897d-3045d048e00b
+		summarizeBy: none
+		sourceColumn: Email 2
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Email 3'
+		dataType: string
+		lineageTag: 01e73588-3ecc-4484-a92a-4a2af6a35445
+		summarizeBy: none
+		sourceColumn: Email 3
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Email 4'
+		dataType: string
+		lineageTag: 92880cca-bea9-4259-bab8-e605156f18e5
+		summarizeBy: none
+		sourceColumn: Email 4
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Email 5'
+		dataType: string
+		lineageTag: 28649390-cb2f-4c2a-97aa-5653cbc5a39e
+		summarizeBy: none
+		sourceColumn: Email 5
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Sitio web'
+		dataType: string
+		lineageTag: 23d6faea-ba88-453f-a4f5-0dc8e6c3fdcb
+		summarizeBy: none
+		sourceColumn: Sitio web
+
+		annotation SummarizationSetBy = Automatic
+
+	partition dim_Direcciones = m
+		mode: import
+		source =
+				let
+				    Origen = PowerBI.Dataflows(null),
+				    #"cd25238f-048e-4509-ab9f-29f918c14d4c" = Origen{[workspaceId="cd25238f-048e-4509-ab9f-29f918c14d4c"]}[Data],
+				    #"5877d4c8-d8db-4300-bd5c-7bed546ea986" = #"cd25238f-048e-4509-ab9f-29f918c14d4c"{[dataflowId="5877d4c8-d8db-4300-bd5c-7bed546ea986"]}[Data],
+				    dim_Direcciones1 = #"5877d4c8-d8db-4300-bd5c-7bed546ea986"{[entity="dim_Direcciones"]}[Data]
+				in
+				    dim_Direcciones1
+

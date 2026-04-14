@@ -76,43 +76,13 @@ relationship 4dc4c71b-7efa-5806-258e-78c2865bf455
 	fromColumn: Recepciones.Sociedad
 	toColumn: Empresa.Empresa
 
-relationship AutoDetected_01f045d2-ff1c-4fd5-8a8d-f949ee455422
-	fromColumn: fact_FacturasCompra.ProveedorID
-	toColumn: Proveedor.ProveedorID
-
-relationship AutoDetected_91129552-a388-4b74-b97f-fbc678f4ce71
-	fromColumn: fact_FacturasCompra.Empresa
-	toColumn: Empresa.Empresa
-
-relationship AutoDetected_dfe93a79-10bf-4ecc-8902-05f2aec7d453
-	isActive: false
-	crossFilteringBehavior: bothDirections
-	fromCardinality: one
-	fromColumn: 'Lineas Contables Analiticas'.DocumentoLinea
-	toColumn: fact_FacturasCompra.DocumentoLinea
-
-relationship AutoDetected_a32aaa33-98c9-4b5c-8c7e-aef9840dd6d3
-	fromColumn: 'Factura Compras'.ProveedorID
-	toColumn: dim_Proveedores.ProveedorID
-
 relationship AutoDetected_59ec1c90-7210-4380-9831-6987bddf280b
 	fromColumn: fact_FacturasCompra.ProveedorID
 	toColumn: dim_Proveedores.ProveedorID
 
-relationship AutoDetected_de61b37b-7ea4-42ee-9303-661ad32980c6
-	fromColumn: 'Factura Compras'.Empresa
-	toColumn: dim_Sociedades.Empresa
-
 relationship AutoDetected_e85ed07b-77f1-45e4-b05f-4929d961c839
 	fromColumn: fact_FacturasCompra.Empresa
 	toColumn: dim_Sociedades.Empresa
-
-relationship AutoDetected_39f9b184-841c-4ad5-b02c-af20a92bcca2
-	isActive: false
-	crossFilteringBehavior: bothDirections
-	fromCardinality: one
-	fromColumn: dim_Proveedores.IdDireccion
-	toColumn: Direccion.IdDireccion
 
 relationship 610d256a-39f5-6003-d057-f0e46e3e80c4
 	fromColumn: fact_Recepciones.IdProveedor
@@ -129,4 +99,41 @@ relationship 7ceb5c87-cec6-4540-d63b-7556ebc77619
 relationship 12271f35-3c79-5291-30b1-8c0ac66b7eca
 	fromColumn: fact_Recepciones.Sociedad
 	toColumn: dim_Sociedades.Empresa
+
+relationship 1cc38ebd-2782-891d-cc35-d5372f230b7a
+	fromColumn: fact_FacturasCompra.ItemID
+	toColumn: dim_Articulos.IdArticulo
+
+relationship eb381c76-fada-97ec-f1f1-73627094a609
+	fromColumn: fact_FacturasCompra.'Fecha Contable'
+	toColumn: dim_Calendario.Fecha
+
+relationship a71102d2-82d5-5ced-d474-7a2ef1db11f4
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: dim_Direcciones.IdDireccion
+	toColumn: dim_Proveedores.IdDireccion
+
+relationship afc8ca0a-88ed-9770-cb9b-0128571262bf
+	isActive: false
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: dim_Sociedades.IdDireccion
+	toColumn: dim_Direcciones.IdDireccion
+
+relationship AutoDetected_0dc30a80-dad7-4d38-a2e3-017dc89c4764
+	fromColumn: fact_PedidosCompra.IdArticulo
+	toColumn: dim_Articulos.IdArticulo
+
+relationship abb8f435-7b74-2166-2993-0e2743a3eceb
+	fromColumn: fact_PedidosCompra.Fecha
+	toColumn: dim_Calendario.Fecha
+
+relationship a077d73b-c2a0-f4d4-4a06-a4c365af94b8
+	fromColumn: fact_PedidosCompra.IdSociedad
+	toColumn: dim_Sociedades.Empresa
+
+relationship f520729a-fb11-b922-9687-0c139b31bf2c
+	fromColumn: fact_PedidosCompra.IdProveedor
+	toColumn: dim_Proveedores.ProveedorID
 
