@@ -156,7 +156,7 @@ table Fecha
 		mode: import
 		source = ```
 				let
-				    MinDateYear = 2020, 
+				    MinDateYear = 2007, 
 				    //Date.Year(List.Min(#"Factura Compras"[Fecha Contable])),
 				    StartDate= Date.From(Text.From(MinDateYear)&"-01-01"),
 				    MaxDateYear = 2026,

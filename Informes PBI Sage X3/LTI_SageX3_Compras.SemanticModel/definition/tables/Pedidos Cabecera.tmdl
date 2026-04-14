@@ -200,6 +200,14 @@ table 'Pedidos Cabecera'
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
+	column IdTipoPedido
+		dataType: string
+		lineageTag: 3afb5c01-5121-45d4-81fa-2d726185d488
+		summarizeBy: none
+		sourceColumn: IdTipoPedido
+
+		annotation SummarizationSetBy = Automatic
+
 	partition 'Pedidos Cabecera' = m
 		mode: import
 		source = ```
@@ -216,6 +224,7 @@ table 'Pedidos Cabecera'
 				                                                                    ORDREF_0 AS 'Nº OCC',
 				                                                                    ZNUM_REPORT_0 AS 'Nº de report', 
 				                                                                    (cast(XREFERENCI_0 as varchar) + ' - ' + M6200.LANMES_0) AS 'Clase pedido',
+				                                                                    YTIPPED_0 AS IdTipoPedido,
 				                                                                    (YTIPPED_0 + ' - ' + ATX6001.TEXTE_0 ) AS 'Tipo pedido',
 				                                                                    BPSNUM_0 AS 'IdProveedor',
 				                                                                    BPRNAM_0 AS 'Proveedor',

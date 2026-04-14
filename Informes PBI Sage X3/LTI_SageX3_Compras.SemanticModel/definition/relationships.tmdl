@@ -30,16 +30,14 @@ relationship AutoDetected_91bdcf6b-1ccf-4acf-b24e-0d089c27d08f
 	toColumn: Empresa.Empresa
 
 relationship 82b2afdd-d54b-654d-8df6-b88b8c470d51
+	isActive: false
 	fromColumn: 'Pedidos Cabecera'.IdSociedad
 	toColumn: Empresa.Empresa
 
 relationship 585dd791-9c7e-8c65-5208-7035658eb85c
+	isActive: false
 	fromColumn: 'Pedidos Cabecera'.Fecha
 	toColumn: Fecha.Fecha
-
-relationship 36e42869-87ad-e149-a763-41085d9704ee
-	fromColumn: 'Pedidos Cabecera'.IdProveedor
-	toColumn: Proveedor.ProveedorID
 
 relationship AutoDetected_7d59aae9-79b4-4fbd-9032-9de93c58a9b4
 	fromColumn: 'Pedidos Lineas'.Documento
@@ -52,4 +50,56 @@ relationship AutoDetected_7ad4eaf5-bf78-4f95-810d-a1e7c2cd9c94
 relationship 7f953941-1c75-ba32-9e91-634ea631e132
 	fromColumn: 'Factura Compras'.ItemID
 	toColumn: Articulos.IdArticulo
+
+relationship AutoDetected_9c431dd0-ff53-460a-ac19-7043bd720094
+	fromColumn: Recepciones.Documento
+	toColumn: 'Pedidos Cabecera'.Documento
+
+relationship AutoDetected_5ac3e01d-e6a9-4210-a914-153221009cd0
+	fromColumn: Recepciones.IdArticulo
+	toColumn: Articulos.IdArticulo
+
+relationship 44f95d83-6660-1b0e-1742-5711920c6d35
+	fromColumn: Recepciones.IdProveedor
+	toColumn: Proveedor.ProveedorID
+
+relationship 250c0ad3-150c-7a56-d785-173e8e8de8f7
+	isActive: false
+	fromColumn: 'Pedidos Cabecera'.IdProveedor
+	toColumn: Proveedor.ProveedorID
+
+relationship a2cb2604-9d94-4270-f7dc-ce6a833446c0
+	fromColumn: Recepciones.'Fecha recepcion'
+	toColumn: Fecha.Fecha
+
+relationship 4dc4c71b-7efa-5806-258e-78c2865bf455
+	fromColumn: Recepciones.Sociedad
+	toColumn: Empresa.Empresa
+
+relationship AutoDetected_f3f73b58-e876-4dcc-a2a4-1460ea7ab245
+	fromColumn: 'Factura Compras'.ProveedorID
+	toColumn: dim_Proveedores.ProveedorID
+
+relationship AutoDetected_cb820271-3cc3-4ed4-9a1f-7ac361851e25
+	fromColumn: 'Factura Compras'.Empresa
+	toColumn: dim_Sociedades.Empresa
+
+relationship AutoDetected_7f1395d2-284b-48c8-b76b-2ee3f11efa53
+	isActive: false
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: dim_Proveedores.IdDireccion
+	toColumn: Direccion.IdDireccion
+
+relationship fbcf0f10-291c-6d92-e128-02528a135fe7
+	fromColumn: fact_Recepciones.Sociedad
+	toColumn: dim_Sociedades.Empresa
+
+relationship a4dd8ec8-0a0f-c50f-83b1-a601883345d5
+	fromColumn: fact_Recepciones.'Fecha recepcion'
+	toColumn: dim_Calendario.Fecha
+
+relationship 20ea7140-0994-7d7c-bcae-60390103e52b
+	fromColumn: fact_Recepciones.IdProveedor
+	toColumn: dim_Proveedores.ProveedorID
 

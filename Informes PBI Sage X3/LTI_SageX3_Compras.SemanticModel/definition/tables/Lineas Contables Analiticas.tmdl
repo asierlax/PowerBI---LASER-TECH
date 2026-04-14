@@ -919,3 +919,5 @@ table 'Lineas Contables Analiticas'
 
 	annotation PBI_ResultType = Table
 
+	annotation PBI_NavigationStepName = Navegación
+

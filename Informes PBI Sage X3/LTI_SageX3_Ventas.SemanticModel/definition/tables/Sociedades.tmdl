@@ -1,9 +1,17 @@
 table Sociedades
 	lineageTag: 008568a0-5739-43d3-909e-27205a3c0d29
 
+	column IdDireccion
+		dataType: string
+		lineageTag: d538f7d2-4989-49f9-b47b-10f1ce98dbd3
+		summarizeBy: none
+		sourceColumn: IdDireccion
+
+		annotation SummarizationSetBy = Automatic
+
 	column Empresa
 		dataType: string
-		lineageTag: 58846c99-fe58-429d-9510-f4578c180b5b
+		lineageTag: 062ca720-05f7-4ec2-9dfe-f82d964a820f
 		summarizeBy: none
 		sourceColumn: Empresa
 
@@ -11,16 +19,24 @@ table Sociedades
 
 	column 'Nombre Empresa'
 		dataType: string
-		lineageTag: 80090e9b-6f29-4c3b-9966-1ac23ce4e165
+		lineageTag: 081973ee-c769-4da6-9c44-07b4350c9f2d
 		summarizeBy: none
 		sourceColumn: Nombre Empresa
+
+		annotation SummarizationSetBy = Automatic
+
+	column Direccion
+		dataType: string
+		lineageTag: faac9e98-8db7-4393-ada7-122b54bddf34
+		summarizeBy: none
+		sourceColumn: Direccion
 
 		annotation SummarizationSetBy = Automatic
 
 	column 'Sociedad Juridica'
 		dataType: int64
 		formatString: 0
-		lineageTag: 2f48e1a4-007b-4694-a17c-31b2244b2491
+		lineageTag: e195e592-b155-4f74-9203-2a36e918f5dc
 		summarizeBy: none
 		sourceColumn: Sociedad Juridica
 
@@ -28,7 +44,7 @@ table Sociedades
 
 	column Legislacion
 		dataType: string
-		lineageTag: 8896f65b-d726-4040-abba-d21131c116ac
+		lineageTag: e8d1f327-61f4-4eee-96ee-5e9727055613
 		summarizeBy: none
 		sourceColumn: Legislacion
 
@@ -36,7 +52,7 @@ table Sociedades
 
 	column 'Modelo Contable'
 		dataType: string
-		lineageTag: d64a3af1-e4c8-4909-bfa5-685868962d7f
+		lineageTag: c034aa96-71c2-4db3-bf52-eb49ee047ed3
 		summarizeBy: none
 		sourceColumn: Modelo Contable
 
@@ -44,7 +60,7 @@ table Sociedades
 
 	column 'Planta Principal'
 		dataType: string
-		lineageTag: 290e54ee-5418-4362-986a-06d8fca6c63e
+		lineageTag: c4c2d420-91a9-4a46-b0c0-5029d6d3f9ac
 		summarizeBy: none
 		sourceColumn: Planta Principal
 
@@ -52,25 +68,9 @@ table Sociedades
 
 	column Pais
 		dataType: string
-		lineageTag: f8163480-5d6a-497f-9e52-655d7e3d12b0
+		lineageTag: 7e1d8648-7714-425b-a45a-0009eee89408
 		summarizeBy: none
 		sourceColumn: Pais
-
-		annotation SummarizationSetBy = Automatic
-
-	column Direccion
-		dataType: string
-		lineageTag: 67533869-4361-43d6-bb2b-3bb4f7627413
-		summarizeBy: none
-		sourceColumn: Direccion
-
-		annotation SummarizationSetBy = Automatic
-
-	column IdDireccion
-		dataType: string
-		lineageTag: d538f7d2-4989-49f9-b47b-10f1ce98dbd3
-		summarizeBy: none
-		sourceColumn: IdDireccion
 
 		annotation SummarizationSetBy = Automatic
 
@@ -83,21 +83,19 @@ table Sociedades
 				    CurrentSchema = Esquema,
 				    Origen = Sql.Database(CurrentServer, CurrentDatabase, [Query="
 				                                                                SELECT  
-				                                                                     [CPY_0]
-				                                                                    ,[CPYNAM_0]
-				                                                                    ,[BPAADD_0]
-				                                                                    ,[CPYLEGFLG_0]
-				                                                                    ,[LEG_0]
-				                                                                    ,[ACM_0]
-				                                                                    ,[MAIFCY_0]
-				                                                                    ,[CRY_0]   
+				                                                                    CPY_0 AS 'Empresa',
+				                                                                    CPYNAM_0 AS 'Nombre Empresa',
+				                                                                    BPAADD_0 AS 'Direccion',
+				                                                                    (CPY_0+'-'+BPAADD_0) AS 'IdDireccion',
+				                                                                    CPYLEGFLG_0 AS 'Sociedad Juridica',
+				                                                                    LEG_0 AS 'Legislacion',
+				                                                                    ACM_0 AS 'Modelo Contable',
+				                                                                    MAIFCY_0 AS 'Planta Principal',
+				                                                                    CRY_0 AS 'Pais'
 				                                                                FROM " & CurrentSchema & ".COMPANY"
-				                                                          ]),
-				    #"Columnas con nombre cambiado" = Table.RenameColumns(Origen,{{"CPY_0", "Empresa"}, {"CPYNAM_0", "Nombre Empresa"}, {"CPYLEGFLG_0", "Sociedad Juridica"}, {"LEG_0", "Legislacion"}, {"ACM_0", "Modelo Contable"}, {"MAIFCY_0", "Planta Principal"}, {"CRY_0", "Pais"}, {"BPAADD_0", "Direccion"}}),
-				    #"Personalizada agregada" = Table.AddColumn(#"Columnas con nombre cambiado", "IdDireccion", each [Empresa]&"-"&[Direccion]),
-				    #"Columnas reordenadas" = Table.ReorderColumns(#"Personalizada agregada",{"IdDireccion", "Empresa", "Nombre Empresa", "Direccion", "Sociedad Juridica", "Legislacion", "Modelo Contable", "Planta Principal", "Pais"})
+				                                                          ])
 				in
-				    #"Columnas reordenadas"
+				    #"Origen"
 				```
 
 	annotation PBI_ResultType = Table

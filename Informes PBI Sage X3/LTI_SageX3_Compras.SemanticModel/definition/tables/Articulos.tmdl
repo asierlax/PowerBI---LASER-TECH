@@ -201,7 +201,7 @@ table Articulos
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-	column IdArticulo_descripcion = CONCATENATE('Articulos'[IdItem],CONCATENATE(" - ",'Articulos'[Descripcion 1]))
+	column IdArticulo_descripcion = CONCATENATE('Articulos'[IdArticulo],CONCATENATE(" - ",'Articulos'[Descripcion 1]))
 		lineageTag: d0e5980a-e891-4a01-a797-6a3cd38d7bfe
 		summarizeBy: none
 

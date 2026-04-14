@@ -353,7 +353,7 @@ table Metricas
 		lineageTag: 9def452f-8d76-4d8c-ae61-a02cc78ba855
 
 	measure 'Int En garantia' = CALCULATE([Count Intervenciones], Intervenciones[Int. con garantia] = "SI" ) + 0
-		formatString: 0
+		formatString: #,0
 		displayFolder: Intervenciones
 		lineageTag: 688702a6-e52e-4c09-ad7a-3fca07dd8a17
 

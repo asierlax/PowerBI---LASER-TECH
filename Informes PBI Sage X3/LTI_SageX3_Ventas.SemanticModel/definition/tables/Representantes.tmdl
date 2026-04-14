@@ -1,9 +1,17 @@
 table Representantes
 	lineageTag: 9e54ec5a-7c17-4b59-a1d0-d0d9e0788d20
 
+	column IdDireccion
+		dataType: string
+		lineageTag: a8c889db-6e5d-4ecd-918d-886a8dae76b3
+		summarizeBy: none
+		sourceColumn: IdDireccion
+
+		annotation SummarizationSetBy = Automatic
+
 	column Comercial
 		dataType: string
-		lineageTag: 349abac9-5341-4b5e-af80-f36db022d433
+		lineageTag: 53b55628-a645-4c07-9db9-168cf62b3095
 		summarizeBy: none
 		sourceColumn: Comercial
 
@@ -11,7 +19,7 @@ table Representantes
 
 	column 'Nombre Comercial'
 		dataType: string
-		lineageTag: 4d403d46-9874-4cfb-86ee-b2e127a9b695
+		lineageTag: 8067e875-4283-4c13-8c31-09af30a878de
 		summarizeBy: none
 		sourceColumn: Nombre Comercial
 
@@ -19,7 +27,7 @@ table Representantes
 
 	column 'Codigo Usuario'
 		dataType: string
-		lineageTag: 20fa7483-9de6-44ac-ba1e-7c0ba4978f1c
+		lineageTag: 144663a6-8391-4e1e-a651-5b16fbdd57ea
 		summarizeBy: none
 		sourceColumn: Codigo Usuario
 
@@ -27,7 +35,7 @@ table Representantes
 
 	column Empresa
 		dataType: string
-		lineageTag: ce19f2f2-1fb6-43a9-a357-12a17ed6333a
+		lineageTag: 767f38bc-18cd-4b74-a5f3-d83ae454e30c
 		summarizeBy: none
 		sourceColumn: Empresa
 
@@ -35,7 +43,7 @@ table Representantes
 
 	column Moneda
 		dataType: string
-		lineageTag: 0e12911b-f111-4287-b971-96d8432c0b37
+		lineageTag: ed7df226-c6d5-42d4-80c1-02777aaa6645
 		summarizeBy: none
 		sourceColumn: Moneda
 
@@ -43,17 +51,9 @@ table Representantes
 
 	column Direccion
 		dataType: string
-		lineageTag: 4854d16e-5129-4da6-a8fa-934a7fb5616a
+		lineageTag: 8969d036-b55d-463a-a963-62618c2efadb
 		summarizeBy: none
 		sourceColumn: Direccion
-
-		annotation SummarizationSetBy = Automatic
-
-	column IdDireccion
-		dataType: string
-		lineageTag: a8c889db-6e5d-4ecd-918d-886a8dae76b3
-		summarizeBy: none
-		sourceColumn: IdDireccion
 
 		annotation SummarizationSetBy = Automatic
 
@@ -65,18 +65,17 @@ table Representantes
 				    CurrentDatabase = BaseDeDatos,
 				    CurrentSchema = Esquema,
 				    Origen = Sql.Database(CurrentServer, CurrentDatabase, [Query="
-				                                                                SELECT   [REPNUM_0]
-				                                                                        ,[REPNAM_0]
-				                                                                        ,[AUSNUM_0]
-				                                                                        ,[CFY_0]
-				                                                                        ,[CUR_0]
-				                                                                        ,[BPAADD_0]
+				                                                                SELECT  REPNUM_0 AS 'Comercial',
+				                                                                        REPNAM_0 AS 'Nombre Comercial',
+				                                                                        AUSNUM_0 AS 'Codigo Usuario',
+				                                                                        CFY_0 AS 'Empresa',
+				                                                                        CUR_0 AS 'Moneda',
+				                                                                        BPAADD_0 AS 'Direccion',
+				                                                                        (REPNUM_0+'-'+BPAADD_0) AS 'IdDireccion'
 				                                                                FROM " & CurrentSchema & ".SALESREP"
-				                                                          ]),
-				    #"Columnas con nombre cambiado" = Table.RenameColumns(Origen,{{"REPNUM_0", "Comercial"}, {"REPNAM_0", "Nombre Comercial"}, {"AUSNUM_0", "Codigo Usuario"}, {"CFY_0", "Empresa"}, {"CUR_0", "Moneda"}, {"BPAADD_0", "Direccion"}}),
-				    #"Personalizada agregada" = Table.AddColumn(#"Columnas con nombre cambiado", "IdDireccion", each [Comercial]&"-"&[Direccion])
+				                                                          ])
 				in
-				    #"Personalizada agregada"
+				    #"Origen"
 
 	annotation PBI_ResultType = Table
 

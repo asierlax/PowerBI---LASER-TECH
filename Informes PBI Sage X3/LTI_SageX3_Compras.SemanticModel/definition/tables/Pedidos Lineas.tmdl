@@ -193,10 +193,26 @@ table 'Pedidos Lineas'
 
 		annotation SummarizationSetBy = Automatic
 
-	column 'Diferenia dias OCC' = DATEDIFF('Pedidos Lineas'[Fecha OCC],'Pedidos Lineas'[Fecha recepcion],DAY)
+	column 'Diferenia dias OCC' = ```
+			
+			IF(
+			    'Pedidos Lineas'[Fecha OCC] > DATE(2007,1,1), 
+			    DATEDIFF('Pedidos Lineas'[Fecha OCC],'Pedidos Lineas'[Fecha recepcion],DAY), 
+			    BLANK()
+			)
+			
+			```
 		formatString: 0
 		lineageTag: 554443a7-05ae-4c64-aa29-ecbceec1f8a8
 		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
+	column DocIdLinea
+		dataType: string
+		lineageTag: ae5f3a8b-1bdc-4292-8b01-a380614fa98b
+		summarizeBy: none
+		sourceColumn: DocIdLinea
 
 		annotation SummarizationSetBy = Automatic
 
@@ -211,6 +227,7 @@ table 'Pedidos Lineas'
 				                                                                SELECT
 				                                                                    POQ.POHNUM_0 AS 'Documento',
 				                                                                    POQ.POPLIN_0 AS 'IdLinea',
+				                                                                    POQ.POHNUM_0 + '/' + cast(POQ.POPLIN_0 as varchar) AS 'DocIdLinea',
 				                                                                    POQ.ITMREF_0 AS 'IdArticulo',
 				                                                                    POQ.ITMREFBPS_0 AS 'Ref. proveedor',
 				                                                                    POP.ITMDES_0 AS 'Descripcion linea',

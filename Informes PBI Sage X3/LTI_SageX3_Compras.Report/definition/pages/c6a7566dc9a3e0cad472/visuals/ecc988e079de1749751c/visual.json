@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.5.0/schema.json",
   "name": "ecc988e079de1749751c",
   "position": {
-    "x": 36.960486322188451,
-    "y": 97.264437689969611,
+    "x": 37.178423236514526,
+    "y": 96.663900414937757,
     "z": 10000,
-    "height": 43.768996960486326,
-    "width": 137.14285714285714,
+    "height": 44.614107883817425,
+    "width": 202.88796680497924,
     "tabOrder": 10000
   },
   "visual": {
@@ -55,7 +55,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'PROVEEDORES'"
+                  "Value": "'RECEPCIONES COMPRA'"
                 }
               }
             }

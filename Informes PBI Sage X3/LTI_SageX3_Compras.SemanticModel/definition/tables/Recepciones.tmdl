@@ -1,0 +1,367 @@
+table Recepciones
+	lineageTag: a4dd099a-9cf4-4f61-bf7b-4bf75c58b346
+
+	column Documento
+		dataType: string
+		lineageTag: 9413cad2-f8ee-4895-a9af-e1860cff8ffc
+		summarizeBy: none
+		sourceColumn: Documento
+
+		annotation SummarizationSetBy = Automatic
+
+	column IdArticulo
+		dataType: string
+		isHidden
+		lineageTag: d0a461ee-c9f8-49fc-aaae-e31a65268ca0
+		summarizeBy: none
+		sourceColumn: IdArticulo
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Descripcion linea'
+		dataType: string
+		lineageTag: ddd391e1-8ae4-4210-b204-10e4b4458484
+		summarizeBy: none
+		sourceColumn: Descripcion linea
+
+		annotation SummarizationSetBy = Automatic
+
+	column Planta
+		dataType: string
+		lineageTag: 6250f8a0-2a48-4435-91fb-59e39df311e8
+		summarizeBy: none
+		sourceColumn: Planta
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Fecha recepcion'
+		dataType: dateTime
+		isHidden
+		formatString: dd/mm/yyyy
+		lineageTag: 113e08c5-d89b-42bf-a6b6-1da25ab1dedf
+		summarizeBy: none
+		sourceColumn: Fecha recepcion
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+		annotation PBI_FormatHint = {"isDateTimeCustom":true}
+
+	column 'Fecha OCC'
+		dataType: dateTime
+		formatString: dd/mm/yyyy
+		lineageTag: b6ffb0fe-2b95-40ab-89cb-3037a56bc337
+		summarizeBy: none
+		sourceColumn: Fecha OCC
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+		annotation PBI_FormatHint = {"isDateTimeCustom":true}
+
+	column Dto1
+		dataType: double
+		lineageTag: bf741c5c-5e7d-4503-851c-0e18df574fbc
+		summarizeBy: sum
+		sourceColumn: Dto1
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Dto2
+		dataType: double
+		lineageTag: 557cdf03-4bbc-4083-bd4b-d48887bc1980
+		summarizeBy: sum
+		sourceColumn: Dto2
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Precio neto'
+		dataType: double
+		lineageTag: cdda5994-bad0-444c-98fd-42e302fd5dbe
+		summarizeBy: sum
+		sourceColumn: Precio neto
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Importe linea'
+		dataType: double
+		lineageTag: 5130a14c-996e-4707-bd8f-b4aa7db818c0
+		summarizeBy: sum
+		sourceColumn: Importe linea
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Sociedad
+		dataType: string
+		lineageTag: e9b1f2c5-d5f4-48ae-8744-4b98f29af726
+		summarizeBy: none
+		sourceColumn: Sociedad
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Doc entrega proveedor'
+		dataType: string
+		lineageTag: f23e4534-80fd-4aa9-a82b-846658863abb
+		summarizeBy: none
+		sourceColumn: Doc entrega proveedor
+
+		annotation SummarizationSetBy = Automatic
+
+	column IdProveedor
+		dataType: string
+		lineageTag: 0afc4674-3b66-4bc0-8911-8dcd38976698
+		summarizeBy: none
+		sourceColumn: IdProveedor
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Nombre proveedor'
+		dataType: string
+		lineageTag: 7d0a274e-1cc9-4fbc-9e19-5712ce1633ff
+		summarizeBy: none
+		sourceColumn: Nombre proveedor
+
+		annotation SummarizationSetBy = Automatic
+
+	column Proveedor
+		dataType: string
+		lineageTag: f506d6eb-ddcc-4dd4-874d-ec4ca36e3498
+		summarizeBy: none
+		sourceColumn: Proveedor
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Codigo direccion'
+		dataType: string
+		lineageTag: 0477195f-670f-4747-95f3-babade828f85
+		summarizeBy: none
+		sourceColumn: Codigo direccion
+
+		annotation SummarizationSetBy = Automatic
+
+	column Pais
+		dataType: string
+		lineageTag: 33087217-c7f3-4c2c-b86f-659b37c08e1a
+		summarizeBy: none
+		sourceColumn: Pais
+
+		annotation SummarizationSetBy = Automatic
+
+	column Regimen
+		dataType: string
+		lineageTag: 10bfdb77-ffe9-4b7c-9336-f788500d7384
+		summarizeBy: none
+		sourceColumn: Regimen
+
+		annotation SummarizationSetBy = Automatic
+
+	column Divisa
+		dataType: string
+		lineageTag: f8f72c11-96ba-4ffd-99e1-9899f7b33da9
+		summarizeBy: none
+		sourceColumn: Divisa
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Tipo pedido'
+		dataType: string
+		lineageTag: 7949e43b-9707-4bae-819d-5393f2e42647
+		summarizeBy: none
+		sourceColumn: Tipo pedido
+
+		annotation SummarizationSetBy = Automatic
+
+	column Linea
+		dataType: int64
+		formatString: 0
+		lineageTag: ca6b9c84-f60e-4b91-b2c1-83f15c22d3f8
+		summarizeBy: sum
+		sourceColumn: Linea
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Nº pedido'
+		dataType: string
+		lineageTag: 198e37d5-c441-4d07-9ed4-0b85e65362ee
+		summarizeBy: none
+		sourceColumn: Nº pedido
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Linea pedido'
+		dataType: int64
+		formatString: 0
+		lineageTag: 7648f3a8-0483-4ffe-b9f7-52c69f41bd87
+		summarizeBy: sum
+		sourceColumn: Linea pedido
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Precio bruto'
+		dataType: double
+		lineageTag: 5ec33dd3-9321-4267-a7a9-4a1ebb40413e
+		summarizeBy: sum
+		sourceColumn: Precio bruto
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Cantidad
+		dataType: double
+		lineageTag: 7658ca03-ae33-4f16-9149-772ea2f73631
+		summarizeBy: sum
+		sourceColumn: Cantidad
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Unidad stock'
+		dataType: string
+		lineageTag: 07cd7aeb-e749-48bb-9c93-c2071006718c
+		summarizeBy: none
+		sourceColumn: Unidad stock
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Numero de OCC'
+		dataType: string
+		lineageTag: 294a6700-798d-4c70-afe0-14c196580689
+		summarizeBy: none
+		sourceColumn: Numero de OCC
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Fecha recepcion linea'
+		dataType: dateTime
+		formatString: dd/mm/yyyy
+		lineageTag: f2760d62-7dba-4c39-bcaf-548d6b315e93
+		summarizeBy: none
+		sourceColumn: Fecha recepcion linea
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+		annotation PBI_FormatHint = {"isDateTimeCustom":true}
+
+	column 'Dias dif OCC'
+		dataType: int64
+		formatString: 0
+		lineageTag: 41a6bc53-1da4-4907-9d65-7cf5692ac909
+		summarizeBy: sum
+		sourceColumn: Dias dif OCC
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Clase pedido'
+		dataType: string
+		lineageTag: d955d743-63eb-4ef3-b397-255a4f91831c
+		summarizeBy: none
+		sourceColumn: Clase pedido
+
+		annotation SummarizationSetBy = Automatic
+
+	column IdTipoPedido
+		dataType: string
+		lineageTag: 496cfe5f-003a-4370-8498-8e05eb773471
+		summarizeBy: none
+		sourceColumn: IdTipoPedido
+
+		annotation SummarizationSetBy = Automatic
+
+	column DocIdLinea
+		dataType: string
+		lineageTag: 1db43f72-f89f-4204-951e-94e5f98fa1e8
+		summarizeBy: none
+		sourceColumn: DocIdLinea
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Recepciones = m
+		mode: import
+		source = ```
+				let
+				    CurrentServer = Instancia,
+				    CurrentDatabase = BaseDeDatos,
+				    CurrentSchema = Esquema,
+				    Origen = Sql.Database(CurrentServer, CurrentDatabase, [Query="
+				                                                                SELECT 
+				                                                                    -- Campos de Cabecera (PTH)
+				                                                                    PTH.PTHNUM_0 AS 'Documento',
+				                                                                    PTH.CPY_0 AS 'Sociedad',
+				                                                                    PTH.PRHFCY_0 AS 'Planta',
+				                                                                    PTH.RCPDAT_0 AS 'Fecha recepcion',
+				                                                                    PTH.BPSNDE_0 AS 'Doc entrega proveedor',
+				                                                                    PTH.BPSNUM_0 AS 'IdProveedor',
+				                                                                    PTH.BPONAM_0 AS 'Nombre proveedor',
+				                                                                    PTH.BPSNUM_0 + ' - ' +  PTH.BPONAM_0 AS 'Proveedor',
+				                                                                    PTH.BPAADD_0 AS 'Codigo direccion',
+				                                                                    PTH.BPOCRYNAM_0 AS 'Pais',
+				                                                                    PTH.VACBPR_0 AS 'Regimen',
+				                                                                    PTH.CUR_0 AS 'Divisa',
+				                                                                    
+				                                                                    -- Campos de Linea (PTD)
+				                                                                    PTD.PTDLIN_0 AS 'Linea',
+				                                                                    PTH.PTHNUM_0 + '/'+ cast(PTD.PTDLIN_0 as varchar) AS 'DocIdLinea',
+				                                                                    PTD.POHNUM_0 AS 'Nº pedido',
+				                                                                    PTD.POPLIN_0 AS 'Linea pedido',
+				                                                                    PTD.ITMREF_0 AS 'IdArticulo',
+				                                                                    PTD.ITMDES_0 AS 'Descripcion linea',
+				                                                                    PTD.GROPRI_0 AS 'Precio bruto',
+				                                                                    PTD.DISCRGVAL1_0 AS 'Dto1',
+				                                                                    PTD.DISCRGVAL2_0 AS 'Dto2',
+				                                                                    PTD.NETPRI_0 AS 'Precio neto',
+				                                                                    PTD.LINAMT_0 AS 'Importe linea',
+				                                                                    PTD.QTYSTU_0 AS 'Cantidad',
+				                                                                    PTD.STU_0 AS 'Unidad stock',
+				
+				                                                                    -- Campos del Pedido (POH y POQ)
+				                                                                    (cast(XREFERENCI_0 as varchar) + ' - ' + M6200.LANMES_0) AS 'Clase pedido',
+				                                                                    POH.YTIPPED_0 AS 'IdTipoPedido',
+				                                                                    (POH.YTIPPED_0 + ' - ' + ATX6001.TEXTE_0 ) AS 'Tipo pedido',
+				                                                                    POH.ORDREF_0 AS 'Numero de OCC',
+				                                                                    CASE 
+				                                                                        WHEN POQ.XFECHAOCC_0 IS NULL THEN PTD.RCPDAT_0 
+				                                                                        WHEN POQ.XFECHAOCC_0 = '01/01/1753' THEN PTD.RCPDAT_0 
+				                                                                        ELSE POQ.XFECHAOCC_0
+				                                                                    END AS 'Fecha OCC',
+				                                                                    
+				                                                                    PTD.RCPDAT_0 AS 'Fecha recepcion linea',
+				                                                                    CASE 
+				                                                                        WHEN POQ.XFECHAOCC_0 IS NULL THEN 0
+				                                                                        WHEN POQ.XFECHAOCC_0 = '01/01/1753' THEN 0 
+				                                                                        ELSE DATEDIFF(d, POQ.XFECHAOCC_0, PTD.RCPDAT_0) 
+				                                                                    END AS 'Dias dif OCC'
+				                                                                                                                                
+				                                                                FROM " & CurrentSchema & ".PRECEIPT PTH
+				                                                                INNER JOIN " & CurrentSchema & ".PRECEIPTD PTD ON PTH.PTHNUM_0 = PTD.PTHNUM_0
+				                                                                LEFT JOIN " & CurrentSchema & ".PORDER POH ON POH.POHNUM_0 = PTD.POHNUM_0
+				                                                                LEFT JOIN " & CurrentSchema & ".PORDERQ POQ ON POQ.POHNUM_0 = PTD.POHNUM_0 AND POQ.POPLIN_0 = PTD.POPLIN_0                                                                
+				                                                                LEFT JOIN " & CurrentSchema & ".APLSTD M6200 ON POH.XREFERENCI_0 = M6200.LANNUM_0 AND M6200.LANCHP_0 = '6200' AND M6200.LAN_0 = 'SPA'
+				                                                                LEFT JOIN " & CurrentSchema & ".ATEXTRA ATX6001 ON POH.YTIPPED_0 = ATX6001.IDENT2_0 AND ATX6001.CODFIC_0 = 'ATABDIV' AND ATX6001.IDENT1_0 = '6001' AND ATX6001.ZONE_0 = 'LNGDES'
+				                                                          "]),
+				    #"Tipo cambiado" = Table.TransformColumnTypes(Origen,{{"Fecha recepcion", type date}, {"Fecha OCC", type date}, {"Fecha recepcion linea", type date}})
+				in
+				    #"Tipo cambiado"
+				```
+
+	annotation PBI_NavigationStepName = Navegación
+
+	annotation PBI_ResultType = Table
+

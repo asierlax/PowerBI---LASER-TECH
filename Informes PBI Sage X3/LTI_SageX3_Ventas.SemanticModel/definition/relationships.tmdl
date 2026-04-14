@@ -1,8 +1,3 @@
-relationship 47a9ba8d-e77c-4976-9823-018072520445
-	isActive: false
-	fromColumn: DocumentosCabecera.Empresa
-	toColumn: Sociedades.Empresa
-
 relationship 3daf2cfc-19f2-4dcd-b840-eb8e5d9e40fa
 	isActive: false
 	fromColumn: Direcciones.IdDireccion
@@ -28,15 +23,6 @@ relationship 685b8689-5ef5-4fd8-9c9e-25dd45ba81c8
 	fromColumn: RFM.RFScore
 	toColumn: Segmentos.RF
 
-relationship f3e346c2-b4c0-d5ca-0577-0c8c9ccec2b1
-	fromColumn: DocumentosLinea.'Comercial 1'
-	toColumn: Representantes.Comercial
-
-relationship a2272193-31e6-f40f-cec3-788be8b6134c
-	isActive: false
-	fromColumn: DocumentosLinea.'Comercial 2'
-	toColumn: Representantes.Comercial
-
 relationship da42d8e5-2b7a-8625-b0cf-cfd5be8825e3
 	fromColumn: DocumentosLinea.Documento
 	toColumn: DocumentosCabecera.Documento
@@ -52,10 +38,6 @@ relationship 10914dcc-0eca-33d2-e16f-c50ce30df5f0
 relationship cf3a6933-d495-5dda-4a16-090e1a921d99
 	fromColumn: TarifasCompra.IdArticulo
 	toColumn: Articulos.CodArticulo
-
-relationship 0e82a900-9127-7093-4785-bdf01ae67408
-	fromColumn: DocumentosLinea.Empresa
-	toColumn: Sociedades.Empresa
 
 relationship 6d4e71b9-c370-749b-9456-c3fb74e8567a
 	fromColumn: Intervenciones.'Codigo cliente'
@@ -86,4 +68,12 @@ relationship 07aecbd1-4ae4-f70a-98c1-522936168570
 relationship 8041d0a7-7806-71b4-c07e-f1d771c524f7
 	fromColumn: Intervenciones.'Fecha intervencion'
 	toColumn: Fecha.Fecha
+
+relationship 32ccf683-ad47-995e-d4f4-b753b5531416
+	fromColumn: DocumentosCabecera.Empresa
+	toColumn: Sociedades.Empresa
+
+relationship ff8fc771-6b50-6a5a-83d0-d57b37e74363
+	fromColumn: DocumentosLinea.'Comercial 1'
+	toColumn: Representantes.Comercial
 

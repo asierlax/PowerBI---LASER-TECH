@@ -1,0 +1,297 @@
+table fact_Recepciones
+	lineageTag: 225579a3-2c0a-4141-862d-58aad62c3122
+
+	column Documento
+		dataType: string
+		lineageTag: 33821d7c-2f92-461d-ba5a-1fd1e80265df
+		summarizeBy: none
+		sourceColumn: Documento
+
+		annotation SummarizationSetBy = Automatic
+
+	column Sociedad
+		dataType: string
+		lineageTag: 07aa2d04-f070-4450-b072-d5e8e6816234
+		summarizeBy: none
+		sourceColumn: Sociedad
+
+		annotation SummarizationSetBy = Automatic
+
+	column Planta
+		dataType: string
+		lineageTag: 9149bebd-cc20-4cee-ad31-70f79bfd9675
+		summarizeBy: none
+		sourceColumn: Planta
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Fecha recepcion'
+		dataType: dateTime
+		formatString: dd/mm/yyyy
+		lineageTag: 20db9911-59f7-4084-83ec-568a0ef68322
+		summarizeBy: none
+		sourceColumn: Fecha recepcion
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+		annotation PBI_FormatHint = {"isDateTimeCustom":true}
+
+	column 'Doc entrega proveedor'
+		dataType: string
+		lineageTag: ebcebea5-81ac-433b-b70f-7d790d57804d
+		summarizeBy: none
+		sourceColumn: Doc entrega proveedor
+
+		annotation SummarizationSetBy = Automatic
+
+	column IdProveedor
+		dataType: string
+		lineageTag: e1dd364e-aa5c-4e17-b9e1-a5974af0bc9e
+		summarizeBy: none
+		sourceColumn: IdProveedor
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Nombre proveedor'
+		dataType: string
+		lineageTag: 2fff91a4-5bf4-4cf1-a01e-5b9e275346d7
+		summarizeBy: none
+		sourceColumn: Nombre proveedor
+
+		annotation SummarizationSetBy = Automatic
+
+	column Proveedor
+		dataType: string
+		lineageTag: 1778fa47-aa11-4359-82d1-fac7ab3a8777
+		summarizeBy: none
+		sourceColumn: Proveedor
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Codigo direccion'
+		dataType: string
+		lineageTag: 99c7d505-7279-4fef-856b-6bf8b6522ae7
+		summarizeBy: none
+		sourceColumn: Codigo direccion
+
+		annotation SummarizationSetBy = Automatic
+
+	column Pais
+		dataType: string
+		lineageTag: 3fca12e1-5138-4fa7-9a32-9f6074864f1d
+		summarizeBy: none
+		sourceColumn: Pais
+
+		annotation SummarizationSetBy = Automatic
+
+	column Regimen
+		dataType: string
+		lineageTag: fab5aae6-8d99-474f-8f80-2d4c3e8ce779
+		summarizeBy: none
+		sourceColumn: Regimen
+
+		annotation SummarizationSetBy = Automatic
+
+	column Divisa
+		dataType: string
+		lineageTag: b2ba3796-e663-4a59-9953-afbb0c8fa012
+		summarizeBy: none
+		sourceColumn: Divisa
+
+		annotation SummarizationSetBy = Automatic
+
+	column Linea
+		dataType: int64
+		formatString: 0
+		lineageTag: 2a3071b7-c9d3-457c-b79f-cf8bbedce7b9
+		summarizeBy: sum
+		sourceColumn: Linea
+
+		annotation SummarizationSetBy = Automatic
+
+	column DocIdLinea
+		dataType: string
+		lineageTag: 1d233e08-6c5f-4611-9eb9-a8b6702be16c
+		summarizeBy: none
+		sourceColumn: DocIdLinea
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Nº pedido'
+		dataType: string
+		lineageTag: feb25be2-d7ea-46c2-81fd-4940fc871e84
+		summarizeBy: none
+		sourceColumn: Nº pedido
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Linea pedido'
+		dataType: int64
+		formatString: 0
+		lineageTag: 39018128-9a86-465b-b65d-657a65bd4187
+		summarizeBy: sum
+		sourceColumn: Linea pedido
+
+		annotation SummarizationSetBy = Automatic
+
+	column IdArticulo
+		dataType: string
+		lineageTag: fac8409c-3543-4e17-b941-f892dbeb7848
+		summarizeBy: none
+		sourceColumn: IdArticulo
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Descripcion linea'
+		dataType: string
+		lineageTag: c476fd88-00c2-41a4-b760-c474fa5d711f
+		summarizeBy: none
+		sourceColumn: Descripcion linea
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Precio bruto'
+		dataType: double
+		lineageTag: e58f3e73-8c96-4893-9848-c60813d5c343
+		summarizeBy: sum
+		sourceColumn: Precio bruto
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Dto1
+		dataType: double
+		lineageTag: 8d95c9e8-221d-4a0c-954b-bccb0819f2cc
+		summarizeBy: sum
+		sourceColumn: Dto1
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Dto2
+		dataType: double
+		lineageTag: d30146c6-7c23-4385-bb6a-f1f50f57b20b
+		summarizeBy: sum
+		sourceColumn: Dto2
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Precio neto'
+		dataType: double
+		lineageTag: 58a11ea9-bcdc-4d05-bbcd-000592c11b64
+		summarizeBy: sum
+		sourceColumn: Precio neto
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Importe linea'
+		dataType: double
+		lineageTag: 7696cbcb-8853-46da-8841-9fc392617920
+		summarizeBy: sum
+		sourceColumn: Importe linea
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Cantidad
+		dataType: double
+		lineageTag: 4f26c128-2191-4bfc-8a7f-d713f559130a
+		summarizeBy: sum
+		sourceColumn: Cantidad
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Unidad stock'
+		dataType: string
+		lineageTag: 3a930124-307b-44dd-8e60-4e3db9a1b37b
+		summarizeBy: none
+		sourceColumn: Unidad stock
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Clase pedido'
+		dataType: string
+		lineageTag: eef7d9bf-6555-4e65-9345-b12505ac582b
+		summarizeBy: none
+		sourceColumn: Clase pedido
+
+		annotation SummarizationSetBy = Automatic
+
+	column IdTipoPedido
+		dataType: string
+		lineageTag: 3b0e16d8-80ed-4faf-ac6e-b903f44f131f
+		summarizeBy: none
+		sourceColumn: IdTipoPedido
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Tipo pedido'
+		dataType: string
+		lineageTag: a069f94c-ca17-4758-831d-b90f76d0818e
+		summarizeBy: none
+		sourceColumn: Tipo pedido
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Numero de OCC'
+		dataType: string
+		lineageTag: e5142170-cef1-4252-b1ba-5d164f50d61d
+		summarizeBy: none
+		sourceColumn: Numero de OCC
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Fecha OCC'
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 2bccb926-e0d9-4061-a166-3f59494f1d58
+		summarizeBy: none
+		sourceColumn: Fecha OCC
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column 'Fecha recepcion linea'
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 1445bc2c-7212-4679-9122-98be06477a4a
+		summarizeBy: none
+		sourceColumn: Fecha recepcion linea
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column 'Dias dif OCC'
+		dataType: int64
+		formatString: 0
+		lineageTag: 6355be74-5e44-46f2-b02d-efce8fe1d419
+		summarizeBy: sum
+		sourceColumn: Dias dif OCC
+
+		annotation SummarizationSetBy = Automatic
+
+	partition fact_Recepciones = m
+		mode: import
+		source =
+				let
+				    Origen = PowerPlatform.Dataflows(null),
+				    Workspaces = Origen{[Id="Workspaces"]}[Data],
+				    #"cd25238f-048e-4509-ab9f-29f918c14d4c" = Workspaces{[workspaceId="cd25238f-048e-4509-ab9f-29f918c14d4c"]}[Data],
+				    #"83e92cc2-2615-4e7e-af83-e12f28b5827e" = #"cd25238f-048e-4509-ab9f-29f918c14d4c"{[dataflowId="83e92cc2-2615-4e7e-af83-e12f28b5827e"]}[Data],
+				    fact_Recepciones_ = #"83e92cc2-2615-4e7e-af83-e12f28b5827e"{[entity="fact_Recepciones",version=""]}[Data]
+				in
+				    fact_Recepciones_
+

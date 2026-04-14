@@ -1,0 +1,73 @@
+table dim_Proveedores
+	lineageTag: 995b40bd-f4bd-4bad-b6bc-33f55c071bbf
+
+	column ProveedorID
+		dataType: string
+		lineageTag: 3bb58e99-161b-46f8-b91f-f89f4197de54
+		summarizeBy: none
+		sourceColumn: ProveedorID
+
+		annotation SummarizationSetBy = Automatic
+
+	column Proveedor
+		dataType: string
+		lineageTag: d596d2d2-5d18-4da3-8b46-7e8e2ce45548
+		summarizeBy: none
+		sourceColumn: Proveedor
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Tipo Proveedor'
+		dataType: int64
+		formatString: 0
+		lineageTag: 03fbc197-0185-4eda-b3ce-7b88ef0ed4e1
+		summarizeBy: sum
+		sourceColumn: Tipo Proveedor
+
+		annotation SummarizationSetBy = Automatic
+
+	column Categoria
+		dataType: string
+		lineageTag: a3749bf5-3597-4c60-a81b-11eb11cfb957
+		summarizeBy: none
+		sourceColumn: Categoria
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Categoria ABC'
+		dataType: int64
+		formatString: 0
+		lineageTag: ba21fc31-b3f1-4818-b812-1aa29187e771
+		summarizeBy: sum
+		sourceColumn: Categoria ABC
+
+		annotation SummarizationSetBy = Automatic
+
+	column Direccion
+		dataType: string
+		lineageTag: 68dab8ba-e566-42b2-bc90-cd2f1297c5e7
+		summarizeBy: none
+		sourceColumn: Direccion
+
+		annotation SummarizationSetBy = Automatic
+
+	column IdDireccion
+		dataType: string
+		lineageTag: 10143677-1cf6-4a85-94f6-7acf797ea908
+		summarizeBy: none
+		sourceColumn: IdDireccion
+
+		annotation SummarizationSetBy = Automatic
+
+	partition dim_Proveedores = m
+		mode: import
+		source =
+				let
+				    Origen = PowerPlatform.Dataflows(null),
+				    Workspaces = Origen{[Id="Workspaces"]}[Data],
+				    #"cd25238f-048e-4509-ab9f-29f918c14d4c" = Workspaces{[workspaceId="cd25238f-048e-4509-ab9f-29f918c14d4c"]}[Data],
+				    #"5877d4c8-d8db-4300-bd5c-7bed546ea986" = #"cd25238f-048e-4509-ab9f-29f918c14d4c"{[dataflowId="5877d4c8-d8db-4300-bd5c-7bed546ea986"]}[Data],
+				    dim_Proveedores_ = #"5877d4c8-d8db-4300-bd5c-7bed546ea986"{[entity="dim_Proveedores",version=""]}[Data]
+				in
+				    dim_Proveedores_
+

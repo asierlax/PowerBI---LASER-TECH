@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.5.0/schema.json",
   "name": "8294dd810b6c01a7b60c",
   "position": {
-    "x": 228.57142857142858,
-    "y": 0.97264437689969607,
+    "x": 206.0746887966805,
+    "y": 1.0622406639004149,
     "z": 44000,
-    "height": 51.550151975683896,
-    "width": 286.93009118541033,
+    "height": 50.987551867219914,
+    "width": 523.68464730290452,
     "tabOrder": 44000
   },
   "visual": {
@@ -19,7 +19,7 @@
               {
                 "textRuns": [
                   {
-                    "value": "KPIs Pedidos compra",
+                    "value": "KPIs Recepciones Compra Repuestos 00669",
                     "textStyle": {
                       "fontWeight": "bold",
                       "fontSize": "18pt",

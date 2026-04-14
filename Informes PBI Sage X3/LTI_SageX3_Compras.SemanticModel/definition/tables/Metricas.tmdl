@@ -148,9 +148,69 @@ table Metricas
 		formatString: 0.00\ %;-0.00\ %;0.00\ %
 		lineageTag: 3da3f035-627c-4a6e-af28-f4666e306d6a
 
-	measure 'Count Lin pedidos' = COUNT('Pedidos Lineas'[DocIdLinea]) + 0
-		displayFolder: KPI Pedidos
+	measure 'Count Lin recepciones Repuestos' = ```
+			
+			    CALCULATE(
+			        COUNT(Recepciones[DocIdLinea]) + 0,
+			        'Recepciones'[Clase pedido] = "1 - REPUESTOS"
+			        )
+			```
+		formatString: 0
+		displayFolder: KPI Recepciones
 		lineageTag: 909c3a4d-1d27-42a9-a274-b9ac7668acad
+
+	measure 'Count Lin pedidos Garantia' = ```
+			CALCULATE(
+			    [Count Lin recepciones Repuestos],     
+			    'Pedidos Cabecera'[IdTipoPedido] IN {"S09","S10","SG1","SG2","SG5","SG6","SG7"}
+			    ) + 0
+			```
+		formatString: 0
+		displayFolder: KPI Recepciones
+		lineageTag: 98dda53c-6c62-4d57-9ce0-fc66926e9c19
+
+	measure 'Count Lin pedidos sin Garantia' = ```
+			CALCULATE(
+			    [Count Lin recepciones Repuestos], 
+			    NOT 'Pedidos Cabecera'[IdTipoPedido] IN {"S09","S10","SG1","SG2","SG5","SG6","SG7"}
+			    ) + 0
+			```
+		formatString: 0
+		displayFolder: KPI Recepciones
+		lineageTag: a26e0f3e-304a-47d2-b23d-d7110a900b46
+
+	measure 'Dias OCC Garantia' = ```
+			CALCULATE(
+			    [Total Dias OCC], 
+			    'Pedidos Cabecera'[Clase pedido] = "1 - REPUESTOS",
+			    'Pedidos Cabecera'[IdTipoPedido] IN {"S09","S10","SG1","SG2","SG5","SG6","SG7"}
+			    ) + 0
+			```
+		formatString: 0
+		displayFolder: KPI Recepciones
+		lineageTag: a6503cd7-6dcb-4402-a69b-291943a08cc9
+
+	measure 'Dias OCC sin Garantia' = ```
+			CALCULATE(
+			    [Total Dias OCC], 
+			    'Pedidos Cabecera'[Clase pedido] = "1 - REPUESTOS",
+			    NOT 'Pedidos Cabecera'[IdTipoPedido] IN {"S09","S10","SG1","SG2","SG5","SG6","SG7"}
+			    ) + 0
+			```
+		formatString: 0
+		displayFolder: KPI Recepciones
+		lineageTag: 7a3fdb06-2e10-458d-9e75-957a254bf4ab
+
+	measure 'Total Dias OCC' = ```
+			
+			    CALCULATE(
+			        SUM('Pedidos Lineas'[Diferenia dias OCC]) + 0,
+			        'Pedidos Cabecera'[Clase pedido] = "1 - REPUESTOS"
+			        )  
+			```
+		formatString: 0
+		displayFolder: KPI Recepciones
+		lineageTag: 4bb57acc-1778-4bf9-9e0d-4b8f669704b8
 
 	partition Metricas-f6c63909-fea0-42bb-accd-c4ede5072810 = m
 		mode: import
@@ -163,4 +223,6 @@ table Metricas
 				    #"Columnas quitadas"
 
 	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navegación
 

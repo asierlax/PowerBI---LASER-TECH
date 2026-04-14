@@ -20,13 +20,29 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Proveedor"
+                      "Entity": "Fecha"
                     }
                   },
-                  "Property": "Proveedor"
+                  "Property": "Año"
                 }
               },
-              "queryRef": "Proveedor.Proveedor",
+              "queryRef": "Fecha.Año",
+              "nativeQueryRef": "Año",
+              "active": true
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Fecha"
+                    }
+                  },
+                  "Property": "Mes del año"
+                }
+              },
+              "queryRef": "Fecha.Mes del año",
+              "nativeQueryRef": "Mes del año",
               "active": true
             }
           ]
@@ -41,11 +57,11 @@
                       "Entity": "Metricas"
                     }
                   },
-                  "Property": "Total Compras"
+                  "Property": "Count Lin recepciones Repuestos"
                 }
               },
-              "queryRef": "Metricas.TotalLineaSinImpuesto",
-              "displayName": "Compras"
+              "queryRef": "Metricas.Count Lin pedidos",
+              "nativeQueryRef": "Count Lin recepciones Repuestos"
             },
             {
               "field": {
@@ -55,10 +71,11 @@
                       "Entity": "Metricas"
                     }
                   },
-                  "Property": "Descuento %"
+                  "Property": "Count Lin pedidos Garantia"
                 }
               },
-              "queryRef": "Metricas.Descuento %"
+              "queryRef": "Metricas.Count Lin pedidos Garantia",
+              "nativeQueryRef": "Count Lin pedidos Garantia"
             },
             {
               "field": {
@@ -68,33 +85,107 @@
                       "Entity": "Metricas"
                     }
                   },
-                  "Property": "Compra Neta"
+                  "Property": "Count Lin pedidos sin Garantia"
                 }
               },
-              "queryRef": "Metricas.CompraNeta",
-              "displayName": "Compra Neta"
+              "queryRef": "Metricas.Count Lin pedidos sin Garantia",
+              "nativeQueryRef": "Count Lin pedidos sin Garantia"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Metricas"
+                    }
+                  },
+                  "Property": "Total Dias OCC"
+                }
+              },
+              "queryRef": "Metricas.Total Dias OCC",
+              "nativeQueryRef": "Total Dias OCC"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Metricas"
+                    }
+                  },
+                  "Property": "Dias OCC Garantia"
+                }
+              },
+              "queryRef": "Metricas.Dias OCC Garantia",
+              "nativeQueryRef": "Dias OCC Garantia"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Metricas"
+                    }
+                  },
+                  "Property": "Dias OCC sin Garantia"
+                }
+              },
+              "queryRef": "Metricas.Dias OCC sin Garantia",
+              "nativeQueryRef": "Dias OCC sin Garantia"
             }
           ]
         }
-      },
-      "sortDefinition": {
-        "sort": [
-          {
-            "field": {
-              "Measure": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "Metricas"
-                  }
-                },
-                "Property": "Total Compras"
-              }
-            },
-            "direction": "Descending"
-          }
-        ]
       }
     },
+    "expansionStates": [
+      {
+        "roles": [
+          "Rows"
+        ],
+        "levels": [
+          {
+            "queryRefs": [
+              "Fecha.Año"
+            ],
+            "isCollapsed": true,
+            "identityKeys": [
+              {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Fecha"
+                    }
+                  },
+                  "Property": "Año"
+                }
+              }
+            ],
+            "isPinned": true
+          },
+          {
+            "queryRefs": [
+              "Fecha.Mes del año"
+            ],
+            "isCollapsed": true,
+            "isPinned": true
+          }
+        ],
+        "root": {
+          "children": [
+            {
+              "identityValues": [
+                {
+                  "Literal": {
+                    "Value": "2024L"
+                  }
+                }
+              ],
+              "isToggled": true
+            }
+          ]
+        }
+      }
+    ],
     "objects": {
       "grid": [
         {
@@ -199,13 +290,13 @@
             "value": {
               "expr": {
                 "Literal": {
-                  "Value": "136.37277604580643D"
+                  "Value": "97.36233040702314D"
                 }
               }
             }
           },
           "selector": {
-            "metadata": "Proveedor.Proveedor"
+            "metadata": "Metricas.Count Lin pedidos"
           }
         },
         {
@@ -213,13 +304,55 @@
             "value": {
               "expr": {
                 "Literal": {
-                  "Value": "86.91794732132436D"
+                  "Value": "83.25459209438792D"
                 }
               }
             }
           },
           "selector": {
-            "metadata": "Metricas.Descuento %"
+            "metadata": "Metricas.Count Lin pedidos Garantia"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "84.88828502669858D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Metricas.Count Lin pedidos sin Garantia"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "69.05188533224529D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Metricas.Dias OCC Garantia"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "73.75020785403456D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Metricas.Dias OCC sin Garantia"
           }
         }
       ]
@@ -244,35 +377,21 @@
   "filterConfig": {
     "filters": [
       {
-        "name": "48c6463b65dc776a1960",
+        "name": "102ca63279f7d57665da",
         "field": {
           "Column": {
             "Expression": {
               "SourceRef": {
-                "Entity": "Proveedor"
+                "Entity": "Fecha"
               }
             },
-            "Property": "Proveedor"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "b95947000047b7b3109a",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Metricas"
-              }
-            },
-            "Property": "Total Compras"
+            "Property": "Año"
           }
         },
         "type": "Advanced"
       },
       {
-        "name": "83528c38754b9e830b19",
+        "name": "27ab487984fac4909937",
         "field": {
           "Measure": {
             "Expression": {
@@ -280,13 +399,27 @@
                 "Entity": "Metricas"
               }
             },
-            "Property": "Descuento %"
+            "Property": "Count Lin recepciones Repuestos"
           }
         },
         "type": "Advanced"
       },
       {
-        "name": "4e88f7bde7dc7b1cbd87",
+        "name": "93bd0e0bdf492ff20a80",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Fecha"
+              }
+            },
+            "Property": "Mes del año"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "da88039c5249db183c20",
         "field": {
           "Measure": {
             "Expression": {
@@ -294,7 +427,63 @@
                 "Entity": "Metricas"
               }
             },
-            "Property": "Compra Neta"
+            "Property": "Count Lin pedidos Garantia"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "c33c9896d62e9c4cf25b",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Metricas"
+              }
+            },
+            "Property": "Count Lin pedidos sin Garantia"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "1dcc0943c7be7a074910",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Metricas"
+              }
+            },
+            "Property": "Dias OCC Garantia"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "17ab9fc18419e2320373",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Metricas"
+              }
+            },
+            "Property": "Dias OCC sin Garantia"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "6b5aaca75efd83015466",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Metricas"
+              }
+            },
+            "Property": "Total Dias OCC"
           }
         },
         "type": "Advanced"

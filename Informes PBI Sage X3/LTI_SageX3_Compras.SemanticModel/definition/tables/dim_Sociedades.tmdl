@@ -1,0 +1,88 @@
+table dim_Sociedades
+	lineageTag: a598d10b-f17b-4fd8-b2f1-5955d6b11ef0
+
+	column Empresa
+		dataType: string
+		lineageTag: a14e789e-6d6f-42a7-b128-4710b90e63a7
+		summarizeBy: none
+		sourceColumn: Empresa
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Nombre Empresa'
+		dataType: string
+		lineageTag: f4595ca0-00ad-4253-83a7-c1f859c1ddfc
+		summarizeBy: none
+		sourceColumn: Nombre Empresa
+
+		annotation SummarizationSetBy = Automatic
+
+	column Direccion
+		dataType: string
+		lineageTag: bc5a0a5b-d887-4525-8137-b0ef34130e19
+		summarizeBy: none
+		sourceColumn: Direccion
+
+		annotation SummarizationSetBy = Automatic
+
+	column IdDireccion
+		dataType: string
+		lineageTag: e78b8a07-1dac-4325-aa69-7082caa20911
+		summarizeBy: none
+		sourceColumn: IdDireccion
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Sociedad Juridica'
+		dataType: int64
+		formatString: 0
+		lineageTag: 689c5abc-08be-447a-ba72-f0c66f1e3cab
+		summarizeBy: sum
+		sourceColumn: Sociedad Juridica
+
+		annotation SummarizationSetBy = Automatic
+
+	column Legislacion
+		dataType: string
+		lineageTag: 6ee3d615-1f58-48c8-9584-5e10a6cd1128
+		summarizeBy: none
+		sourceColumn: Legislacion
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Modelo Contable'
+		dataType: string
+		lineageTag: ba320cd5-aca4-4c06-bcbd-d25db277a76f
+		summarizeBy: none
+		sourceColumn: Modelo Contable
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Planta Principal'
+		dataType: string
+		lineageTag: 2d340ea3-505f-4b3f-b886-f7670a7d6fe1
+		summarizeBy: none
+		sourceColumn: Planta Principal
+
+		annotation SummarizationSetBy = Automatic
+
+	column Pais
+		dataType: string
+		lineageTag: f3f9db2e-43f4-437d-b165-3603211226c2
+		summarizeBy: none
+		sourceColumn: Pais
+
+		annotation SummarizationSetBy = Automatic
+
+	partition dim_Sociedades = m
+		mode: import
+		source =
+				let
+				    Origen = PowerPlatform.Dataflows(null),
+				    Workspaces = Origen{[Id="Workspaces"]}[Data],
+				    #"cd25238f-048e-4509-ab9f-29f918c14d4c" = Workspaces{[workspaceId="cd25238f-048e-4509-ab9f-29f918c14d4c"]}[Data],
+				    #"5877d4c8-d8db-4300-bd5c-7bed546ea986" = #"cd25238f-048e-4509-ab9f-29f918c14d4c"{[dataflowId="5877d4c8-d8db-4300-bd5c-7bed546ea986"]}[Data],
+				    dim_Sociedades_ = #"5877d4c8-d8db-4300-bd5c-7bed546ea986"{[entity="dim_Sociedades",version=""]}[Data]
+				in
+				    dim_Sociedades_
+
