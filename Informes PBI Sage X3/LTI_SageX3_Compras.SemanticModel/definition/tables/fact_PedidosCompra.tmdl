@@ -391,6 +391,20 @@ table fact_PedidosCompra
 
 		annotation SummarizationSetBy = Automatic
 
+	column 'Diferenia dias OCC' = ```
+			
+			IF(
+			    'fact_PedidosCompra'[Fecha OCC] > DATE(2007,1,1), 
+			    DATEDIFF('fact_PedidosCompra'[Fecha OCC],'fact_PedidosCompra'[Fecha recepcion],DAY), 
+			    BLANK()
+			)
+			```
+		formatString: 0
+		lineageTag: 2d8b9163-5386-4caf-829b-cf0edc39b624
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
 	partition fact_PedidosCompra = m
 		mode: import
 		source =

@@ -5,7 +5,7 @@ table Metricas
 		formatString: #,0.00\ "€";-#,0.00\ "€";#,0.00\ "€"
 		lineageTag: 2aa08c01-aa5b-462f-98cf-cf4e3805db71
 
-	measure 'Total Compras AA' = CALCULATE([Total Compras], SAMEPERIODLASTYEAR(Fecha[Fecha]))
+	measure 'Total Compras AA' = CALCULATE([Total Compras], SAMEPERIODLASTYEAR(dim_Calendario[Fecha]))
 		formatString: #,0.00\ "€";-#,0.00\ "€";#,0.00\ "€"
 		lineageTag: 1dae9be3-1827-49d2-b14e-33a8e2096e11
 
@@ -19,7 +19,7 @@ table Metricas
 		lineageTag: d244f30b-6ada-43db-aedc-43e24326a110
 
 	measure 'Descuento AA' = ```
-			CALCULATE([Descuento], SAMEPERIODLASTYEAR(Fecha[Fecha])) 
+			CALCULATE([Descuento], SAMEPERIODLASTYEAR(dim_Calendario[Fecha])) 
 			```
 		lineageTag: 166f38aa-1bb3-4edf-b992-9f8d52655be0
 
@@ -34,24 +34,24 @@ table Metricas
 		lineageTag: 67c9c067-38c7-4ddd-bb42-dae7227767e6
 
 	measure 'Compra Neta AA' = ```
-			CALCULATE([Compra Neta], SAMEPERIODLASTYEAR(Fecha[Fecha])) 
+			CALCULATE([Compra Neta], SAMEPERIODLASTYEAR(dim_Calendario[Fecha])) 
 			```
 		lineageTag: 0d76ebc8-16f8-4662-8fd2-9ce614afaefd
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
 	measure 'Descuento AA %' = ```
-			CALCULATE([Descuento %], SAMEPERIODLASTYEAR(Fecha[Fecha])) 
+			CALCULATE([Descuento %], SAMEPERIODLASTYEAR(dim_Calendario[Fecha])) 
 			```
 		formatString: 0.00\ %;-0.00\ %;0.00\ %
 		lineageTag: 7e9b21c2-cdf0-4493-b3b7-dc523e7f4de3
 
-	measure FirstOfDate = FIRSTDATE(Fecha[Fecha])
+	measure FirstOfDate = FIRSTDATE(dim_Calendario[Fecha])
 		formatString: General Date
 		displayFolder: Ayuda
 		lineageTag: 4fd64a87-a696-4bf3-a838-1680ab5293a6
 
-	measure EndOfDate = LASTDATE(Fecha[Fecha])
+	measure EndOfDate = LASTDATE(dim_Calendario[Fecha])
 		formatString: General Date
 		displayFolder: Ayuda
 		lineageTag: 944050c5-f7e0-49ce-8657-fe55f2cc4e9e
@@ -95,7 +95,7 @@ table Metricas
 	measure Antiguedad =
 			
 			--var fp = CALCULATE(FIRSTNONBLANK('Facturas a clientes'[Fecha de Orden], 'Facturas a clientes'[Fecha de Orden]), ALL('Facturas a clientes'))
-			DATEDIFF(calculate([FechaPrimeraCompra],all(Fecha[Fecha])), TODAY(), day) / 365.25
+			DATEDIFF(calculate([FechaPrimeraCompra],all(dim_Calendario[Fecha])), TODAY(), day) / 365.25
 		formatString: 0.0
 		lineageTag: b8c8cc63-48b0-475f-92ea-53d8029d82f5
 
@@ -114,7 +114,7 @@ table Metricas
 
 		annotation PBI_FormatHint = {"isDecimal":true}
 
-	measure 'Total Cantidad AA' = CALCULATE([Total Cantidad],SAMEPERIODLASTYEAR(Fecha[Fecha]))
+	measure 'Total Cantidad AA' = CALCULATE([Total Cantidad],SAMEPERIODLASTYEAR(dim_Calendario[Fecha]))
 		formatString: 0
 		lineageTag: d09a6a4d-fe6b-4f74-b7ae-438ed32fa03a
 
@@ -128,7 +128,7 @@ table Metricas
 		formatString: 0
 		lineageTag: df1629c5-52be-4a1d-96e4-6a778b47ac7a
 
-	measure 'Total Facturas AA' = calculate([Total Facturas],SAMEPERIODLASTYEAR(Fecha[Fecha]))
+	measure 'Total Facturas AA' = calculate([Total Facturas],SAMEPERIODLASTYEAR(dim_Calendario[Fecha]))
 		formatString: 0
 		lineageTag: 7d41a519-8a27-45da-9a53-fd381522a21e
 
@@ -151,8 +151,8 @@ table Metricas
 	measure 'Count Lin recepciones Repuestos' = ```
 			
 			    CALCULATE(
-			        COUNT(Recepciones[DocIdLinea]) + 0,
-			        'Recepciones'[Clase pedido] = "1 - REPUESTOS"
+			        COUNT(fact_Recepciones[DocIdLinea]) + 0,
+			        'fact_Recepciones'[Clase pedido] = "1 - REPUESTOS"
 			        )
 			```
 		formatString: 0
@@ -162,7 +162,7 @@ table Metricas
 	measure 'Count Lin pedidos Garantia' = ```
 			CALCULATE(
 			    [Count Lin recepciones Repuestos],     
-			    'Pedidos Cabecera'[IdTipoPedido] IN {"S09","S10","SG1","SG2","SG5","SG6","SG7"}
+			    'fact_PedidosCompra'[IdTipoPedido] IN {"S09","S10","SG1","SG2","SG5","SG6","SG7"}
 			    ) + 0
 			```
 		formatString: 0
@@ -172,7 +172,7 @@ table Metricas
 	measure 'Count Lin pedidos sin Garantia' = ```
 			CALCULATE(
 			    [Count Lin recepciones Repuestos], 
-			    NOT 'Pedidos Cabecera'[IdTipoPedido] IN {"S09","S10","SG1","SG2","SG5","SG6","SG7"}
+			    NOT 'fact_PedidosCompra'[IdTipoPedido] IN {"S09","S10","SG1","SG2","SG5","SG6","SG7"}
 			    ) + 0
 			```
 		formatString: 0
@@ -182,8 +182,8 @@ table Metricas
 	measure 'Dias OCC Garantia' = ```
 			CALCULATE(
 			    [Total Dias OCC], 
-			    'Pedidos Cabecera'[Clase pedido] = "1 - REPUESTOS",
-			    'Pedidos Cabecera'[IdTipoPedido] IN {"S09","S10","SG1","SG2","SG5","SG6","SG7"}
+			    'fact_PedidosCompra'[Clase pedido] = "1 - REPUESTOS",
+			    'fact_PedidosCompra'[IdTipoPedido] IN {"S09","S10","SG1","SG2","SG5","SG6","SG7"}
 			    ) + 0
 			```
 		formatString: 0
@@ -193,8 +193,8 @@ table Metricas
 	measure 'Dias OCC sin Garantia' = ```
 			CALCULATE(
 			    [Total Dias OCC], 
-			    'Pedidos Cabecera'[Clase pedido] = "1 - REPUESTOS",
-			    NOT 'Pedidos Cabecera'[IdTipoPedido] IN {"S09","S10","SG1","SG2","SG5","SG6","SG7"}
+			    'fact_PedidosCompra'[Clase pedido] = "1 - REPUESTOS",
+			    NOT 'fact_PedidosCompra'[IdTipoPedido] IN {"S09","S10","SG1","SG2","SG5","SG6","SG7"}
 			    ) + 0
 			```
 		formatString: 0
@@ -204,11 +204,10 @@ table Metricas
 	measure 'Total Dias OCC' = ```
 			
 			    CALCULATE(
-			        SUM('Pedidos Lineas'[Diferenia dias OCC]) + 0,
-			        'Pedidos Cabecera'[Clase pedido] = "1 - REPUESTOS"
+			        SUM('fact_PedidosCompra'[Diferenia dias OCC]) + 0,
+			        'fact_PedidosCompra'[Clase pedido] = "1 - REPUESTOS"
 			        )  
 			```
-		formatString: 0
 		displayFolder: KPI Recepciones
 		lineageTag: 4bb57acc-1778-4bf9-9e0d-4b8f669704b8
 
