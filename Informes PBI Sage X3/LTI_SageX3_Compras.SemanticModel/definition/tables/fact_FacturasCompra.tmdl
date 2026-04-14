@@ -1,0 +1,442 @@
+table fact_FacturasCompra
+	lineageTag: 7ff90c7b-6b21-4593-9c7d-a8018cb42dab
+
+	column 'Categoria Factura'
+		dataType: int64
+		formatString: 0
+		lineageTag: 3411bea4-0092-4926-bbd9-83394fd2623c
+		summarizeBy: sum
+		sourceColumn: Categoria Factura
+
+		annotation SummarizationSetBy = Automatic
+
+	column Documento
+		dataType: string
+		lineageTag: cc71473a-2b20-4cb6-aa02-2390b8484cbc
+		summarizeBy: none
+		sourceColumn: Documento
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Tipo Factura'
+		dataType: string
+		lineageTag: 70871871-05b2-4496-965a-e14c42ad0cc2
+		summarizeBy: none
+		sourceColumn: Tipo Factura
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Categoria Factura Compras'
+		dataType: int64
+		formatString: 0
+		lineageTag: 9787d693-9b03-4d02-bef3-d586cea2e1b6
+		summarizeBy: sum
+		sourceColumn: Categoria Factura Compras
+
+		annotation SummarizationSetBy = Automatic
+
+	column Empresa
+		dataType: string
+		lineageTag: 5a922158-7efe-4f24-9a2a-9e9ce8cf6597
+		summarizeBy: none
+		sourceColumn: Empresa
+
+		annotation SummarizationSetBy = Automatic
+
+	column Planta
+		dataType: string
+		lineageTag: 317dec35-a2a2-4531-a659-9f7c9012d004
+		summarizeBy: none
+		sourceColumn: Planta
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Fecha Contable'
+		dataType: dateTime
+		formatString: dd/mm/yyyy
+		lineageTag: 0bffdbd7-cf00-44c8-bdbc-f4e7b6317e4f
+		summarizeBy: none
+		sourceColumn: Fecha Contable
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isDateTimeCustom":true}
+
+	column ProveedorID
+		dataType: string
+		lineageTag: 55d285e4-21d1-423f-a7ea-0e46da4a6427
+		summarizeBy: none
+		sourceColumn: ProveedorID
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Numero Factura'
+		dataType: string
+		lineageTag: 8c364474-e8b4-489f-96ac-e13ba34be0da
+		summarizeBy: none
+		sourceColumn: Numero Factura
+
+		annotation SummarizationSetBy = Automatic
+
+	column Validacion
+		dataType: int64
+		formatString: 0
+		lineageTag: 86d7b496-5280-43f1-acd7-42e576b737f4
+		summarizeBy: sum
+		sourceColumn: Validacion
+
+		annotation SummarizationSetBy = Automatic
+
+	column Sentido
+		dataType: int64
+		formatString: 0
+		lineageTag: bd7fe095-f6f9-456c-a748-26132eff3026
+		summarizeBy: sum
+		sourceColumn: Sentido
+
+		annotation SummarizationSetBy = Automatic
+
+	column Provincia
+		dataType: string
+		lineageTag: 75f9ebe1-ae4c-43a0-9f79-a60ea3692686
+		summarizeBy: none
+		sourceColumn: Provincia
+
+		annotation SummarizationSetBy = Automatic
+
+	column Linea
+		dataType: int64
+		formatString: 0
+		lineageTag: dc1020ec-ad6f-47d0-b3ce-4c79b6e11ddb
+		summarizeBy: sum
+		sourceColumn: Linea
+
+		annotation SummarizationSetBy = Automatic
+
+	column DocumentoLinea
+		dataType: string
+		lineageTag: d134ef38-ee76-4a34-8e02-20b2ebacc68e
+		summarizeBy: none
+		sourceColumn: DocumentoLinea
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Planta Linea'
+		dataType: string
+		lineageTag: 3380035f-b6e0-4e6f-8915-52e55c77689f
+		summarizeBy: none
+		sourceColumn: Planta Linea
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Origen Linea'
+		dataType: int64
+		formatString: 0
+		lineageTag: 9e4ce940-128a-4e12-8642-3f06086d25f1
+		summarizeBy: sum
+		sourceColumn: Origen Linea
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Numero Origen'
+		dataType: string
+		lineageTag: 8122f2c7-3157-4273-90b6-59f018533425
+		summarizeBy: none
+		sourceColumn: Numero Origen
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Linea Origen'
+		dataType: int64
+		formatString: 0
+		lineageTag: d9848278-a5f1-4681-9d08-1309871745b0
+		summarizeBy: sum
+		sourceColumn: Linea Origen
+
+		annotation SummarizationSetBy = Automatic
+
+	column ItemID
+		dataType: string
+		lineageTag: aa4b51f2-3873-4a10-a307-c5fa85881e30
+		summarizeBy: none
+		sourceColumn: ItemID
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Item Des'
+		dataType: string
+		lineageTag: 2f9feb61-f55c-413a-b6d6-0d5dd19be28e
+		summarizeBy: none
+		sourceColumn: Item Des
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Item Des 1'
+		dataType: string
+		lineageTag: eff4af4e-d084-4e71-bf25-0a08870b8d18
+		summarizeBy: none
+		sourceColumn: Item Des 1
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Unidad Facturacion'
+		dataType: string
+		lineageTag: ee38136b-a0ba-47ba-b90d-216ce1588770
+		summarizeBy: none
+		sourceColumn: Unidad Facturacion
+
+		annotation SummarizationSetBy = Automatic
+
+	column Cantidad
+		dataType: double
+		lineageTag: 15f3b497-f047-42aa-8fb2-ddaf1addfe9e
+		summarizeBy: sum
+		sourceColumn: Cantidad
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Precio Bruto'
+		dataType: double
+		lineageTag: 8cf1c6c6-772d-4f9f-a2e3-113e83c96710
+		summarizeBy: sum
+		sourceColumn: Precio Bruto
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Motivo Precio'
+		dataType: int64
+		formatString: 0
+		lineageTag: e000c611-73f1-4ced-927c-a78483f00d29
+		summarizeBy: sum
+		sourceColumn: Motivo Precio
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Precio Neto'
+		dataType: double
+		lineageTag: 8af7d678-a454-429b-9aee-ded916cb0150
+		summarizeBy: sum
+		sourceColumn: Precio Neto
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Valor Descuento1'
+		dataType: double
+		lineageTag: 44e8ec77-8568-42e1-8538-d806fd3d7fea
+		summarizeBy: sum
+		sourceColumn: Valor Descuento1
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Valor Descuento2'
+		dataType: double
+		lineageTag: 8d3b816c-fbc1-4ad4-a374-e962c7dda2de
+		summarizeBy: sum
+		sourceColumn: Valor Descuento2
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Valor Descuento3'
+		dataType: double
+		lineageTag: 4b51bfe2-a622-48ef-a1f3-6b74f3f1b493
+		summarizeBy: sum
+		sourceColumn: Valor Descuento3
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Tipo Compra'
+		dataType: int64
+		formatString: 0
+		lineageTag: de33e66d-ab6f-493b-ac46-75ad9c783acf
+		summarizeBy: sum
+		sourceColumn: Tipo Compra
+
+		annotation SummarizationSetBy = Automatic
+
+	column Divisa
+		dataType: string
+		lineageTag: 7991b475-06e3-4cd4-a1bc-ac6d24da12f0
+		summarizeBy: none
+		sourceColumn: Divisa
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Numero Pedido'
+		dataType: string
+		lineageTag: e20a6397-2614-4495-b785-33cdd62edb5f
+		summarizeBy: none
+		sourceColumn: Numero Pedido
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Linea Pedido Compra'
+		dataType: int64
+		formatString: 0
+		lineageTag: 2c7f7a53-bf20-4307-b882-2bf42066b359
+		summarizeBy: sum
+		sourceColumn: Linea Pedido Compra
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Numero Recepcion'
+		dataType: string
+		lineageTag: b880c2b7-1f99-4cfe-85d4-d108560ddb2a
+		summarizeBy: none
+		sourceColumn: Numero Recepcion
+
+		annotation SummarizationSetBy = Automatic
+
+	column Linea2
+		dataType: int64
+		formatString: 0
+		lineageTag: 6943921c-482b-4100-9b6f-5626f35df935
+		summarizeBy: sum
+		sourceColumn: Linea2
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Linea factura'
+		dataType: int64
+		formatString: 0
+		lineageTag: 1f40c6d7-8cb0-4547-a2f4-4c501640346e
+		summarizeBy: sum
+		sourceColumn: Linea factura
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Familia Estadisitca1'
+		dataType: string
+		lineageTag: d5244fa9-13ed-4b94-9a46-dbd113aaaaaf
+		summarizeBy: none
+		sourceColumn: Familia Estadisitca1
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Familia Estadisitca2'
+		dataType: string
+		lineageTag: 7fca66ef-c6a4-42a3-9c8d-b449c2ef9190
+		summarizeBy: none
+		sourceColumn: Familia Estadisitca2
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Tipo Impuesto'
+		dataType: string
+		lineageTag: 0bc9b2dd-7a41-4da2-8859-7005ed38da13
+		summarizeBy: none
+		sourceColumn: Tipo Impuesto
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Importe Linea AI'
+		dataType: double
+		lineageTag: d5b9c00c-ad11-4748-9903-db777a6a72a4
+		summarizeBy: sum
+		sourceColumn: Importe Linea AI
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Importe Linea II'
+		dataType: double
+		lineageTag: 5ca376f8-c5a0-45a0-bfe7-33502179f252
+		summarizeBy: sum
+		sourceColumn: Importe Linea II
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Importe Descuento'
+		dataType: double
+		lineageTag: 59d64eea-9faa-4f4a-944c-d45b2990383b
+		summarizeBy: sum
+		sourceColumn: Importe Descuento
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Importe Impuesto'
+		dataType: double
+		lineageTag: 7439b846-bac5-4c89-aace-dcdcbe1b9f9d
+		summarizeBy: sum
+		sourceColumn: Importe Impuesto
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Impuesto deducible'
+		dataType: double
+		lineageTag: 8f098427-384c-4270-910f-c55c9296a3e4
+		summarizeBy: sum
+		sourceColumn: Impuesto deducible
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Precio Coste'
+		dataType: double
+		lineageTag: cd22226e-c77d-490b-bbb2-ac4d93ccc073
+		summarizeBy: sum
+		sourceColumn: Precio Coste
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Coste Stock'
+		dataType: double
+		lineageTag: cad1fe86-1b3f-48c3-9afb-d4ffca47ea25
+		summarizeBy: sum
+		sourceColumn: Coste Stock
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Coste Compra'
+		dataType: double
+		lineageTag: e5fe8148-af72-42ba-b679-f5c4e0b27ca2
+		summarizeBy: sum
+		sourceColumn: Coste Compra
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Fra Parcial'
+		dataType: int64
+		formatString: 0
+		lineageTag: 2c53c8fe-34f4-4669-9452-a7e944d67515
+		summarizeBy: sum
+		sourceColumn: Fra Parcial
+
+		annotation SummarizationSetBy = Automatic
+
+	partition fact_FacturasCompra = m
+		mode: import
+		source =
+				let
+				    Origen = PowerBI.Dataflows(null),
+				    #"cd25238f-048e-4509-ab9f-29f918c14d4c" = Origen{[workspaceId="cd25238f-048e-4509-ab9f-29f918c14d4c"]}[Data],
+				    #"83e92cc2-2615-4e7e-af83-e12f28b5827e" = #"cd25238f-048e-4509-ab9f-29f918c14d4c"{[dataflowId="83e92cc2-2615-4e7e-af83-e12f28b5827e"]}[Data],
+				    fact_FacturasCompra1 = #"83e92cc2-2615-4e7e-af83-e12f28b5827e"{[entity="fact_FacturasCompra"]}[Data]
+				in
+				    fact_FacturasCompra1
+

@@ -163,12 +163,19 @@
           "zIndex": 11
         },
         {
-          "location": {
-            "x": 1987.0930496800192,
-            "y": 506.78633801167564
+          "location": {},
+          "nodeIndex": "fact_FacturasCompra",
+          "nodeLineageTag": "7ff90c7b-6b21-4593-9c7d-a8018cb42dab",
+          "size": {
+            "height": 300,
+            "width": 234
           },
+          "zIndex": 0
+        },
+        {
+          "location": {},
           "nodeIndex": "dim_Articulos",
-          "nodeLineageTag": "286129b7-4146-4c80-9c7a-e0d6931e0b83",
+          "nodeLineageTag": "a6a6e687-c10c-4fae-97a1-a08794dac3cb",
           "size": {
             "height": 300,
             "width": 234
@@ -176,12 +183,9 @@
           "zIndex": 0
         },
         {
-          "location": {
-            "x": 2241.8262523981152,
-            "y": 274.27789293877117
-          },
+          "location": {},
           "nodeIndex": "dim_Calendario",
-          "nodeLineageTag": "6881de4b-be73-4d70-802c-a424e2d2f695",
+          "nodeLineageTag": "4eb11884-e053-4d6f-82b2-c7ebacb5a0f6",
           "size": {
             "height": 300,
             "width": 234
@@ -189,12 +193,9 @@
           "zIndex": 0
         },
         {
-          "location": {
-            "x": 2555.0930496800192,
-            "y": 532.78633801167564
-          },
+          "location": {},
           "nodeIndex": "dim_Proveedores",
-          "nodeLineageTag": "995b40bd-f4bd-4bad-b6bc-33f55c071bbf",
+          "nodeLineageTag": "933e29cd-f0fd-4330-b9ac-0197c920c308",
           "size": {
             "height": 248,
             "width": 234
@@ -202,12 +203,9 @@
           "zIndex": 0
         },
         {
-          "location": {
-            "x": 2839.0930496800192,
-            "y": 508.78633801167564
-          },
+          "location": {},
           "nodeIndex": "dim_Sociedades",
-          "nodeLineageTag": "a598d10b-f17b-4fd8-b2f1-5955d6b11ef0",
+          "nodeLineageTag": "b7555c49-dd89-4423-a39f-e4cd66ed5e38",
           "size": {
             "height": 296,
             "width": 234
@@ -215,12 +213,9 @@
           "zIndex": 0
         },
         {
-          "location": {
-            "x": 3123.0930496800192,
-            "y": 506.78633801167564
-          },
+          "location": {},
           "nodeIndex": "fact_Recepciones",
-          "nodeLineageTag": "225579a3-2c0a-4141-862d-58aad62c3122",
+          "nodeLineageTag": "6860febb-b658-41a9-bc21-ce5525ceb565",
           "size": {
             "height": 300,
             "width": 234
@@ -244,8 +239,8 @@
       "nodes": [
         {
           "location": {
-            "x": 663.0978021451707,
-            "y": 151.69645980067628
+            "x": 312.3890148237744,
+            "y": 4.62503285944554
           },
           "nodeIndex": "Factura Compras",
           "nodeLineageTag": "11b2c351-ad50-4ad4-92bb-a560c55808c0",
@@ -257,8 +252,8 @@
         },
         {
           "location": {
-            "x": 1055.8988136306916,
-            "y": 7.900505742760533
+            "x": 711.47513002473238,
+            "y": 0
           },
           "nodeIndex": "Articulos",
           "nodeLineageTag": "f3514044-18e3-4e8f-842d-93188140c17d",
@@ -266,12 +261,12 @@
             "height": 300,
             "width": 234
           },
-          "zIndex": 7
+          "zIndex": 4
         },
         {
           "location": {
-            "x": -11,
-            "y": 47
+            "x": 0,
+            "y": 0
           },
           "nodeIndex": "Lineas Contables Analiticas",
           "nodeLineageTag": "b2d20480-d1b3-44ff-b07f-d4500fcb9545",
@@ -279,12 +274,12 @@
             "height": 300,
             "width": 234
           },
-          "zIndex": 2
+          "zIndex": 6
         },
         {
           "location": {
-            "x": 51,
-            "y": 551
+            "x": 15.803419193551633,
+            "y": 437.86813312213019
           },
           "nodeIndex": "Fecha",
           "nodeLineageTag": "f7cc7aa8-aa2d-46dc-883f-19461f666627",
@@ -292,12 +287,12 @@
             "height": 300,
             "width": 234
           },
-          "zIndex": 3
+          "zIndex": 5
         },
         {
           "location": {
-            "x": 870.00505742760527,
-            "y": 618.90556317036589
+            "x": 593.460493948368,
+            "y": 362.47333158052777
           },
           "nodeIndex": "Empresa",
           "nodeLineageTag": "c891fb5c-310c-4c83-8912-6eb73c8f7084",
@@ -305,12 +300,12 @@
             "height": 296,
             "width": 234
           },
-          "zIndex": 4
+          "zIndex": 2
         },
         {
           "location": {
-            "x": 572.92242756525059,
-            "y": 627.98313560511531
+            "x": 317.74721671849983,
+            "y": 646.83844675142677
           },
           "nodeIndex": "Proveedor",
           "nodeLineageTag": "9e0c0cb7-2c08-45c6-a25a-ec1acb666fd2",
@@ -318,12 +313,12 @@
             "height": 248,
             "width": 234
           },
-          "zIndex": 5
+          "zIndex": 3
         },
         {
           "location": {
-            "x": 791.9662712102305,
-            "y": 994.83979770289579
+            "x": 900.07005511575062,
+            "y": 600.13528437343894
           },
           "nodeIndex": "Direccion",
           "nodeLineageTag": "aa57438b-efc9-42f0-97ab-1ec1207a90a3",
@@ -331,7 +326,7 @@
             "height": 300,
             "width": 234
           },
-          "zIndex": 6
+          "zIndex": 7
         }
       ],
       "name": "Facturas Compra",
@@ -437,14 +432,14 @@
     {
       "ordinal": 3,
       "scrollPosition": {
-        "x": 58.300806935311321,
-        "y": 236.56673583366708
+        "x": 0,
+        "y": 0
       },
       "nodes": [
         {
           "location": {
-            "x": 405.03346705359542,
-            "y": 96.57943468390819
+            "x": 318.70342601476904,
+            "y": 27.066934107190846
           },
           "nodeIndex": "Recepciones",
           "nodeLineageTag": "a4dd099a-9cf4-4f61-bf7b-4bf75c58b346",
@@ -452,7 +447,7 @@
             "height": 300,
             "width": 234
           },
-          "zIndex": 2
+          "zIndex": 3
         },
         {
           "location": {
@@ -465,11 +460,11 @@
             "height": 300,
             "width": 234
           },
-          "zIndex": 3
+          "zIndex": 4
         },
         {
           "location": {
-            "x": 770.48608843992258,
+            "x": 641.55161156375334,
             "y": 0
           },
           "nodeIndex": "Proveedor",
@@ -478,12 +473,12 @@
             "height": 248,
             "width": 234
           },
-          "zIndex": 6
+          "zIndex": 7
         },
         {
           "location": {
-            "x": 457.28991561547787,
-            "y": 519.90665375601429
+            "x": 432.6241896043847,
+            "y": 450.394153179297
           },
           "nodeIndex": "Empresa",
           "nodeLineageTag": "c891fb5c-310c-4c83-8912-6eb73c8f7084",
@@ -491,7 +486,7 @@
             "height": 296,
             "width": 234
           },
-          "zIndex": 4
+          "zIndex": 5
         },
         {
           "location": {
@@ -504,76 +499,76 @@
             "height": 300,
             "width": 234
           },
-          "zIndex": 5
+          "zIndex": 6
         },
         {
           "location": {
-            "x": 1204.9770277191906,
-            "y": 368.04294739006872
-          },
-          "nodeIndex": "dim_Sociedades",
-          "nodeLineageTag": "a598d10b-f17b-4fd8-b2f1-5955d6b11ef0",
-          "size": {
-            "height": 296,
-            "width": 234
-          },
-          "zIndex": 1
-        },
-        {
-          "location": {
-            "x": 860.7780329280256,
-            "y": 439.79778669506732
+            "x": 1181.0696709680446,
+            "y": 346.64715189899994
           },
           "nodeIndex": "fact_Recepciones",
-          "nodeLineageTag": "225579a3-2c0a-4141-862d-58aad62c3122",
+          "nodeLineageTag": "6860febb-b658-41a9-bc21-ce5525ceb565",
           "size": {
             "height": 300,
             "width": 234
           },
-          "zIndex": 7
+          "zIndex": 2
         },
         {
           "location": {
-            "x": 1031.195776277397,
-            "y": 42.903831789294088
+            "x": 1476.9166413106439,
+            "y": 67.786610475592909
           },
-          "nodeIndex": "dim_Calendario",
-          "nodeLineageTag": "6881de4b-be73-4d70-802c-a424e2d2f695",
+          "nodeIndex": "dim_Proveedores",
+          "nodeLineageTag": "933e29cd-f0fd-4330-b9ac-0197c920c308",
           "size": {
-            "height": 300,
+            "height": 248,
             "width": 234
           },
           "zIndex": 8
         },
         {
           "location": {
-            "x": 697.08730576349774,
-            "y": 283.95524507952354
+            "x": 950.33734481568263,
+            "y": 1.2564305420897384
           },
-          "nodeIndex": "dim_Proveedores",
-          "nodeLineageTag": "995b40bd-f4bd-4bad-b6bc-33f55c071bbf",
+          "nodeIndex": "dim_Calendario",
+          "nodeLineageTag": "4eb11884-e053-4d6f-82b2-c7ebacb5a0f6",
           "size": {
-            "height": 248,
+            "height": 300,
             "width": 234
           },
-          "zIndex": 0
+          "zIndex": 1
         },
         {
           "location": {
-            "x": 1184.7959791646597,
-            "y": 730.18065200748333
+            "x": 814.44591346214406,
+            "y": 570.30179933503189
           },
           "nodeIndex": "dim_Articulos",
-          "nodeLineageTag": "286129b7-4146-4c80-9c7a-e0d6931e0b83",
+          "nodeLineageTag": "a6a6e687-c10c-4fae-97a1-a08794dac3cb",
           "size": {
             "height": 300,
+            "width": 234
+          },
+          "zIndex": 9
+        },
+        {
+          "location": {
+            "x": 1508.0584276624966,
+            "y": 690.62233751264409
+          },
+          "nodeIndex": "dim_Sociedades",
+          "nodeLineageTag": "b7555c49-dd89-4423-a39f-e4cd66ed5e38",
+          "size": {
+            "height": 296,
             "width": 234
           },
           "zIndex": 0
         }
       ],
       "name": "Recepciones Compra",
-      "zoomValue": 89.192590520569482,
+      "zoomValue": 70.644630823148873,
       "pinKeyFieldsToTop": false,
       "showExtraHeaderInfo": false,
       "hideKeyFieldsWhenCollapsed": false,

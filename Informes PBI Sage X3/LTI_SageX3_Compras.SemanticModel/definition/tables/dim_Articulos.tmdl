@@ -1,17 +1,17 @@
 table dim_Articulos
-	lineageTag: 286129b7-4146-4c80-9c7a-e0d6931e0b83
+	lineageTag: a6a6e687-c10c-4fae-97a1-a08794dac3cb
 
-	column CodArticulo
+	column IdArticulo
 		dataType: string
-		lineageTag: ed6c9573-ae12-4dd0-ba8e-56c79f4e9330
+		lineageTag: 355a588c-e5c6-4afd-83fa-e54e4bff7afe
 		summarizeBy: none
-		sourceColumn: CodArticulo
+		sourceColumn: IdArticulo
 
 		annotation SummarizationSetBy = Automatic
 
 	column IdCategoria
 		dataType: string
-		lineageTag: be9e01c9-3eac-45af-9ce4-7439e1f40a2e
+		lineageTag: c99a8f10-41d7-4b77-ba10-d0c919bc38b7
 		summarizeBy: none
 		sourceColumn: IdCategoria
 
@@ -19,7 +19,7 @@ table dim_Articulos
 
 	column Categoria
 		dataType: string
-		lineageTag: cc5218b8-e63c-4aec-88c3-24fb92f41b96
+		lineageTag: 893ca2f3-156d-4d6e-a0e5-b319726842cf
 		summarizeBy: none
 		sourceColumn: Categoria
 
@@ -27,7 +27,7 @@ table dim_Articulos
 
 	column 'Codigo Contable'
 		dataType: string
-		lineageTag: 75b1e4ed-2d40-4884-8910-2dfdd187c60b
+		lineageTag: 581e17b2-e2da-4d44-9a34-e6672d8ffc3f
 		summarizeBy: none
 		sourceColumn: Codigo Contable
 
@@ -35,7 +35,7 @@ table dim_Articulos
 
 	column 'Descripcion 1'
 		dataType: string
-		lineageTag: 1d24c96f-a236-48a3-a89a-a9f7bbdb4467
+		lineageTag: 47259a77-4082-4692-beb2-c9cdf14195cf
 		summarizeBy: none
 		sourceColumn: Descripcion 1
 
@@ -43,7 +43,7 @@ table dim_Articulos
 
 	column 'Descripcion 2'
 		dataType: string
-		lineageTag: 3d05e2c4-20c0-4b51-9406-118e8794e5bf
+		lineageTag: 9532a760-3346-4a13-b3d6-8c7987de57d2
 		summarizeBy: none
 		sourceColumn: Descripcion 2
 
@@ -51,7 +51,7 @@ table dim_Articulos
 
 	column 'Descripcion 3'
 		dataType: string
-		lineageTag: ddad2cf6-5c94-4d69-94f7-caff56e4ea40
+		lineageTag: d140036b-8b78-4c9c-81e9-aebb16524a88
 		summarizeBy: none
 		sourceColumn: Descripcion 3
 
@@ -59,7 +59,7 @@ table dim_Articulos
 
 	column Unidad
 		dataType: string
-		lineageTag: 0a2598e6-c987-4ef7-96e7-e0470cc6de94
+		lineageTag: 107dcad2-4db8-48fd-bc97-5eb530f9e2de
 		summarizeBy: none
 		sourceColumn: Unidad
 
@@ -67,7 +67,7 @@ table dim_Articulos
 
 	column 'Nivel Impuesto'
 		dataType: string
-		lineageTag: 2a73ef21-8e91-43cd-a9af-1eb0ecc01214
+		lineageTag: 10f73d23-6278-4bcc-b521-40e55b21a130
 		summarizeBy: none
 		sourceColumn: Nivel Impuesto
 
@@ -75,7 +75,7 @@ table dim_Articulos
 
 	column Comprador
 		dataType: string
-		lineageTag: ff99068b-424a-4b6a-8b1b-6f8fca85f9ab
+		lineageTag: 25d78013-4d17-4379-b05f-76d44acdf0a6
 		summarizeBy: none
 		sourceColumn: Comprador
 
@@ -83,8 +83,8 @@ table dim_Articulos
 
 	column 'Precio Base'
 		dataType: double
-		lineageTag: 42bddc48-5666-48fa-88bb-cd5ce1f6b9a0
-		summarizeBy: sum
+		lineageTag: e24ff0cd-b150-433d-ba02-2da83c1848d5
+		summarizeBy: none
 		sourceColumn: Precio Base
 
 		annotation SummarizationSetBy = Automatic
@@ -93,8 +93,8 @@ table dim_Articulos
 
 	column 'Coef Gastos Entrega'
 		dataType: double
-		lineageTag: 0b3224ea-51d7-46fc-9b75-f9194bb69c65
-		summarizeBy: sum
+		lineageTag: 218054af-74c7-417c-a707-c94dd888eab5
+		summarizeBy: none
 		sourceColumn: Coef Gastos Entrega
 
 		annotation SummarizationSetBy = Automatic
@@ -103,8 +103,8 @@ table dim_Articulos
 
 	column 'Coste Fijo Unitario'
 		dataType: double
-		lineageTag: 191ea6e7-8361-453e-bf21-ee3d82b53ec7
-		summarizeBy: sum
+		lineageTag: c0e6ec87-f47b-481c-a9b6-37054a21e6d0
+		summarizeBy: none
 		sourceColumn: Coste Fijo Unitario
 
 		annotation SummarizationSetBy = Automatic
@@ -113,7 +113,7 @@ table dim_Articulos
 
 	column 'Eje Analitico 1'
 		dataType: string
-		lineageTag: 1234b343-4eed-46f1-b927-0fb4c4b04734
+		lineageTag: cd3d201d-132d-4407-a614-967022872e1c
 		summarizeBy: none
 		sourceColumn: Eje Analitico 1
 
@@ -121,7 +121,7 @@ table dim_Articulos
 
 	column 'Eje Analitico 2'
 		dataType: string
-		lineageTag: b593bab2-6d57-4a45-a27c-95432b635cae
+		lineageTag: 3b1a1cb0-b7c1-4ea2-a3fd-b8f5e4fed7bb
 		summarizeBy: none
 		sourceColumn: Eje Analitico 2
 
@@ -129,7 +129,7 @@ table dim_Articulos
 
 	column 'Eje Analitico 3'
 		dataType: string
-		lineageTag: f7f1dfa6-a5d7-44ea-9799-11ccbdd2129c
+		lineageTag: d07720bc-00e4-4f23-b382-6f3973050dcb
 		summarizeBy: none
 		sourceColumn: Eje Analitico 3
 
@@ -137,7 +137,7 @@ table dim_Articulos
 
 	column 'Eje Analitico 4'
 		dataType: string
-		lineageTag: d9fd1344-bf51-4390-b59a-913de1338483
+		lineageTag: 87b62b14-39d9-43aa-9121-8e82907e54d4
 		summarizeBy: none
 		sourceColumn: Eje Analitico 4
 
@@ -145,7 +145,7 @@ table dim_Articulos
 
 	column 'Codigo Famlia'
 		dataType: string
-		lineageTag: 2e62c4aa-d814-4c62-933d-b57f6c0d7f84
+		lineageTag: 4f07ced4-742c-4bbb-a3f6-0c5f4b8da81f
 		summarizeBy: none
 		sourceColumn: Codigo Famlia
 
@@ -153,7 +153,7 @@ table dim_Articulos
 
 	column 'Codigo Subfamilia'
 		dataType: string
-		lineageTag: 139da4ae-b00c-492c-9801-e079796648c1
+		lineageTag: a44639d5-7abd-4812-935b-05dddcfcd7f0
 		summarizeBy: none
 		sourceColumn: Codigo Subfamilia
 
@@ -161,7 +161,7 @@ table dim_Articulos
 
 	column Familia
 		dataType: string
-		lineageTag: daffddb4-1f67-4703-8d15-0db8da7cff00
+		lineageTag: 9d90ded3-7338-48e9-9f8b-09650d723f5a
 		summarizeBy: none
 		sourceColumn: Familia
 
@@ -169,7 +169,7 @@ table dim_Articulos
 
 	column Subfamilia
 		dataType: string
-		lineageTag: 7058770d-d494-4f51-bc90-b82c8a8b5776
+		lineageTag: e37703b4-53cb-43c3-b136-0daf8b1f909a
 		summarizeBy: none
 		sourceColumn: Subfamilia
 
@@ -177,8 +177,8 @@ table dim_Articulos
 
 	column 'Cantidad Minima'
 		dataType: double
-		lineageTag: cd7b360c-7a13-4df4-871b-1f5dd4ff92dc
-		summarizeBy: sum
+		lineageTag: 1e2edfe0-dd85-4abc-8f82-c1e01635c59e
+		summarizeBy: none
 		sourceColumn: Cantidad Minima
 
 		annotation SummarizationSetBy = Automatic
@@ -187,8 +187,8 @@ table dim_Articulos
 
 	column 'Margen Minimo'
 		dataType: double
-		lineageTag: f3ec0456-2932-4102-99c8-f4ae04aca7f9
-		summarizeBy: sum
+		lineageTag: 368e5166-9783-4292-b4cf-8056659e1865
+		summarizeBy: none
 		sourceColumn: Margen Minimo
 
 		annotation SummarizationSetBy = Automatic
@@ -197,8 +197,8 @@ table dim_Articulos
 
 	column 'Precio Minimo'
 		dataType: double
-		lineageTag: 3ac60aaf-e05f-497e-8d74-a9627c809160
-		summarizeBy: sum
+		lineageTag: ab685dbf-38b5-47f9-a2ec-698cd1f8e22a
+		summarizeBy: none
 		sourceColumn: Precio Minimo
 
 		annotation SummarizationSetBy = Automatic
@@ -207,8 +207,8 @@ table dim_Articulos
 
 	column 'Precio Base Ventas'
 		dataType: double
-		lineageTag: 9e37e71f-cb1c-4e34-a5ab-538bc182908a
-		summarizeBy: sum
+		lineageTag: 6e3ad537-dccf-48b2-ab73-5f4f9c05a28b
+		summarizeBy: none
 		sourceColumn: Precio Base Ventas
 
 		annotation SummarizationSetBy = Automatic
@@ -219,11 +219,10 @@ table dim_Articulos
 		mode: import
 		source =
 				let
-				    Origen = PowerPlatform.Dataflows(null),
-				    Workspaces = Origen{[Id="Workspaces"]}[Data],
-				    #"cd25238f-048e-4509-ab9f-29f918c14d4c" = Workspaces{[workspaceId="cd25238f-048e-4509-ab9f-29f918c14d4c"]}[Data],
+				    Origen = PowerBI.Dataflows(null),
+				    #"cd25238f-048e-4509-ab9f-29f918c14d4c" = Origen{[workspaceId="cd25238f-048e-4509-ab9f-29f918c14d4c"]}[Data],
 				    #"5877d4c8-d8db-4300-bd5c-7bed546ea986" = #"cd25238f-048e-4509-ab9f-29f918c14d4c"{[dataflowId="5877d4c8-d8db-4300-bd5c-7bed546ea986"]}[Data],
-				    dim_Articulos_ = #"5877d4c8-d8db-4300-bd5c-7bed546ea986"{[entity="dim_Articulos",version=""]}[Data]
+				    dim_Articulos1 = #"5877d4c8-d8db-4300-bd5c-7bed546ea986"{[entity="dim_Articulos"]}[Data]
 				in
-				    dim_Articulos_
+				    dim_Articulos1
 

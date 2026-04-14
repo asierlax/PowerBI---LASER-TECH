@@ -12,7 +12,7 @@ queryGroup Ayuda
 
 annotation __PBI_TimeIntelligenceEnabled = 0
 
-annotation PBI_QueryOrder = ["Factura Compras","Lineas Contables Analiticas","Proveedor","Recurso","Direccion","Fecha","Articulos","Empresa","Metricas","UltimaActualizacion","Instancia","BaseDeDatos","Esquema","Pedidos Cabecera","Pedidos Lineas","Recepciones","dim_Articulos","dim_Calendario","fact_Recepciones","dim_Proveedores","dim_Sociedades"]
+annotation PBI_QueryOrder = ["Factura Compras","Lineas Contables Analiticas","Proveedor","Recurso","Direccion","Fecha","Articulos","Empresa","Metricas","UltimaActualizacion","Instancia","BaseDeDatos","Esquema","Pedidos Cabecera","Pedidos Lineas","Recepciones","fact_FacturasCompra","dim_Articulos","dim_Calendario","dim_Proveedores","dim_Sociedades","fact_Recepciones"]
 
 annotation PBI_ProTooling = ["DevMode"]
 
@@ -28,11 +28,12 @@ ref table 'Lineas Contables Analiticas'
 ref table 'Pedidos Cabecera'
 ref table 'Pedidos Lineas'
 ref table Recepciones
+ref table fact_FacturasCompra
 ref table dim_Articulos
 ref table dim_Calendario
-ref table fact_Recepciones
 ref table dim_Proveedores
 ref table dim_Sociedades
+ref table fact_Recepciones
 
 ref cultureInfo es-ES
 

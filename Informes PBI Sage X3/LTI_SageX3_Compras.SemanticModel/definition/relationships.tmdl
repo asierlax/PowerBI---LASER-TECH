@@ -76,30 +76,57 @@ relationship 4dc4c71b-7efa-5806-258e-78c2865bf455
 	fromColumn: Recepciones.Sociedad
 	toColumn: Empresa.Empresa
 
-relationship AutoDetected_f3f73b58-e876-4dcc-a2a4-1460ea7ab245
+relationship AutoDetected_01f045d2-ff1c-4fd5-8a8d-f949ee455422
+	fromColumn: fact_FacturasCompra.ProveedorID
+	toColumn: Proveedor.ProveedorID
+
+relationship AutoDetected_91129552-a388-4b74-b97f-fbc678f4ce71
+	fromColumn: fact_FacturasCompra.Empresa
+	toColumn: Empresa.Empresa
+
+relationship AutoDetected_dfe93a79-10bf-4ecc-8902-05f2aec7d453
+	isActive: false
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: 'Lineas Contables Analiticas'.DocumentoLinea
+	toColumn: fact_FacturasCompra.DocumentoLinea
+
+relationship AutoDetected_a32aaa33-98c9-4b5c-8c7e-aef9840dd6d3
 	fromColumn: 'Factura Compras'.ProveedorID
 	toColumn: dim_Proveedores.ProveedorID
 
-relationship AutoDetected_cb820271-3cc3-4ed4-9a1f-7ac361851e25
+relationship AutoDetected_59ec1c90-7210-4380-9831-6987bddf280b
+	fromColumn: fact_FacturasCompra.ProveedorID
+	toColumn: dim_Proveedores.ProveedorID
+
+relationship AutoDetected_de61b37b-7ea4-42ee-9303-661ad32980c6
 	fromColumn: 'Factura Compras'.Empresa
 	toColumn: dim_Sociedades.Empresa
 
-relationship AutoDetected_7f1395d2-284b-48c8-b76b-2ee3f11efa53
+relationship AutoDetected_e85ed07b-77f1-45e4-b05f-4929d961c839
+	fromColumn: fact_FacturasCompra.Empresa
+	toColumn: dim_Sociedades.Empresa
+
+relationship AutoDetected_39f9b184-841c-4ad5-b02c-af20a92bcca2
 	isActive: false
 	crossFilteringBehavior: bothDirections
 	fromCardinality: one
 	fromColumn: dim_Proveedores.IdDireccion
 	toColumn: Direccion.IdDireccion
 
-relationship fbcf0f10-291c-6d92-e128-02528a135fe7
-	fromColumn: fact_Recepciones.Sociedad
-	toColumn: dim_Sociedades.Empresa
+relationship 610d256a-39f5-6003-d057-f0e46e3e80c4
+	fromColumn: fact_Recepciones.IdProveedor
+	toColumn: dim_Proveedores.ProveedorID
 
-relationship a4dd8ec8-0a0f-c50f-83b1-a601883345d5
+relationship c2cf43ac-9548-1acd-b4a8-f40291dfc4c5
 	fromColumn: fact_Recepciones.'Fecha recepcion'
 	toColumn: dim_Calendario.Fecha
 
-relationship 20ea7140-0994-7d7c-bcae-60390103e52b
-	fromColumn: fact_Recepciones.IdProveedor
-	toColumn: dim_Proveedores.ProveedorID
+relationship 7ceb5c87-cec6-4540-d63b-7556ebc77619
+	fromColumn: fact_Recepciones.IdArticulo
+	toColumn: dim_Articulos.IdArticulo
+
+relationship 12271f35-3c79-5291-30b1-8c0ac66b7eca
+	fromColumn: fact_Recepciones.Sociedad
+	toColumn: dim_Sociedades.Empresa
 

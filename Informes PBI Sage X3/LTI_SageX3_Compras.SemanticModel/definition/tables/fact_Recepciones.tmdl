@@ -1,9 +1,9 @@
 table fact_Recepciones
-	lineageTag: 225579a3-2c0a-4141-862d-58aad62c3122
+	lineageTag: 6860febb-b658-41a9-bc21-ce5525ceb565
 
 	column Documento
 		dataType: string
-		lineageTag: 33821d7c-2f92-461d-ba5a-1fd1e80265df
+		lineageTag: 3914375b-89c1-4eab-9a18-d3ad380b7c9f
 		summarizeBy: none
 		sourceColumn: Documento
 
@@ -11,7 +11,7 @@ table fact_Recepciones
 
 	column Sociedad
 		dataType: string
-		lineageTag: 07aa2d04-f070-4450-b072-d5e8e6816234
+		lineageTag: e1841e99-65a3-4972-a306-06c6ed4ae910
 		summarizeBy: none
 		sourceColumn: Sociedad
 
@@ -19,7 +19,7 @@ table fact_Recepciones
 
 	column Planta
 		dataType: string
-		lineageTag: 9149bebd-cc20-4cee-ad31-70f79bfd9675
+		lineageTag: 597e1210-1d0d-4152-a0a7-691440ee16f4
 		summarizeBy: none
 		sourceColumn: Planta
 
@@ -28,7 +28,7 @@ table fact_Recepciones
 	column 'Fecha recepcion'
 		dataType: dateTime
 		formatString: dd/mm/yyyy
-		lineageTag: 20db9911-59f7-4084-83ec-568a0ef68322
+		lineageTag: 51931e42-8a98-424b-8fbc-c32a54149d0d
 		summarizeBy: none
 		sourceColumn: Fecha recepcion
 
@@ -40,7 +40,7 @@ table fact_Recepciones
 
 	column 'Doc entrega proveedor'
 		dataType: string
-		lineageTag: ebcebea5-81ac-433b-b70f-7d790d57804d
+		lineageTag: c73c1865-e8ea-4199-abfe-535b3674840b
 		summarizeBy: none
 		sourceColumn: Doc entrega proveedor
 
@@ -48,7 +48,7 @@ table fact_Recepciones
 
 	column IdProveedor
 		dataType: string
-		lineageTag: e1dd364e-aa5c-4e17-b9e1-a5974af0bc9e
+		lineageTag: df13ee7a-db53-4de7-8a41-a4442ef750b3
 		summarizeBy: none
 		sourceColumn: IdProveedor
 
@@ -56,7 +56,7 @@ table fact_Recepciones
 
 	column 'Nombre proveedor'
 		dataType: string
-		lineageTag: 2fff91a4-5bf4-4cf1-a01e-5b9e275346d7
+		lineageTag: 2f372f73-90ff-4558-b635-2efb2d558760
 		summarizeBy: none
 		sourceColumn: Nombre proveedor
 
@@ -64,7 +64,7 @@ table fact_Recepciones
 
 	column Proveedor
 		dataType: string
-		lineageTag: 1778fa47-aa11-4359-82d1-fac7ab3a8777
+		lineageTag: d537f971-9db6-43c2-bf64-e79faee1a70f
 		summarizeBy: none
 		sourceColumn: Proveedor
 
@@ -72,7 +72,7 @@ table fact_Recepciones
 
 	column 'Codigo direccion'
 		dataType: string
-		lineageTag: 99c7d505-7279-4fef-856b-6bf8b6522ae7
+		lineageTag: 6b178f8f-e8aa-4ee6-926e-a5ac33029117
 		summarizeBy: none
 		sourceColumn: Codigo direccion
 
@@ -80,7 +80,7 @@ table fact_Recepciones
 
 	column Pais
 		dataType: string
-		lineageTag: 3fca12e1-5138-4fa7-9a32-9f6074864f1d
+		lineageTag: 45b04a51-9123-4f33-9bb0-dd1dbd1952f8
 		summarizeBy: none
 		sourceColumn: Pais
 
@@ -88,7 +88,7 @@ table fact_Recepciones
 
 	column Regimen
 		dataType: string
-		lineageTag: fab5aae6-8d99-474f-8f80-2d4c3e8ce779
+		lineageTag: 80efa328-1090-41b4-be49-557456bda53a
 		summarizeBy: none
 		sourceColumn: Regimen
 
@@ -96,7 +96,7 @@ table fact_Recepciones
 
 	column Divisa
 		dataType: string
-		lineageTag: b2ba3796-e663-4a59-9953-afbb0c8fa012
+		lineageTag: d7791fec-88af-49c4-b793-61c659350306
 		summarizeBy: none
 		sourceColumn: Divisa
 
@@ -105,7 +105,7 @@ table fact_Recepciones
 	column Linea
 		dataType: int64
 		formatString: 0
-		lineageTag: 2a3071b7-c9d3-457c-b79f-cf8bbedce7b9
+		lineageTag: df4962c3-0593-4fca-aacf-d8697bc3e5dc
 		summarizeBy: sum
 		sourceColumn: Linea
 
@@ -113,7 +113,7 @@ table fact_Recepciones
 
 	column DocIdLinea
 		dataType: string
-		lineageTag: 1d233e08-6c5f-4611-9eb9-a8b6702be16c
+		lineageTag: 2daeb368-65ba-476f-bfaf-9e47b2bac7cc
 		summarizeBy: none
 		sourceColumn: DocIdLinea
 
@@ -121,7 +121,7 @@ table fact_Recepciones
 
 	column 'Nº pedido'
 		dataType: string
-		lineageTag: feb25be2-d7ea-46c2-81fd-4940fc871e84
+		lineageTag: 189e65fd-be50-4aa6-8340-0592f6ff63c7
 		summarizeBy: none
 		sourceColumn: Nº pedido
 
@@ -130,7 +130,7 @@ table fact_Recepciones
 	column 'Linea pedido'
 		dataType: int64
 		formatString: 0
-		lineageTag: 39018128-9a86-465b-b65d-657a65bd4187
+		lineageTag: cc68d00d-cf56-434c-a3ce-568d958bfee6
 		summarizeBy: sum
 		sourceColumn: Linea pedido
 
@@ -138,7 +138,7 @@ table fact_Recepciones
 
 	column IdArticulo
 		dataType: string
-		lineageTag: fac8409c-3543-4e17-b941-f892dbeb7848
+		lineageTag: ecb778f4-b660-4962-a036-a74af8ec7ce3
 		summarizeBy: none
 		sourceColumn: IdArticulo
 
@@ -146,7 +146,7 @@ table fact_Recepciones
 
 	column 'Descripcion linea'
 		dataType: string
-		lineageTag: c476fd88-00c2-41a4-b760-c474fa5d711f
+		lineageTag: 043c1e57-7487-40e7-9abc-969a709cc758
 		summarizeBy: none
 		sourceColumn: Descripcion linea
 
@@ -154,7 +154,7 @@ table fact_Recepciones
 
 	column 'Precio bruto'
 		dataType: double
-		lineageTag: e58f3e73-8c96-4893-9848-c60813d5c343
+		lineageTag: b12bab79-ce82-4016-8076-2bf7cd9105c6
 		summarizeBy: sum
 		sourceColumn: Precio bruto
 
@@ -164,7 +164,7 @@ table fact_Recepciones
 
 	column Dto1
 		dataType: double
-		lineageTag: 8d95c9e8-221d-4a0c-954b-bccb0819f2cc
+		lineageTag: 9a1ab012-c65f-4859-8a1e-acb80e5ab4b5
 		summarizeBy: sum
 		sourceColumn: Dto1
 
@@ -174,7 +174,7 @@ table fact_Recepciones
 
 	column Dto2
 		dataType: double
-		lineageTag: d30146c6-7c23-4385-bb6a-f1f50f57b20b
+		lineageTag: ffef5c21-12fe-49db-8c2a-789219236b87
 		summarizeBy: sum
 		sourceColumn: Dto2
 
@@ -184,7 +184,7 @@ table fact_Recepciones
 
 	column 'Precio neto'
 		dataType: double
-		lineageTag: 58a11ea9-bcdc-4d05-bbcd-000592c11b64
+		lineageTag: df4a4169-d51f-4b33-aa24-5a2156a2f9cd
 		summarizeBy: sum
 		sourceColumn: Precio neto
 
@@ -194,7 +194,7 @@ table fact_Recepciones
 
 	column 'Importe linea'
 		dataType: double
-		lineageTag: 7696cbcb-8853-46da-8841-9fc392617920
+		lineageTag: 0362a8c1-87f6-46d8-88d9-744281b19f7d
 		summarizeBy: sum
 		sourceColumn: Importe linea
 
@@ -204,7 +204,7 @@ table fact_Recepciones
 
 	column Cantidad
 		dataType: double
-		lineageTag: 4f26c128-2191-4bfc-8a7f-d713f559130a
+		lineageTag: 1b70fb2a-407a-40db-b145-0fbebb91be5d
 		summarizeBy: sum
 		sourceColumn: Cantidad
 
@@ -214,7 +214,7 @@ table fact_Recepciones
 
 	column 'Unidad stock'
 		dataType: string
-		lineageTag: 3a930124-307b-44dd-8e60-4e3db9a1b37b
+		lineageTag: 35ba4200-a2ea-4e4b-990b-ac10756726a2
 		summarizeBy: none
 		sourceColumn: Unidad stock
 
@@ -222,7 +222,7 @@ table fact_Recepciones
 
 	column 'Clase pedido'
 		dataType: string
-		lineageTag: eef7d9bf-6555-4e65-9345-b12505ac582b
+		lineageTag: 970d3c2d-66d3-4e67-856e-ea7065309834
 		summarizeBy: none
 		sourceColumn: Clase pedido
 
@@ -230,7 +230,7 @@ table fact_Recepciones
 
 	column IdTipoPedido
 		dataType: string
-		lineageTag: 3b0e16d8-80ed-4faf-ac6e-b903f44f131f
+		lineageTag: 1b4326bd-898d-44ab-98f3-2ce2dcdff68c
 		summarizeBy: none
 		sourceColumn: IdTipoPedido
 
@@ -238,7 +238,7 @@ table fact_Recepciones
 
 	column 'Tipo pedido'
 		dataType: string
-		lineageTag: a069f94c-ca17-4758-831d-b90f76d0818e
+		lineageTag: e086b707-cbac-42dc-bd10-563c92b50e52
 		summarizeBy: none
 		sourceColumn: Tipo pedido
 
@@ -246,7 +246,7 @@ table fact_Recepciones
 
 	column 'Numero de OCC'
 		dataType: string
-		lineageTag: e5142170-cef1-4252-b1ba-5d164f50d61d
+		lineageTag: 39b16a1f-4bac-443a-a027-802160657bf3
 		summarizeBy: none
 		sourceColumn: Numero de OCC
 
@@ -255,7 +255,7 @@ table fact_Recepciones
 	column 'Fecha OCC'
 		dataType: dateTime
 		formatString: Long Date
-		lineageTag: 2bccb926-e0d9-4061-a166-3f59494f1d58
+		lineageTag: 36abe77e-d5f4-4e10-a7f3-5c6634d24682
 		summarizeBy: none
 		sourceColumn: Fecha OCC
 
@@ -266,7 +266,7 @@ table fact_Recepciones
 	column 'Fecha recepcion linea'
 		dataType: dateTime
 		formatString: Long Date
-		lineageTag: 1445bc2c-7212-4679-9122-98be06477a4a
+		lineageTag: e17caf92-0f68-4ff6-bbcd-e00740c64e8d
 		summarizeBy: none
 		sourceColumn: Fecha recepcion linea
 
@@ -277,7 +277,7 @@ table fact_Recepciones
 	column 'Dias dif OCC'
 		dataType: int64
 		formatString: 0
-		lineageTag: 6355be74-5e44-46f2-b02d-efce8fe1d419
+		lineageTag: a72e52f2-684f-45cd-9376-8afaff8915e7
 		summarizeBy: sum
 		sourceColumn: Dias dif OCC
 
@@ -287,11 +287,10 @@ table fact_Recepciones
 		mode: import
 		source =
 				let
-				    Origen = PowerPlatform.Dataflows(null),
-				    Workspaces = Origen{[Id="Workspaces"]}[Data],
-				    #"cd25238f-048e-4509-ab9f-29f918c14d4c" = Workspaces{[workspaceId="cd25238f-048e-4509-ab9f-29f918c14d4c"]}[Data],
+				    Origen = PowerBI.Dataflows(null),
+				    #"cd25238f-048e-4509-ab9f-29f918c14d4c" = Origen{[workspaceId="cd25238f-048e-4509-ab9f-29f918c14d4c"]}[Data],
 				    #"83e92cc2-2615-4e7e-af83-e12f28b5827e" = #"cd25238f-048e-4509-ab9f-29f918c14d4c"{[dataflowId="83e92cc2-2615-4e7e-af83-e12f28b5827e"]}[Data],
-				    fact_Recepciones_ = #"83e92cc2-2615-4e7e-af83-e12f28b5827e"{[entity="fact_Recepciones",version=""]}[Data]
+				    fact_Recepciones1 = #"83e92cc2-2615-4e7e-af83-e12f28b5827e"{[entity="fact_Recepciones"]}[Data]
 				in
-				    fact_Recepciones_
+				    fact_Recepciones1
 

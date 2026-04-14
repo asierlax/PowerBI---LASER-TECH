@@ -1,9 +1,9 @@
 table dim_Proveedores
-	lineageTag: 995b40bd-f4bd-4bad-b6bc-33f55c071bbf
+	lineageTag: 933e29cd-f0fd-4330-b9ac-0197c920c308
 
 	column ProveedorID
 		dataType: string
-		lineageTag: 3bb58e99-161b-46f8-b91f-f89f4197de54
+		lineageTag: e90bfd16-cbe5-456b-b274-862a0d824980
 		summarizeBy: none
 		sourceColumn: ProveedorID
 
@@ -11,7 +11,7 @@ table dim_Proveedores
 
 	column Proveedor
 		dataType: string
-		lineageTag: d596d2d2-5d18-4da3-8b46-7e8e2ce45548
+		lineageTag: acde3ee3-6f9b-42fd-b954-e49ee2450482
 		summarizeBy: none
 		sourceColumn: Proveedor
 
@@ -20,7 +20,7 @@ table dim_Proveedores
 	column 'Tipo Proveedor'
 		dataType: int64
 		formatString: 0
-		lineageTag: 03fbc197-0185-4eda-b3ce-7b88ef0ed4e1
+		lineageTag: cd2ea4b0-5828-4819-b4c7-37cbfb0a0af5
 		summarizeBy: sum
 		sourceColumn: Tipo Proveedor
 
@@ -28,7 +28,7 @@ table dim_Proveedores
 
 	column Categoria
 		dataType: string
-		lineageTag: a3749bf5-3597-4c60-a81b-11eb11cfb957
+		lineageTag: 9114a1f8-bc91-40cb-8ed5-faa23f267cae
 		summarizeBy: none
 		sourceColumn: Categoria
 
@@ -37,7 +37,7 @@ table dim_Proveedores
 	column 'Categoria ABC'
 		dataType: int64
 		formatString: 0
-		lineageTag: ba21fc31-b3f1-4818-b812-1aa29187e771
+		lineageTag: 1a03562e-6f5f-4c84-a215-a030279c0e94
 		summarizeBy: sum
 		sourceColumn: Categoria ABC
 
@@ -45,7 +45,7 @@ table dim_Proveedores
 
 	column Direccion
 		dataType: string
-		lineageTag: 68dab8ba-e566-42b2-bc90-cd2f1297c5e7
+		lineageTag: a1f1b033-16ab-43f5-8990-dfa67b56d1c5
 		summarizeBy: none
 		sourceColumn: Direccion
 
@@ -53,7 +53,7 @@ table dim_Proveedores
 
 	column IdDireccion
 		dataType: string
-		lineageTag: 10143677-1cf6-4a85-94f6-7acf797ea908
+		lineageTag: 3cfad875-25b0-4ddc-b6d2-746eaed71191
 		summarizeBy: none
 		sourceColumn: IdDireccion
 
@@ -63,11 +63,10 @@ table dim_Proveedores
 		mode: import
 		source =
 				let
-				    Origen = PowerPlatform.Dataflows(null),
-				    Workspaces = Origen{[Id="Workspaces"]}[Data],
-				    #"cd25238f-048e-4509-ab9f-29f918c14d4c" = Workspaces{[workspaceId="cd25238f-048e-4509-ab9f-29f918c14d4c"]}[Data],
+				    Origen = PowerBI.Dataflows(null),
+				    #"cd25238f-048e-4509-ab9f-29f918c14d4c" = Origen{[workspaceId="cd25238f-048e-4509-ab9f-29f918c14d4c"]}[Data],
 				    #"5877d4c8-d8db-4300-bd5c-7bed546ea986" = #"cd25238f-048e-4509-ab9f-29f918c14d4c"{[dataflowId="5877d4c8-d8db-4300-bd5c-7bed546ea986"]}[Data],
-				    dim_Proveedores_ = #"5877d4c8-d8db-4300-bd5c-7bed546ea986"{[entity="dim_Proveedores",version=""]}[Data]
+				    dim_Proveedores1 = #"5877d4c8-d8db-4300-bd5c-7bed546ea986"{[entity="dim_Proveedores"]}[Data]
 				in
-				    dim_Proveedores_
+				    dim_Proveedores1
 
