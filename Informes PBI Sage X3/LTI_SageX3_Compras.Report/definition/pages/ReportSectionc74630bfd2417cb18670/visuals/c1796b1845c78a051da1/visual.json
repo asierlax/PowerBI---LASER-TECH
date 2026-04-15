@@ -1,5 +1,5 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.7.0/schema.json",
   "name": "c1796b1845c78a051da1",
   "position": {
     "x": 0,
@@ -55,7 +55,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'TOP PROVEEDORES / LÍNEA DE NEGOCIO'"
+                  "Value": "'TOP PROVEEDORES / FAMILIA'"
                 }
               }
             }

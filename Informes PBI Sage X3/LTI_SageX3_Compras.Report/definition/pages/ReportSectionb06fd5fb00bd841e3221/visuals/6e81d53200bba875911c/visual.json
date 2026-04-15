@@ -1,5 +1,5 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.7.0/schema.json",
   "name": "6e81d53200bba875911c",
   "position": {
     "x": 184,
@@ -108,5 +108,23 @@
     },
     "drillFilterOtherVisuals": true
   },
-  "parentGroupName": "abd1e09f8b82919963dd"
+  "parentGroupName": "abd1e09f8b82919963dd",
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "9e248d8c21963ae31076",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Metricas"
+              }
+            },
+            "Property": "TXT_Periodo"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
+  }
 }

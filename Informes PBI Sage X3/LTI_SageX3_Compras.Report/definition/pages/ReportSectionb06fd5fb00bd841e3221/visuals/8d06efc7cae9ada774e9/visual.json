@@ -1,5 +1,5 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.5.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.7.0/schema.json",
   "name": "8d06efc7cae9ada774e9",
   "position": {
     "x": 863.47188264058684,
@@ -20,15 +20,15 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Lineas Contables Analiticas"
+                      "Entity": "dim_Articulos"
                     }
                   },
-                  "Property": "Seccion Analitica_2"
+                  "Property": "Familia"
                 }
               },
-              "queryRef": "Lineas Contables Analiticas.Seccion Analitica_2",
-              "active": true,
-              "displayName": "Linea de negocio"
+              "queryRef": "dim_Articulos.Familia",
+              "nativeQueryRef": "Familia",
+              "active": true
             }
           ]
         },
@@ -172,5 +172,37 @@
       ]
     },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "ddf5cca0453edc2c3800",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Metricas"
+              }
+            },
+            "Property": "Total Compras"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "bb7dd9c7060465808ec0",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "dim_Articulos"
+              }
+            },
+            "Property": "Familia"
+          }
+        },
+        "type": "Categorical"
+      }
+    ]
   }
 }

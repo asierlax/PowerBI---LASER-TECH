@@ -1,12 +1,12 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.5.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.7.0/schema.json",
   "name": "557fb69fc19b73290be1",
   "position": {
-    "x": 1056,
-    "y": 10,
+    "x": 1056.4761158966328,
+    "y": 10.023492560689116,
     "z": 2000,
-    "height": 48.000000000000007,
-    "width": 176,
+    "height": 48.112764291307748,
+    "width": 222.52153484729834,
     "tabOrder": 17000
   },
   "visual": {
@@ -20,13 +20,14 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Empresa"
+                      "Entity": "dim_Sociedades"
                     }
                   },
                   "Property": "Nombre Empresa"
                 }
               },
-              "queryRef": "Empresa.Nombre Empresa",
+              "queryRef": "dim_Sociedades.Nombre Empresa",
+              "nativeQueryRef": "Nombre Empresa",
               "active": true
             }
           ]
@@ -86,8 +87,8 @@
                 "Version": 2,
                 "From": [
                   {
-                    "Name": "e",
-                    "Entity": "Empresa",
+                    "Name": "d",
+                    "Entity": "dim_Sociedades",
                     "Type": 0
                   }
                 ],
@@ -100,7 +101,7 @@
                             "Column": {
                               "Expression": {
                                 "SourceRef": {
-                                  "Source": "e"
+                                  "Source": "d"
                                 }
                               },
                               "Property": "Nombre Empresa"
@@ -168,5 +169,23 @@
     },
     "drillFilterOtherVisuals": true
   },
-  "parentGroupName": "c9308926d00264dc7c8e"
+  "parentGroupName": "c9308926d00264dc7c8e",
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "c8e519fbad24860ae896",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "dim_Sociedades"
+              }
+            },
+            "Property": "Nombre Empresa"
+          }
+        },
+        "type": "Categorical"
+      }
+    ]
+  }
 }

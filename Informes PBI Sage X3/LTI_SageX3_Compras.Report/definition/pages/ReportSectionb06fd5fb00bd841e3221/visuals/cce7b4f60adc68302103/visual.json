@@ -1,5 +1,5 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.7.0/schema.json",
   "name": "cce7b4f60adc68302103",
   "position": {
     "x": 449.77995110024449,
@@ -20,13 +20,14 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Fecha"
+                      "Entity": "dim_Calendario"
                     }
                   },
                   "Property": "MesAno"
                 }
               },
-              "queryRef": "Fecha.MesAno",
+              "queryRef": "dim_Calendario.MesAno",
+              "nativeQueryRef": "Mes",
               "active": true,
               "displayName": "Mes"
             }
@@ -72,7 +73,7 @@
               "Column": {
                 "Expression": {
                   "SourceRef": {
-                    "Entity": "Fecha"
+                    "Entity": "dim_Calendario"
                   }
                 },
                 "Property": "MesAno"
@@ -80,7 +81,8 @@
             },
             "direction": "Ascending"
           }
-        ]
+        ],
+        "isDefaultSort": true
       }
     },
     "objects": {
@@ -147,5 +149,51 @@
       ]
     },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "6d2626700a08da00cace",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Metricas"
+              }
+            },
+            "Property": "Total Compras"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "26b5263ac6404b63738c",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Metricas"
+              }
+            },
+            "Property": "Compra Neta"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "cde71c6a4ec5c60e85dd",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "dim_Calendario"
+              }
+            },
+            "Property": "MesAno"
+          }
+        },
+        "type": "Categorical"
+      }
+    ]
   }
 }

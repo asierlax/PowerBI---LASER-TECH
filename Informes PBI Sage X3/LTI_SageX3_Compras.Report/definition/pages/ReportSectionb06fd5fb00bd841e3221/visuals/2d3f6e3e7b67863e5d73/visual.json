@@ -1,5 +1,5 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.7.0/schema.json",
   "name": "2d3f6e3e7b67863e5d73",
   "position": {
     "x": 453.08868501529048,
@@ -20,13 +20,14 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Fecha"
+                      "Entity": "dim_Calendario"
                     }
                   },
                   "Property": "Mes 3L"
                 }
               },
-              "queryRef": "Fecha.Mes 3L",
+              "queryRef": "dim_Calendario.Mes 3L",
+              "nativeQueryRef": "Mes",
               "active": true,
               "displayName": "Mes"
             }
@@ -93,6 +94,24 @@
             }
           ]
         }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Measure": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Metricas"
+                  }
+                },
+                "Property": "Variación Compras AA"
+              }
+            },
+            "direction": "Descending"
+          }
+        ],
+        "isDefaultSort": true
       }
     },
     "objects": {
@@ -169,5 +188,79 @@
       ]
     },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "3f800f7a589516a48943",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Metricas"
+              }
+            },
+            "Property": "Total Compras"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "dfc468c142300678570a",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Metricas"
+              }
+            },
+            "Property": "Total Compras AA"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "f9bc6a4600615810e7e9",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Metricas"
+              }
+            },
+            "Property": "Variacion % Total Compras AA"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "514c6d20add07c8700a7",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Metricas"
+              }
+            },
+            "Property": "Variación Compras AA"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "39f926fce90b22013573",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "dim_Calendario"
+              }
+            },
+            "Property": "Mes 3L"
+          }
+        },
+        "type": "Categorical"
+      }
+    ]
   }
 }

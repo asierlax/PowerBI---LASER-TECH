@@ -1,5 +1,5 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.7.0/schema.json",
   "name": "6ef86bac1d89a375cc27",
   "position": {
     "x": 11.894936896234185,
@@ -214,5 +214,37 @@
     },
     "drillFilterOtherVisuals": true
   },
-  "parentGroupName": "204fa993f4b56284cc0a"
+  "parentGroupName": "204fa993f4b56284cc0a",
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "d8146bbc5ec396014740",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Metricas"
+              }
+            },
+            "Property": "Compra Neta AA"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "27ab3d1bc764ecd3a3e0",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Metricas"
+              }
+            },
+            "Property": "Compra Neta"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
+  }
 }

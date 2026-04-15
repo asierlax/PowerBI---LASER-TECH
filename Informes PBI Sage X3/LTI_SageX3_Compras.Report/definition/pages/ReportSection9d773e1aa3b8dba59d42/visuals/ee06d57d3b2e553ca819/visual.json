@@ -1,5 +1,5 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.7.0/schema.json",
   "name": "ee06d57d3b2e553ca819",
   "position": {
     "x": 8.8118146502974568,
@@ -37,13 +37,14 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Articulos"
+                      "Entity": "dim_Articulos"
                     }
                   },
                   "Property": "Familia"
                 }
               },
-              "queryRef": "Items.Familia",
+              "queryRef": "dim_Articulos.Familia",
+              "nativeQueryRef": "Familia",
               "active": true
             },
             {
@@ -51,13 +52,14 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Articulos"
+                      "Entity": "dim_Articulos"
                     }
                   },
                   "Property": "Descripcion 1"
                 }
               },
-              "queryRef": "Items.Descripcion 1",
+              "queryRef": "dim_Articulos.Descripcion 1",
+              "nativeQueryRef": "Producto",
               "active": false,
               "displayName": "Producto"
             },
@@ -66,13 +68,14 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Articulos"
+                      "Entity": "dim_Articulos"
                     }
                   },
                   "Property": "Subfamilia"
                 }
               },
-              "queryRef": "Items.Subfamilia",
+              "queryRef": "dim_Articulos.Subfamilia",
+              "nativeQueryRef": "Subfamilia",
               "active": false
             }
           ]
@@ -105,59 +108,23 @@
         "levels": [
           {
             "queryRefs": [
-              "Items.Familia"
+              "dim_Articulos.Familia"
             ],
             "isCollapsed": true,
-            "identityKeys": [
-              {
-                "Column": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "Articulos"
-                    }
-                  },
-                  "Property": "Familia"
-                }
-              }
-            ],
             "isPinned": true
           },
           {
             "queryRefs": [
-              "Items.Descripcion 1"
+              "dim_Articulos.Descripcion 1"
             ],
             "isCollapsed": true,
-            "identityKeys": [
-              {
-                "Column": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "Articulos"
-                    }
-                  },
-                  "Property": "Descripcion 1"
-                }
-              }
-            ],
             "isPinned": true
           },
           {
             "queryRefs": [
-              "Items.Subfamilia"
+              "dim_Articulos.Subfamilia"
             ],
             "isCollapsed": true,
-            "identityKeys": [
-              {
-                "Column": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "Articulos"
-                    }
-                  },
-                  "Property": "Subfamilia"
-                }
-              }
-            ],
             "isPinned": true
           }
         ],
@@ -442,5 +409,65 @@
     },
     "drillFilterOtherVisuals": true
   },
-  "parentGroupName": "ba347329d02f89c1a03c"
+  "parentGroupName": "ba347329d02f89c1a03c",
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "c69dd97f0033d4009c50",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Metricas"
+              }
+            },
+            "Property": "Total Compras"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "9b9d21c14149076030e9",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "dim_Articulos"
+              }
+            },
+            "Property": "Familia"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "441a626e1dcc04008794",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "dim_Articulos"
+              }
+            },
+            "Property": "Descripcion 1"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "5ed22d200ac9ba6b7650",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "dim_Articulos"
+              }
+            },
+            "Property": "Subfamilia"
+          }
+        },
+        "type": "Categorical"
+      }
+    ]
+  }
 }

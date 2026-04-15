@@ -1,5 +1,5 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.7.0/schema.json",
   "name": "11835cd815063e608ed4",
   "position": {
     "x": 7.1067516837975973,
@@ -20,13 +20,14 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Articulos"
+                      "Entity": "dim_Articulos"
                     }
                   },
                   "Property": "Familia"
                 }
               },
-              "queryRef": "Items.Familia",
+              "queryRef": "dim_Articulos.Familia",
+              "nativeQueryRef": "Familia",
               "active": true
             },
             {
@@ -34,14 +35,15 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Articulos"
+                      "Entity": "dim_Articulos"
                     }
                   },
                   "Property": "Subfamilia"
                 }
               },
-              "queryRef": "Items.Subfamilia",
-              "active": true
+              "queryRef": "dim_Articulos.Subfamilia",
+              "nativeQueryRef": "Subfamilia",
+              "active": false
             }
           ]
         },
@@ -122,7 +124,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'COMPRAS POR BUSINESS UNIT'"
+                  "Value": "'COMPRAS POR FAMILIA'"
                 }
               }
             }
@@ -197,5 +199,51 @@
     },
     "drillFilterOtherVisuals": true
   },
-  "parentGroupName": "24263ad13f9e16b65915"
+  "parentGroupName": "24263ad13f9e16b65915",
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "51b9471b8bb85bb2bdaa",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Metricas"
+              }
+            },
+            "Property": "Total Compras"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "4a3f55ab45c633017d40",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "dim_Articulos"
+              }
+            },
+            "Property": "Familia"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "b5f5781c0ad0a31805b2",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "dim_Articulos"
+              }
+            },
+            "Property": "Subfamilia"
+          }
+        },
+        "type": "Categorical"
+      }
+    ]
+  }
 }

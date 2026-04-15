@@ -1,5 +1,5 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.5.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.7.0/schema.json",
   "name": "fb6a89400b3ca0bd4e0d",
   "position": {
     "x": 47.766011094301561,
@@ -20,13 +20,14 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Fecha"
+                      "Entity": "dim_Calendario"
                     }
                   },
                   "Property": "Año"
                 }
               },
-              "queryRef": "Fecha.Año",
+              "queryRef": "dim_Calendario.Año",
+              "nativeQueryRef": "Año",
               "active": true
             },
             {
@@ -34,13 +35,14 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Fecha"
+                      "Entity": "dim_Calendario"
                     }
                   },
                   "Property": "Mes 3L"
                 }
               },
-              "queryRef": "Fecha.Mes 3L",
+              "queryRef": "dim_Calendario.Mes 3L",
+              "nativeQueryRef": "Mes",
               "active": false,
               "displayName": "Mes"
             }
@@ -53,13 +55,14 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Proveedor"
+                      "Entity": "dim_Proveedores"
                     }
                   },
                   "Property": "Proveedor"
                 }
               },
-              "queryRef": "Proveedor.Proveedor",
+              "queryRef": "dim_Proveedores.Proveedor",
+              "nativeQueryRef": "Proveedor",
               "active": true
             },
             {
@@ -67,45 +70,46 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Articulos"
+                      "Entity": "dim_Articulos"
                     }
                   },
                   "Property": "Categoria"
                 }
               },
-              "queryRef": "Articulos.Categoria",
-              "nativeQueryRef": "Categoria",
-              "active": true
+              "queryRef": "dim_Articulos.Categoria",
+              "nativeQueryRef": "Categoria1",
+              "active": false
             },
             {
               "field": {
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Articulos"
+                      "Entity": "dim_Articulos"
                     }
                   },
                   "Property": "Descripcion 1"
                 }
               },
-              "queryRef": "Items.Descripcion 1",
-              "active": true,
-              "displayName": "Artículos"
+              "queryRef": "dim_Articulos.Descripcion 1",
+              "nativeQueryRef": "Articulo",
+              "active": false,
+              "displayName": "Articulo"
             },
             {
               "field": {
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Factura Compras"
+                      "Entity": "fact_FacturasCompra"
                     }
                   },
                   "Property": "Documento"
                 }
               },
-              "queryRef": "Factura Compras.Documento",
-              "nativeQueryRef": "Documento",
-              "active": true
+              "queryRef": "fact_FacturasCompra.Documento",
+              "nativeQueryRef": "Documento1",
+              "active": false
             }
           ]
         },
@@ -205,107 +209,34 @@
         "levels": [
           {
             "queryRefs": [
-              "Proveedor.Proveedor"
+              "dim_Proveedores.Proveedor"
             ],
             "isCollapsed": true,
-            "identityKeys": [
-              {
-                "Column": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "Proveedor"
-                    }
-                  },
-                  "Property": "Proveedor"
-                }
-              }
-            ],
             "isPinned": true
           },
           {
             "queryRefs": [
-              "Articulos.Categoria"
+              "dim_Articulos.Categoria"
             ],
             "isCollapsed": true,
-            "identityKeys": [
-              {
-                "Column": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "Articulos"
-                    }
-                  },
-                  "Property": "Categoria"
-                }
-              }
-            ],
             "isPinned": true
           },
           {
             "queryRefs": [
-              "Items.Descripcion 1"
+              "dim_Articulos.Descripcion 1"
             ],
             "isCollapsed": true,
-            "identityKeys": [
-              {
-                "Column": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "Articulos"
-                    }
-                  },
-                  "Property": "Descripcion 1"
-                }
-              }
-            ],
             "isPinned": true
           },
           {
             "queryRefs": [
-              "Factura Compras.Documento"
+              "fact_FacturasCompra.Documento"
             ],
             "isCollapsed": true,
             "isPinned": true
           }
         ],
-        "root": {
-          "children": [
-            {
-              "identityValues": [
-                {
-                  "Literal": {
-                    "Value": "'ACABADOS DEL NOROESTE VIGO, S.L.'"
-                  }
-                }
-              ],
-              "isToggled": true,
-              "children": [
-                {
-                  "identityValues": [
-                    {
-                      "Literal": {
-                        "Value": "'MATERIAL PUBLICITARIO'"
-                      }
-                    }
-                  ],
-                  "isToggled": true,
-                  "children": [
-                    {
-                      "identityValues": [
-                        {
-                          "Literal": {
-                            "Value": "'FLYER COOLPEEL'"
-                          }
-                        }
-                      ],
-                      "isToggled": true
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
+        "root": {}
       }
     ],
     "objects": {
@@ -615,5 +546,177 @@
       ]
     },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "f75d0d3f3197cc4e47d3",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Metricas"
+              }
+            },
+            "Property": "Total Compras"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "6c16049292d09b07d8cd",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Metricas"
+              }
+            },
+            "Property": "Total Compras AA"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "706231721520db86576a",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Metricas"
+              }
+            },
+            "Property": "Variacion % Total Compras AA"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "f63cd9cd0c09d0771583",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Metricas"
+              }
+            },
+            "Property": "Descuento %"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "e43834f003d1a3be2e66",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Metricas"
+              }
+            },
+            "Property": "Descuento"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "99b61c2073565387ca6a",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Metricas"
+              }
+            },
+            "Property": "Compra Neta"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "fe88ff969c9c302cc0d9",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "dim_Proveedores"
+              }
+            },
+            "Property": "Proveedor"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "2e0fe5ca1de95e0e00bb",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "dim_Articulos"
+              }
+            },
+            "Property": "Categoria"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "ca79f3430b8e08058e8c",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "dim_Articulos"
+              }
+            },
+            "Property": "Descripcion 1"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "c86d70d4e1067db77481",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "fact_FacturasCompra"
+              }
+            },
+            "Property": "Documento"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "9ca0e11aa09d698cc402",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "dim_Calendario"
+              }
+            },
+            "Property": "Año"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "00049fc1473ed63c0e8d",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "dim_Calendario"
+              }
+            },
+            "Property": "Mes 3L"
+          }
+        },
+        "type": "Categorical"
+      }
+    ]
   }
 }

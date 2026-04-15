@@ -1,5 +1,5 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.5.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.7.0/schema.json",
   "name": "24ba0c19bd262b122321",
   "position": {
     "x": 960.851818988465,
@@ -20,13 +20,13 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Factura Compras"
+                      "Entity": "fact_FacturasCompra"
                     }
                   },
                   "Property": "Provincia"
                 }
               },
-              "queryRef": "Factura Compras.Provincia",
+              "queryRef": "fact_FacturasCompra.Provincia",
               "nativeQueryRef": "Provincia",
               "active": true
             }
@@ -124,5 +124,37 @@
       ]
     },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "4b129a5ab67d93aa0322",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Metricas"
+              }
+            },
+            "Property": "Total Compras"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "d2532516389302989652",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "fact_FacturasCompra"
+              }
+            },
+            "Property": "Provincia"
+          }
+        },
+        "type": "Categorical"
+      }
+    ]
   }
 }

@@ -1,5 +1,5 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/page/2.0.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/page/2.1.0/schema.json",
   "name": "ReportSection9d773e1aa3b8dba59d42",
   "displayName": "Detalle de Proveedor",
   "displayOption": "FitToPage",
@@ -8,57 +8,18 @@
   "filterConfig": {
     "filters": [
       {
-        "name": "Filter51edb600ba001626204e",
+        "name": "c7147d5f046681184341",
         "field": {
           "Column": {
             "Expression": {
               "SourceRef": {
-                "Entity": "Proveedor"
+                "Entity": "dim_Proveedores"
               }
             },
             "Property": "Proveedor"
           }
         },
         "type": "Categorical",
-        "filter": {
-          "Version": 2,
-          "From": [
-            {
-              "Name": "p",
-              "Entity": "Proveedor",
-              "Type": 0
-            }
-          ],
-          "Where": [
-            {
-              "Condition": {
-                "In": {
-                  "Expressions": [
-                    {
-                      "Column": {
-                        "Expression": {
-                          "SourceRef": {
-                            "Source": "p"
-                          }
-                        },
-                        "Property": "Proveedor"
-                      }
-                    }
-                  ],
-                  "Values": [
-                    [
-                      {
-                        "Literal": {
-                          "Value": "'EL.EN, S.p.A.'"
-                        }
-                      }
-                    ]
-                  ]
-                }
-              }
-            }
-          ]
-        },
         "howCreated": "Drillthrough"
       }
     ]
@@ -68,13 +29,15 @@
     "type": "Drillthrough",
     "parameters": [
       {
-        "name": "Param_Filter51edb600ba001626204e",
-        "boundFilter": "Filter51edb600ba001626204e",
+        "name": "01310453622dadd4584d",
+        "boundFilter": "c7147d5f046681184341",
+        "asAggregation": false,
+        "qnaSingleSelectRequired": false,
         "fieldExpr": {
           "Column": {
             "Expression": {
               "SourceRef": {
-                "Entity": "Proveedor"
+                "Entity": "dim_Proveedores"
               }
             },
             "Property": "Proveedor"

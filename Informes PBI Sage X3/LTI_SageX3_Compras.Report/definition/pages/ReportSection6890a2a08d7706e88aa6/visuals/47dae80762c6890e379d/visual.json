@@ -1,5 +1,5 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.5.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.7.0/schema.json",
   "name": "47dae80762c6890e379d",
   "position": {
     "x": 362.07951070336389,
@@ -20,13 +20,14 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Factura Compras"
+                      "Entity": "fact_FacturasCompra"
                     }
                   },
                   "Property": "Fecha Contable"
                 }
               },
-              "queryRef": "Factura Compras.Fecha Contable",
+              "queryRef": "fact_FacturasCompra.Fecha Contable",
+              "nativeQueryRef": "Fecha",
               "displayName": "Fecha"
             },
             {
@@ -34,13 +35,42 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Articulos"
+                      "Entity": "fact_FacturasCompra"
+                    }
+                  },
+                  "Property": "Documento"
+                }
+              },
+              "queryRef": "fact_FacturasCompra.Documento",
+              "nativeQueryRef": "Documento"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fact_FacturasCompra"
+                    }
+                  },
+                  "Property": "ItemID"
+                }
+              },
+              "queryRef": "fact_FacturasCompra.ItemID",
+              "nativeQueryRef": "ItemID"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "dim_Articulos"
                     }
                   },
                   "Property": "Descripcion 1"
                 }
               },
-              "queryRef": "Items.Descripcion 1",
+              "queryRef": "dim_Articulos.Descripcion 1",
+              "nativeQueryRef": "Producto",
               "displayName": "Producto"
             },
             {
@@ -100,23 +130,6 @@
             }
           ]
         }
-      },
-      "sortDefinition": {
-        "sort": [
-          {
-            "field": {
-              "Column": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "Factura Compras"
-                  }
-                },
-                "Property": "Fecha Contable"
-              }
-            },
-            "direction": "Descending"
-          }
-        ]
       }
     },
     "objects": {
@@ -181,20 +194,6 @@
           },
           "selector": {
             "metadata": "Item.Descripcion 1"
-          }
-        },
-        {
-          "properties": {
-            "value": {
-              "expr": {
-                "Literal": {
-                  "Value": "208.41950131130852D"
-                }
-              }
-            }
-          },
-          "selector": {
-            "metadata": "Items.Descripcion 1"
           }
         }
       ],
@@ -402,5 +401,121 @@
       ]
     },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "7e34ad9cb3601283644e",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Metricas"
+              }
+            },
+            "Property": "Total Compras"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "5b8bd001e4620015610b",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Metricas"
+              }
+            },
+            "Property": "Descuento %"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "61731d8ab0008b309ab3",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Metricas"
+              }
+            },
+            "Property": "Compra Neta"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "332153670005863dc430",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Metricas"
+              }
+            },
+            "Property": "Total Cantidad"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "770452f38461433c5aad",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "fact_FacturasCompra"
+              }
+            },
+            "Property": "Fecha Contable"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "a57ef794a5c4613ce255",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "dim_Articulos"
+              }
+            },
+            "Property": "Descripcion 1"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "7b4e743e4944d2c52986",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "fact_FacturasCompra"
+              }
+            },
+            "Property": "Documento"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "51e9791f4a9ae5150901",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "fact_FacturasCompra"
+              }
+            },
+            "Property": "ItemID"
+          }
+        },
+        "type": "Categorical"
+      }
+    ]
   }
 }

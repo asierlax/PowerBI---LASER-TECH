@@ -1,5 +1,5 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/page/2.0.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/page/2.1.0/schema.json",
   "name": "ReportSection6890a2a08d7706e88aa6",
   "displayName": "Detalle de Familia",
   "displayOption": "FitToPage",
@@ -8,73 +8,36 @@
   "filterConfig": {
     "filters": [
       {
-        "name": "Filterc07f89541543067c4e00",
+        "name": "f995fc741899353c35ce",
         "field": {
           "Column": {
             "Expression": {
               "SourceRef": {
-                "Entity": "Articulos"
+                "Entity": "dim_Articulos"
               }
             },
             "Property": "Familia"
           }
         },
         "type": "Categorical",
-        "filter": {
-          "Version": 2,
-          "From": [
-            {
-              "Name": "a",
-              "Entity": "Articulos",
-              "Type": 0
-            }
-          ],
-          "Where": [
-            {
-              "Condition": {
-                "In": {
-                  "Expressions": [
-                    {
-                      "Column": {
-                        "Expression": {
-                          "SourceRef": {
-                            "Source": "a"
-                          }
-                        },
-                        "Property": "Familia"
-                      }
-                    }
-                  ],
-                  "Values": [
-                    [
-                      {
-                        "Literal": {
-                          "Value": "'Alejandrita'"
-                        }
-                      }
-                    ]
-                  ]
-                }
-              }
-            }
-          ]
-        },
         "howCreated": "Drillthrough"
       }
     ]
   },
   "pageBinding": {
-    "name": "Pod1",
+    "name": "ed3ff65d94426dd1d436",
     "type": "Drillthrough",
     "parameters": [
       {
-        "name": "Param_Filterc07f89541543067c4e00",
-        "boundFilter": "Filterc07f89541543067c4e00",
+        "name": "60519b9bc0279712c98d",
+        "boundFilter": "f995fc741899353c35ce",
+        "asAggregation": false,
+        "qnaSingleSelectRequired": false,
         "fieldExpr": {
           "Column": {
             "Expression": {
               "SourceRef": {
-                "Entity": "Articulos"
+                "Entity": "dim_Articulos"
               }
             },
             "Property": "Familia"

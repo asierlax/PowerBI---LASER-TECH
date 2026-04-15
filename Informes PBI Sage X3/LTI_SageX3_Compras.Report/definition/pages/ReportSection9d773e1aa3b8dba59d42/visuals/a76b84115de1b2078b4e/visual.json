@@ -1,5 +1,5 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.7.0/schema.json",
   "name": "a76b84115de1b2078b4e",
   "position": {
     "x": 6.0458839406207829,
@@ -127,5 +127,23 @@
     },
     "drillFilterOtherVisuals": true
   },
-  "parentGroupName": "1d83d09e36d0c02e5e16"
+  "parentGroupName": "1d83d09e36d0c02e5e16",
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "590ac5d600d9d58dea37",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Metricas"
+              }
+            },
+            "Property": "Total Compras"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
+  }
 }

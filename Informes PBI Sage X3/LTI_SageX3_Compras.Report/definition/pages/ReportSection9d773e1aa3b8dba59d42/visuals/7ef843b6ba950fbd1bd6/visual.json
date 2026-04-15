@@ -1,5 +1,5 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.7.0/schema.json",
   "name": "7ef843b6ba950fbd1bd6",
   "position": {
     "x": 6.8279907700321054,
@@ -20,15 +20,15 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Fecha"
+                      "Entity": "dim_Calendario"
                     }
                   },
                   "Property": "MesAno"
                 }
               },
-              "queryRef": "Fecha.MesAno",
-              "active": true,
-              "displayName": "Mes"
+              "queryRef": "dim_Calendario.MesAno",
+              "nativeQueryRef": "MesAno",
+              "active": true
             }
           ]
         },
@@ -90,7 +90,7 @@
               "Column": {
                 "Expression": {
                   "SourceRef": {
-                    "Entity": "Fecha"
+                    "Entity": "dim_Calendario"
                   }
                 },
                 "Property": "MesAno"
@@ -223,5 +223,65 @@
     },
     "drillFilterOtherVisuals": true
   },
-  "parentGroupName": "1d83d09e36d0c02e5e16"
+  "parentGroupName": "1d83d09e36d0c02e5e16",
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "399d91d3b1de05a7b6bd",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Metricas"
+              }
+            },
+            "Property": "Total Compras AA"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "c7c30bdd4272974d0450",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Metricas"
+              }
+            },
+            "Property": "Variacion % Total Compras AA"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "09bfbfd0e6e905888ca7",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Metricas"
+              }
+            },
+            "Property": "Total Compras"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "13c334d8d78b73d8d23a",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "dim_Calendario"
+              }
+            },
+            "Property": "MesAno"
+          }
+        },
+        "type": "Categorical"
+      }
+    ]
+  }
 }

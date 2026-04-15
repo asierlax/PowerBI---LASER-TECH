@@ -1,5 +1,5 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.7.0/schema.json",
   "name": "3f212206eae28b9b00ed",
   "position": {
     "x": 7.4943914064406911,
@@ -20,15 +20,15 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Fecha"
+                      "Entity": "dim_Calendario"
                     }
                   },
                   "Property": "MesAno"
                 }
               },
-              "queryRef": "Fecha.MesAno",
-              "active": true,
-              "displayName": "Mes"
+              "queryRef": "dim_Calendario.MesAno",
+              "nativeQueryRef": "MesAno",
+              "active": true
             }
           ]
         },
@@ -89,7 +89,7 @@
               "Column": {
                 "Expression": {
                   "SourceRef": {
-                    "Entity": "Fecha"
+                    "Entity": "dim_Calendario"
                   }
                 },
                 "Property": "MesAno"
@@ -222,5 +222,65 @@
     },
     "drillFilterOtherVisuals": true
   },
-  "parentGroupName": "c8990609dcd21f20aef0"
+  "parentGroupName": "c8990609dcd21f20aef0",
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "c047591050b0bb703d5a",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Metricas"
+              }
+            },
+            "Property": "Descuento AA"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "a6819e385368b98c8477",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Metricas"
+              }
+            },
+            "Property": "Variacion Descuento AA"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "b0256bc59e868160770e",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Metricas"
+              }
+            },
+            "Property": "Descuento"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "48b01493bad8406072aa",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "dim_Calendario"
+              }
+            },
+            "Property": "MesAno"
+          }
+        },
+        "type": "Categorical"
+      }
+    ]
+  }
 }

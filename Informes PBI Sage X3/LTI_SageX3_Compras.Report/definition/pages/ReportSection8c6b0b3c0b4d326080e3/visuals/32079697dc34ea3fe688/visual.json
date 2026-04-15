@@ -1,5 +1,5 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.7.0/schema.json",
   "name": "32079697dc34ea3fe688",
   "position": {
     "x": 8.694090671503794,
@@ -20,15 +20,15 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Fecha"
+                      "Entity": "dim_Calendario"
                     }
                   },
                   "Property": "MesAno"
                 }
               },
-              "queryRef": "Fecha.MesAno",
-              "active": true,
-              "displayName": "Mes"
+              "queryRef": "dim_Calendario.MesAno",
+              "nativeQueryRef": "MesAno",
+              "active": true
             }
           ]
         },
@@ -90,7 +90,7 @@
               "Column": {
                 "Expression": {
                   "SourceRef": {
-                    "Entity": "Fecha"
+                    "Entity": "dim_Calendario"
                   }
                 },
                 "Property": "MesAno"
@@ -223,5 +223,65 @@
     },
     "drillFilterOtherVisuals": true
   },
-  "parentGroupName": "2da2b419ee1dd094c524"
+  "parentGroupName": "2da2b419ee1dd094c524",
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "0f15c32c12325e8b555a",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Metricas"
+              }
+            },
+            "Property": "Total Facturas AA"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "6841e1116d914695d6e9",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Metricas"
+              }
+            },
+            "Property": "Variación FacturasTotal AA"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "b25fcc4f6ac1e036c1c6",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Metricas"
+              }
+            },
+            "Property": "Total Facturas"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "43d5ec3705d342cc1d08",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "dim_Calendario"
+              }
+            },
+            "Property": "MesAno"
+          }
+        },
+        "type": "Categorical"
+      }
+    ]
+  }
 }

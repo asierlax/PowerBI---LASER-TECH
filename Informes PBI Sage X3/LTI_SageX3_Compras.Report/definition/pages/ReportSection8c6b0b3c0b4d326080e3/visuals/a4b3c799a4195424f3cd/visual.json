@@ -1,5 +1,5 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.7.0/schema.json",
   "name": "a4b3c799a4195424f3cd",
   "position": {
     "x": 362.3070097604259,
@@ -20,13 +20,14 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Factura Compras"
+                      "Entity": "fact_FacturasCompra"
                     }
                   },
                   "Property": "Fecha Contable"
                 }
               },
-              "queryRef": "Factura Compras.Fecha Contable",
+              "queryRef": "fact_FacturasCompra.Fecha Contable",
+              "nativeQueryRef": "Fecha",
               "displayName": "Fecha"
             },
             {
@@ -34,13 +35,28 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Proveedor"
+                      "Entity": "fact_FacturasCompra"
+                    }
+                  },
+                  "Property": "Documento"
+                }
+              },
+              "queryRef": "fact_FacturasCompra.Documento",
+              "nativeQueryRef": "Documento"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "dim_Proveedores"
                     }
                   },
                   "Property": "Proveedor"
                 }
               },
-              "queryRef": "Proveedor.Proveedor"
+              "queryRef": "dim_Proveedores.Proveedor",
+              "nativeQueryRef": "Proveedor"
             },
             {
               "field": {
@@ -112,23 +128,6 @@
             }
           ]
         }
-      },
-      "sortDefinition": {
-        "sort": [
-          {
-            "field": {
-              "Column": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "Factura Compras"
-                  }
-                },
-                "Property": "Fecha Contable"
-              }
-            },
-            "direction": "Descending"
-          }
-        ]
       }
     },
     "objects": {
@@ -400,5 +399,121 @@
       ]
     },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "69b987088b9a681661d1",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Metricas"
+              }
+            },
+            "Property": "Total Compras"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "3bb7fa722504da857b84",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Metricas"
+              }
+            },
+            "Property": "Descuento %"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "f83ea7f0bb00c01d4dd5",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Metricas"
+              }
+            },
+            "Property": "Descuento"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "43e22037a050645950a3",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Metricas"
+              }
+            },
+            "Property": "Compra Neta"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "551ab8a288c2e11a0a0d",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Metricas"
+              }
+            },
+            "Property": "Total Cantidad"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "8dce928122b7a12449d9",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "fact_FacturasCompra"
+              }
+            },
+            "Property": "Fecha Contable"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "45f2bbb606edb76c6ee3",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "dim_Proveedores"
+              }
+            },
+            "Property": "Proveedor"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "0887ab4b663aacc0375c",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "fact_FacturasCompra"
+              }
+            },
+            "Property": "Documento"
+          }
+        },
+        "type": "Categorical"
+      }
+    ]
   }
 }

@@ -1,5 +1,5 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.5.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.7.0/schema.json",
   "name": "5391259188e504c66ac8",
   "position": {
     "x": 911.95195195195208,
@@ -20,14 +20,14 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Articulos"
+                      "Entity": "dim_Articulos"
                     }
                   },
                   "Property": "Familia"
                 }
               },
-              "queryRef": "Articulos.Familia",
-              "nativeQueryRef": "Familia",
+              "queryRef": "dim_Articulos.Familia",
+              "nativeQueryRef": "Familia1",
               "active": true
             }
           ]
@@ -178,6 +178,20 @@
           }
         },
         "type": "Advanced"
+      },
+      {
+        "name": "89b627d4d7e40215317d",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "dim_Articulos"
+              }
+            },
+            "Property": "Familia"
+          }
+        },
+        "type": "Categorical"
       }
     ],
     "filterSortOrder": "Custom"

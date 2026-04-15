@@ -101,6 +101,26 @@ table dim_Calendario
 
 		annotation SummarizationSetBy = Automatic
 
+	column MesAno = (dim_Calendario[Mes] & "-" & dim_Calendario[Año])
+		dataType: dateTime
+		formatString: yyyy-mm
+		lineageTag: bacf3f1a-5f35-46ce-8eba-89ccb7ea4ad4
+		summarizeBy: none
+
+		changedProperty = DataType
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+		annotation PBI_FormatHint = {"isDateTimeCustom":true}
+
+	column Mes = UPPER( mid(FORMAT([Fecha],"MMM"),1,1)) & mid(FORMAT([Fecha],"MMM"),2,100)
+		lineageTag: 4c439d1e-3df3-483a-8d05-dba3617d8ecd
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
 	partition dim_Calendario = m
 		mode: import
 		source =

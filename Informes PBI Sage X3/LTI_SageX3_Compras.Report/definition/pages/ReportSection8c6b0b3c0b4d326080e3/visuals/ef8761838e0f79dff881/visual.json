@@ -1,5 +1,5 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.7.0/schema.json",
   "name": "ef8761838e0f79dff881",
   "position": {
     "x": 8.6594178723067969,
@@ -20,15 +20,15 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Fecha"
+                      "Entity": "dim_Calendario"
                     }
                   },
                   "Property": "MesAno"
                 }
               },
-              "queryRef": "Fecha.MesAno",
-              "active": true,
-              "displayName": "Mes"
+              "queryRef": "dim_Calendario.MesAno",
+              "nativeQueryRef": "MesAno",
+              "active": true
             }
           ]
         },
@@ -90,7 +90,7 @@
               "Column": {
                 "Expression": {
                   "SourceRef": {
-                    "Entity": "Fecha"
+                    "Entity": "dim_Calendario"
                   }
                 },
                 "Property": "MesAno"
@@ -223,5 +223,65 @@
     },
     "drillFilterOtherVisuals": true
   },
-  "parentGroupName": "8e899a907f09f7222a9a"
+  "parentGroupName": "8e899a907f09f7222a9a",
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "719d3bbace372d298813",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Metricas"
+              }
+            },
+            "Property": "Total Cantidad AA"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "7f0f3155ee6000d74c23",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Metricas"
+              }
+            },
+            "Property": "Variacion TotalCantidad AA"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "ac2e74e12b9315ecc022",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Metricas"
+              }
+            },
+            "Property": "Total Cantidad"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "3d894724170417d16512",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "dim_Calendario"
+              }
+            },
+            "Property": "MesAno"
+          }
+        },
+        "type": "Categorical"
+      }
+    ]
+  }
 }

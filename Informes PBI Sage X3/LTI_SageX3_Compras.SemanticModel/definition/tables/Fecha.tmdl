@@ -2,14 +2,6 @@ table Fecha
 	lineageTag: f7cc7aa8-aa2d-46dc-883f-19461f666627
 	dataCategory: Time
 
-	measure MaxSelectedDate = CALCULATE(MAX('Fecha'[Fecha]), ALLSELECTED('Fecha'))
-		formatString: General Date
-		lineageTag: acdda248-6ade-4646-a3fa-5204d9889bf2
-
-	measure MinSelectedDate = CALCULATE(MIN('Fecha'[Fecha]), ALLSELECTED('Fecha'))
-		formatString: General Date
-		lineageTag: d3a3fab3-d3ab-4542-829a-5aed583bd93f
-
 	column Fecha
 		dataType: dateTime
 		isKey

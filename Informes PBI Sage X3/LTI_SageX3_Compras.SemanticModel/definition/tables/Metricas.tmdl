@@ -211,6 +211,14 @@ table Metricas
 		displayFolder: KPI Recepciones
 		lineageTag: 4bb57acc-1778-4bf9-9e0d-4b8f669704b8
 
+	measure MaxSelectedDate = CALCULATE(MAX('dim_Calendario'[Fecha]), ALLSELECTED('dim_Calendario'))
+		formatString: General Date
+		lineageTag: acdda248-6ade-4646-a3fa-5204d9889bf2
+
+	measure MinSelectedDate = CALCULATE(MIN('dim_Calendario'[Fecha]), ALLSELECTED('dim_Calendario'))
+		formatString: General Date
+		lineageTag: d3a3fab3-d3ab-4542-829a-5aed583bd93f
+
 	partition Metricas-f6c63909-fea0-42bb-accd-c4ede5072810 = m
 		mode: import
 		source =

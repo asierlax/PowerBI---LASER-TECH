@@ -1,5 +1,5 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.7.0/schema.json",
   "name": "3330ed6a66e2ff3f5c07",
   "position": {
     "x": 123.90273556231003,
@@ -216,5 +216,23 @@
     },
     "drillFilterOtherVisuals": true
   },
-  "parentGroupName": "ce64b07bfe490ceb1511"
+  "parentGroupName": "ce64b07bfe490ceb1511",
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "8e7c9e87e7208aa67424",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Metricas"
+              }
+            },
+            "Property": "Variacion % Total Compras AA"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
+  }
 }

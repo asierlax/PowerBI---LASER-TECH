@@ -1,12 +1,12 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.5.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.7.0/schema.json",
   "name": "f2b22cedb58d6bb9da05",
   "position": {
-    "x": 1165.0588023689475,
-    "y": 323.01840800826329,
+    "x": 1124.6358653093187,
+    "y": 322.75646045418949,
     "z": 27000,
-    "height": 32.567237163814184,
-    "width": 80.097799511002449,
+    "height": 33.077525450274081,
+    "width": 120.28191072826938,
     "tabOrder": 27000
   },
   "visual": {
@@ -186,5 +186,23 @@
       ]
     },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "6097631ad1cd94326065",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Metricas"
+              }
+            },
+            "Property": "Variacion % Total Compras AA"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
   }
 }

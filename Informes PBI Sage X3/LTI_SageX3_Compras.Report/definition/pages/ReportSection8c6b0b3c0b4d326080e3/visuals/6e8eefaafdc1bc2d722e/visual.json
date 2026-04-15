@@ -1,5 +1,5 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.7.0/schema.json",
   "name": "6e8eefaafdc1bc2d722e",
   "position": {
     "x": 8.8118146502974568,
@@ -37,13 +37,14 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Articulos"
+                      "Entity": "dim_Articulos"
                     }
                   },
                   "Property": "Familia"
                 }
               },
-              "queryRef": "Items.Familia",
+              "queryRef": "dim_Articulos.Familia",
+              "nativeQueryRef": "Familia",
               "active": true
             },
             {
@@ -51,13 +52,14 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Articulos"
+                      "Entity": "dim_Articulos"
                     }
                   },
                   "Property": "Subfamilia"
                 }
               },
-              "queryRef": "Items.Subfamilia",
+              "queryRef": "dim_Articulos.Subfamilia",
+              "nativeQueryRef": "Subfamilia",
               "active": true
             }
           ]
@@ -90,7 +92,7 @@
         "levels": [
           {
             "queryRefs": [
-              "Items.Familia"
+              "dim_Articulos.Familia"
             ],
             "isCollapsed": true,
             "identityKeys": [
@@ -98,7 +100,7 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Articulos"
+                      "Entity": "dim_Articulos"
                     }
                   },
                   "Property": "Familia"
@@ -109,21 +111,9 @@
           },
           {
             "queryRefs": [
-              "Items.Subfamilia"
+              "dim_Articulos.Subfamilia"
             ],
             "isCollapsed": true,
-            "identityKeys": [
-              {
-                "Column": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "Articulos"
-                    }
-                  },
-                  "Property": "Subfamilia"
-                }
-              }
-            ],
             "isPinned": true
           }
         ],
@@ -133,7 +123,7 @@
               "identityValues": [
                 {
                   "Literal": {
-                    "Value": "'CONTRATOS COMPRA/VENTA SOFTWAR'"
+                    "Value": "'CO2 Medico'"
                   }
                 }
               ],
@@ -421,5 +411,51 @@
     },
     "drillFilterOtherVisuals": true
   },
-  "parentGroupName": "29801459678171ad66ac"
+  "parentGroupName": "29801459678171ad66ac",
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "fd7e38e56d0bded370e0",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Metricas"
+              }
+            },
+            "Property": "Total Compras"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "38c1fbac9ebd1e58285b",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "dim_Articulos"
+              }
+            },
+            "Property": "Familia"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "e218c46890da01977010",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "dim_Articulos"
+              }
+            },
+            "Property": "Subfamilia"
+          }
+        },
+        "type": "Categorical"
+      }
+    ]
+  }
 }

@@ -1,5 +1,5 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.5.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.7.0/schema.json",
   "name": "3321c4d6307eba416b07",
   "position": {
     "x": 24.316109422492403,
@@ -20,14 +20,14 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Fecha"
+                      "Entity": "dim_Calendario"
                     }
                   },
                   "Property": "Año"
                 }
               },
-              "queryRef": "Fecha.Año",
-              "nativeQueryRef": "Año",
+              "queryRef": "dim_Calendario.Año",
+              "nativeQueryRef": "Año1",
               "active": true
             },
             {
@@ -35,15 +35,15 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Fecha"
+                      "Entity": "dim_Calendario"
                     }
                   },
                   "Property": "Mes del año"
                 }
               },
-              "queryRef": "Fecha.Mes del año",
-              "nativeQueryRef": "Mes del año",
-              "active": true
+              "queryRef": "dim_Calendario.Mes del año",
+              "nativeQueryRef": "Mes del año1",
+              "active": false
             }
           ]
         },
@@ -145,45 +145,20 @@
         "levels": [
           {
             "queryRefs": [
-              "Fecha.Año"
+              "dim_Calendario.Año"
             ],
             "isCollapsed": true,
-            "identityKeys": [
-              {
-                "Column": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "Fecha"
-                    }
-                  },
-                  "Property": "Año"
-                }
-              }
-            ],
             "isPinned": true
           },
           {
             "queryRefs": [
-              "Fecha.Mes del año"
+              "dim_Calendario.Mes del año"
             ],
             "isCollapsed": true,
             "isPinned": true
           }
         ],
-        "root": {
-          "children": [
-            {
-              "identityValues": [
-                {
-                  "Literal": {
-                    "Value": "2024L"
-                  }
-                }
-              ],
-              "isToggled": true
-            }
-          ]
-        }
+        "root": {}
       }
     ],
     "objects": {
@@ -377,20 +352,6 @@
   "filterConfig": {
     "filters": [
       {
-        "name": "102ca63279f7d57665da",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Fecha"
-              }
-            },
-            "Property": "Año"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
         "name": "27ab487984fac4909937",
         "field": {
           "Measure": {
@@ -400,20 +361,6 @@
               }
             },
             "Property": "Count Lin recepciones Repuestos"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "93bd0e0bdf492ff20a80",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Fecha"
-              }
-            },
-            "Property": "Mes del año"
           }
         },
         "type": "Advanced"
@@ -484,6 +431,34 @@
               }
             },
             "Property": "Total Dias OCC"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "343e9b1b4049ca78d4bc",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "dim_Calendario"
+              }
+            },
+            "Property": "Año"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "05a317abe9e019ba0e52",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "dim_Calendario"
+              }
+            },
+            "Property": "Mes del año"
           }
         },
         "type": "Advanced"

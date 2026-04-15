@@ -1,5 +1,5 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.5.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.7.0/schema.json",
   "name": "161afa7a81309d615e8a",
   "position": {
     "x": 790,
@@ -20,13 +20,14 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Fecha"
+                      "Entity": "dim_Calendario"
                     }
                   },
                   "Property": "Año"
                 }
               },
-              "queryRef": "Fecha.Año",
+              "queryRef": "dim_Calendario.Año",
+              "nativeQueryRef": "Año",
               "active": true
             }
           ]
@@ -86,8 +87,8 @@
                 "Version": 2,
                 "From": [
                   {
-                    "Name": "f",
-                    "Entity": "Fecha",
+                    "Name": "d",
+                    "Entity": "dim_Calendario",
                     "Type": 0
                   }
                 ],
@@ -100,7 +101,7 @@
                             "Column": {
                               "Expression": {
                                 "SourceRef": {
-                                  "Source": "f"
+                                  "Source": "d"
                                 }
                               },
                               "Property": "Año"
@@ -111,140 +112,7 @@
                           [
                             {
                               "Literal": {
-                                "Value": "2007L"
-                              }
-                            }
-                          ],
-                          [
-                            {
-                              "Literal": {
-                                "Value": "2008L"
-                              }
-                            }
-                          ],
-                          [
-                            {
-                              "Literal": {
-                                "Value": "2009L"
-                              }
-                            }
-                          ],
-                          [
-                            {
-                              "Literal": {
-                                "Value": "2010L"
-                              }
-                            }
-                          ],
-                          [
-                            {
-                              "Literal": {
-                                "Value": "2011L"
-                              }
-                            }
-                          ],
-                          [
-                            {
-                              "Literal": {
-                                "Value": "2012L"
-                              }
-                            }
-                          ],
-                          [
-                            {
-                              "Literal": {
-                                "Value": "2013L"
-                              }
-                            }
-                          ],
-                          [
-                            {
-                              "Literal": {
-                                "Value": "2014L"
-                              }
-                            }
-                          ],
-                          [
-                            {
-                              "Literal": {
-                                "Value": "2015L"
-                              }
-                            }
-                          ],
-                          [
-                            {
-                              "Literal": {
-                                "Value": "2016L"
-                              }
-                            }
-                          ],
-                          [
-                            {
-                              "Literal": {
-                                "Value": "2017L"
-                              }
-                            }
-                          ],
-                          [
-                            {
-                              "Literal": {
-                                "Value": "2018L"
-                              }
-                            }
-                          ],
-                          [
-                            {
-                              "Literal": {
-                                "Value": "2019L"
-                              }
-                            }
-                          ],
-                          [
-                            {
-                              "Literal": {
-                                "Value": "2020L"
-                              }
-                            }
-                          ],
-                          [
-                            {
-                              "Literal": {
-                                "Value": "2021L"
-                              }
-                            }
-                          ],
-                          [
-                            {
-                              "Literal": {
-                                "Value": "2022L"
-                              }
-                            }
-                          ],
-                          [
-                            {
-                              "Literal": {
-                                "Value": "2023L"
-                              }
-                            }
-                          ],
-                          [
-                            {
-                              "Literal": {
-                                "Value": "2024L"
-                              }
-                            }
-                          ],
-                          [
-                            {
-                              "Literal": {
                                 "Value": "2025L"
-                              }
-                            }
-                          ],
-                          [
-                            {
-                              "Literal": {
-                                "Value": "2026L"
                               }
                             }
                           ]
