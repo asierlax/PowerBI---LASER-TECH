@@ -5,7 +5,7 @@
       "ordinal": 0,
       "scrollPosition": {
         "x": 447.13162514020092,
-        "y": 60.589194713540564
+        "y": 7.4125995799561224
       },
       "nodes": [
         {
@@ -20,57 +20,6 @@
             "width": 234
           },
           "zIndex": 1
-        },
-        {
-          "location": {
-            "x": 1638.8646228561797,
-            "y": 843.19217316492427
-          },
-          "nodeIndex": "Direccion",
-          "nodeLineageTag": "aa57438b-efc9-42f0-97ab-1ec1207a90a3",
-          "size": {
-            "height": 300,
-            "width": 234
-          },
-          "zIndex": 2
-        },
-        {
-          "location": {
-            "x": 1172.8586889435273,
-            "y": 300.53537714382026
-          },
-          "nodeIndex": "Empresa",
-          "nodeLineageTag": "c891fb5c-310c-4c83-8912-6eb73c8f7084",
-          "size": {
-            "height": 296,
-            "width": 234
-          },
-          "zIndex": 3
-        },
-        {
-          "location": {
-            "x": 845.2,
-            "y": 538.6
-          },
-          "nodeIndex": "Factura Compras",
-          "size": {
-            "height": 300,
-            "width": 234
-          },
-          "zIndex": 4
-        },
-        {
-          "location": {
-            "x": 844.61167030649722,
-            "y": 1038.5726760233513
-          },
-          "nodeIndex": "Fecha",
-          "nodeLineageTag": "f7cc7aa8-aa2d-46dc-883f-19461f666627",
-          "size": {
-            "height": 300,
-            "width": 234
-          },
-          "zIndex": 5
         },
         {
           "location": {
@@ -110,18 +59,6 @@
             "width": 234
           },
           "zIndex": 8
-        },
-        {
-          "location": {
-            "x": 912.4,
-            "y": 50
-          },
-          "nodeIndex": "Articulos",
-          "size": {
-            "height": 300,
-            "width": 234
-          },
-          "zIndex": 9
         },
         {
           "location": {
@@ -283,32 +220,6 @@
       "nodes": [
         {
           "location": {
-            "x": 312.3890148237744,
-            "y": 4.62503285944554
-          },
-          "nodeIndex": "Factura Compras",
-          "nodeLineageTag": "11b2c351-ad50-4ad4-92bb-a560c55808c0",
-          "size": {
-            "height": 300,
-            "width": 234
-          },
-          "zIndex": 1
-        },
-        {
-          "location": {
-            "x": 711.47513002473238,
-            "y": 0
-          },
-          "nodeIndex": "Articulos",
-          "nodeLineageTag": "f3514044-18e3-4e8f-842d-93188140c17d",
-          "size": {
-            "height": 300,
-            "width": 234
-          },
-          "zIndex": 4
-        },
-        {
-          "location": {
             "x": 0,
             "y": 0
           },
@@ -322,32 +233,6 @@
         },
         {
           "location": {
-            "x": 15.803419193551633,
-            "y": 437.86813312213019
-          },
-          "nodeIndex": "Fecha",
-          "nodeLineageTag": "f7cc7aa8-aa2d-46dc-883f-19461f666627",
-          "size": {
-            "height": 300,
-            "width": 234
-          },
-          "zIndex": 5
-        },
-        {
-          "location": {
-            "x": 593.460493948368,
-            "y": 362.47333158052777
-          },
-          "nodeIndex": "Empresa",
-          "nodeLineageTag": "c891fb5c-310c-4c83-8912-6eb73c8f7084",
-          "size": {
-            "height": 296,
-            "width": 234
-          },
-          "zIndex": 2
-        },
-        {
-          "location": {
             "x": 317.74721671849983,
             "y": 646.83844675142677
           },
@@ -358,19 +243,6 @@
             "width": 234
           },
           "zIndex": 3
-        },
-        {
-          "location": {
-            "x": 900.07005511575062,
-            "y": 600.13528437343894
-          },
-          "nodeIndex": "Direccion",
-          "nodeLineageTag": "aa57438b-efc9-42f0-97ab-1ec1207a90a3",
-          "size": {
-            "height": 300,
-            "width": 234
-          },
-          "zIndex": 7
         },
         {
           "location": {
@@ -480,32 +352,6 @@
         },
         {
           "location": {
-            "x": 564.06693410719083,
-            "y": 42.604435837342891
-          },
-          "nodeIndex": "Empresa",
-          "nodeLineageTag": "c891fb5c-310c-4c83-8912-6eb73c8f7084",
-          "size": {
-            "height": 296,
-            "width": 234
-          },
-          "zIndex": 5
-        },
-        {
-          "location": {
-            "x": 0,
-            "y": 20.243749711641321
-          },
-          "nodeIndex": "Fecha",
-          "nodeLineageTag": "f7cc7aa8-aa2d-46dc-883f-19461f666627",
-          "size": {
-            "height": 300,
-            "width": 234
-          },
-          "zIndex": 6
-        },
-        {
-          "location": {
             "x": 0,
             "y": 424.06129017375036
           },
@@ -529,19 +375,6 @@
             "width": 234
           },
           "zIndex": 7
-        },
-        {
-          "location": {
-            "x": 734.04052197039618,
-            "y": 524.26028496491517
-          },
-          "nodeIndex": "Articulos",
-          "nodeLineageTag": "f3514044-18e3-4e8f-842d-93188140c17d",
-          "size": {
-            "height": 300,
-            "width": 234
-          },
-          "zIndex": 3
         },
         {
           "location": {
@@ -638,19 +471,6 @@
         },
         {
           "location": {
-            "x": 1.1211693641406129,
-            "y": 0
-          },
-          "nodeIndex": "Fecha",
-          "nodeLineageTag": "f7cc7aa8-aa2d-46dc-883f-19461f666627",
-          "size": {
-            "height": 300,
-            "width": 234
-          },
-          "zIndex": 4
-        },
-        {
-          "location": {
             "x": 641.55161156375334,
             "y": 0
           },
@@ -661,32 +481,6 @@
             "width": 234
           },
           "zIndex": 7
-        },
-        {
-          "location": {
-            "x": 432.6241896043847,
-            "y": 450.394153179297
-          },
-          "nodeIndex": "Empresa",
-          "nodeLineageTag": "c891fb5c-310c-4c83-8912-6eb73c8f7084",
-          "size": {
-            "height": 296,
-            "width": 234
-          },
-          "zIndex": 5
-        },
-        {
-          "location": {
-            "x": 166.23951676156096,
-            "y": 454.4568543364075
-          },
-          "nodeIndex": "Articulos",
-          "nodeLineageTag": "f3514044-18e3-4e8f-842d-93188140c17d",
-          "size": {
-            "height": 300,
-            "width": 234
-          },
-          "zIndex": 6
         },
         {
           "location": {

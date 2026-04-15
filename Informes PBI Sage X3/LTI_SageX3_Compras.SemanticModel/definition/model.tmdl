@@ -12,22 +12,12 @@ queryGroup Ayuda
 
 annotation __PBI_TimeIntelligenceEnabled = 0
 
-annotation PBI_QueryOrder = ["Factura Compras","Lineas Contables Analiticas","Proveedor","Recurso","Direccion","Fecha","Articulos","Empresa","Metricas","UltimaActualizacion","Instancia","BaseDeDatos","Esquema","Pedidos Cabecera","Pedidos Lineas","Recepciones","fact_FacturasCompra","dim_Articulos","dim_Calendario","dim_Proveedores","dim_Sociedades","fact_Recepciones","dim_Direcciones","fact_PedidosCompra"]
+annotation PBI_QueryOrder = ["Recurso","Metricas","UltimaActualizacion","Instancia","BaseDeDatos","Esquema","fact_FacturasCompra","dim_Articulos","dim_Calendario","dim_Proveedores","dim_Sociedades","fact_Recepciones","dim_Direcciones","fact_PedidosCompra"]
 
 annotation PBI_ProTooling = ["DevMode"]
 
-ref table 'Factura Compras'
-ref table Proveedor
-ref table Direccion
-ref table Fecha
-ref table Articulos
-ref table Empresa
 ref table Metricas
 ref table UltimaActualizacion
-ref table 'Lineas Contables Analiticas'
-ref table 'Pedidos Cabecera'
-ref table 'Pedidos Lineas'
-ref table Recepciones
 ref table fact_FacturasCompra
 ref table dim_Articulos
 ref table dim_Calendario

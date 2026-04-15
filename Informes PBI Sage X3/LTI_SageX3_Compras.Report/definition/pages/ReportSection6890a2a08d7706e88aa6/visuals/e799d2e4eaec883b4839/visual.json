@@ -1,5 +1,5 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.7.0/schema.json",
   "name": "e799d2e4eaec883b4839",
   "position": {
     "x": 10,
@@ -20,13 +20,14 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Factura Compras"
+                      "Entity": "fact_FacturasCompra"
                     }
                   },
                   "Property": "Tipo Impuesto"
                 }
               },
-              "queryRef": "Factura Compras.Tipo Impuesto",
+              "queryRef": "fact_FacturasCompra.Tipo Impuesto",
+              "nativeQueryRef": "Tipo Impuesto",
               "active": true
             }
           ]

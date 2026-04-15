@@ -660,51 +660,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "3e3d23c7d0203d4e2e1a",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Metricas"
-              }
-            },
-            "Property": "Total Compras"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "c400f2204576d092c7d6",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Metricas"
-              }
-            },
-            "Property": "Total Compras AA"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "cd39c97c01089c8a9040",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "dim_Calendario"
-              }
-            },
-            "Property": "MesAno"
-          }
-        },
-        "type": "Categorical"
-      }
-    ]
   }
 }

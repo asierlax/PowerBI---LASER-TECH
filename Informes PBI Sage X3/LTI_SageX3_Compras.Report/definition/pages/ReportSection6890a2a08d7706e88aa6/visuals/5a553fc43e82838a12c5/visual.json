@@ -221,51 +221,5 @@
     },
     "drillFilterOtherVisuals": true
   },
-  "parentGroupName": "099cd4aaa968b67edaf6",
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "68da738130750c619057",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Metricas"
-              }
-            },
-            "Property": "Descuento %"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "af70ad18663b609d6c21",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Metricas"
-              }
-            },
-            "Property": "Variacion Descuento % AA"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "6a147ba2ecd70cd09ae8",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "dim_Calendario"
-              }
-            },
-            "Property": "MesAno"
-          }
-        },
-        "type": "Categorical"
-      }
-    ]
-  }
+  "parentGroupName": "099cd4aaa968b67edaf6"
 }

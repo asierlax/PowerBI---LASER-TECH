@@ -442,12 +442,12 @@
   "filterConfig": {
     "filters": [
       {
-        "name": "9e5b24af5ba2d9c2a314",
+        "name": "ff3b363a5ac95202dcde",
         "field": {
           "Column": {
             "Expression": {
               "SourceRef": {
-                "Entity": "Proveedor"
+                "Entity": "dim_Proveedores"
               }
             },
             "Property": "Proveedor"
@@ -465,8 +465,8 @@
                     "Version": 2,
                     "From": [
                       {
-                        "Name": "p",
-                        "Entity": "Proveedor",
+                        "Name": "d1",
+                        "Entity": "dim_Proveedores",
                         "Type": 0
                       },
                       {
@@ -480,7 +480,7 @@
                         "Column": {
                           "Expression": {
                             "SourceRef": {
-                              "Source": "p"
+                              "Source": "d1"
                             }
                           },
                           "Property": "Proveedor"
@@ -510,8 +510,8 @@
               "Type": 2
             },
             {
-              "Name": "p",
-              "Entity": "Proveedor",
+              "Name": "d1",
+              "Entity": "dim_Proveedores",
               "Type": 0
             }
           ],
@@ -524,7 +524,7 @@
                       "Column": {
                         "Expression": {
                           "SourceRef": {
-                            "Source": "p"
+                            "Source": "d1"
                           }
                         },
                         "Property": "Proveedor"
@@ -540,50 +540,7 @@
               }
             }
           ]
-        },
-        "howCreated": "User"
-      },
-      {
-        "name": "7fd4e691cab070d4d048",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Metricas"
-              }
-            },
-            "Property": "Total Compras"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "ad11dc5761b66c68dc72",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "dim_Articulos"
-              }
-            },
-            "Property": "Familia"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "ff3b363a5ac95202dcde",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "dim_Proveedores"
-              }
-            },
-            "Property": "Proveedor"
-          }
-        },
-        "type": "Categorical"
+        }
       }
     ]
   }

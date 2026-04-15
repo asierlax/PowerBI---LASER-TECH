@@ -1,5 +1,5 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.7.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
   "name": "cc106b9ee5700240e0d3",
   "position": {
     "x": 11.531531531531533,
@@ -145,37 +145,5 @@
     },
     "drillFilterOtherVisuals": true
   },
-  "parentGroupName": "ce64b07bfe490ceb1511",
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "39bcafda309058638912",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Metricas"
-              }
-            },
-            "Property": "Total Compras AA"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "9b920eec0ed73c6669ce",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Metricas"
-              }
-            },
-            "Property": "Total Compras"
-          }
-        },
-        "type": "Advanced"
-      }
-    ]
-  }
+  "parentGroupName": "ce64b07bfe490ceb1511"
 }

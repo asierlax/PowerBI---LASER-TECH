@@ -1,5 +1,5 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.5.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.7.0/schema.json",
   "name": "f82f4d36a38379cc3ba8",
   "position": {
     "x": 0,
@@ -20,13 +20,14 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Articulos"
+                      "Entity": "dim_Articulos"
                     }
                   },
                   "Property": "Subfamilia"
                 }
               },
-              "queryRef": "Items.Subfamilia",
+              "queryRef": "dim_Articulos.Subfamilia",
+              "nativeQueryRef": "Subfamilia",
               "active": true
             }
           ]

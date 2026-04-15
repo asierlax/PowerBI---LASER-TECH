@@ -178,20 +178,6 @@
           }
         },
         "type": "Advanced"
-      },
-      {
-        "name": "89b627d4d7e40215317d",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "dim_Articulos"
-              }
-            },
-            "Property": "Familia"
-          }
-        },
-        "type": "Categorical"
       }
     ],
     "filterSortOrder": "Custom"

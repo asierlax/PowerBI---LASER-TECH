@@ -1,5 +1,5 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.7.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
   "name": "037c98cd8694d5052e5b",
   "position": {
     "x": 119.02249423706405,
@@ -216,23 +216,5 @@
     },
     "drillFilterOtherVisuals": true
   },
-  "parentGroupName": "204fa993f4b56284cc0a",
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "f40c19ac500a62a0c2e0",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Metricas"
-              }
-            },
-            "Property": "Variacion CompraNeta AA"
-          }
-        },
-        "type": "Advanced"
-      }
-    ]
-  }
+  "parentGroupName": "204fa993f4b56284cc0a"
 }

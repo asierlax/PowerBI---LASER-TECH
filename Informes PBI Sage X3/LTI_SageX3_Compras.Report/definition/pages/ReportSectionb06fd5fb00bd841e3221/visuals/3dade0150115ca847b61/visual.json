@@ -169,23 +169,5 @@
     },
     "drillFilterOtherVisuals": true
   },
-  "parentGroupName": "5c129f1060dc6a8e4eb3",
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "387215c0c3bb2b26c210",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "dim_Calendario"
-              }
-            },
-            "Property": "Año"
-          }
-        },
-        "type": "Advanced"
-      }
-    ]
-  }
+  "parentGroupName": "5c129f1060dc6a8e4eb3"
 }

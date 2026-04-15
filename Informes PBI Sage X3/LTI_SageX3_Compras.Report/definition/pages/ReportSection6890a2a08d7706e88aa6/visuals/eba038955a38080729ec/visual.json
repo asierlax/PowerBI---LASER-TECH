@@ -386,51 +386,5 @@
     },
     "drillFilterOtherVisuals": true
   },
-  "parentGroupName": "597f0df9ab01b3f2caa6",
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "32b55d5f34a0a7a9e615",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Metricas"
-              }
-            },
-            "Property": "Total Compras"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "c738abe053bcd3173789",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "dim_Proveedores"
-              }
-            },
-            "Property": "Proveedor"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "a7b31ac257e52c88cdc9",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "dim_Articulos"
-              }
-            },
-            "Property": "Descripcion 1"
-          }
-        },
-        "type": "Categorical"
-      }
-    ]
-  }
+  "parentGroupName": "597f0df9ab01b3f2caa6"
 }

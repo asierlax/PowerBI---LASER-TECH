@@ -172,37 +172,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "ddf5cca0453edc2c3800",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Metricas"
-              }
-            },
-            "Property": "Total Compras"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "bb7dd9c7060465808ec0",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "dim_Articulos"
-              }
-            },
-            "Property": "Familia"
-          }
-        },
-        "type": "Categorical"
-      }
-    ]
   }
 }

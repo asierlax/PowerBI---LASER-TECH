@@ -1,5 +1,5 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.7.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
   "name": "fb8fc354934e1da06453",
   "position": {
     "x": 13.453453453453454,
@@ -214,37 +214,5 @@
     },
     "drillFilterOtherVisuals": true
   },
-  "parentGroupName": "ad2a5848c72804d9fed8",
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "5ff4bd5a079eb3b7e110",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Metricas"
-              }
-            },
-            "Property": "Descuento AA"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "fb58058b09d0a1ea7e13",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Metricas"
-              }
-            },
-            "Property": "Descuento"
-          }
-        },
-        "type": "Advanced"
-      }
-    ]
-  }
+  "parentGroupName": "ad2a5848c72804d9fed8"
 }

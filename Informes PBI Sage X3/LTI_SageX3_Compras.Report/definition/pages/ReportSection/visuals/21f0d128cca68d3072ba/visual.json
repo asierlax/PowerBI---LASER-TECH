@@ -169,23 +169,5 @@
     },
     "drillFilterOtherVisuals": true
   },
-  "parentGroupName": "776d51f04e31070828d9",
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "1908ae8355e8bac7a0d3",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "dim_Sociedades"
-              }
-            },
-            "Property": "Nombre Empresa"
-          }
-        },
-        "type": "Categorical"
-      }
-    ]
-  }
+  "parentGroupName": "776d51f04e31070828d9"
 }

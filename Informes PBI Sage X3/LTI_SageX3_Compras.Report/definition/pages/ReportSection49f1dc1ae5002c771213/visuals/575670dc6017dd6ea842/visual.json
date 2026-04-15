@@ -1,12 +1,12 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.7.0/schema.json",
   "name": "575670dc6017dd6ea842",
   "position": {
-    "x": 1043.6236933797911,
+    "x": 998,
     "y": 561,
     "z": 11000,
-    "height": 47.5725900116144,
-    "width": 163.53077816492453,
+    "height": 48,
+    "width": 209,
     "tabOrder": 11000
   },
   "visual": {
@@ -20,13 +20,14 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Empresa"
+                      "Entity": "dim_Sociedades"
                     }
                   },
                   "Property": "Nombre Empresa"
                 }
               },
-              "queryRef": "Empresa.Nombre Empresa",
+              "queryRef": "dim_Sociedades.Nombre Empresa",
+              "nativeQueryRef": "Nombre Empresa",
               "active": true
             }
           ]

@@ -1,5 +1,5 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.7.0/schema.json",
   "name": "70f8ed514f629d9ba896",
   "position": {
     "x": 0,
@@ -20,13 +20,14 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Articulos"
+                      "Entity": "dim_Articulos"
                     }
                   },
-                  "Property": "IdArticulo_descripcion"
+                  "Property": "IdArticulo"
                 }
               },
-              "queryRef": "Items.IdArticulo_descripcion",
+              "queryRef": "dim_Articulos.IdArticulo",
+              "nativeQueryRef": "IdArticulo",
               "active": true
             }
           ]

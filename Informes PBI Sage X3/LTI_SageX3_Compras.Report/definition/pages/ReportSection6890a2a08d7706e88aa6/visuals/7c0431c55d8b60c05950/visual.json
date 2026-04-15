@@ -124,37 +124,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "86d630565c2e78cc96ac",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Metricas"
-              }
-            },
-            "Property": "Total Compras"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "a4a3676d40d37b7bd094",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "fact_FacturasCompra"
-              }
-            },
-            "Property": "Provincia"
-          }
-        },
-        "type": "Categorical"
-      }
-    ]
   }
 }
