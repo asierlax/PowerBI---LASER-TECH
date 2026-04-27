@@ -1,0 +1,66 @@
+table Stock
+	lineageTag: 81bc4502-cf87-439c-9a28-a7b8535b38c0
+
+	column IdArticulo
+		dataType: string
+		lineageTag: 884d66e8-e0c1-42ee-95af-5bf84dfb1f0d
+		summarizeBy: none
+		sourceColumn: IdArticulo
+
+		annotation SummarizationSetBy = Automatic
+
+	column Cantidad
+		dataType: double
+		lineageTag: 3689887a-6e66-4898-866f-597bd01010ca
+		summarizeBy: sum
+		sourceColumn: Cantidad
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Valor stock'
+		dataType: double
+		lineageTag: 4ecb19bf-fa37-4b71-a559-21cc269bdd25
+		summarizeBy: sum
+		sourceColumn: Valor stock
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Coste standar'
+		dataType: double
+		lineageTag: a5a9925d-3184-4cb5-8d66-2518bd2f7711
+		summarizeBy: sum
+		sourceColumn: Coste standar
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	partition Stock-a68e783f-7af5-47e9-8c84-8f91e563392d = m
+		mode: import
+		source = ```
+				let
+				    CurrentServer = Instancia,
+				    CurrentDatabase = BaseDeDatos,
+				    CurrentSchema = Esquema,
+				    CurrentRows = Registros,
+				    CurrentPeriod = Periodo,
+				    Origen = Sql.Database(CurrentServer, CurrentDatabase, [Query="
+				                                                                SELECT ITMREF_0 'IdArticulo', 
+				                                                                SUM(PHYSTO_0) AS 'Cantidad', 
+				                                                                SUM(PHYSTO_0*AVC_0) AS 'Valor stock', 
+				                                                                MAX(AVC_0) AS 'Coste standar'
+				                                                                FROM " & CurrentSchema &".ITMMVT
+				                                                                GROUP BY ITMREF_0
+				                                                        "])
+				in
+				    Origen
+				```
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

@@ -5,7 +5,7 @@
       "ordinal": 0,
       "scrollPosition": {
         "x": 447.13162514020092,
-        "y": 7.4125995799561224
+        "y": 0
       },
       "nodes": [
         {
@@ -23,32 +23,6 @@
         },
         {
           "location": {
-            "x": 477.13580099472404,
-            "y": 603.75911279443085
-          },
-          "nodeIndex": "Lineas Contables Analiticas",
-          "nodeLineageTag": "b2d20480-d1b3-44ff-b07f-d4500fcb9545",
-          "size": {
-            "height": 300,
-            "width": 234
-          },
-          "zIndex": 6
-        },
-        {
-          "location": {
-            "x": 1177.1089008689789,
-            "y": 801.9650467070835
-          },
-          "nodeIndex": "Proveedor",
-          "nodeLineageTag": "9e0c0cb7-2c08-45c6-a25a-ec1acb666fd2",
-          "size": {
-            "height": 248,
-            "width": 234
-          },
-          "zIndex": 7
-        },
-        {
-          "location": {
             "x": 1538.526447461554,
             "y": 220.54023702256973
           },
@@ -59,45 +33,6 @@
             "width": 234
           },
           "zIndex": 8
-        },
-        {
-          "location": {
-            "x": 1826.1356034759158,
-            "y": 360.86684087010264
-          },
-          "nodeIndex": "Pedidos Cabecera",
-          "nodeLineageTag": "4fbc5562-a25c-4790-865f-e8257b9fb192",
-          "size": {
-            "height": 300,
-            "width": 234
-          },
-          "zIndex": 12
-        },
-        {
-          "location": {
-            "x": 2180.2288506747432,
-            "y": 25
-          },
-          "nodeIndex": "Pedidos Lineas",
-          "nodeLineageTag": "aa62e44d-c444-4ef7-a109-3a11dbb2a308",
-          "size": {
-            "height": 300,
-            "width": 234
-          },
-          "zIndex": 10
-        },
-        {
-          "location": {
-            "x": 2156.7678449578893,
-            "y": 597.04587465701024
-          },
-          "nodeIndex": "Recepciones",
-          "nodeLineageTag": "a4dd099a-9cf4-4f61-bf7b-4bf75c58b346",
-          "size": {
-            "height": 300,
-            "width": 234
-          },
-          "zIndex": 11
         },
         {
           "location": {
@@ -220,32 +155,6 @@
       "nodes": [
         {
           "location": {
-            "x": 0,
-            "y": 0
-          },
-          "nodeIndex": "Lineas Contables Analiticas",
-          "nodeLineageTag": "b2d20480-d1b3-44ff-b07f-d4500fcb9545",
-          "size": {
-            "height": 300,
-            "width": 234
-          },
-          "zIndex": 6
-        },
-        {
-          "location": {
-            "x": 317.74721671849983,
-            "y": 646.83844675142677
-          },
-          "nodeIndex": "Proveedor",
-          "nodeLineageTag": "9e0c0cb7-2c08-45c6-a25a-ec1acb666fd2",
-          "size": {
-            "height": 248,
-            "width": 234
-          },
-          "zIndex": 3
-        },
-        {
-          "location": {
             "x": 1335.2802028512422,
             "y": 223.02624800112292
           },
@@ -339,45 +248,6 @@
       "nodes": [
         {
           "location": {
-            "x": 298.36915202586232,
-            "y": 285.30645086875182
-          },
-          "nodeIndex": "Pedidos Cabecera",
-          "nodeLineageTag": "4fbc5562-a25c-4790-865f-e8257b9fb192",
-          "size": {
-            "height": 300,
-            "width": 234
-          },
-          "zIndex": 4
-        },
-        {
-          "location": {
-            "x": 0,
-            "y": 424.06129017375036
-          },
-          "nodeIndex": "Proveedor",
-          "nodeLineageTag": "9e0c0cb7-2c08-45c6-a25a-ec1acb666fd2",
-          "size": {
-            "height": 248,
-            "width": 234
-          },
-          "zIndex": 8
-        },
-        {
-          "location": {
-            "x": 441.74535896852524,
-            "y": 615.931654909449
-          },
-          "nodeIndex": "Pedidos Lineas",
-          "nodeLineageTag": "aa62e44d-c444-4ef7-a109-3a11dbb2a308",
-          "size": {
-            "height": 300,
-            "width": 234
-          },
-          "zIndex": 7
-        },
-        {
-          "location": {
             "x": 1143.3127126914574,
             "y": 378.13347166733416
           },
@@ -456,32 +326,6 @@
         "y": 0
       },
       "nodes": [
-        {
-          "location": {
-            "x": 318.70342601476904,
-            "y": 27.066934107190846
-          },
-          "nodeIndex": "Recepciones",
-          "nodeLineageTag": "a4dd099a-9cf4-4f61-bf7b-4bf75c58b346",
-          "size": {
-            "height": 300,
-            "width": 234
-          },
-          "zIndex": 3
-        },
-        {
-          "location": {
-            "x": 641.55161156375334,
-            "y": 0
-          },
-          "nodeIndex": "Proveedor",
-          "nodeLineageTag": "9e0c0cb7-2c08-45c6-a25a-ec1acb666fd2",
-          "size": {
-            "height": 248,
-            "width": 234
-          },
-          "zIndex": 7
-        },
         {
           "location": {
             "x": 1181.0696709680446,

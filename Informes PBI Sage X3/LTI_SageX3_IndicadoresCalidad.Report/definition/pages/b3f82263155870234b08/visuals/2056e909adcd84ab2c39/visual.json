@@ -1,0 +1,609 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
+  "name": "2056e909adcd84ab2c39",
+  "position": {
+    "x": 35.258764607679467,
+    "y": 411.35225375626044,
+    "z": 44000,
+    "height": 308.78130217028382,
+    "width": 1218.0300500834726,
+    "tabOrder": 43000
+  },
+  "visual": {
+    "visualType": "pivotTable",
+    "query": {
+      "queryState": {
+        "Rows": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Fecha"
+                    }
+                  },
+                  "Property": "Ano"
+                }
+              },
+              "queryRef": "Fecha.Ano",
+              "nativeQueryRef": "Ano",
+              "active": true
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Fecha"
+                    }
+                  },
+                  "Property": "Semestre"
+                }
+              },
+              "queryRef": "Fecha.Semestre",
+              "nativeQueryRef": "Semestre",
+              "active": false
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Fecha"
+                    }
+                  },
+                  "Property": "Mes"
+                }
+              },
+              "queryRef": "Fecha.Mes",
+              "nativeQueryRef": "Mes",
+              "active": false
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Fecha"
+                    }
+                  },
+                  "Property": "MesAno"
+                }
+              },
+              "queryRef": "Fecha.MesAno",
+              "nativeQueryRef": "MesAno",
+              "active": false
+            }
+          ]
+        },
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Metricas"
+                    }
+                  },
+                  "Property": "Count Intervenciones"
+                }
+              },
+              "queryRef": "Metricas.Count Intervenciones",
+              "nativeQueryRef": "C# Int.",
+              "displayName": "C# Int."
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Metricas"
+                    }
+                  },
+                  "Property": "Int En garantia"
+                }
+              },
+              "queryRef": "Metricas.Count Int En garantia",
+              "nativeQueryRef": "En garantia",
+              "displayName": "En garantia"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Metricas"
+                    }
+                  },
+                  "Property": "Int Sin garantia"
+                }
+              },
+              "queryRef": "Metricas.Count Int Sin garantia",
+              "nativeQueryRef": "Sin garantia",
+              "displayName": "Sin garantia"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Metricas"
+                    }
+                  },
+                  "Property": "Int En garantia LTI"
+                }
+              },
+              "queryRef": "Metricas.Count Int En garantia LTI",
+              "nativeQueryRef": "En garantia LTI",
+              "displayName": "En garantia LTI"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Metricas"
+                    }
+                  },
+                  "Property": "Int En garantia Clientes"
+                }
+              },
+              "queryRef": "Metricas.Count Int En garantia LTClientesI",
+              "nativeQueryRef": "En garantia Clientes",
+              "displayName": "En garantia Clientes"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Metricas"
+                    }
+                  },
+                  "Property": "Int Instalacion"
+                }
+              },
+              "queryRef": "Metricas.Int Instalacion",
+              "nativeQueryRef": "Instalacion",
+              "displayName": "Instalacion"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Metricas"
+                    }
+                  },
+                  "Property": "Int contrato"
+                }
+              },
+              "queryRef": "Metricas.Int contrato",
+              "nativeQueryRef": "Contrato",
+              "displayName": "Contrato"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Metricas"
+                    }
+                  },
+                  "Property": "Int revision"
+                }
+              },
+              "queryRef": "Metricas.Int revision",
+              "nativeQueryRef": "Revision",
+              "displayName": "Revision"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Metricas"
+                    }
+                  },
+                  "Property": "Int reincidencia"
+                }
+              },
+              "queryRef": "Metricas.Int reincidencia",
+              "nativeQueryRef": "Reincidencia",
+              "displayName": "Reincidencia"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Metricas"
+                    }
+                  },
+                  "Property": "Int Contrato Standard"
+                }
+              },
+              "queryRef": "Metricas.Int Contrato Standard",
+              "nativeQueryRef": "Cont. Standard",
+              "displayName": "Cont. Standard"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Metricas"
+                    }
+                  },
+                  "Property": "Int Contrato FullRisk"
+                }
+              },
+              "queryRef": "Metricas.Int Contrato FullRisk",
+              "nativeQueryRef": "Cont. FullRisk",
+              "displayName": "Cont. FullRisk"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Metricas"
+                    }
+                  },
+                  "Property": "% en Garantia"
+                }
+              },
+              "queryRef": "Metricas.% en Garantia",
+              "nativeQueryRef": "% en Garantia"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Metricas"
+                    }
+                  },
+                  "Property": "% Reincidencias averias"
+                }
+              },
+              "queryRef": "Metricas.% Reincidencias averias",
+              "nativeQueryRef": "% Reincidencias averias"
+            }
+          ]
+        }
+      }
+    },
+    "expansionStates": [
+      {
+        "roles": [
+          "Rows"
+        ],
+        "levels": [
+          {
+            "queryRefs": [
+              "Fecha.Ano"
+            ],
+            "isCollapsed": true,
+            "identityKeys": [
+              {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Fecha"
+                    }
+                  },
+                  "Property": "Ano"
+                }
+              }
+            ],
+            "isPinned": true
+          },
+          {
+            "queryRefs": [
+              "Fecha.Semestre"
+            ],
+            "isCollapsed": true,
+            "identityKeys": [
+              {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Fecha"
+                    }
+                  },
+                  "Property": "Semestre"
+                }
+              }
+            ],
+            "isPinned": true
+          },
+          {
+            "queryRefs": [
+              "Fecha.Mes"
+            ],
+            "isCollapsed": true,
+            "identityKeys": [
+              {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Fecha"
+                    }
+                  },
+                  "Property": "Mes"
+                }
+              }
+            ],
+            "isPinned": true
+          },
+          {
+            "queryRefs": [
+              "Fecha.MesAno"
+            ],
+            "isCollapsed": true,
+            "identityKeys": [
+              {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Fecha"
+                    }
+                  },
+                  "Property": "MesAno"
+                }
+              }
+            ],
+            "isPinned": true
+          }
+        ],
+        "root": {}
+      }
+    ],
+    "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "05d8fcd9c87d1ba8f837",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Fecha"
+              }
+            },
+            "Property": "Ano"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "10059eba33e10e2b5f39",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Fecha"
+              }
+            },
+            "Property": "Semestre"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "83382d8ca1d9c75d57f0",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Fecha"
+              }
+            },
+            "Property": "Mes"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "e30b157b833e43b2a7d5",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Fecha"
+              }
+            },
+            "Property": "MesAno"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "682481b34295c342c752",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Metricas"
+              }
+            },
+            "Property": "Count Intervenciones"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "d135a63d1b97eda2cb8d",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Metricas"
+              }
+            },
+            "Property": "Int En garantia"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "1a0963933091a5407f94",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Metricas"
+              }
+            },
+            "Property": "Int Sin garantia"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "69f71ad444383b5f2aef",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Metricas"
+              }
+            },
+            "Property": "Int En garantia LTI"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "8e5af9c66d2dab3b89e9",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Metricas"
+              }
+            },
+            "Property": "Int En garantia Clientes"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "106dc3ba82262655c8dd",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Metricas"
+              }
+            },
+            "Property": "Int Instalacion"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "47268898f79dd2b9d329",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Metricas"
+              }
+            },
+            "Property": "Int contrato"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "897ea16d7b8e82bda63e",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Metricas"
+              }
+            },
+            "Property": "Int revision"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "e4c62c1d609208eb804d",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Metricas"
+              }
+            },
+            "Property": "Int reincidencia"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "40b932e1483721461472",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Metricas"
+              }
+            },
+            "Property": "Int Contrato Standard"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "4fd2647a5f6e9e38c2a0",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Metricas"
+              }
+            },
+            "Property": "Int Contrato FullRisk"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "8b8d69e357699b114e6e",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Metricas"
+              }
+            },
+            "Property": "% en Garantia"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "dc8408d967121d6844c8",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Metricas"
+              }
+            },
+            "Property": "% Reincidencias averias"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
+  }
+}

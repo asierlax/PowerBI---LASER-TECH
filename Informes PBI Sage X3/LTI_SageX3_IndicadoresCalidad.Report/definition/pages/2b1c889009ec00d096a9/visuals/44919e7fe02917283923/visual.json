@@ -1,0 +1,294 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
+  "name": "44919e7fe02917283923",
+  "position": {
+    "x": 47.255216693418944,
+    "y": 121.21990369181381,
+    "z": 46000,
+    "height": 238.33065810593902,
+    "width": 1200.8988764044943,
+    "tabOrder": 46000
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Albaranes"
+                    }
+                  },
+                  "Property": "Sociedad"
+                }
+              },
+              "queryRef": "Albaranes.Sociedad",
+              "nativeQueryRef": "Sociedad"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Albaranes"
+                    }
+                  },
+                  "Property": "Planta"
+                }
+              },
+              "queryRef": "Albaranes.Planta",
+              "nativeQueryRef": "Planta"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Albaranes"
+                    }
+                  },
+                  "Property": "Tipo entrega"
+                }
+              },
+              "queryRef": "Albaranes.Tipo entrega",
+              "nativeQueryRef": "Tipo entrega"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Albaranes"
+                    }
+                  },
+                  "Property": "Num. Entrega"
+                }
+              },
+              "queryRef": "Albaranes.Num. Entrega",
+              "nativeQueryRef": "Num. Entrega"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Albaranes"
+                    }
+                  },
+                  "Property": "Fecha"
+                }
+              },
+              "queryRef": "Albaranes.Fecha",
+              "nativeQueryRef": "Fecha"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Albaranes"
+                    }
+                  },
+                  "Property": "Num. Pedido"
+                }
+              },
+              "queryRef": "Albaranes.Num. Pedido",
+              "nativeQueryRef": "Num. Pedido"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Albaranes"
+                    }
+                  },
+                  "Property": "Cliente"
+                }
+              },
+              "queryRef": "Albaranes.Cliente",
+              "nativeQueryRef": "Cliente"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Albaranes"
+                    }
+                  },
+                  "Property": "Razon Social"
+                }
+              },
+              "queryRef": "Albaranes.Razon Social",
+              "nativeQueryRef": "Razon Social"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Albaranes"
+                    }
+                  },
+                  "Property": "Cliente grupo"
+                }
+              },
+              "queryRef": "Albaranes.Cliente grupo",
+              "nativeQueryRef": "Cliente grupo"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Albaranes"
+                    }
+                  },
+                  "Property": "Causa transporte"
+                }
+              },
+              "queryRef": "Albaranes.Causa transporte",
+              "nativeQueryRef": "Causa transporte"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Albaranes"
+                    }
+                  },
+                  "Property": "Dir. entrega"
+                }
+              },
+              "queryRef": "Albaranes.Dir. entrega",
+              "nativeQueryRef": "Dir. entrega"
+            },
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Albaranes"
+                        }
+                      },
+                      "Property": "Linea"
+                    }
+                  },
+                  "Function": 0
+                }
+              },
+              "queryRef": "Sum(Albaranes.Linea)",
+              "nativeQueryRef": "Linea"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Albaranes"
+                    }
+                  },
+                  "Property": "Cod. articulo"
+                }
+              },
+              "queryRef": "Albaranes.Cod. articulo",
+              "nativeQueryRef": "Cod. articulo"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Albaranes"
+                    }
+                  },
+                  "Property": "Descripcion"
+                }
+              },
+              "queryRef": "Albaranes.Descripcion",
+              "nativeQueryRef": "Descripcion"
+            },
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Albaranes"
+                        }
+                      },
+                      "Property": "Cantidad US"
+                    }
+                  },
+                  "Function": 0
+                }
+              },
+              "queryRef": "Sum(Albaranes.Cantidad US)",
+              "nativeQueryRef": "Cantidad US"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Albaranes"
+                    }
+                  },
+                  "Property": "Unidad stock"
+                }
+              },
+              "queryRef": "Albaranes.Unidad stock",
+              "nativeQueryRef": "Unidad stock"
+            },
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Albaranes"
+                        }
+                      },
+                      "Property": "Precio neto"
+                    }
+                  },
+                  "Function": 0
+                }
+              },
+              "queryRef": "Sum(Albaranes.Precio neto)",
+              "nativeQueryRef": "Precio neto"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Albaranes"
+                  }
+                },
+                "Property": "Fecha"
+              }
+            },
+            "direction": "Ascending"
+          }
+        ]
+      }
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

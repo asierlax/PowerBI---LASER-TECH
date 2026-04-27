@@ -1,0 +1,128 @@
+table Registros_Year
+	lineageTag: f492c6de-2e02-468f-8ec4-457031129351
+
+	column PERIODO
+		dataType: int64
+		formatString: 0
+		lineageTag: 90a00489-2401-4d0f-a623-e87372bbada7
+		summarizeBy: sum
+		sourceColumn: PERIODO
+
+		annotation SummarizationSetBy = Automatic
+
+	column REGISTROS
+		dataType: int64
+		formatString: #,0
+		lineageTag: 10a8c708-5420-4af8-9d3f-f1eeddcb0b16
+		summarizeBy: sum
+		sourceColumn: REGISTROS
+
+		annotation SummarizationSetBy = Automatic
+
+	column ACUMULADO
+		dataType: int64
+		formatString: #,0
+		lineageTag: 70d6f301-5368-4006-a093-8455c4f28d98
+		summarizeBy: sum
+		sourceColumn: ACUMULADO
+
+		annotation SummarizationSetBy = Automatic
+
+	column MAX_REGISTROS
+		dataType: int64
+		formatString: #,0
+		lineageTag: 0233ac0b-44e8-4690-a5ce-bc9bac8d9773
+		summarizeBy: sum
+		sourceColumn: MAX_REGISTROS
+
+		annotation SummarizationSetBy = Automatic
+
+	column PERIODO_SELECCIONADO
+		dataType: string
+		lineageTag: c488e37b-90b9-42f6-b5cd-7ca65aa117da
+		summarizeBy: none
+		sourceColumn: PERIODO_SELECCIONADO
+
+		annotation SummarizationSetBy = Automatic
+
+	column PERIODO_RECOMENDADO
+		dataType: int64
+		formatString: 0
+		lineageTag: 170bc578-e5c9-4c81-b670-dc5180675abb
+		summarizeBy: sum
+		sourceColumn: PERIODO_RECOMENDADO
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Registros_Year-3d47424c-eff7-4b13-aba9-40bac2cc7254 = m
+		mode: import
+		source = ```
+				let
+				    CurrentServer = Instancia,
+				    CurrentDatabase = BaseDeDatos,
+				    CurrentSchema = Esquema,
+				    CurrentRows = Registros,
+				    CurrentPeriod = Periodo,
+				    Origen = Sql.Database(CurrentServer, CurrentDatabase, [Query="
+				
+				
+				DECLARE @ANO1 VARCHAR(20)
+				DECLARE @ANO2 int
+				set @ANO1='"& CurrentPeriod &"'
+				set @ANO2=(SELECT MIN(PERIODO) FROM (	SELECT YEAR(ACCDAT_0) AS PERIODO,COUNT(*) AS REGISTROS,
+														SUM(COUNT(*)) OVER (ORDER BY YEAR(ACCDAT_0) DESC) AS ACUMULADO
+														FROM " & CurrentSchema &".SINVOICED as SED left join " & CurrentSchema &".SINVOICE AS SE on SED.NUM_0 = SE.NUM_0
+														where SE.ORIMOD_0=5 
+														GROUP BY YEAR(ACCDAT_0)
+														) A	WHERE ACUMULADO <=" & CurrentRows &")
+														
+				
+				IF @ANO1='Periodo automático'
+				
+				SELECT 
+				YEAR(ACCDAT_0) AS PERIODO,
+				COUNT(*) AS REGISTROS,
+				SUM(COUNT(*)) OVER (ORDER BY YEAR(ACCDAT_0) DESC) AS ACUMULADO,
+				@ANO1 as PERIODO_SELECCIONADO,
+				@ANO2 as PERIODO_RECOMENDADO,
+				" & CurrentRows &" as MAX_REGISTROS
+				
+				FROM " & CurrentSchema &".SINVOICED as SED left join " & CurrentSchema &".SINVOICE AS SE on SED.NUM_0 = SE.NUM_0
+				where SE.ORIMOD_0=5 AND YEAR(ACCDAT_0)>=@ANO2
+				
+				GROUP BY YEAR(ACCDAT_0)
+				ORDER BY YEAR(ACCDAT_0) DESC
+				
+				
+				ELSE
+				
+				
+				SELECT 
+				YEAR(ACCDAT_0) AS PERIODO,
+				COUNT(*) AS REGISTROS,
+				SUM(COUNT(*)) OVER (ORDER BY YEAR(ACCDAT_0) DESC) AS ACUMULADO,
+				@ANO1 as PERIODO_SELECCIONADO,
+				@ANO2 as PERIODO_RECOMENDADO,
+				" & CurrentRows &" as MAX_REGISTROS
+				
+				FROM " & CurrentSchema &".SINVOICED as SED left join " & CurrentSchema &".SINVOICE AS SE on SED.NUM_0 = SE.NUM_0
+				where SE.ORIMOD_0=5 AND YEAR(ACCDAT_0)>=@ANO1 
+				
+				GROUP BY YEAR(ACCDAT_0)
+				ORDER BY YEAR(ACCDAT_0) DESC
+				
+				
+				
+				        "
+				                                                          ]),
+				                                                          
+				 #"Changed Type" = Table.TransformColumnTypes(Origen,{{"MAX_REGISTROS", Int64.Type}})
+				   
+				in
+				    #"Changed Type"
+				```
+
+	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navigation
+

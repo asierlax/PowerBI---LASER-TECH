@@ -1,0 +1,83 @@
+table Representantes
+	lineageTag: 9e54ec5a-7c17-4b59-a1d0-d0d9e0788d20
+
+	column IdDireccion
+		dataType: string
+		lineageTag: a8c889db-6e5d-4ecd-918d-886a8dae76b3
+		summarizeBy: none
+		sourceColumn: IdDireccion
+
+		annotation SummarizationSetBy = Automatic
+
+	column Comercial
+		dataType: string
+		lineageTag: 53b55628-a645-4c07-9db9-168cf62b3095
+		summarizeBy: none
+		sourceColumn: Comercial
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Nombre Comercial'
+		dataType: string
+		lineageTag: 8067e875-4283-4c13-8c31-09af30a878de
+		summarizeBy: none
+		sourceColumn: Nombre Comercial
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Codigo Usuario'
+		dataType: string
+		lineageTag: 144663a6-8391-4e1e-a651-5b16fbdd57ea
+		summarizeBy: none
+		sourceColumn: Codigo Usuario
+
+		annotation SummarizationSetBy = Automatic
+
+	column Empresa
+		dataType: string
+		lineageTag: 767f38bc-18cd-4b74-a5f3-d83ae454e30c
+		summarizeBy: none
+		sourceColumn: Empresa
+
+		annotation SummarizationSetBy = Automatic
+
+	column Moneda
+		dataType: string
+		lineageTag: ed7df226-c6d5-42d4-80c1-02777aaa6645
+		summarizeBy: none
+		sourceColumn: Moneda
+
+		annotation SummarizationSetBy = Automatic
+
+	column Direccion
+		dataType: string
+		lineageTag: 8969d036-b55d-463a-a963-62618c2efadb
+		summarizeBy: none
+		sourceColumn: Direccion
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Representantes-66b70925-f506-4382-b29e-82b103a88725 = m
+		mode: import
+		source =
+				let
+				    CurrentServer = Instancia,
+				    CurrentDatabase = BaseDeDatos,
+				    CurrentSchema = Esquema,
+				    Origen = Sql.Database(CurrentServer, CurrentDatabase, [Query="
+				                                                                SELECT  REPNUM_0 AS 'Comercial',
+				                                                                        REPNAM_0 AS 'Nombre Comercial',
+				                                                                        AUSNUM_0 AS 'Codigo Usuario',
+				                                                                        CFY_0 AS 'Empresa',
+				                                                                        CUR_0 AS 'Moneda',
+				                                                                        BPAADD_0 AS 'Direccion',
+				                                                                        (REPNUM_0+'-'+BPAADD_0) AS 'IdDireccion'
+				                                                                FROM " & CurrentSchema & ".SALESREP"
+				                                                          ])
+				in
+				    #"Origen"
+
+	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navigation
+

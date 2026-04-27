@@ -1,0 +1,165 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/report/3.0.0/schema.json",
+  "themeCollection": {
+    "baseTheme": {
+      "name": "CY25SU11",
+      "reportVersionAtImport": {
+        "visual": "2.4.0",
+        "report": "3.0.0",
+        "page": "2.3.0"
+      },
+      "type": "SharedResources"
+    },
+    "customTheme": {
+      "name": "AccessibleOrchid",
+      "reportVersionAtImport": {
+        "visual": "2.4.0",
+        "report": "3.0.0",
+        "page": "2.3.0"
+      },
+      "type": "SharedResources"
+    }
+  },
+  "objects": {
+    "section": [
+      {
+        "properties": {
+          "verticalAlignment": {
+            "expr": {
+              "Literal": {
+                "Value": "'Top'"
+              }
+            }
+          }
+        }
+      }
+    ],
+    "outspacePane": [
+      {
+        "properties": {
+          "expanded": {
+            "expr": {
+              "Literal": {
+                "Value": "true"
+              }
+            }
+          }
+        }
+      }
+    ]
+  },
+  "resourcePackages": [
+    {
+      "name": "BoxandWhiskerByMAQ1823AD39DT234AB532063E128AX",
+      "type": "CustomVisual",
+      "items": [
+        {
+          "name": "BoxandWhiskerByMAQ1823AD39DT234AB532063E128AX.pbiviz.json",
+          "path": "BoxandWhiskerByMAQ1823AD39DT234AB532063E128AX.pbiviz.json",
+          "type": "CustomVisualMetadata"
+        }
+      ]
+    },
+    {
+      "name": "RegisteredResources",
+      "type": "RegisteredResources",
+      "items": [
+        {
+          "name": "arrow-go-back-line5550192182353129.png",
+          "path": "arrow-go-back-line5550192182353129.png",
+          "type": "Image"
+        },
+        {
+          "name": "Astrolab_Logo16557831475522478.png",
+          "path": "Astrolab_Logo16557831475522478.png",
+          "type": "Image"
+        },
+        {
+          "name": "Astrolab_Logo6270442293727945.png",
+          "path": "Astrolab_Logo6270442293727945.png",
+          "type": "Image"
+        },
+        {
+          "name": "layout-masonry-fill5303090304201044.png",
+          "path": "layout-masonry-fill5303090304201044.png",
+          "type": "Image"
+        },
+        {
+          "name": "line-chart-line3934097141701425.png",
+          "path": "line-chart-line3934097141701425.png",
+          "type": "Image"
+        },
+        {
+          "name": "LOGO-VERNE-TECHNOLOGY-GROUP-302814750993733517.png",
+          "path": "LOGO-VERNE-TECHNOLOGY-GROUP-302814750993733517.png",
+          "type": "Image"
+        },
+        {
+          "name": "money-euro-circle-line045772762747405826.png",
+          "path": "money-euro-circle-line045772762747405826.png",
+          "type": "Image"
+        },
+        {
+          "name": "share-line29147961854029747.png",
+          "path": "share-line29147961854029747.png",
+          "type": "Image"
+        },
+        {
+          "name": "shopping-cart-2-line03840442886383544.png",
+          "path": "shopping-cart-2-line03840442886383544.png",
+          "type": "Image"
+        },
+        {
+          "name": "team-fill_(2)9974516899529384.png",
+          "path": "team-fill_(2)9974516899529384.png",
+          "type": "Image"
+        },
+        {
+          "name": "user-star-line42592953811018397.png",
+          "path": "user-star-line42592953811018397.png",
+          "type": "Image"
+        },
+        {
+          "name": "logo_web_lti33305103396078517.png",
+          "path": "logo_web_lti33305103396078517.png",
+          "type": "Image"
+        },
+        {
+          "name": "logo_web_lti20982905184077694.png",
+          "path": "logo_web_lti20982905184077694.png",
+          "type": "Image"
+        }
+      ]
+    },
+    {
+      "name": "SharedResources",
+      "type": "SharedResources",
+      "items": [
+        {
+          "name": "CY25SU11",
+          "path": "BaseThemes/CY25SU11.json",
+          "type": "BaseTheme"
+        },
+        {
+          "name": "AccessibleOrchid",
+          "path": "BuiltInThemes/AccessibleOrchid.json",
+          "type": "CustomTheme"
+        }
+      ]
+    }
+  ],
+  "settings": {
+    "useStylableVisualContainerHeader": true,
+    "exportDataMode": "AllowSummarized",
+    "defaultDrillFilterOtherVisuals": true,
+    "allowChangeFilterTypes": true,
+    "useEnhancedTooltips": true
+  },
+  "slowDataSourceSettings": {
+    "isCrossHighlightingDisabled": false,
+    "isSlicerSelectionsButtonEnabled": false,
+    "isFilterSelectionsButtonEnabled": false,
+    "isFieldWellButtonEnabled": false,
+    "isApplyAllButtonEnabled": false
+  }
+}

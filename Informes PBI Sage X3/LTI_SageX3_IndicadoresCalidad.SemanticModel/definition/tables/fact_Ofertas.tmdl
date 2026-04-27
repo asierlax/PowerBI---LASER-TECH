@@ -1,0 +1,186 @@
+table fact_Ofertas
+	lineageTag: 18df90da-f246-4542-b3c5-b79ef536b82d
+
+	column 'Num presupuesto'
+		dataType: string
+		lineageTag: ca10a192-e5cb-476a-ad20-0f9a20055226
+		summarizeBy: none
+		sourceColumn: Num presupuesto
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Num proforma'
+		dataType: string
+		lineageTag: 96aedfd5-9e68-4e8b-9eca-4d20cb73f445
+		summarizeBy: none
+		sourceColumn: Num proforma
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Fecha creacion'
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 0c0c8536-4a5c-46ea-9578-faa84c2852e7
+		summarizeBy: none
+		sourceColumn: Fecha creacion
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Fecha oferta'
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: a0f34f18-228f-49c0-a58f-d180d317ebd0
+		summarizeBy: none
+		sourceColumn: Fecha oferta
+
+		annotation SummarizationSetBy = Automatic
+
+	column IdCliente
+		dataType: string
+		lineageTag: 42922e2c-640a-4b27-a0fc-07d0da337b24
+		summarizeBy: none
+		sourceColumn: IdCliente
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Razon Social'
+		dataType: string
+		lineageTag: fd833e22-7e04-4044-abe2-6c4a01f0f7b5
+		summarizeBy: none
+		sourceColumn: Razon Social
+
+		annotation SummarizationSetBy = Automatic
+
+	column Referencia
+		dataType: string
+		lineageTag: 0aa0b11e-a499-44a7-9de9-0e933b4c5e32
+		summarizeBy: none
+		sourceColumn: Referencia
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Modo aceptacion'
+		dataType: string
+		lineageTag: 8874c4fb-bb4e-47cc-8f1c-8d1ac0e4d056
+		summarizeBy: none
+		sourceColumn: Modo aceptacion
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Importe BI presupuesto'
+		dataType: double
+		lineageTag: 1370cbfd-bb6e-42df-be5b-6fd963bdc92c
+		summarizeBy: sum
+		sourceColumn: Importe BI presupuesto
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Importe II presupuesto'
+		dataType: double
+		lineageTag: b9e01043-be06-441b-a425-6f49001b860b
+		summarizeBy: sum
+		sourceColumn: Importe II presupuesto
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Categoria cliente'
+		dataType: string
+		lineageTag: d168574a-0895-48e1-b85e-a2f0714f08c2
+		summarizeBy: none
+		sourceColumn: Categoria cliente
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Num pedido'
+		dataType: string
+		lineageTag: 6dc098a1-5a00-4b80-8a75-5ba89f63b756
+		summarizeBy: none
+		sourceColumn: Num pedido
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Num entrega'
+		dataType: string
+		lineageTag: 700d6c29-949d-4a08-84ad-eb95fe0ecfa0
+		summarizeBy: none
+		sourceColumn: Num entrega
+
+		annotation SummarizationSetBy = Automatic
+
+	column IdArticulo
+		dataType: string
+		lineageTag: f2b7b5a2-d211-4a6e-b5f2-48f1fe0fcd23
+		summarizeBy: none
+		sourceColumn: IdArticulo
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Descripcion linea'
+		dataType: string
+		lineageTag: 982e3841-881d-4e77-bf55-c50f62537c12
+		summarizeBy: none
+		sourceColumn: Descripcion linea
+
+		annotation SummarizationSetBy = Automatic
+
+	column Cantidad
+		dataType: double
+		lineageTag: 484e78dd-3bb4-4332-9127-43cb43bebbdf
+		summarizeBy: sum
+		sourceColumn: Cantidad
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Unidad stock'
+		dataType: string
+		lineageTag: 6025e195-bbaf-405e-9002-0d4ed8ad61a1
+		summarizeBy: none
+		sourceColumn: Unidad stock
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Precio neto'
+		dataType: double
+		lineageTag: 2bfb1ae7-ed2b-4cf8-814c-5e57841b17f2
+		summarizeBy: sum
+		sourceColumn: Precio neto
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Importe linea'
+		dataType: double
+		lineageTag: 271e9e31-4c04-4178-848a-4dd2153b4e0f
+		summarizeBy: sum
+		sourceColumn: Importe linea
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Categoria articulo'
+		dataType: string
+		lineageTag: 42155703-9c2c-42d8-bfc2-74aa04f748ed
+		summarizeBy: none
+		sourceColumn: Categoria articulo
+
+		annotation SummarizationSetBy = Automatic
+
+	partition fact_Ofertas = m
+		mode: import
+		source =
+				let
+				    Origen = PowerBI.Dataflows(null),
+				    #"cd25238f-048e-4509-ab9f-29f918c14d4c" = Origen{[workspaceId="cd25238f-048e-4509-ab9f-29f918c14d4c"]}[Data],
+				    #"30301d97-998a-4d39-af0b-bb343b5472a7" = #"cd25238f-048e-4509-ab9f-29f918c14d4c"{[dataflowId="30301d97-998a-4d39-af0b-bb343b5472a7"]}[Data],
+				    fact_Ofertas1 = #"30301d97-998a-4d39-af0b-bb343b5472a7"{[entity="fact_Ofertas"]}[Data]
+				in
+				    fact_Ofertas1
+

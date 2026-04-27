@@ -1,10 +1,10 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.7.0/schema.json",
   "name": "8cc423387039ede55d4d",
   "position": {
     "x": 112,
     "y": 12,
-    "z": 1000,
+    "z": 2000,
     "height": 35,
     "width": 610,
     "tabOrder": 0
@@ -65,7 +65,7 @@
                             "From": [
                               {
                                 "Name": "p",
-                                "Entity": "Proveedor",
+                                "Entity": "dim_Proveedores",
                                 "Type": 0
                               }
                             ],
@@ -79,7 +79,7 @@
                                   },
                                   "Property": "Proveedor"
                                 },
-                                "Name": "Proveedor.Proveedor"
+                                "Name": "dim_Proveedores.Proveedor"
                               },
                               {
                                 "Column": {
@@ -90,7 +90,7 @@
                                   },
                                   "Property": "ProveedorID"
                                 },
-                                "Name": "Proveedor.ProveedorID"
+                                "Name": "dim_Proveedores.ProveedorID"
                               },
                               {
                                 "Column": {
@@ -101,7 +101,7 @@
                                   },
                                   "Property": "Tipo Proveedor"
                                 },
-                                "Name": "Proveedor.Tipo Proveedor"
+                                "Name": "dim_Proveedores.Tipo Proveedor"
                               },
                               {
                                 "Column": {
@@ -112,7 +112,7 @@
                                   },
                                   "Property": "Categoria"
                                 },
-                                "Name": "Proveedor.Categoria"
+                                "Name": "dim_Proveedores.Categoria"
                               },
                               {
                                 "Column": {
@@ -123,7 +123,7 @@
                                   },
                                   "Property": "Categoria ABC"
                                 },
-                                "Name": "Proveedor.Categoria ABC"
+                                "Name": "dim_Proveedores.Categoria ABC"
                               },
                               {
                                 "Column": {
@@ -134,7 +134,7 @@
                                   },
                                   "Property": "Direccion"
                                 },
-                                "Name": "Proveedor.Direccion"
+                                "Name": "dim_Proveedores.Direccion"
                               },
                               {
                                 "Column": {
@@ -145,7 +145,7 @@
                                   },
                                   "Property": "IdDireccion"
                                 },
-                                "Name": "Proveedor.IdDireccion"
+                                "Name": "dim_Proveedores.IdDireccion"
                               }
                             ],
                             "OrderBy": [
@@ -166,7 +166,7 @@
                           }
                         }
                       },
-                      "Property": "Proveedor.Proveedor"
+                      "Property": "dim_Proveedores.Proveedor"
                     }
                   },
                   "Function": 3
