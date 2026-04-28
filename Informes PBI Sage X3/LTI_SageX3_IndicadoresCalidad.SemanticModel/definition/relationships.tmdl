@@ -77,3 +77,11 @@ relationship ff8fc771-6b50-6a5a-83d0-d57b37e74363
 	fromColumn: DocumentosLinea.'Comercial 1'
 	toColumn: Representantes.Comercial
 
+relationship 0d070f21-1903-57f5-890d-3c420ab281a9
+	fromColumn: fact_Intervenciones.'Fecha intervencion'
+	toColumn: dim_Calendario.Fecha
+
+relationship fb59f612-a000-26e6-628b-503fd6623bd7
+	fromColumn: fact_Intervenciones.'Codigo cliente'
+	toColumn: dim_Clientes.IdCliente
+

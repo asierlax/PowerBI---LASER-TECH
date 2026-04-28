@@ -1,5 +1,5 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.5.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.8.0/schema.json",
   "name": "fcfd63e9dd6093e81ec5",
   "position": {
     "x": 23.505843071786312,
@@ -20,272 +20,255 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Intervenciones"
+                      "Entity": "fact_Intervenciones"
                     }
                   },
                   "Property": "Solicitud servicio"
                 }
               },
-              "queryRef": "Intervenciones.Solicitud servicio",
-              "nativeQueryRef": "Solicitud servicio"
+              "queryRef": "fact_Intervenciones.Solicitud servicio",
+              "nativeQueryRef": "Solicitud servicio1"
             },
             {
               "field": {
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Intervenciones"
+                      "Entity": "fact_Intervenciones"
                     }
                   },
                   "Property": "Intervencion"
                 }
               },
-              "queryRef": "Intervenciones.Intervencion",
-              "nativeQueryRef": "Intervencion"
+              "queryRef": "fact_Intervenciones.Intervencion",
+              "nativeQueryRef": "Intervencion1"
             },
             {
               "field": {
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Intervenciones"
+                      "Entity": "fact_Intervenciones"
                     }
                   },
                   "Property": "Fecha intervencion"
                 }
               },
-              "queryRef": "Intervenciones.Fecha intervencion",
-              "nativeQueryRef": "Fecha intervencion"
+              "queryRef": "fact_Intervenciones.Fecha intervencion",
+              "nativeQueryRef": "Fecha intervencion1"
             },
             {
               "field": {
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Intervenciones"
+                      "Entity": "fact_Intervenciones"
                     }
                   },
                   "Property": "Cliente"
                 }
               },
-              "queryRef": "Intervenciones.Cliente",
-              "nativeQueryRef": "Cliente"
+              "queryRef": "fact_Intervenciones.Cliente",
+              "nativeQueryRef": "Cliente1"
             },
             {
               "field": {
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Intervenciones"
+                      "Entity": "fact_Intervenciones"
                     }
                   },
                   "Property": "Anomalia"
                 }
               },
-              "queryRef": "Intervenciones.Anomalia",
-              "nativeQueryRef": "Anomalia"
+              "queryRef": "fact_Intervenciones.Anomalia",
+              "nativeQueryRef": "Anomalia1"
             },
             {
               "field": {
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Intervenciones"
+                      "Entity": "fact_Intervenciones"
                     }
                   },
                   "Property": "Id Parque"
                 }
               },
-              "queryRef": "Intervenciones.Id Parque",
-              "nativeQueryRef": "Id Parque"
+              "queryRef": "fact_Intervenciones.Id Parque",
+              "nativeQueryRef": "Id Parque1"
             },
             {
               "field": {
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Intervenciones"
+                      "Entity": "fact_Intervenciones"
                     }
                   },
                   "Property": "Nº serie maquina"
                 }
               },
-              "queryRef": "Intervenciones.Nº serie maquina",
-              "nativeQueryRef": "Nº serie maquina"
+              "queryRef": "fact_Intervenciones.Nº serie maquina",
+              "nativeQueryRef": "Nº serie maquina1"
             },
             {
               "field": {
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Intervenciones"
+                      "Entity": "fact_Intervenciones"
                     }
                   },
                   "Property": "Motivo"
                 }
               },
-              "queryRef": "Intervenciones.Motivo",
-              "nativeQueryRef": "Motivo"
+              "queryRef": "fact_Intervenciones.Motivo",
+              "nativeQueryRef": "Motivo1"
             },
             {
               "field": {
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Intervenciones"
+                      "Entity": "fact_Intervenciones"
                     }
                   },
                   "Property": "Modo comunicacion"
                 }
               },
-              "queryRef": "Intervenciones.Modo comunicacion",
-              "nativeQueryRef": "Modo comunicacion"
+              "queryRef": "fact_Intervenciones.Modo comunicacion",
+              "nativeQueryRef": "Modo comunicacion1"
             },
             {
               "field": {
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Intervenciones"
+                      "Entity": "fact_Intervenciones"
                     }
                   },
                   "Property": "Tipo contrato"
                 }
               },
-              "queryRef": "Intervenciones.Tipo contrato",
-              "nativeQueryRef": "Tipo contrato"
+              "queryRef": "fact_Intervenciones.Tipo contrato",
+              "nativeQueryRef": "Tipo contrato1"
             },
             {
               "field": {
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Intervenciones"
+                      "Entity": "fact_Intervenciones"
                     }
                   },
                   "Property": "Lugar de realizacion"
                 }
               },
-              "queryRef": "Intervenciones.Lugar de realizacion",
-              "nativeQueryRef": "Lugar de realizacion"
+              "queryRef": "fact_Intervenciones.Lugar de realizacion",
+              "nativeQueryRef": "Lugar de realizacion1"
             },
             {
               "field": {
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Intervenciones"
+                      "Entity": "fact_Intervenciones"
                     }
                   },
                   "Property": "Sector"
                 }
               },
-              "queryRef": "Intervenciones.Sector",
-              "nativeQueryRef": "Sector"
+              "queryRef": "fact_Intervenciones.Sector",
+              "nativeQueryRef": "Sector1"
             },
             {
               "field": {
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Intervenciones"
+                      "Entity": "fact_Intervenciones"
                     }
                   },
                   "Property": "Fam est 2 SS"
                 }
               },
-              "queryRef": "Intervenciones.Fam est 2 SS",
-              "nativeQueryRef": "Fam est 2 SS"
+              "queryRef": "fact_Intervenciones.Fam est 2 SS",
+              "nativeQueryRef": "Fam est 2 SS1"
             },
             {
               "field": {
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Intervenciones"
+                      "Entity": "fact_Intervenciones"
                     }
                   },
                   "Property": "Int. con garantia"
                 }
               },
-              "queryRef": "Intervenciones.Int. con garantia",
-              "nativeQueryRef": "Int. con garantia"
+              "queryRef": "fact_Intervenciones.Int. con garantia",
+              "nativeQueryRef": "Int. con garantia1"
             },
             {
               "field": {
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Intervenciones"
+                      "Entity": "fact_Intervenciones"
                     }
                   },
                   "Property": "Int. sin garantia"
                 }
               },
-              "queryRef": "Intervenciones.Int. sin garantia",
-              "nativeQueryRef": "Int. sin garantia"
+              "queryRef": "fact_Intervenciones.Int. sin garantia",
+              "nativeQueryRef": "Int. sin garantia1"
             },
             {
               "field": {
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Intervenciones"
+                      "Entity": "fact_Intervenciones"
                     }
                   },
                   "Property": "Int. instalacion"
                 }
               },
-              "queryRef": "Intervenciones.Int. instalacion",
-              "nativeQueryRef": "Int. instalacion"
+              "queryRef": "fact_Intervenciones.Int. instalacion",
+              "nativeQueryRef": "Int. instalacion1"
             },
             {
               "field": {
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Intervenciones"
+                      "Entity": "fact_Intervenciones"
                     }
                   },
                   "Property": "Estado facturado"
                 }
               },
-              "queryRef": "Intervenciones.Estado facturado",
-              "nativeQueryRef": "Estado facturado"
+              "queryRef": "fact_Intervenciones.Estado facturado",
+              "nativeQueryRef": "Estado facturado1"
             },
             {
               "field": {
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Intervenciones"
+                      "Entity": "fact_Intervenciones"
                     }
                   },
                   "Property": "Tecnico"
                 }
               },
-              "queryRef": "Intervenciones.Tecnico",
-              "nativeQueryRef": "Tecnico"
+              "queryRef": "fact_Intervenciones.Tecnico",
+              "nativeQueryRef": "Tecnico1"
             }
           ]
         }
-      },
-      "sortDefinition": {
-        "sort": [
-          {
-            "field": {
-              "Column": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "Intervenciones"
-                  }
-                },
-                "Property": "Int. sin garantia"
-              }
-            },
-            "direction": "Ascending"
-          }
-        ]
       }
     },
     "drillFilterOtherVisuals": true
@@ -293,12 +276,12 @@
   "filterConfig": {
     "filters": [
       {
-        "name": "00a912be529bf96cdb98",
+        "name": "0d9011c76e0dc25c9c3d",
         "field": {
           "Column": {
             "Expression": {
               "SourceRef": {
-                "Entity": "Intervenciones"
+                "Entity": "fact_Intervenciones"
               }
             },
             "Property": "Solicitud servicio"
@@ -307,12 +290,12 @@
         "type": "Categorical"
       },
       {
-        "name": "1db2431b27eb7c904e5e",
+        "name": "6068f06f1c3d245022ed",
         "field": {
           "Column": {
             "Expression": {
               "SourceRef": {
-                "Entity": "Intervenciones"
+                "Entity": "fact_Intervenciones"
               }
             },
             "Property": "Intervencion"
@@ -321,12 +304,12 @@
         "type": "Categorical"
       },
       {
-        "name": "9c816ea2c860526a439d",
+        "name": "8d477713b90c0562e229",
         "field": {
           "Column": {
             "Expression": {
               "SourceRef": {
-                "Entity": "Intervenciones"
+                "Entity": "fact_Intervenciones"
               }
             },
             "Property": "Fecha intervencion"
@@ -335,12 +318,12 @@
         "type": "Categorical"
       },
       {
-        "name": "c639e8a0dfda352e1ba1",
+        "name": "42d3fd6737e407e0c405",
         "field": {
           "Column": {
             "Expression": {
               "SourceRef": {
-                "Entity": "Intervenciones"
+                "Entity": "fact_Intervenciones"
               }
             },
             "Property": "Cliente"
@@ -349,12 +332,12 @@
         "type": "Categorical"
       },
       {
-        "name": "b72094d1dfb1a85476da",
+        "name": "b3cb0845c0630c6a746d",
         "field": {
           "Column": {
             "Expression": {
               "SourceRef": {
-                "Entity": "Intervenciones"
+                "Entity": "fact_Intervenciones"
               }
             },
             "Property": "Anomalia"
@@ -363,12 +346,12 @@
         "type": "Categorical"
       },
       {
-        "name": "fae58a567a77083db4eb",
+        "name": "73bd1aa22d29d3775c22",
         "field": {
           "Column": {
             "Expression": {
               "SourceRef": {
-                "Entity": "Intervenciones"
+                "Entity": "fact_Intervenciones"
               }
             },
             "Property": "Id Parque"
@@ -377,12 +360,12 @@
         "type": "Categorical"
       },
       {
-        "name": "0fc5f23a1d415e1b4735",
+        "name": "ffa790988d33377e91b5",
         "field": {
           "Column": {
             "Expression": {
               "SourceRef": {
-                "Entity": "Intervenciones"
+                "Entity": "fact_Intervenciones"
               }
             },
             "Property": "Nº serie maquina"
@@ -391,12 +374,12 @@
         "type": "Categorical"
       },
       {
-        "name": "6ede0f920d509ffb86f4",
+        "name": "86bb4be422d009d51c29",
         "field": {
           "Column": {
             "Expression": {
               "SourceRef": {
-                "Entity": "Intervenciones"
+                "Entity": "fact_Intervenciones"
               }
             },
             "Property": "Motivo"
@@ -405,12 +388,12 @@
         "type": "Categorical"
       },
       {
-        "name": "95ff682d0d963ebd7c9d",
+        "name": "f9541f99dad1d344e84c",
         "field": {
           "Column": {
             "Expression": {
               "SourceRef": {
-                "Entity": "Intervenciones"
+                "Entity": "fact_Intervenciones"
               }
             },
             "Property": "Modo comunicacion"
@@ -419,12 +402,12 @@
         "type": "Categorical"
       },
       {
-        "name": "4644941fc6e50e6c8b4d",
+        "name": "27654928cd6d9800a4c0",
         "field": {
           "Column": {
             "Expression": {
               "SourceRef": {
-                "Entity": "Intervenciones"
+                "Entity": "fact_Intervenciones"
               }
             },
             "Property": "Tipo contrato"
@@ -433,12 +416,12 @@
         "type": "Categorical"
       },
       {
-        "name": "070f40143c58e24e1790",
+        "name": "be083649bc96ce7d3324",
         "field": {
           "Column": {
             "Expression": {
               "SourceRef": {
-                "Entity": "Intervenciones"
+                "Entity": "fact_Intervenciones"
               }
             },
             "Property": "Lugar de realizacion"
@@ -447,12 +430,12 @@
         "type": "Categorical"
       },
       {
-        "name": "665fac831d8cf907ecff",
+        "name": "903794e1189ac0ec1462",
         "field": {
           "Column": {
             "Expression": {
               "SourceRef": {
-                "Entity": "Intervenciones"
+                "Entity": "fact_Intervenciones"
               }
             },
             "Property": "Sector"
@@ -461,12 +444,26 @@
         "type": "Categorical"
       },
       {
-        "name": "5e94712f82031bd76f3c",
+        "name": "ccb2a4ebab30b08d743d",
         "field": {
           "Column": {
             "Expression": {
               "SourceRef": {
-                "Entity": "Intervenciones"
+                "Entity": "fact_Intervenciones"
+              }
+            },
+            "Property": "Fam est 2 SS"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "7d85221778cd4ab00346",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "fact_Intervenciones"
               }
             },
             "Property": "Int. con garantia"
@@ -475,12 +472,12 @@
         "type": "Categorical"
       },
       {
-        "name": "1e9fe989475993bc495d",
+        "name": "ac00a36003e205571744",
         "field": {
           "Column": {
             "Expression": {
               "SourceRef": {
-                "Entity": "Intervenciones"
+                "Entity": "fact_Intervenciones"
               }
             },
             "Property": "Int. sin garantia"
@@ -489,12 +486,12 @@
         "type": "Categorical"
       },
       {
-        "name": "50b5836a9e0cb6fd930b",
+        "name": "fd984ea243d75626d3b7",
         "field": {
           "Column": {
             "Expression": {
               "SourceRef": {
-                "Entity": "Intervenciones"
+                "Entity": "fact_Intervenciones"
               }
             },
             "Property": "Int. instalacion"
@@ -503,26 +500,12 @@
         "type": "Categorical"
       },
       {
-        "name": "8ab33d7f67a4a13fc2ba",
+        "name": "d195fc8f3073912510be",
         "field": {
           "Column": {
             "Expression": {
               "SourceRef": {
-                "Entity": "Intervenciones"
-              }
-            },
-            "Property": "Tecnico"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "71e84f812fdab80dc84d",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Intervenciones"
+                "Entity": "fact_Intervenciones"
               }
             },
             "Property": "Estado facturado"
@@ -531,15 +514,15 @@
         "type": "Categorical"
       },
       {
-        "name": "b0da68b54d00daab5c08",
+        "name": "37665c57066563c0036b",
         "field": {
           "Column": {
             "Expression": {
               "SourceRef": {
-                "Entity": "Intervenciones"
+                "Entity": "fact_Intervenciones"
               }
             },
-            "Property": "Fam est 2 SS"
+            "Property": "Tecnico"
           }
         },
         "type": "Categorical"

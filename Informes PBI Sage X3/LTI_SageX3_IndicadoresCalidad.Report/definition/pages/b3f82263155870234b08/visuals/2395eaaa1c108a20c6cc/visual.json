@@ -1,5 +1,5 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.8.0/schema.json",
   "name": "2395eaaa1c108a20c6cc",
   "position": {
     "x": 792,
@@ -17,78 +17,47 @@
           "projections": [
             {
               "field": {
-                "HierarchyLevel": {
+                "Column": {
                   "Expression": {
-                    "Hierarchy": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "Fecha"
-                        }
-                      },
-                      "Hierarchy": "Ano Jerarquía"
+                    "SourceRef": {
+                      "Entity": "dim_Calendario"
                     }
                   },
-                  "Level": "Ano"
+                  "Property": "Año"
                 }
               },
-              "queryRef": "Fecha.Ano Jerarquía.Ano",
+              "queryRef": "dim_Calendario.Año",
+              "nativeQueryRef": "Año",
               "active": true
             },
             {
               "field": {
-                "HierarchyLevel": {
+                "Column": {
                   "Expression": {
-                    "Hierarchy": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "Fecha"
-                        }
-                      },
-                      "Hierarchy": "Ano Jerarquía"
+                    "SourceRef": {
+                      "Entity": "dim_Calendario"
                     }
                   },
-                  "Level": "Trimestre"
+                  "Property": "Trimestre"
                 }
               },
-              "queryRef": "Fecha.Ano Jerarquía.Trimestre",
+              "queryRef": "dim_Calendario.Trimestre",
+              "nativeQueryRef": "Trimestre",
               "active": false
             },
             {
               "field": {
-                "HierarchyLevel": {
+                "Column": {
                   "Expression": {
-                    "Hierarchy": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "Fecha"
-                        }
-                      },
-                      "Hierarchy": "Ano Jerarquía"
+                    "SourceRef": {
+                      "Entity": "dim_Calendario"
                     }
                   },
-                  "Level": "Mes"
+                  "Property": "Mes del año"
                 }
               },
-              "queryRef": "Fecha.Ano Jerarquía.Mes",
-              "active": false
-            },
-            {
-              "field": {
-                "HierarchyLevel": {
-                  "Expression": {
-                    "Hierarchy": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "Fecha"
-                        }
-                      },
-                      "Hierarchy": "Ano Jerarquía"
-                    }
-                  },
-                  "Level": "Dia"
-                }
-              },
-              "queryRef": "Fecha.Ano Jerarquía.Dia",
+              "queryRef": "dim_Calendario.Mes del año",
+              "nativeQueryRef": "Mes del año",
               "active": false
             }
           ]
@@ -103,104 +72,25 @@
         "levels": [
           {
             "queryRefs": [
-              "Fecha.Ano Jerarquía.Ano"
+              "dim_Calendario.Año"
             ],
             "isCollapsed": true,
-            "identityKeys": [
-              {
-                "Column": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "Fecha"
-                    }
-                  },
-                  "Property": "Ano"
-                }
-              }
-            ],
             "isPinned": true
           },
           {
             "queryRefs": [
-              "Fecha.Ano Jerarquía.Trimestre"
+              "dim_Calendario.Trimestre"
             ],
-            "isCollapsed": true,
-            "identityKeys": [
-              {
-                "Column": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "Fecha"
-                    }
-                  },
-                  "Property": "Trimestre"
-                }
-              }
-            ],
-            "isPinned": true
+            "isCollapsed": true
           },
           {
             "queryRefs": [
-              "Fecha.Ano Jerarquía.Mes"
+              "dim_Calendario.Mes del año"
             ],
-            "isCollapsed": true,
-            "identityKeys": [
-              {
-                "Column": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "Fecha"
-                    }
-                  },
-                  "Property": "Mes"
-                }
-              }
-            ],
-            "isPinned": true
-          },
-          {
-            "queryRefs": [
-              "Fecha.Ano Jerarquía.Dia"
-            ],
-            "isCollapsed": true,
-            "isPinned": true
+            "isCollapsed": true
           }
         ],
-        "root": {
-          "children": [
-            {
-              "identityValues": [
-                {
-                  "Literal": {
-                    "Value": "2022L"
-                  }
-                }
-              ],
-              "children": [
-                {
-                  "identityValues": [
-                    {
-                      "Literal": {
-                        "Value": "'T1'"
-                      }
-                    }
-                  ],
-                  "isToggled": true
-                },
-                {
-                  "identityValues": [
-                    {
-                      "Literal": {
-                        "Value": "'T4'"
-                      }
-                    }
-                  ],
-                  "isToggled": true
-                }
-              ]
-            }
-          ]
-        }
+        "root": {}
       }
     ],
     "objects": {
@@ -256,8 +146,8 @@
                 "Version": 2,
                 "From": [
                   {
-                    "Name": "f",
-                    "Entity": "Fecha",
+                    "Name": "d",
+                    "Entity": "dim_Calendario",
                     "Type": 0
                   }
                 ],
@@ -270,10 +160,10 @@
                             "Column": {
                               "Expression": {
                                 "SourceRef": {
-                                  "Source": "f"
+                                  "Source": "d"
                                 }
                               },
-                              "Property": "Ano"
+                              "Property": "Año"
                             }
                           }
                         ],
@@ -386,14 +276,14 @@
                           [
                             {
                               "Literal": {
-                                "Value": "2023L"
+                                "Value": "2022L"
                               }
                             }
                           ],
                           [
                             {
                               "Literal": {
-                                "Value": "2024L"
+                                "Value": "2023L"
                               }
                             }
                           ],
@@ -407,7 +297,7 @@
                           [
                             {
                               "Literal": {
-                                "Value": "2022L"
+                                "Value": "2024L"
                               }
                             }
                           ]
@@ -418,18 +308,13 @@
                       "filterExpressionMetadata": {
                         "expressions": [
                           {
-                            "HierarchyLevel": {
+                            "Column": {
                               "Expression": {
-                                "Hierarchy": {
-                                  "Expression": {
-                                    "SourceRef": {
-                                      "Entity": "Fecha"
-                                    }
-                                  },
-                                  "Hierarchy": "Ano Jerarquía"
+                                "SourceRef": {
+                                  "Entity": "dim_Calendario"
                                 }
                               },
-                              "Level": "Ano"
+                              "Property": "Año"
                             }
                           }
                         ],
@@ -605,7 +490,7 @@
                                 "0": [
                                   {
                                     "Literal": {
-                                      "Value": "2023L"
+                                      "Value": "2022L"
                                     }
                                   }
                                 ]
@@ -616,7 +501,7 @@
                                 "0": [
                                   {
                                     "Literal": {
-                                      "Value": "2024L"
+                                      "Value": "2023L"
                                     }
                                   }
                                 ]
@@ -638,7 +523,7 @@
                                 "0": [
                                   {
                                     "Literal": {
-                                      "Value": "2022L"
+                                      "Value": "2024L"
                                     }
                                   }
                                 ]
@@ -651,10 +536,10 @@
                                 "Column": {
                                   "Expression": {
                                     "SourceRef": {
-                                      "Entity": "Fecha"
+                                      "Entity": "dim_Calendario"
                                     }
                                   },
-                                  "Property": "Ano"
+                                  "Property": "Año"
                                 }
                               }
                             }
@@ -707,16 +592,16 @@
                             "0": "2021"
                           },
                           {
-                            "0": "2023"
+                            "0": "2022"
                           },
                           {
-                            "0": "2024"
+                            "0": "2023"
                           },
                           {
                             "0": "2025"
                           },
                           {
-                            "0": "2022"
+                            "0": "2024"
                           }
                         ]
                       }
@@ -764,5 +649,51 @@
     },
     "drillFilterOtherVisuals": true
   },
-  "parentGroupName": "6b467b9d045014819be4"
+  "parentGroupName": "6b467b9d045014819be4",
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "6116ec201a0d2021a130",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "dim_Calendario"
+              }
+            },
+            "Property": "Año"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "d74c96ca38048e702106",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "dim_Calendario"
+              }
+            },
+            "Property": "Trimestre"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "9cc7b0e90b6706056acc",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "dim_Calendario"
+              }
+            },
+            "Property": "Mes del año"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
+  }
 }

@@ -1,0 +1,95 @@
+table dim_Clientes
+	lineageTag: 7d1f8fc6-3e79-4a70-8076-511b149715ad
+
+	column IdCliente
+		dataType: string
+		lineageTag: d4cfede7-24d8-46ca-82a5-ccf06abe9ca4
+		summarizeBy: none
+		sourceColumn: IdCliente
+
+		annotation SummarizationSetBy = Automatic
+
+	column Cliente
+		dataType: string
+		lineageTag: 66b7ac74-766f-47e0-aac3-a09f5e5fdf6f
+		summarizeBy: none
+		sourceColumn: Cliente
+
+		annotation SummarizationSetBy = Automatic
+
+	column Categoria
+		dataType: string
+		lineageTag: 8ae1323d-3fc7-4d9c-a403-67d758ea4ba4
+		summarizeBy: none
+		sourceColumn: Categoria
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Cliente Grupo'
+		dataType: string
+		lineageTag: 9fb6bcf3-aefe-455b-8c1d-4b36aa715c3d
+		summarizeBy: none
+		sourceColumn: Cliente Grupo
+
+		annotation SummarizationSetBy = Automatic
+
+	column Tipo
+		dataType: int64
+		formatString: 0
+		lineageTag: fb8ce78c-469d-49fb-bf6d-88d81c4d6c66
+		summarizeBy: none
+		sourceColumn: Tipo
+
+		annotation SummarizationSetBy = Automatic
+
+	column Direccion
+		dataType: string
+		lineageTag: 914b677c-6acf-42ad-96bc-607317b0edf2
+		summarizeBy: none
+		sourceColumn: Direccion
+
+		annotation SummarizationSetBy = Automatic
+
+	column Divisa
+		dataType: string
+		lineageTag: 2faf606d-e6d0-4040-9623-f4fc8c56f589
+		summarizeBy: none
+		sourceColumn: Divisa
+
+		annotation SummarizationSetBy = Automatic
+
+	column Pais
+		dataType: string
+		lineageTag: 031c947d-7bbf-40b1-822e-e7e78219d770
+		summarizeBy: none
+		sourceColumn: Pais
+
+		annotation SummarizationSetBy = Automatic
+
+	column Ciudad
+		dataType: string
+		lineageTag: 9302fc80-f327-41e3-8a3f-e8cde099df4a
+		summarizeBy: none
+		sourceColumn: Ciudad
+
+		annotation SummarizationSetBy = Automatic
+
+	column IdDireccion
+		dataType: string
+		lineageTag: 3ab7337d-7552-4e79-bf71-94adb4078d15
+		summarizeBy: none
+		sourceColumn: IdDireccion
+
+		annotation SummarizationSetBy = Automatic
+
+	partition dim_Clientes = m
+		mode: import
+		source =
+				let
+				    Origen = PowerBI.Dataflows(null),
+				    #"cd25238f-048e-4509-ab9f-29f918c14d4c" = Origen{[workspaceId="cd25238f-048e-4509-ab9f-29f918c14d4c"]}[Data],
+				    #"5877d4c8-d8db-4300-bd5c-7bed546ea986" = #"cd25238f-048e-4509-ab9f-29f918c14d4c"{[dataflowId="5877d4c8-d8db-4300-bd5c-7bed546ea986"]}[Data],
+				    dim_Clientes1 = #"5877d4c8-d8db-4300-bd5c-7bed546ea986"{[entity="dim_Clientes"]}[Data]
+				in
+				    dim_Clientes1
+

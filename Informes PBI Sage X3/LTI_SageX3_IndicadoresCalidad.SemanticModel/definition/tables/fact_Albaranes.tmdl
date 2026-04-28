@@ -1,0 +1,280 @@
+table fact_Albaranes
+	lineageTag: 75e9067a-6055-49d9-92fa-b99cb7607066
+
+	column Sociedad
+		dataType: string
+		lineageTag: c957c0f2-8dce-4b53-8100-9de12a5e8f11
+		summarizeBy: none
+		sourceColumn: Sociedad
+
+		annotation SummarizationSetBy = Automatic
+
+	column Planta
+		dataType: string
+		lineageTag: ad24140a-65fe-4f5f-ac52-1769786e8645
+		summarizeBy: none
+		sourceColumn: Planta
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Tipo entrega'
+		dataType: string
+		lineageTag: 0fe39115-c327-4f38-9a9e-30db3c3d5627
+		summarizeBy: none
+		sourceColumn: Tipo entrega
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Num. Entrega'
+		dataType: string
+		lineageTag: 7ba9c7b2-1832-4fe7-986f-521386825bea
+		summarizeBy: none
+		sourceColumn: Num. Entrega
+
+		annotation SummarizationSetBy = Automatic
+
+	column Fecha
+		dataType: dateTime
+		formatString: dd/mm/yyyy
+		lineageTag: 3092c846-4918-4ca3-bcb2-e56294ec1d2b
+		summarizeBy: none
+		sourceColumn: Fecha
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+		annotation PBI_FormatHint = {"isDateTimeCustom":true}
+
+	column Cliente
+		dataType: string
+		lineageTag: 8e952129-3b05-47e7-8ccb-b56767c949f4
+		summarizeBy: none
+		sourceColumn: Cliente
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Razon Social'
+		dataType: string
+		lineageTag: a84cc226-c6ef-4d07-846e-7a234158d782
+		summarizeBy: none
+		sourceColumn: Razon Social
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Causa transporte'
+		dataType: string
+		lineageTag: c0e4ea21-c1a5-4e42-bc92-5f4465692948
+		summarizeBy: none
+		sourceColumn: Causa transporte
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Cod. Cliente grupo'
+		dataType: string
+		lineageTag: 183978c1-d60f-449c-b667-c5e40073abb8
+		summarizeBy: none
+		sourceColumn: Cod. Cliente grupo
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Cliente grupo'
+		dataType: string
+		lineageTag: d77bb76b-fd4c-4533-a3ef-78d92b333985
+		summarizeBy: none
+		sourceColumn: Cliente grupo
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Cliente facturado'
+		dataType: string
+		lineageTag: d1d12789-75e7-4a4d-bc0c-81a4cf48bf67
+		summarizeBy: none
+		sourceColumn: Cliente facturado
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Num. Pedido'
+		dataType: string
+		lineageTag: 2150ace9-e529-4beb-a072-2174380b93ba
+		summarizeBy: none
+		sourceColumn: Num. Pedido
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Dir. entrega'
+		dataType: string
+		lineageTag: a8888d75-ddc6-43b8-b1cb-dc5d72087cdd
+		summarizeBy: none
+		sourceColumn: Dir. entrega
+
+		annotation SummarizationSetBy = Automatic
+
+	column Linea
+		dataType: int64
+		formatString: 0
+		lineageTag: bda52ddb-b7c5-4799-91a1-1336f4e920ce
+		summarizeBy: sum
+		sourceColumn: Linea
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Cod. articulo'
+		dataType: string
+		lineageTag: 0852c382-f6f9-4fa0-a981-2a61e01f8f5f
+		summarizeBy: none
+		sourceColumn: Cod. articulo
+
+		annotation SummarizationSetBy = Automatic
+
+	column Descripcion
+		dataType: string
+		lineageTag: a78afc7e-c682-4144-8f8b-38115a7dd01a
+		summarizeBy: none
+		sourceColumn: Descripcion
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Cantidad UV'
+		dataType: double
+		lineageTag: e7a57e3b-885a-43f9-970c-ba28540440a6
+		summarizeBy: sum
+		sourceColumn: Cantidad UV
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Unidad venta'
+		dataType: string
+		lineageTag: 85efb7e0-6aad-40fa-866f-e8b3f1d9a008
+		summarizeBy: none
+		sourceColumn: Unidad venta
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Coeficiente UV-US'
+		dataType: double
+		lineageTag: fb387c7b-87c1-43ac-8d21-9a8094be800d
+		summarizeBy: sum
+		sourceColumn: Coeficiente UV-US
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Cantidad US'
+		dataType: double
+		lineageTag: e4494d99-8bfa-43ef-93cf-f21c09391c03
+		summarizeBy: sum
+		sourceColumn: Cantidad US
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Unidad stock'
+		dataType: string
+		lineageTag: 0fe5b9e2-3779-4937-ad7c-12d0c8dcc973
+		summarizeBy: none
+		sourceColumn: Unidad stock
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Precio bruto'
+		dataType: double
+		lineageTag: f260bdc0-a236-46fe-8b5b-85e37335d57a
+		summarizeBy: sum
+		sourceColumn: Precio bruto
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Descuento 1'
+		dataType: double
+		lineageTag: 8a322802-b0f5-4a88-8921-0439d69855fc
+		summarizeBy: sum
+		sourceColumn: Descuento 1
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Descuento 2'
+		dataType: double
+		lineageTag: eb7e38c4-78a7-4bff-a818-9060e4d8fd22
+		summarizeBy: sum
+		sourceColumn: Descuento 2
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Descuento 3'
+		dataType: double
+		lineageTag: cfaea199-649c-41ea-bba2-c0bbea8aa30e
+		summarizeBy: sum
+		sourceColumn: Descuento 3
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Precio neto'
+		dataType: double
+		lineageTag: 716f20cf-a9cb-4674-86fd-bcbef35fe34f
+		summarizeBy: sum
+		sourceColumn: Precio neto
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Coste
+		dataType: double
+		lineageTag: d1ed9b2f-00cd-423a-9d25-f201e60dde80
+		summarizeBy: sum
+		sourceColumn: Coste
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Margen
+		dataType: double
+		lineageTag: 61e12a1e-67fe-4065-af43-abbea4e55f28
+		summarizeBy: sum
+		sourceColumn: Margen
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Representante 1'
+		dataType: string
+		lineageTag: a1ee8ee3-a5df-4625-9100-e827a271c637
+		summarizeBy: none
+		sourceColumn: Representante 1
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Representante 2'
+		dataType: string
+		lineageTag: 493421a4-f687-4472-a532-e63d5b8e56f7
+		summarizeBy: none
+		sourceColumn: Representante 2
+
+		annotation SummarizationSetBy = Automatic
+
+	partition fact_Albaranes = m
+		mode: import
+		source =
+				let
+				    Origen = PowerBI.Dataflows(null),
+				    #"cd25238f-048e-4509-ab9f-29f918c14d4c" = Origen{[workspaceId="cd25238f-048e-4509-ab9f-29f918c14d4c"]}[Data],
+				    #"30301d97-998a-4d39-af0b-bb343b5472a7" = #"cd25238f-048e-4509-ab9f-29f918c14d4c"{[dataflowId="30301d97-998a-4d39-af0b-bb343b5472a7"]}[Data],
+				    fact_Albaranes1 = #"30301d97-998a-4d39-af0b-bb343b5472a7"{[entity="fact_Albaranes"]}[Data]
+				in
+				    fact_Albaranes1
+

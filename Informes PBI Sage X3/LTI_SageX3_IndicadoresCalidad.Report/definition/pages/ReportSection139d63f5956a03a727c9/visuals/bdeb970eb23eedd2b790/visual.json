@@ -1,5 +1,5 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.8.0/schema.json",
   "name": "bdeb970eb23eedd2b790",
   "position": {
     "x": 0,
@@ -19,7 +19,7 @@
               {
                 "textRuns": [
                   {
-                    "value": "Informe Ventas",
+                    "value": "Indicadores de Calidad",
                     "textStyle": {
                       "fontWeight": "bold",
                       "fontFamily": "Segoe UI",

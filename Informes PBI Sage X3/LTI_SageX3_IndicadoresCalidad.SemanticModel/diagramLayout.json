@@ -4,7 +4,7 @@
     {
       "ordinal": 0,
       "scrollPosition": {
-        "x": 1387.3239436619713,
+        "x": 0,
         "y": 0
       },
       "nodes": [
@@ -271,6 +271,56 @@
             "width": 234
           },
           "zIndex": 0
+        },
+        {
+          "location": {},
+          "nodeIndex": "dim_Articulos",
+          "nodeLineageTag": "da10986f-070e-4a63-bf03-59f6535f1590",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {},
+          "nodeIndex": "dim_Calendario",
+          "nodeLineageTag": "0f260c98-a8df-467f-bf7e-88f9210095be",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {},
+          "nodeIndex": "dim_Clientes",
+          "nodeLineageTag": "7d1f8fc6-3e79-4a70-8076-511b149715ad",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {},
+          "nodeIndex": "fact_Albaranes",
+          "nodeLineageTag": "75e9067a-6055-49d9-92fa-b99cb7607066",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {},
+          "nodeIndex": "fact_Intervenciones",
+          "nodeLineageTag": "39e48b4d-332b-4321-a070-c82dbe72f970",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
         }
       ],
       "name": "Todas las tablas",
@@ -396,8 +446,8 @@
         },
         {
           "location": {
-            "x": 420,
-            "y": 256
+            "x": 248,
+            "y": 341
           },
           "nodeIndex": "Intervenciones",
           "nodeLineageTag": "a811d9c7-1fbc-4ced-a0de-dc14be13f171",
@@ -409,10 +459,50 @@
         },
         {
           "location": {
-            "x": 842,
-            "y": 172
+            "x": 479,
+            "y": 0
           },
           "nodeIndex": "Clientes",
+          "nodeLineageTag": "87a08bef-d5ce-488c-843d-139538bde7f0",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 954,
+            "y": 326
+          },
+          "nodeIndex": "fact_Intervenciones",
+          "nodeLineageTag": "39e48b4d-332b-4321-a070-c82dbe72f970",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 733,
+            "y": 0
+          },
+          "nodeIndex": "dim_Calendario",
+          "nodeLineageTag": "0f260c98-a8df-467f-bf7e-88f9210095be",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 1028,
+            "y": -12
+          },
+          "nodeIndex": "dim_Clientes",
+          "nodeLineageTag": "7d1f8fc6-3e79-4a70-8076-511b149715ad",
           "size": {
             "height": 300,
             "width": 234
@@ -428,6 +518,6 @@
       "tablesLocked": false
     }
   ],
-  "selectedDiagram": "Todas las tablas",
+  "selectedDiagram": "Intervenciones",
   "defaultDiagram": "Todas las tablas"
 }

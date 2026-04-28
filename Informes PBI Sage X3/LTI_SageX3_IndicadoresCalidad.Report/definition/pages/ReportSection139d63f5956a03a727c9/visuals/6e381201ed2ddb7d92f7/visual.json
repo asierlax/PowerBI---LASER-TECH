@@ -1,5 +1,5 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.8.0/schema.json",
   "name": "6e381201ed2ddb7d92f7",
   "position": {
     "x": 51.557603686635943,
@@ -19,7 +19,7 @@
               {
                 "textRuns": [
                   {
-                    "value": "I N I C I O",
+                    "value": "INTERVENCIONES",
                     "textStyle": {
                       "fontSize": "10pt"
                     }

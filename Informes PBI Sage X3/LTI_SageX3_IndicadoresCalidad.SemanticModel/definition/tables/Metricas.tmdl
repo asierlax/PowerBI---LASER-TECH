@@ -27,8 +27,8 @@ table Metricas
 
 	measure ClientesNuevos =
 			
-			var anteriores = CALCULATE(DISTINCTCOUNT('DocumentosLinea'[IdCliente]), DATESBETWEEN(Fecha[Fecha], DATE(1990,1,1), [MinSelectedDate]))
-			var actuales = CALCULATE(DISTINCTCOUNT('DocumentosLinea'[IdCliente]), DATESBETWEEN(Fecha[Fecha], DATE(1990,1,1), [MaxSelectedDate]))
+			var anteriores = CALCULATE(DISTINCTCOUNT('DocumentosLinea'[IdCliente]), DATESBETWEEN(dim_Calendario[Fecha], DATE(1990,1,1), [MinSelectedDate]))
+			var actuales = CALCULATE(DISTINCTCOUNT('DocumentosLinea'[IdCliente]), DATESBETWEEN(dim_Calendario[Fecha], DATE(1990,1,1), [MaxSelectedDate]))
 			var dif = actuales - anteriores
 			return IF(dif < 0, 0, dif)
 		formatString: 0
@@ -70,12 +70,12 @@ table Metricas
 		displayFolder: Ventas
 		lineageTag: 824762c2-9cd3-482c-b2e0-f13b7c304fd6
 
-	measure FirstOfDate = FIRSTDATE(Fecha[Fecha])
+	measure FirstOfDate = FIRSTDATE(dim_Calendario[Fecha])
 		formatString: General Date
 		displayFolder: Ayuda
 		lineageTag: 293c6343-0ddc-4b02-8d34-50bfc3c2f7af
 
-	measure EndOfDate = LASTDATE(Fecha[Fecha])
+	measure EndOfDate = LASTDATE(dim_Calendario[Fecha])
 		formatString: General Date
 		displayFolder: Ayuda
 		lineageTag: b219289d-ec83-4970-9c81-67e0d5aa7a00
@@ -97,7 +97,7 @@ table Metricas
 			var  difPeriodoActual = [MaxSelectedDate] - [MinSelectedDate]
 			var MaxSelctedDatePA = [MinSelectedDate] - 1
 			var minSelectedPA = MaxSelctedDatePA - difPeriodoActual
-			return CALCULATE([Clientes], DATESBETWEEN(Fecha[Fecha], minSelectedPA, MaxSelctedDatePA))
+			return CALCULATE([Clientes], DATESBETWEEN(dim_Calendario[Fecha], minSelectedPA, MaxSelctedDatePA))
 		formatString: 0
 		displayFolder: Clientes
 		lineageTag: 109185d8-17bf-45bc-a550-e06a996ca8db
@@ -108,8 +108,8 @@ table Metricas
 			var MaxSelctedDatePA = [MinSelectedDate] - 1
 			var minSelectedPA = MaxSelctedDatePA - difPeriodoActual
 			
-			var anteriores = CALCULATE(DISTINCTCOUNT('DocumentosLinea'[IdCliente]), DATESBETWEEN(Fecha[Fecha], DATE(1990,1,1), minSelectedPA))
-			var actuales = CALCULATE(DISTINCTCOUNT('DocumentosLinea'[IdCliente]), DATESBETWEEN(Fecha[Fecha], DATE(1990,1,1), MaxSelctedDatePA))
+			var anteriores = CALCULATE(DISTINCTCOUNT('DocumentosLinea'[IdCliente]), DATESBETWEEN(dim_Calendario[Fecha], DATE(1990,1,1), minSelectedPA))
+			var actuales = CALCULATE(DISTINCTCOUNT('DocumentosLinea'[IdCliente]), DATESBETWEEN(dim_Calendario[Fecha], DATE(1990,1,1), MaxSelctedDatePA))
 			var dif = actuales - anteriores
 			return IF(dif < 0, 0, dif)
 		formatString: 0
@@ -175,7 +175,7 @@ table Metricas
 		displayFolder: Importe
 		lineageTag: c601e16b-6841-4110-a9b7-dd2c8ad02a70
 
-	measure 'Items Media AA' = CALCULATE([Items Media], SAMEPERIODLASTYEAR(Fecha[Fecha]))
+	measure 'Items Media AA' = CALCULATE([Items Media], SAMEPERIODLASTYEAR(dim_Calendario[Fecha]))
 		displayFolder: Articulos
 		lineageTag: 2901974c-f05c-4e70-8c2e-88d73a2774e6
 
@@ -197,7 +197,7 @@ table Metricas
 	measure Antiguedad =
 			
 			--var fp = CALCULATE(FIRSTNONBLANK('Facturas a clientes'[Fecha de Orden], 'Facturas a clientes'[Fecha de Orden]), ALL('Facturas a clientes'))
-			DATEDIFF(CALCULATE([FechaPrimeraCompra], ALL(Fecha[Fecha])), TODAY(), day) / 365.25
+			DATEDIFF(CALCULATE([FechaPrimeraCompra], ALL(dim_Calendario[Fecha])), TODAY(), day) / 365.25
 		formatString: 0.0
 		displayFolder: Ayuda
 		lineageTag: 799e2418-65bb-49b3-9472-dd160de4b268
@@ -213,7 +213,7 @@ table Metricas
 
 	measure '# Clientes seleccionados' = ```
 			
-			    COUNTROWS(filter(all(Clientes[IdCliente]), [Total Ventas]<>BLANK()))
+			    COUNTROWS(filter(all(dim_Clientes[IdCliente]), [Total Ventas]<>BLANK()))
 			```
 		formatString: 0
 		displayFolder: Clientes
@@ -221,7 +221,7 @@ table Metricas
 
 	measure '% Clientes s/Total' =
 			
-			var ClientesIn = CALCULATETABLE(all(Clientes), TREATAS( VALUES('DocumentosLinea'[IdCliente]),Clientes[IdCliente]))
+			var ClientesIn = CALCULATETABLE(all(dim_Clientes), TREATAS( VALUES('DocumentosLinea'[IdCliente]),Clientes[IdCliente]))
 			Return DIVIDE([# Clientes seleccionados]
 			    , [# Clientes In]
 			    )
@@ -269,7 +269,7 @@ table Metricas
 
 		annotation PBI_FormatHint = {"isDecimal":true}
 
-	measure 'Cantidad AA' = calculate( [Total Cantidad], SAMEPERIODLASTYEAR(Fecha[Fecha]))
+	measure 'Cantidad AA' = calculate( [Total Cantidad], SAMEPERIODLASTYEAR(dim_Calendario[Fecha]))
 		formatString: 0
 		displayFolder: Articulos
 		lineageTag: b8df87c9-a590-4a8e-aa4a-59adb4ee8398
@@ -291,7 +291,7 @@ table Metricas
 		displayFolder: Articulos
 		lineageTag: a86a998c-8da2-4bdb-b618-e0a7d8af8ff0
 
-	measure 'Total Facturas AA' = CALCULATE([Total Facturas], SAMEPERIODLASTYEAR(Fecha[Fecha]))
+	measure 'Total Facturas AA' = CALCULATE([Total Facturas], SAMEPERIODLASTYEAR(dim_Calendario[Fecha]))
 		formatString: 0
 		displayFolder: Articulos
 		lineageTag: 919f6d90-132b-4d8e-b636-4ab0a20f464f
@@ -347,57 +347,57 @@ table Metricas
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-	measure 'Count Intervenciones' = COUNT(Intervenciones[Intervencion]) + 0
+	measure 'Count Intervenciones' = COUNT(fact_Intervenciones[Intervencion]) + 0
 		formatString: 0
 		displayFolder: Intervenciones
 		lineageTag: 9def452f-8d76-4d8c-ae61-a02cc78ba855
 
-	measure 'Int En garantia' = CALCULATE([Count Intervenciones], Intervenciones[Int. con garantia] = "SI" ) + 0
+	measure 'Int En garantia' = CALCULATE([Count Intervenciones], fact_Intervenciones[Int. con garantia] = "SI" ) + 0
 		formatString: #,0
 		displayFolder: Intervenciones
 		lineageTag: 688702a6-e52e-4c09-ad7a-3fca07dd8a17
 
-	measure 'Int Sin garantia' = CALCULATE([Count Intervenciones], Intervenciones[Int. con garantia] = "NO" ) + 0
+	measure 'Int Sin garantia' = CALCULATE([Count Intervenciones], fact_Intervenciones[Int. con garantia] = "NO" ) + 0
 		formatString: 0
 		displayFolder: Intervenciones
 		lineageTag: e50aefb3-3ca1-4f65-8bf1-8a2956e3984a
 
-	measure 'Int En garantia LTI' = CALCULATE([Count Intervenciones], Intervenciones[Int. con garantia] = "SI", Intervenciones[Codigo cliente] = "01020" ) + 0
+	measure 'Int En garantia LTI' = CALCULATE([Count Intervenciones], fact_Intervenciones[Int. con garantia] = "SI", fact_Intervenciones[Codigo cliente] = "01020" ) + 0
 		formatString: 0
 		displayFolder: Intervenciones
 		lineageTag: 9a33bcf8-bf15-45f4-984e-6d1526e272c3
 
-	measure 'Int En garantia Clientes' = CALCULATE([Count Intervenciones], Intervenciones[Int. con garantia] = "SI", Intervenciones[Codigo cliente] <> "01020" ) + 0
+	measure 'Int En garantia Clientes' = CALCULATE([Count Intervenciones], fact_Intervenciones[Int. con garantia] = "SI", fact_Intervenciones[Codigo cliente] <> "01020" ) + 0
 		formatString: 0
 		displayFolder: Intervenciones
 		lineageTag: b59f79f5-97c3-48da-9a49-64499bc7e793
 
-	measure 'Int Instalacion' = CALCULATE([Count Intervenciones],Intervenciones[Int. instalacion] = "SI" ) + 0
+	measure 'Int Instalacion' = CALCULATE([Count Intervenciones], fact_Intervenciones[Int. instalacion] = "SI" ) + 0
 		formatString: 0
 		displayFolder: Intervenciones
 		lineageTag: 4310055f-51a1-4327-85d7-3fa91e0f8fa5
 
-	measure 'Int contrato' = CALCULATE([Count Intervenciones], Intervenciones[Int. contrato] = "SI" ) + 0
+	measure 'Int contrato' = CALCULATE([Count Intervenciones], fact_Intervenciones[Int. contrato] = "SI" ) + 0
 		formatString: 0
 		displayFolder: Intervenciones
 		lineageTag: b23e0bf2-f8ea-4c85-a004-9b970b92709d
 
-	measure 'Int revision' = CALCULATE([Count Intervenciones], Intervenciones[Motivo] = "C1 - Revision" ) + 0
+	measure 'Int revision' = CALCULATE([Count Intervenciones], fact_Intervenciones[Motivo] = "C1 - Revision" ) + 0
 		formatString: 0
 		displayFolder: Intervenciones
 		lineageTag: 9dd9be44-a4b5-410c-b7e1-efa22e3b85f0
 
-	measure 'Int reincidencia' = CALCULATE([Count Intervenciones], Intervenciones[Motivo] = "A1 - Reincidencia Averia" ) + 0
+	measure 'Int reincidencia' = CALCULATE([Count Intervenciones], fact_Intervenciones[Motivo] = "A1 - Reincidencia Averia" ) + 0
 		formatString: 0
 		displayFolder: Intervenciones
 		lineageTag: 4947d28e-02bd-4b41-96d1-b70a3446ecd9
 
-	measure 'Int Contrato Standard' = CALCULATE([Count Intervenciones], Intervenciones[Tipo contrato] = "A1 - Contrato Standard" ) + 0
+	measure 'Int Contrato Standard' = CALCULATE([Count Intervenciones], fact_Intervenciones[Tipo contrato] = "A1 - Contrato Standard" ) + 0
 		formatString: 0
 		displayFolder: Intervenciones
 		lineageTag: 0e84d594-b85e-4266-8212-5d66285d24b6
 
-	measure 'Int Contrato FullRisk' = CALCULATE([Count Intervenciones], Intervenciones[Tipo contrato] = "C1 - Contrato Full Risk" ) + 0
+	measure 'Int Contrato FullRisk' = CALCULATE([Count Intervenciones], fact_Intervenciones[Tipo contrato] = "C1 - Contrato Full Risk" ) + 0
 		formatString: 0
 		displayFolder: Intervenciones
 		lineageTag: 5ee77393-adc3-4e20-984a-d587722be3b1
@@ -412,7 +412,7 @@ table Metricas
 		displayFolder: Intervenciones
 		lineageTag: ba36a3d2-6986-4cd3-af5f-eb324d45be76
 
-	measure 'Ejercicio seleccionado' = SELECTEDVALUE(Fecha[Ano],"Todos los años")
+	measure 'Ejercicio seleccionado' = SELECTEDVALUE(dim_Calendario[Año],"Todos los años")
 		displayFolder: Intervenciones
 		lineageTag: 794848ed-7ae3-4288-870d-73f11a08a909
 

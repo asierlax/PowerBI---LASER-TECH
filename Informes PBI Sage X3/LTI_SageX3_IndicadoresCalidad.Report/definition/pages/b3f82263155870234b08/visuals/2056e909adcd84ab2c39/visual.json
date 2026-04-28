@@ -1,5 +1,5 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.8.0/schema.json",
   "name": "2056e909adcd84ab2c39",
   "position": {
     "x": 35.258764607679467,
@@ -20,14 +20,14 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Fecha"
+                      "Entity": "dim_Calendario"
                     }
                   },
-                  "Property": "Ano"
+                  "Property": "Año"
                 }
               },
-              "queryRef": "Fecha.Ano",
-              "nativeQueryRef": "Ano",
+              "queryRef": "dim_Calendario.Año",
+              "nativeQueryRef": "Año",
               "active": true
             },
             {
@@ -35,14 +35,14 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Fecha"
+                      "Entity": "dim_Calendario"
                     }
                   },
                   "Property": "Semestre"
                 }
               },
-              "queryRef": "Fecha.Semestre",
-              "nativeQueryRef": "Semestre",
+              "queryRef": "dim_Calendario.Semestre",
+              "nativeQueryRef": "Semestre1",
               "active": false
             },
             {
@@ -50,14 +50,14 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Fecha"
+                      "Entity": "dim_Calendario"
                     }
                   },
-                  "Property": "Mes"
+                  "Property": "Mes del año"
                 }
               },
-              "queryRef": "Fecha.Mes",
-              "nativeQueryRef": "Mes",
+              "queryRef": "dim_Calendario.Mes del año",
+              "nativeQueryRef": "Mes del año",
               "active": false
             },
             {
@@ -65,14 +65,14 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Fecha"
+                      "Entity": "dim_Calendario"
                     }
                   },
-                  "Property": "MesAno"
+                  "Property": "Mes, Año"
                 }
               },
-              "queryRef": "Fecha.MesAno",
-              "nativeQueryRef": "MesAno",
+              "queryRef": "dim_Calendario.Mes, Año",
+              "nativeQueryRef": "Mes, Año",
               "active": false
             }
           ]
@@ -284,7 +284,7 @@
         "levels": [
           {
             "queryRefs": [
-              "Fecha.Ano"
+              "dim_Calendario.Año"
             ],
             "isCollapsed": true,
             "identityKeys": [
@@ -292,10 +292,10 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Fecha"
+                      "Entity": "dim_Calendario"
                     }
                   },
-                  "Property": "Ano"
+                  "Property": "Año"
                 }
               }
             ],
@@ -303,7 +303,7 @@
           },
           {
             "queryRefs": [
-              "Fecha.Semestre"
+              "dim_Calendario.Semestre"
             ],
             "isCollapsed": true,
             "identityKeys": [
@@ -311,7 +311,7 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Fecha"
+                      "Entity": "dim_Calendario"
                     }
                   },
                   "Property": "Semestre"
@@ -322,7 +322,7 @@
           },
           {
             "queryRefs": [
-              "Fecha.Mes"
+              "dim_Calendario.Mes del año"
             ],
             "isCollapsed": true,
             "identityKeys": [
@@ -330,10 +330,10 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Fecha"
+                      "Entity": "dim_Calendario"
                     }
                   },
-                  "Property": "Mes"
+                  "Property": "Mes del año"
                 }
               }
             ],
@@ -341,87 +341,55 @@
           },
           {
             "queryRefs": [
-              "Fecha.MesAno"
+              "dim_Calendario.Mes, Año"
             ],
             "isCollapsed": true,
-            "identityKeys": [
-              {
-                "Column": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "Fecha"
-                    }
-                  },
-                  "Property": "MesAno"
-                }
-              }
-            ],
             "isPinned": true
           }
         ],
-        "root": {}
+        "root": {
+          "children": [
+            {
+              "identityValues": [
+                {
+                  "Literal": {
+                    "Value": "2013L"
+                  }
+                }
+              ],
+              "children": [
+                {
+                  "identityValues": [
+                    {
+                      "Literal": {
+                        "Value": "'S1'"
+                      }
+                    }
+                  ],
+                  "isToggled": true,
+                  "children": [
+                    {
+                      "identityValues": [
+                        {
+                          "Literal": {
+                            "Value": "1L"
+                          }
+                        }
+                      ],
+                      "isToggled": true
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
       }
     ],
     "drillFilterOtherVisuals": true
   },
   "filterConfig": {
     "filters": [
-      {
-        "name": "05d8fcd9c87d1ba8f837",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Fecha"
-              }
-            },
-            "Property": "Ano"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "10059eba33e10e2b5f39",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Fecha"
-              }
-            },
-            "Property": "Semestre"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "83382d8ca1d9c75d57f0",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Fecha"
-              }
-            },
-            "Property": "Mes"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "e30b157b833e43b2a7d5",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Fecha"
-              }
-            },
-            "Property": "MesAno"
-          }
-        },
-        "type": "Categorical"
-      },
       {
         "name": "682481b34295c342c752",
         "field": {
@@ -603,6 +571,62 @@
           }
         },
         "type": "Advanced"
+      },
+      {
+        "name": "a7215bcb622011bdd689",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "dim_Calendario"
+              }
+            },
+            "Property": "Año"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "de45ad81444865837abc",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "dim_Calendario"
+              }
+            },
+            "Property": "Semestre"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "03937830ba01a3309b7d",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "dim_Calendario"
+              }
+            },
+            "Property": "Mes del año"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "eba300946912d5bcdc9c",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "dim_Calendario"
+              }
+            },
+            "Property": "Mes, Año"
+          }
+        },
+        "type": "Categorical"
       }
     ]
   }

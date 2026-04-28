@@ -1,0 +1,248 @@
+table fact_Intervenciones
+	lineageTag: 39e48b4d-332b-4321-a070-c82dbe72f970
+
+	column 'Solicitud servicio'
+		dataType: string
+		lineageTag: d801feda-4565-49e3-b7c4-a9d4aa21c6f5
+		summarizeBy: none
+		sourceColumn: Solicitud servicio
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Fecha creacion SS'
+		dataType: dateTime
+		formatString: dd/mm/yyyy
+		lineageTag: 220416d8-bece-4832-aa44-f8852d172c88
+		summarizeBy: none
+		sourceColumn: Fecha creacion SS
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+		annotation PBI_FormatHint = {"isDateTimeCustom":true}
+
+	column 'Planta stock'
+		dataType: string
+		lineageTag: 0ab1c5a9-ee53-4657-b4d8-487418e3c481
+		summarizeBy: none
+		sourceColumn: Planta stock
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Id Parque'
+		dataType: string
+		lineageTag: 17bd7ced-6240-4fe6-bd07-079c1d29104e
+		summarizeBy: none
+		sourceColumn: Id Parque
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'AN Linea negocio'
+		dataType: string
+		lineageTag: a34dda90-f0cc-4585-8247-ab09f6d86dcd
+		summarizeBy: none
+		sourceColumn: AN Linea negocio
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'AN Sector mercado'
+		dataType: string
+		lineageTag: 22339586-72bf-45c0-8feb-cf54ef3de053
+		summarizeBy: none
+		sourceColumn: AN Sector mercado
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'AN Departamento'
+		dataType: string
+		lineageTag: 237321cf-fb1c-4039-b96a-e7735f21bb0f
+		summarizeBy: none
+		sourceColumn: AN Departamento
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'AN Planta'
+		dataType: string
+		lineageTag: 3a01fafa-8090-46ea-94ec-3df80c59b26c
+		summarizeBy: none
+		sourceColumn: AN Planta
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Modo comunicacion'
+		dataType: string
+		lineageTag: 3d681737-9543-4989-b61b-955c7cd0293f
+		summarizeBy: none
+		sourceColumn: Modo comunicacion
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Fam est 2 SS'
+		dataType: string
+		lineageTag: 3cee5eff-b47c-4358-be3c-a2b69c9a92ac
+		summarizeBy: none
+		sourceColumn: Fam est 2 SS
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Lugar de realizacion'
+		dataType: string
+		lineageTag: 7a70b041-3037-4e7f-b5b9-e3978fd15108
+		summarizeBy: none
+		sourceColumn: Lugar de realizacion
+
+		annotation SummarizationSetBy = Automatic
+
+	column Motivo
+		dataType: string
+		lineageTag: 109839fc-5516-438b-b5f2-536c1402693b
+		summarizeBy: none
+		sourceColumn: Motivo
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Tipo contrato'
+		dataType: string
+		lineageTag: dadebdf8-146b-4b6e-a6ce-19da0ca025c8
+		summarizeBy: none
+		sourceColumn: Tipo contrato
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Titulo SS'
+		dataType: string
+		lineageTag: c22c9055-9111-4c61-88da-541ce0cdbd34
+		summarizeBy: none
+		sourceColumn: Titulo SS
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'SS intervencion'
+		dataType: string
+		lineageTag: ee419c13-1ec4-4d0d-84a5-a66d7be71bae
+		summarizeBy: none
+		sourceColumn: SS intervencion
+
+		annotation SummarizationSetBy = Automatic
+
+	column Intervencion
+		dataType: string
+		lineageTag: cf8771ae-3aa0-434b-85ba-d8874adc6424
+		summarizeBy: none
+		sourceColumn: Intervencion
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Codigo cliente'
+		dataType: string
+		lineageTag: 70b12b11-2bdb-4ea1-806d-8750ec8f8973
+		summarizeBy: none
+		sourceColumn: Codigo cliente
+
+		annotation SummarizationSetBy = Automatic
+
+	column Cliente
+		dataType: string
+		lineageTag: bb91bc9b-7c5e-4fed-bf78-75853e7d8e98
+		summarizeBy: none
+		sourceColumn: Cliente
+
+		annotation SummarizationSetBy = Automatic
+
+	column Sector
+		dataType: string
+		lineageTag: 245403f3-c3fc-4d73-acf0-193f7f65c1cb
+		summarizeBy: none
+		sourceColumn: Sector
+
+		annotation SummarizationSetBy = Automatic
+
+	column Anomalia
+		dataType: string
+		lineageTag: 3b633e85-1d94-4a9f-af2d-f2e6e0bd03f6
+		summarizeBy: none
+		sourceColumn: Anomalia
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Fecha intervencion'
+		dataType: dateTime
+		formatString: dd/mm/yyyy
+		lineageTag: 963cd356-98ef-4448-877d-9ad32769b0c3
+		summarizeBy: none
+		sourceColumn: Fecha intervencion
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+		annotation PBI_FormatHint = {"isDateTimeCustom":true}
+
+	column 'Nº serie maquina'
+		dataType: string
+		lineageTag: 0734bb8b-583e-4fa4-ad6f-aea6ce982a45
+		summarizeBy: none
+		sourceColumn: Nº serie maquina
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Int. sin garantia'
+		dataType: string
+		lineageTag: 4ebb0cd3-14f6-4510-863b-b7e966a8b49a
+		summarizeBy: none
+		sourceColumn: Int. sin garantia
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Int. con garantia'
+		dataType: string
+		lineageTag: cd7c2783-5721-4770-a2a8-3abddbdcf5f7
+		summarizeBy: none
+		sourceColumn: Int. con garantia
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Int. instalacion'
+		dataType: string
+		lineageTag: 20ecd338-6447-45cc-9f05-2eb6f16bcfdb
+		summarizeBy: none
+		sourceColumn: Int. instalacion
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Int. contrato'
+		dataType: string
+		lineageTag: b88acc1d-7789-4078-8a72-30c6eb2cb1e9
+		summarizeBy: none
+		sourceColumn: Int. contrato
+
+		annotation SummarizationSetBy = Automatic
+
+	column Tecnico
+		dataType: string
+		lineageTag: 88d91834-4a07-45d7-a0be-91d531d66fd7
+		summarizeBy: none
+		sourceColumn: Tecnico
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Estado facturado'
+		dataType: string
+		lineageTag: eeb58207-1985-4105-a53e-ac39d2344009
+		summarizeBy: none
+		sourceColumn: Estado facturado
+
+		annotation SummarizationSetBy = Automatic
+
+	partition fact_Intervenciones = m
+		mode: import
+		source =
+				let
+				    Origen = PowerBI.Dataflows(null),
+				    #"cd25238f-048e-4509-ab9f-29f918c14d4c" = Origen{[workspaceId="cd25238f-048e-4509-ab9f-29f918c14d4c"]}[Data],
+				    #"30301d97-998a-4d39-af0b-bb343b5472a7" = #"cd25238f-048e-4509-ab9f-29f918c14d4c"{[dataflowId="30301d97-998a-4d39-af0b-bb343b5472a7"]}[Data],
+				    fact_Intervenciones1 = #"30301d97-998a-4d39-af0b-bb343b5472a7"{[entity="fact_Intervenciones"]}[Data]
+				in
+				    fact_Intervenciones1
+

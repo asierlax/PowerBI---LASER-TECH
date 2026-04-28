@@ -19,21 +19,33 @@ table fact_Ofertas
 
 	column 'Fecha creacion'
 		dataType: dateTime
-		formatString: General Date
+		formatString: dd/mm/yyyy
 		lineageTag: 0c0c8536-4a5c-46ea-9578-faa84c2852e7
 		summarizeBy: none
 		sourceColumn: Fecha creacion
 
+		changedProperty = DataType
+
 		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+		annotation PBI_FormatHint = {"isDateTimeCustom":true}
 
 	column 'Fecha oferta'
 		dataType: dateTime
-		formatString: General Date
+		formatString: dd/mm/yyyy
 		lineageTag: a0f34f18-228f-49c0-a58f-d180d317ebd0
 		summarizeBy: none
 		sourceColumn: Fecha oferta
 
+		changedProperty = DataType
+
 		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+		annotation PBI_FormatHint = {"isDateTimeCustom":true}
 
 	column IdCliente
 		dataType: string

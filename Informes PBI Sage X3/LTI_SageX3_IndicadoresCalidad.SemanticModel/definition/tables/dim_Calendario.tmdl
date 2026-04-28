@@ -1,0 +1,126 @@
+table dim_Calendario
+	lineageTag: 0f260c98-a8df-467f-bf7e-88f9210095be
+	dataCategory: Time
+
+	column Fecha
+		dataType: dateTime
+		isKey
+		formatString: dd/mm/yyyy
+		lineageTag: 2a8d09b6-4fe4-4f6f-ac58-86242e968aed
+		summarizeBy: none
+		sourceColumn: Fecha
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+		annotation PBI_FormatHint = {"isDateTimeCustom":true}
+
+	column Año
+		dataType: int64
+		formatString: 0
+		lineageTag: 55e8575d-84c8-4683-bb54-564e0b5bcec9
+		summarizeBy: none
+		sourceColumn: Año
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Mes Nombre'
+		dataType: string
+		lineageTag: fb1ffcac-7af5-44da-ab99-d8f48b193ac7
+		summarizeBy: none
+		sourceColumn: Mes Nombre
+
+		annotation SummarizationSetBy = Automatic
+
+	column MonthYearKey
+		dataType: int64
+		formatString: 0
+		lineageTag: 9e603e98-0089-40d6-85af-8f4b61162bfa
+		summarizeBy: none
+		sourceColumn: MonthYearKey
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Mes, Año'
+		dataType: string
+		lineageTag: 5fb797c8-764e-4a7c-b9ed-8005c67a4db9
+		summarizeBy: none
+		sourceColumn: Mes, Año
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Mes 3L'
+		dataType: string
+		lineageTag: 9bc6fb41-bfc7-4b73-a276-3305669540a1
+		summarizeBy: none
+		sourceColumn: Mes 3L
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Fin Month'
+		dataType: int64
+		formatString: 0
+		lineageTag: 43476730-0333-4f58-b7e7-f2dac20a4828
+		summarizeBy: none
+		sourceColumn: Fin Month
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Dia Nombre'
+		dataType: string
+		lineageTag: 60abf9b4-c85d-4f8e-b001-016e6a198c1d
+		summarizeBy: none
+		sourceColumn: Dia Nombre
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Dia Nombre 3L'
+		dataType: string
+		lineageTag: 76699064-7474-4d1e-a476-39a403086195
+		summarizeBy: none
+		sourceColumn: Dia Nombre 3L
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Dia numero semana'
+		dataType: int64
+		formatString: 0
+		lineageTag: d6e57346-264a-40b5-b01e-1dbb5d47a599
+		summarizeBy: none
+		sourceColumn: Dia numero semana
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Mes del año'
+		dataType: int64
+		formatString: 0
+		lineageTag: 583b71bd-dcd2-4e03-881b-ef4fbb25ed73
+		summarizeBy: none
+		sourceColumn: Mes del año
+
+		annotation SummarizationSetBy = Automatic
+
+	column Trimestre = "T" & QUARTER([Fecha])
+		lineageTag: f0434fa1-1a98-4d28-a6f0-a90a66db7006
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column Semestre = IF(MONTH(dim_Calendario[Fecha]) <= 6, "S1", "S2")
+		lineageTag: 01a7ac84-449a-4fa9-9e56-a0b2c87e2f7c
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	partition dim_Calendario = m
+		mode: import
+		source =
+				let
+				    Origen = PowerBI.Dataflows(null),
+				    #"cd25238f-048e-4509-ab9f-29f918c14d4c" = Origen{[workspaceId="cd25238f-048e-4509-ab9f-29f918c14d4c"]}[Data],
+				    #"5877d4c8-d8db-4300-bd5c-7bed546ea986" = #"cd25238f-048e-4509-ab9f-29f918c14d4c"{[dataflowId="5877d4c8-d8db-4300-bd5c-7bed546ea986"]}[Data],
+				    dim_Calendario1 = #"5877d4c8-d8db-4300-bd5c-7bed546ea986"{[entity="dim_Calendario"]}[Data]
+				in
+				    dim_Calendario1
+

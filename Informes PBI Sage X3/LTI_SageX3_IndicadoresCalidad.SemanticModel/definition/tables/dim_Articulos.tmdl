@@ -1,0 +1,228 @@
+table dim_Articulos
+	lineageTag: da10986f-070e-4a63-bf03-59f6535f1590
+
+	column IdArticulo
+		dataType: string
+		lineageTag: 630ce20f-fc2c-4cdf-9356-57aea95b64ce
+		summarizeBy: none
+		sourceColumn: IdArticulo
+
+		annotation SummarizationSetBy = Automatic
+
+	column IdCategoria
+		dataType: string
+		lineageTag: 3dc12458-72de-469d-9da3-d7b7632b20dd
+		summarizeBy: none
+		sourceColumn: IdCategoria
+
+		annotation SummarizationSetBy = Automatic
+
+	column Categoria
+		dataType: string
+		lineageTag: cfed3ef6-6eaf-4746-9daf-ba123878cd40
+		summarizeBy: none
+		sourceColumn: Categoria
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Codigo Contable'
+		dataType: string
+		lineageTag: f36b3b22-233a-49be-9090-bef1abb49745
+		summarizeBy: none
+		sourceColumn: Codigo Contable
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Descripcion 1'
+		dataType: string
+		lineageTag: 4b585392-4a0f-471c-9683-e0908a9fbf2b
+		summarizeBy: none
+		sourceColumn: Descripcion 1
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Descripcion 2'
+		dataType: string
+		lineageTag: cc0c64dc-dd04-43a1-9660-2afca4d6184d
+		summarizeBy: none
+		sourceColumn: Descripcion 2
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Descripcion 3'
+		dataType: string
+		lineageTag: 189a197e-b8db-4489-8080-c934cf8041eb
+		summarizeBy: none
+		sourceColumn: Descripcion 3
+
+		annotation SummarizationSetBy = Automatic
+
+	column Unidad
+		dataType: string
+		lineageTag: d1ee5595-1c97-458a-aafb-32a5be106f15
+		summarizeBy: none
+		sourceColumn: Unidad
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Nivel Impuesto'
+		dataType: string
+		lineageTag: 2d3afa7f-a647-47cd-b1da-6870bfd47add
+		summarizeBy: none
+		sourceColumn: Nivel Impuesto
+
+		annotation SummarizationSetBy = Automatic
+
+	column Comprador
+		dataType: string
+		lineageTag: 0b6d1bf5-1e1c-4b87-a867-e0926f5f9652
+		summarizeBy: none
+		sourceColumn: Comprador
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Precio Base'
+		dataType: double
+		lineageTag: e3d91231-46d3-4ce4-9bc4-d0cca1c7f415
+		summarizeBy: sum
+		sourceColumn: Precio Base
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Coef Gastos Entrega'
+		dataType: double
+		lineageTag: 17474246-b0ee-48b3-89ff-9a69d0d89f3c
+		summarizeBy: sum
+		sourceColumn: Coef Gastos Entrega
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Coste Fijo Unitario'
+		dataType: double
+		lineageTag: 5386d813-e5ab-4a45-a7c6-e6d7f77d1cec
+		summarizeBy: sum
+		sourceColumn: Coste Fijo Unitario
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Eje Analitico 1'
+		dataType: string
+		lineageTag: 203a0f09-dce1-4dc9-9225-b834b0e60bb8
+		summarizeBy: none
+		sourceColumn: Eje Analitico 1
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Eje Analitico 2'
+		dataType: string
+		lineageTag: 7e643d10-2746-477c-8661-a23e835e35ed
+		summarizeBy: none
+		sourceColumn: Eje Analitico 2
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Eje Analitico 3'
+		dataType: string
+		lineageTag: 8519b317-a29e-4691-a4f1-c3fb9100a493
+		summarizeBy: none
+		sourceColumn: Eje Analitico 3
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Eje Analitico 4'
+		dataType: string
+		lineageTag: a1fd29af-7513-4d76-b59a-fe9722ef7695
+		summarizeBy: none
+		sourceColumn: Eje Analitico 4
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Codigo Famlia'
+		dataType: string
+		lineageTag: 2fc707ba-7e38-487f-85b9-279550929f7d
+		summarizeBy: none
+		sourceColumn: Codigo Famlia
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Codigo Subfamilia'
+		dataType: string
+		lineageTag: 270f41c8-88dc-4e0a-b9e3-dfd1a8746362
+		summarizeBy: none
+		sourceColumn: Codigo Subfamilia
+
+		annotation SummarizationSetBy = Automatic
+
+	column Familia
+		dataType: string
+		lineageTag: 2ca05f28-4568-425a-a852-1445e09f2526
+		summarizeBy: none
+		sourceColumn: Familia
+
+		annotation SummarizationSetBy = Automatic
+
+	column Subfamilia
+		dataType: string
+		lineageTag: 71c75f7a-bacf-47a7-87f4-10ee32db15ef
+		summarizeBy: none
+		sourceColumn: Subfamilia
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Cantidad Minima'
+		dataType: double
+		lineageTag: 5f73a441-21ca-4e17-9b3c-2a8204f66bfe
+		summarizeBy: sum
+		sourceColumn: Cantidad Minima
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Margen Minimo'
+		dataType: double
+		lineageTag: fde3f2f3-5b37-48d8-9238-87a75af3ac90
+		summarizeBy: sum
+		sourceColumn: Margen Minimo
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Precio Minimo'
+		dataType: double
+		lineageTag: f3b3bd83-ddd5-42a4-91ed-53cdeabac6a1
+		summarizeBy: sum
+		sourceColumn: Precio Minimo
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Precio Base Ventas'
+		dataType: double
+		lineageTag: 0bd55dcf-7a44-4419-9bfb-89205ba6e774
+		summarizeBy: sum
+		sourceColumn: Precio Base Ventas
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	partition dim_Articulos = m
+		mode: import
+		source =
+				let
+				    Origen = PowerBI.Dataflows(null),
+				    #"cd25238f-048e-4509-ab9f-29f918c14d4c" = Origen{[workspaceId="cd25238f-048e-4509-ab9f-29f918c14d4c"]}[Data],
+				    #"5877d4c8-d8db-4300-bd5c-7bed546ea986" = #"cd25238f-048e-4509-ab9f-29f918c14d4c"{[dataflowId="5877d4c8-d8db-4300-bd5c-7bed546ea986"]}[Data],
+				    dim_Articulos1 = #"5877d4c8-d8db-4300-bd5c-7bed546ea986"{[entity="dim_Articulos"]}[Data]
+				in
+				    dim_Articulos1
+
