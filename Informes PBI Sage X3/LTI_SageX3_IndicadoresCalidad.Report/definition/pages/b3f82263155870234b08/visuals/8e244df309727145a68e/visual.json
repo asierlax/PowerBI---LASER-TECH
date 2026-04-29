@@ -706,37 +706,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "a6187c0e0a6504f39c3a",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Metricas"
-              }
-            },
-            "Property": "% en Garantia"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "a69b6f7acb2d2082e579",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "dim_Calendario"
-              }
-            },
-            "Property": "Año"
-          }
-        },
-        "type": "Advanced"
-      }
-    ]
   }
 }

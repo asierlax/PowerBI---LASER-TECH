@@ -1,5 +1,5 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.8.0/schema.json",
   "name": "81565f9ab3481c041c74",
   "position": {
     "x": 19.232053422370619,
@@ -323,51 +323,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "df235ba43316ed5caca5",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Metricas"
-              }
-            },
-            "Property": "Count Intervenciones"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "2f8660df62f643caafbe",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Metricas"
-              }
-            },
-            "Property": "Int En garantia Clientes"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "fdf12d5992427191ff0a",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Metricas"
-              }
-            },
-            "Property": "Int reincidencia"
-          }
-        },
-        "type": "Advanced"
-      }
-    ]
   }
 }

@@ -1,5 +1,5 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.8.0/schema.json",
   "name": "72e35fab0c439378ec7f",
   "position": {
     "x": 847.27879799666107,
@@ -132,37 +132,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "1e09e52bd170dbc0d08f",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Metricas"
-              }
-            },
-            "Property": "% en Garantia"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "21b8f7d3ffd8e3850173",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Metricas"
-              }
-            },
-            "Property": "% Reincidencias averias"
-          }
-        },
-        "type": "Advanced"
-      }
-    ]
   }
 }

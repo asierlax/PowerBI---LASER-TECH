@@ -1,0 +1,524 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.8.0/schema.json",
+  "name": "5fb8813c32ed0937a030",
+  "position": {
+    "x": 23.505843071786312,
+    "y": 213.68948247078464,
+    "z": 4000,
+    "height": 489.34891485809686,
+    "width": 1241.5358931552587,
+    "tabOrder": 3000
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fact_Ofertas"
+                    }
+                  },
+                  "Property": "Fecha creacion"
+                }
+              },
+              "queryRef": "fact_Ofertas.Fecha creacion",
+              "nativeQueryRef": "Fecha creacion"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fact_Ofertas"
+                    }
+                  },
+                  "Property": "Num presupuesto"
+                }
+              },
+              "queryRef": "fact_Ofertas.Num presupuesto",
+              "nativeQueryRef": "Num presupuesto"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fact_Ofertas"
+                    }
+                  },
+                  "Property": "Num proforma"
+                }
+              },
+              "queryRef": "fact_Ofertas.Num proforma",
+              "nativeQueryRef": "Num proforma"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fact_Ofertas"
+                    }
+                  },
+                  "Property": "Num pedido"
+                }
+              },
+              "queryRef": "fact_Ofertas.Num pedido",
+              "nativeQueryRef": "Num pedido"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fact_Ofertas"
+                    }
+                  },
+                  "Property": "Num entrega"
+                }
+              },
+              "queryRef": "fact_Ofertas.Num entrega",
+              "nativeQueryRef": "Num entrega"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fact_Ofertas"
+                    }
+                  },
+                  "Property": "Modo aceptacion"
+                }
+              },
+              "queryRef": "fact_Ofertas.Modo aceptacion",
+              "nativeQueryRef": "Modo aceptacion"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fact_Ofertas"
+                    }
+                  },
+                  "Property": "IdCliente"
+                }
+              },
+              "queryRef": "fact_Ofertas.IdCliente",
+              "nativeQueryRef": "IdCliente"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fact_Ofertas"
+                    }
+                  },
+                  "Property": "Razon Social"
+                }
+              },
+              "queryRef": "fact_Ofertas.Razon Social",
+              "nativeQueryRef": "Razon Social"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fact_Ofertas"
+                    }
+                  },
+                  "Property": "Categoria cliente"
+                }
+              },
+              "queryRef": "fact_Ofertas.Categoria cliente",
+              "nativeQueryRef": "Categoria cliente"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fact_Ofertas"
+                    }
+                  },
+                  "Property": "Referencia"
+                }
+              },
+              "queryRef": "fact_Ofertas.Referencia",
+              "nativeQueryRef": "Referencia"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fact_Ofertas"
+                    }
+                  },
+                  "Property": "IdArticulo"
+                }
+              },
+              "queryRef": "fact_Ofertas.IdArticulo",
+              "nativeQueryRef": "IdArticulo"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fact_Ofertas"
+                    }
+                  },
+                  "Property": "Descripcion linea"
+                }
+              },
+              "queryRef": "fact_Ofertas.Descripcion linea",
+              "nativeQueryRef": "Descripcion linea"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fact_Ofertas"
+                    }
+                  },
+                  "Property": "Categoria articulo"
+                }
+              },
+              "queryRef": "fact_Ofertas.Categoria articulo",
+              "nativeQueryRef": "Categoria articulo"
+            },
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "fact_Ofertas"
+                        }
+                      },
+                      "Property": "Cantidad"
+                    }
+                  },
+                  "Function": 0
+                }
+              },
+              "queryRef": "Sum(fact_Ofertas.Cantidad)",
+              "nativeQueryRef": "Cantidad"
+            },
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "fact_Ofertas"
+                        }
+                      },
+                      "Property": "Precio neto"
+                    }
+                  },
+                  "Function": 0
+                }
+              },
+              "queryRef": "Sum(fact_Ofertas.Precio neto)",
+              "nativeQueryRef": "Precio neto"
+            },
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "fact_Ofertas"
+                        }
+                      },
+                      "Property": "Importe linea"
+                    }
+                  },
+                  "Function": 0
+                }
+              },
+              "queryRef": "Sum(fact_Ofertas.Importe linea)",
+              "nativeQueryRef": "Importe linea"
+            }
+          ]
+        }
+      }
+    },
+    "objects": {
+      "columnWidth": [
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "248.3767537636216D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "fact_Ofertas.Referencia"
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "3155f46c338ae3b6ba72",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "fact_Ofertas"
+              }
+            },
+            "Property": "Num presupuesto"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "a721068722b0968b7d73",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "fact_Ofertas"
+              }
+            },
+            "Property": "Num proforma"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "f8ca93a3600ad8eac905",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "fact_Ofertas"
+              }
+            },
+            "Property": "Num pedido"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "27f8e23897a140c292e3",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "fact_Ofertas"
+              }
+            },
+            "Property": "Num entrega"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "793f9622dac35880e7c3",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "fact_Ofertas"
+              }
+            },
+            "Property": "Modo aceptacion"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "810478b67796865b2597",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "fact_Ofertas"
+              }
+            },
+            "Property": "Fecha creacion"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "a59fc4bda505280a5762",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "fact_Ofertas"
+              }
+            },
+            "Property": "IdCliente"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "6fd5efa6ed3d3235abeb",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "fact_Ofertas"
+              }
+            },
+            "Property": "Razon Social"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "f2650dd4e06667030d0b",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "fact_Ofertas"
+              }
+            },
+            "Property": "Referencia"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "10db898b2a48dd31960d",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "fact_Ofertas"
+              }
+            },
+            "Property": "IdArticulo"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "98a83ae9a85ceb23c50c",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "fact_Ofertas"
+              }
+            },
+            "Property": "Descripcion linea"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "0e75b45fbbbb54b65a00",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "fact_Ofertas"
+              }
+            },
+            "Property": "Categoria articulo"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "01d6a640706bd42582a0",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "fact_Ofertas"
+              }
+            },
+            "Property": "Categoria cliente"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "111bd8fc4673b9028753",
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "fact_Ofertas"
+                  }
+                },
+                "Property": "Cantidad"
+              }
+            },
+            "Function": 0
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "6def64ab024a16c0c930",
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "fact_Ofertas"
+                  }
+                },
+                "Property": "Precio neto"
+              }
+            },
+            "Function": 0
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "5735f0d47bac7871d0dc",
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "fact_Ofertas"
+                  }
+                },
+                "Property": "Importe linea"
+              }
+            },
+            "Function": 0
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
+  }
+}

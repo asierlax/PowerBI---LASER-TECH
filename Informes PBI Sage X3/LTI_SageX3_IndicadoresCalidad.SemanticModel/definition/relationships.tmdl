@@ -39,35 +39,11 @@ relationship cf3a6933-d495-5dda-4a16-090e1a921d99
 	fromColumn: TarifasCompra.IdArticulo
 	toColumn: Articulos.CodArticulo
 
-relationship 6d4e71b9-c370-749b-9456-c3fb74e8567a
-	fromColumn: Intervenciones.'Codigo cliente'
-	toColumn: Clientes.IdCliente
-
-relationship ecd61387-5062-d123-0118-16ab576bb0e8
-	fromColumn: Albaranes.Cliente
-	toColumn: Clientes.IdCliente
-
 relationship 2082db3a-d9c3-315d-a318-8fe01d55bbd0
 	crossFilteringBehavior: bothDirections
 	fromCardinality: one
 	fromColumn: Articulos.CodArticulo
 	toColumn: Stock.IdArticulo
-
-relationship 8fd85810-1284-fb45-80f8-3a21c89f5a3b
-	fromColumn: DocumentosLinea.IdCliente
-	toColumn: Clientes.IdCliente
-
-relationship f617aecb-ae9b-4334-ade3-a63b99c2a199
-	fromColumn: DocumentosCabecera.'Fecha Factura'
-	toColumn: Fecha.Fecha
-
-relationship 07aecbd1-4ae4-f70a-98c1-522936168570
-	fromColumn: Albaranes.Fecha
-	toColumn: Fecha.Fecha
-
-relationship 8041d0a7-7806-71b4-c07e-f1d771c524f7
-	fromColumn: Intervenciones.'Fecha intervencion'
-	toColumn: Fecha.Fecha
 
 relationship 32ccf683-ad47-995e-d4f4-b753b5531416
 	fromColumn: DocumentosCabecera.Empresa
@@ -84,4 +60,12 @@ relationship 0d070f21-1903-57f5-890d-3c420ab281a9
 relationship fb59f612-a000-26e6-628b-503fd6623bd7
 	fromColumn: fact_Intervenciones.'Codigo cliente'
 	toColumn: dim_Clientes.IdCliente
+
+relationship f98b67d4-312a-8083-39dc-9113f5bff976
+	fromColumn: fact_Ofertas.IdCliente
+	toColumn: dim_Clientes.IdCliente
+
+relationship 0f5bc991-ec18-ea94-9fb6-a94530fb6856
+	fromColumn: fact_Ofertas.'Fecha creacion'
+	toColumn: dim_Calendario.Fecha
 

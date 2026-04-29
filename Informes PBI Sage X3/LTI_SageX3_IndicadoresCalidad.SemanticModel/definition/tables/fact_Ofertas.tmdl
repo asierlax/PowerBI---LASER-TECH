@@ -185,6 +185,39 @@ table fact_Ofertas
 
 		annotation SummarizationSetBy = Automatic
 
+	column Linea
+		dataType: int64
+		formatString: 0
+		lineageTag: 74e571fb-e38d-41cd-845b-96a8c16bb22b
+		summarizeBy: sum
+		sourceColumn: Linea
+
+		annotation SummarizationSetBy = Automatic
+
+	column IdLinea
+		dataType: string
+		lineageTag: 552d85a2-597a-4c48-8d58-5aa693e6cc3b
+		summarizeBy: none
+		sourceColumn: IdLinea
+
+		annotation SummarizationSetBy = Automatic
+
+	column IdSociedad
+		dataType: string
+		lineageTag: bf1a3834-55a4-416d-8d8e-f8cfb801a0d7
+		summarizeBy: none
+		sourceColumn: IdSociedad
+
+		annotation SummarizationSetBy = Automatic
+
+	column Planta
+		dataType: string
+		lineageTag: 5ded0201-e558-444f-af38-fd2eb63b7721
+		summarizeBy: none
+		sourceColumn: Planta
+
+		annotation SummarizationSetBy = Automatic
+
 	partition fact_Ofertas = m
 		mode: import
 		source =

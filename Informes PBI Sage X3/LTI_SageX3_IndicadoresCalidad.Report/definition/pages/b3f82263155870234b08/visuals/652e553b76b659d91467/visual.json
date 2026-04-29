@@ -706,37 +706,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "7519684de3fcf7f8cfb2",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Metricas"
-              }
-            },
-            "Property": "% Reincidencias averias"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "460023f77a69d240d440",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "dim_Calendario"
-              }
-            },
-            "Property": "Año"
-          }
-        },
-        "type": "Advanced"
-      }
-    ]
   }
 }

@@ -418,6 +418,26 @@ table Metricas
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
+	measure 'Count Ofertas' = DISTINCTCOUNT(fact_Ofertas[Num presupuesto]) + 0
+		formatString: #,0
+		displayFolder: Ofertas
+		lineageTag: 30247ed8-abae-4502-9352-892a68e6f071
+
+	measure 'Ofertas aceptadas' = CALCULATE([Count Ofertas con Proforma], fact_Ofertas[Num entrega] <> "" ) + 0
+		formatString: #,0
+		displayFolder: Ofertas
+		lineageTag: 1da2dd9a-5902-4f00-8619-fb2603c786b7
+
+	measure 'Count Ofertas con Proforma' = CALCULATE([Count Ofertas], fact_Ofertas[Num proforma] <> "" ) + 0
+		formatString: #,0
+		displayFolder: Ofertas
+		lineageTag: 9587d341-3266-40e1-bc03-759cbcd032b7
+
+	measure '% Ofertas aceptadas' = DIVIDE([Ofertas aceptadas],[Count Ofertas con Proforma])
+		formatString: #,0\ %;-#,0\ %;#,0\ %
+		displayFolder: Ofertas
+		lineageTag: d75b81b7-ef53-468e-96f6-ac846f605aaf
+
 	partition Metricas-6395655b-e65a-43af-b3d7-1807b8438801 = m
 		mode: import
 		source =

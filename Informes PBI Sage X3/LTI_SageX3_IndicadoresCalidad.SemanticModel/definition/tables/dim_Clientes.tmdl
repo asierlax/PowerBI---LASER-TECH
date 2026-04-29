@@ -37,7 +37,7 @@ table dim_Clientes
 		dataType: int64
 		formatString: 0
 		lineageTag: fb8ce78c-469d-49fb-bf6d-88d81c4d6c66
-		summarizeBy: none
+		summarizeBy: sum
 		sourceColumn: Tipo
 
 		annotation SummarizationSetBy = Automatic

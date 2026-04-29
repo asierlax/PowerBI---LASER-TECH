@@ -20,7 +20,7 @@ table dim_Calendario
 		dataType: int64
 		formatString: 0
 		lineageTag: 55e8575d-84c8-4683-bb54-564e0b5bcec9
-		summarizeBy: none
+		summarizeBy: sum
 		sourceColumn: Año
 
 		annotation SummarizationSetBy = Automatic
@@ -37,7 +37,7 @@ table dim_Calendario
 		dataType: int64
 		formatString: 0
 		lineageTag: 9e603e98-0089-40d6-85af-8f4b61162bfa
-		summarizeBy: none
+		summarizeBy: count
 		sourceColumn: MonthYearKey
 
 		annotation SummarizationSetBy = Automatic
@@ -62,7 +62,7 @@ table dim_Calendario
 		dataType: int64
 		formatString: 0
 		lineageTag: 43476730-0333-4f58-b7e7-f2dac20a4828
-		summarizeBy: none
+		summarizeBy: sum
 		sourceColumn: Fin Month
 
 		annotation SummarizationSetBy = Automatic
@@ -87,7 +87,7 @@ table dim_Calendario
 		dataType: int64
 		formatString: 0
 		lineageTag: d6e57346-264a-40b5-b01e-1dbb5d47a599
-		summarizeBy: none
+		summarizeBy: sum
 		sourceColumn: Dia numero semana
 
 		annotation SummarizationSetBy = Automatic
@@ -96,7 +96,7 @@ table dim_Calendario
 		dataType: int64
 		formatString: 0
 		lineageTag: 583b71bd-dcd2-4e03-881b-ef4fbb25ed73
-		summarizeBy: none
+		summarizeBy: sum
 		sourceColumn: Mes del año
 
 		annotation SummarizationSetBy = Automatic

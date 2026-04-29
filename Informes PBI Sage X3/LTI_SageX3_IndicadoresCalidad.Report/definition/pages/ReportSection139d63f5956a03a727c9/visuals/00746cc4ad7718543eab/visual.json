@@ -257,111 +257,6 @@
                           [
                             {
                               "Literal": {
-                                "Value": "2007L"
-                              }
-                            }
-                          ],
-                          [
-                            {
-                              "Literal": {
-                                "Value": "2008L"
-                              }
-                            }
-                          ],
-                          [
-                            {
-                              "Literal": {
-                                "Value": "2009L"
-                              }
-                            }
-                          ],
-                          [
-                            {
-                              "Literal": {
-                                "Value": "2010L"
-                              }
-                            }
-                          ],
-                          [
-                            {
-                              "Literal": {
-                                "Value": "2011L"
-                              }
-                            }
-                          ],
-                          [
-                            {
-                              "Literal": {
-                                "Value": "2012L"
-                              }
-                            }
-                          ],
-                          [
-                            {
-                              "Literal": {
-                                "Value": "2013L"
-                              }
-                            }
-                          ],
-                          [
-                            {
-                              "Literal": {
-                                "Value": "2014L"
-                              }
-                            }
-                          ],
-                          [
-                            {
-                              "Literal": {
-                                "Value": "2015L"
-                              }
-                            }
-                          ],
-                          [
-                            {
-                              "Literal": {
-                                "Value": "2016L"
-                              }
-                            }
-                          ],
-                          [
-                            {
-                              "Literal": {
-                                "Value": "2017L"
-                              }
-                            }
-                          ],
-                          [
-                            {
-                              "Literal": {
-                                "Value": "2018L"
-                              }
-                            }
-                          ],
-                          [
-                            {
-                              "Literal": {
-                                "Value": "2019L"
-                              }
-                            }
-                          ],
-                          [
-                            {
-                              "Literal": {
-                                "Value": "2020L"
-                              }
-                            }
-                          ],
-                          [
-                            {
-                              "Literal": {
-                                "Value": "2021L"
-                              }
-                            }
-                          ],
-                          [
-                            {
-                              "Literal": {
                                 "Value": "2022L"
                               }
                             }
@@ -376,14 +271,14 @@
                           [
                             {
                               "Literal": {
-                                "Value": "2025L"
+                                "Value": "2024L"
                               }
                             }
                           ],
                           [
                             {
                               "Literal": {
-                                "Value": "2024L"
+                                "Value": "2025L"
                               }
                             }
                           ]
@@ -411,171 +306,6 @@
                                 "0": [
                                   {
                                     "Literal": {
-                                      "Value": "2007L"
-                                    }
-                                  }
-                                ]
-                              }
-                            ],
-                            [
-                              {
-                                "0": [
-                                  {
-                                    "Literal": {
-                                      "Value": "2008L"
-                                    }
-                                  }
-                                ]
-                              }
-                            ],
-                            [
-                              {
-                                "0": [
-                                  {
-                                    "Literal": {
-                                      "Value": "2009L"
-                                    }
-                                  }
-                                ]
-                              }
-                            ],
-                            [
-                              {
-                                "0": [
-                                  {
-                                    "Literal": {
-                                      "Value": "2010L"
-                                    }
-                                  }
-                                ]
-                              }
-                            ],
-                            [
-                              {
-                                "0": [
-                                  {
-                                    "Literal": {
-                                      "Value": "2011L"
-                                    }
-                                  }
-                                ]
-                              }
-                            ],
-                            [
-                              {
-                                "0": [
-                                  {
-                                    "Literal": {
-                                      "Value": "2012L"
-                                    }
-                                  }
-                                ]
-                              }
-                            ],
-                            [
-                              {
-                                "0": [
-                                  {
-                                    "Literal": {
-                                      "Value": "2013L"
-                                    }
-                                  }
-                                ]
-                              }
-                            ],
-                            [
-                              {
-                                "0": [
-                                  {
-                                    "Literal": {
-                                      "Value": "2014L"
-                                    }
-                                  }
-                                ]
-                              }
-                            ],
-                            [
-                              {
-                                "0": [
-                                  {
-                                    "Literal": {
-                                      "Value": "2015L"
-                                    }
-                                  }
-                                ]
-                              }
-                            ],
-                            [
-                              {
-                                "0": [
-                                  {
-                                    "Literal": {
-                                      "Value": "2016L"
-                                    }
-                                  }
-                                ]
-                              }
-                            ],
-                            [
-                              {
-                                "0": [
-                                  {
-                                    "Literal": {
-                                      "Value": "2017L"
-                                    }
-                                  }
-                                ]
-                              }
-                            ],
-                            [
-                              {
-                                "0": [
-                                  {
-                                    "Literal": {
-                                      "Value": "2018L"
-                                    }
-                                  }
-                                ]
-                              }
-                            ],
-                            [
-                              {
-                                "0": [
-                                  {
-                                    "Literal": {
-                                      "Value": "2019L"
-                                    }
-                                  }
-                                ]
-                              }
-                            ],
-                            [
-                              {
-                                "0": [
-                                  {
-                                    "Literal": {
-                                      "Value": "2020L"
-                                    }
-                                  }
-                                ]
-                              }
-                            ],
-                            [
-                              {
-                                "0": [
-                                  {
-                                    "Literal": {
-                                      "Value": "2021L"
-                                    }
-                                  }
-                                ]
-                              }
-                            ],
-                            [
-                              {
-                                "0": [
-                                  {
-                                    "Literal": {
                                       "Value": "2022L"
                                     }
                                   }
@@ -598,7 +328,7 @@
                                 "0": [
                                   {
                                     "Literal": {
-                                      "Value": "2025L"
+                                      "Value": "2024L"
                                     }
                                   }
                                 ]
@@ -609,7 +339,7 @@
                                 "0": [
                                   {
                                     "Literal": {
-                                      "Value": "2024L"
+                                      "Value": "2025L"
                                     }
                                   }
                                 ]
@@ -633,61 +363,16 @@
                         },
                         "valueMap": [
                           {
-                            "0": "2007"
-                          },
-                          {
-                            "0": "2008"
-                          },
-                          {
-                            "0": "2009"
-                          },
-                          {
-                            "0": "2010"
-                          },
-                          {
-                            "0": "2011"
-                          },
-                          {
-                            "0": "2012"
-                          },
-                          {
-                            "0": "2013"
-                          },
-                          {
-                            "0": "2014"
-                          },
-                          {
-                            "0": "2015"
-                          },
-                          {
-                            "0": "2016"
-                          },
-                          {
-                            "0": "2017"
-                          },
-                          {
-                            "0": "2018"
-                          },
-                          {
-                            "0": "2019"
-                          },
-                          {
-                            "0": "2020"
-                          },
-                          {
-                            "0": "2021"
-                          },
-                          {
                             "0": "2022"
                           },
                           {
                             "0": "2023"
                           },
                           {
-                            "0": "2025"
+                            "0": "2024"
                           },
                           {
-                            "0": "2024"
+                            "0": "2025"
                           }
                         ]
                       }
@@ -741,51 +426,5 @@
       "filterChanges": true
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "7ce93217081914017572",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "dim_Calendario"
-              }
-            },
-            "Property": "Año"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "2186c5e6d389001480ce",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "dim_Calendario"
-              }
-            },
-            "Property": "Trimestre"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "e5968c5327e010ea833c",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "dim_Calendario"
-              }
-            },
-            "Property": "Mes del año"
-          }
-        },
-        "type": "Advanced"
-      }
-    ]
   }
 }

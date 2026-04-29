@@ -4,14 +4,14 @@
     {
       "ordinal": 0,
       "scrollPosition": {
-        "x": 0,
-        "y": 0
+        "x": 885.9154929577461,
+        "y": 281.69014084507029
       },
       "nodes": [
         {
           "location": {
-            "x": 564.56688615562393,
-            "y": 168.16277414491975
+            "x": 1081.4682946063281,
+            "y": 0
           },
           "nodeIndex": "Metricas",
           "nodeLineageTag": "8f3050e2-9455-4ce9-a383-af94125f0237",
@@ -24,7 +24,7 @@
         {
           "location": {
             "x": 2186.7656883153636,
-            "y": 1437.2838813120538
+            "y": 1457.995055802015
           },
           "nodeIndex": "ABC by Year",
           "nodeLineageTag": "9bd79a4d-660d-4a66-9929-42953165583b",
@@ -37,7 +37,7 @@
         {
           "location": {
             "x": 1667.9099175861618,
-            "y": 515.2870780164717
+            "y": 535.99825250643289
           },
           "nodeIndex": "ABCD by Year",
           "nodeLineageTag": "1873fb10-3d68-4c33-a241-68980a52c91e",
@@ -50,7 +50,7 @@
         {
           "location": {
             "x": 2455.1658112789582,
-            "y": 630.91379845201186
+            "y": 651.624972941973
           },
           "nodeIndex": "Analitica Facturas",
           "nodeLineageTag": "1fcfe6cd-8d8c-4f5c-8f57-17336535ac97",
@@ -62,21 +62,8 @@
         },
         {
           "location": {
-            "x": 1284.2918096562453,
-            "y": 611.14176424682069
-          },
-          "nodeIndex": "Fecha",
-          "nodeLineageTag": "fff26a44-9740-4abc-af8c-31819644bc51",
-          "size": {
-            "height": 300,
-            "width": 234
-          },
-          "zIndex": 13
-        },
-        {
-          "location": {
             "x": 2792.8918257286182,
-            "y": 1048.6725260595717
+            "y": 1069.3837005495329
           },
           "nodeIndex": "Registros_Year",
           "nodeLineageTag": "f492c6de-2e02-468f-8ec4-457031129351",
@@ -89,7 +76,7 @@
         {
           "location": {
             "x": 2079,
-            "y": 357
+            "y": 377.71117448996119
           },
           "nodeIndex": "RFM",
           "size": {
@@ -101,7 +88,7 @@
         {
           "location": {
             "x": 2235.9,
-            "y": 0
+            "y": 20.711174489961195
           },
           "nodeIndex": "Segmentos",
           "size": {
@@ -113,7 +100,7 @@
         {
           "location": {
             "x": 2521.014167342797,
-            "y": 1504.5705747144225
+            "y": 1525.2817492043837
           },
           "nodeIndex": "Stock",
           "nodeLineageTag": "81bc4502-cf87-439c-9a28-a7b8535b38c0",
@@ -126,7 +113,7 @@
         {
           "location": {
             "x": 2793.7061160350104,
-            "y": 890.90696070780359
+            "y": 911.61813519776479
           },
           "nodeIndex": "UltimaActualizacion",
           "nodeLineageTag": "fdc5c519-6885-4e84-b453-70be9be8df63",
@@ -139,7 +126,7 @@
         {
           "location": {
             "x": 1468.3654745329186,
-            "y": 0
+            "y": 20.711174489961195
           },
           "nodeIndex": "Albaranes",
           "nodeLineageTag": "e922900c-ade0-4b0f-8262-e53ead82cfb2",
@@ -151,21 +138,8 @@
         },
         {
           "location": {
-            "x": 1105.6647367513476,
-            "y": 0
-          },
-          "nodeIndex": "Intervenciones",
-          "nodeLineageTag": "a811d9c7-1fbc-4ced-a0de-dc14be13f171",
-          "size": {
-            "height": 300,
-            "width": 234
-          },
-          "zIndex": 14
-        },
-        {
-          "location": {
             "x": 2785.0957284189162,
-            "y": 1301.6043945446786
+            "y": 1322.3155690346398
           },
           "nodeIndex": "TarifasCompra",
           "size": {
@@ -176,22 +150,11 @@
         },
         {
           "location": {
-            "x": 1034.2973243655783,
-            "y": 1097.3056909440118
-          },
-          "nodeIndex": "Clientes",
-          "size": {
-            "height": 300,
-            "width": 234
-          },
-          "zIndex": 2
-        },
-        {
-          "location": {
-            "x": 437.05971131632111,
-            "y": 1093.7205132326249
+            "x": 869.454077513504,
+            "y": 970.76971589160019
           },
           "nodeIndex": "Direcciones",
+          "nodeLineageTag": "a23f9ee2-22f9-4a22-b324-421fca5adb94",
           "size": {
             "height": 300,
             "width": 234
@@ -201,7 +164,7 @@
         {
           "location": {
             "x": 2042.2749692591012,
-            "y": 800.484127239244
+            "y": 821.1953017292052
           },
           "nodeIndex": "DocumentosLinea",
           "size": {
@@ -213,7 +176,7 @@
         {
           "location": {
             "x": 1685.1910879470474,
-            "y": 1062.06166266147
+            "y": 1082.7728371514313
           },
           "nodeIndex": "DocumentosCabecera",
           "size": {
@@ -225,7 +188,7 @@
         {
           "location": {
             "x": 1354.8680085512976,
-            "y": 1429.3429778103989
+            "y": 1450.05415230036
           },
           "nodeIndex": "Sociedades",
           "size": {
@@ -237,7 +200,7 @@
         {
           "location": {
             "x": 1830.1616417780037,
-            "y": 128.72535950384395
+            "y": 149.43653399380514
           },
           "nodeIndex": "Representantes",
           "nodeLineageTag": "9e54ec5a-7c17-4b59-a1d0-d0d9e0788d20",
@@ -250,7 +213,7 @@
         {
           "location": {
             "x": 2449.38180700331,
-            "y": 989.5343116846368
+            "y": 1010.245486174598
           },
           "nodeIndex": "Articulos",
           "size": {
@@ -262,7 +225,7 @@
         {
           "location": {
             "x": 2543.46330612714,
-            "y": 225.68419417715381
+            "y": 246.395368667115
           },
           "nodeIndex": "fact_Ofertas",
           "nodeLineageTag": "18df90da-f246-4542-b3c5-b79ef536b82d",
@@ -273,7 +236,10 @@
           "zIndex": 0
         },
         {
-          "location": {},
+          "location": {
+            "x": 3505.7055110714109,
+            "y": 1024.0996871349003
+          },
           "nodeIndex": "dim_Articulos",
           "nodeLineageTag": "da10986f-070e-4a63-bf03-59f6535f1590",
           "size": {
@@ -283,7 +249,10 @@
           "zIndex": 0
         },
         {
-          "location": {},
+          "location": {
+            "x": 3259.0294547333829,
+            "y": 664.71959167610441
+          },
           "nodeIndex": "dim_Calendario",
           "nodeLineageTag": "0f260c98-a8df-467f-bf7e-88f9210095be",
           "size": {
@@ -293,7 +262,10 @@
           "zIndex": 0
         },
         {
-          "location": {},
+          "location": {
+            "x": 2690.6464047186892,
+            "y": 694.70470245570232
+          },
           "nodeIndex": "dim_Clientes",
           "nodeLineageTag": "7d1f8fc6-3e79-4a70-8076-511b149715ad",
           "size": {
@@ -303,7 +275,10 @@
           "zIndex": 0
         },
         {
-          "location": {},
+          "location": {
+            "x": 3841.8181871277493,
+            "y": 979.02926459968876
+          },
           "nodeIndex": "fact_Albaranes",
           "nodeLineageTag": "75e9067a-6055-49d9-92fa-b99cb7607066",
           "size": {
@@ -313,7 +288,10 @@
           "zIndex": 0
         },
         {
-          "location": {},
+          "location": {
+            "x": 2974.8479659118743,
+            "y": 697.56428963594954
+          },
           "nodeIndex": "fact_Intervenciones",
           "nodeLineageTag": "39e48b4d-332b-4321-a070-c82dbe72f970",
           "size": {
@@ -389,32 +367,6 @@
             "width": 257
           },
           "zIndex": 0
-        },
-        {
-          "location": {
-            "x": 0,
-            "y": 186
-          },
-          "nodeIndex": "Fecha",
-          "nodeLineageTag": "fff26a44-9740-4abc-af8c-31819644bc51",
-          "size": {
-            "height": 300,
-            "width": 234
-          },
-          "zIndex": 0
-        },
-        {
-          "location": {
-            "x": 733,
-            "y": 108
-          },
-          "nodeIndex": "Clientes",
-          "nodeLineageTag": "87a08bef-d5ce-488c-843d-139538bde7f0",
-          "size": {
-            "height": 300,
-            "width": 234
-          },
-          "zIndex": 0
         }
       ],
       "name": "Albaranes",
@@ -433,47 +385,8 @@
       "nodes": [
         {
           "location": {
-            "x": 0,
-            "y": 0
-          },
-          "nodeIndex": "Fecha",
-          "nodeLineageTag": "fff26a44-9740-4abc-af8c-31819644bc51",
-          "size": {
-            "height": 300,
-            "width": 234
-          },
-          "zIndex": 0
-        },
-        {
-          "location": {
-            "x": 248,
-            "y": 341
-          },
-          "nodeIndex": "Intervenciones",
-          "nodeLineageTag": "a811d9c7-1fbc-4ced-a0de-dc14be13f171",
-          "size": {
-            "height": 300,
-            "width": 234
-          },
-          "zIndex": 0
-        },
-        {
-          "location": {
-            "x": 479,
-            "y": 0
-          },
-          "nodeIndex": "Clientes",
-          "nodeLineageTag": "87a08bef-d5ce-488c-843d-139538bde7f0",
-          "size": {
-            "height": 300,
-            "width": 234
-          },
-          "zIndex": 0
-        },
-        {
-          "location": {
-            "x": 954,
-            "y": 326
+            "x": 386,
+            "y": 321
           },
           "nodeIndex": "fact_Intervenciones",
           "nodeLineageTag": "39e48b4d-332b-4321-a070-c82dbe72f970",
@@ -481,12 +394,66 @@
             "height": 300,
             "width": 234
           },
+          "zIndex": 1
+        },
+        {
+          "location": {
+            "x": 28,
+            "y": 12
+          },
+          "nodeIndex": "dim_Calendario",
+          "nodeLineageTag": "0f260c98-a8df-467f-bf7e-88f9210095be",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 2
+        },
+        {
+          "location": {
+            "x": 703,
+            "y": 39
+          },
+          "nodeIndex": "dim_Clientes",
+          "nodeLineageTag": "7d1f8fc6-3e79-4a70-8076-511b149715ad",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 3
+        }
+      ],
+      "name": "Intervenciones",
+      "zoomValue": 100,
+      "pinKeyFieldsToTop": false,
+      "showExtraHeaderInfo": false,
+      "hideKeyFieldsWhenCollapsed": false,
+      "tablesLocked": false
+    },
+    {
+      "ordinal": 4,
+      "scrollPosition": {
+        "x": 0,
+        "y": 0
+      },
+      "nodes": [
+        {
+          "location": {
+            "x": 455,
+            "y": 205
+          },
+          "nodeIndex": "fact_Ofertas",
+          "nodeLineageTag": "18df90da-f246-4542-b3c5-b79ef536b82d",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
           "zIndex": 0
         },
         {
           "location": {
-            "x": 733,
-            "y": 0
+            "x": 33,
+            "y": 24
           },
           "nodeIndex": "dim_Calendario",
           "nodeLineageTag": "0f260c98-a8df-467f-bf7e-88f9210095be",
@@ -498,8 +465,8 @@
         },
         {
           "location": {
-            "x": 1028,
-            "y": -12
+            "x": 834,
+            "y": 46
           },
           "nodeIndex": "dim_Clientes",
           "nodeLineageTag": "7d1f8fc6-3e79-4a70-8076-511b149715ad",
@@ -510,7 +477,7 @@
           "zIndex": 0
         }
       ],
-      "name": "Intervenciones",
+      "name": "Ofertas",
       "zoomValue": 100,
       "pinKeyFieldsToTop": false,
       "showExtraHeaderInfo": false,
@@ -518,6 +485,6 @@
       "tablesLocked": false
     }
   ],
-  "selectedDiagram": "Intervenciones",
+  "selectedDiagram": "Ofertas",
   "defaultDiagram": "Todas las tablas"
 }
